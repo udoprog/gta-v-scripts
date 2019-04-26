@@ -29,9 +29,11 @@ float fLocal_26 = 0f;
 var uLocal_27 = 0;
 float fLocal_28 = 0f;
 int iLocal_29 = 0;
-int iLocal_30 = 0;
+// local guard to make sure only one failure condition triggers at a time.
+int mission_is_failing = 0;
 int iLocal_31 = 0;
-int iLocal_32 = 0;
+// current failure reason. doesn't seem to be used for anything.
+int current_reason_id = 0;
 int iLocal_33 = 0;
 int iLocal_34 = 0;
 int iLocal_35 = 0;
@@ -9629,7 +9631,7 @@ void func_1() {
 				iLocal_512 = 1;
 			}
 			func_462();
-			if (func_461()) {
+			if (Mission_Can_Fail()) {
 				if (!iLocal_377) {
 					if (iLocal_38 == 0 || iLocal_38 == 1) {
 						if (!bLocal_506) {
@@ -9722,7 +9724,7 @@ void func_1() {
 						}
 					}
 				}
-				if (func_461()) {
+				if (Mission_Can_Fail()) {
 					if (func_422() == 2) {
 						if (ped::is_ped_in_vehicle(player::player_ped_id(), player_mission_vehicles[0], 0)) {
 							entity::is_entity_at_coord(player_mission_vehicles[0], func_425(39), 7f, 7f, 2f, 1, 1, 0);
@@ -9743,7 +9745,7 @@ void func_1() {
 								if (!iLocal_519) {
 									if (entity::is_entity_at_coord(player::player_ped_id(), func_425(39), func_425(40),
 																   0, 1, 0)) {
-										func_420();
+										Clear_Current_Phone_Call_And_Mark_Global();
 										iLocal_540 = 1;
 										iLocal_541 = 1;
 										iLocal_542 = 1;
@@ -9755,7 +9757,7 @@ void func_1() {
 								}
 							}
 							else if (!uLocal_518) {
-								if (!func_419()) {
+								if (!Is_Conversation_Active()) {
 									uLocal_518 = func_418(14);
 								}
 							}
@@ -9781,11 +9783,11 @@ void func_1() {
 						}
 						if (!iLocal_381) {
 							if (fLocal_639 >= 2f && iLocal_43 == 2) {
-								func_420();
+								Clear_Current_Phone_Call_And_Mark_Global();
 								iLocal_381 = 1;
 							}
 						}
-						else if (!func_419()) {
+						else if (!Is_Conversation_Active()) {
 							if (func_416()) {
 								iLocal_378 = 1;
 							}
@@ -9960,7 +9962,7 @@ void func_2() {
 					func_322(&iLocal_64, 1, 1, 1);
 					func_320(1);
 				}
-				func_319();
+				Cleanup_Blips();
 				func_316();
 				gameplay::clear_area(1373.974f, -2070.953f, 54.1842f, 30f, 1, 0, 0, 0);
 				fire::stop_fire_in_range(1373.974f, -2070.953f, 54.1842f, 30f);
@@ -10132,7 +10134,7 @@ void func_3() {
 // Position - 0x124D
 void func_4(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4, int iParam5) {
 	if (iParam3) {
-		func_14(1, 1, 1, 0);
+		Clear_UI(1, 1, 1, 0);
 	}
 	if (iParam0) {
 		func_13();
@@ -10296,17 +10298,17 @@ void func_13() {
 }
 
 // Position - 0x1539
-void func_14(int iParam0, int iParam1, int iParam2, int iParam3) {
-	if (iParam0) {
-		func_420();
+void Clear_UI(int clear_phone_call, int clear_reminders, int clear_help, int keep_prints) {
+	if (clear_phone_call) {
+		Clear_Current_Phone_Call_And_Mark_Global();
 	}
-	if (iParam1) {
-		if (!func_419() || iParam0 && !iParam3) {
+	if (clear_reminders) {
+		if (!Is_Conversation_Active() || clear_phone_call && !keep_prints) {
 			ui::clear_prints();
 		}
 		ui::clear_reminder_message();
 	}
-	if (iParam2) {
+	if (clear_help) {
 		ui::clear_help(1);
 	}
 }
@@ -78867,7 +78869,9 @@ char *func_318(int iParam0) {
 }
 
 // Position - 0x59803
-void func_319() {
+// Clean up local blips (map markers).
+// @decoded partial
+void Cleanup_Blips() {
 	int iVar0;
 
 	if (ui::does_blip_exist(iLocal_264)) {
@@ -83543,7 +83547,7 @@ int func_394(int iParam0) {
 
 // Position - 0x61B1F
 void func_395() {
-	func_14(1, 1, 1, 0);
+	Clear_UI(1, 1, 1, 0);
 	func_13();
 	func_407(1, 1, 1, 0);
 }
@@ -84085,7 +84089,7 @@ var func_417(char *sParam0) { return audio::trigger_music_event(sParam0); }
 var func_418(int iParam0) { return audio::start_audio_scene(func_318(iParam0)); }
 
 // Position - 0x626DA
-bool func_419() {
+bool Is_Conversation_Active() {
 	if (Global_15745 != 0 || audio::is_scripted_conversation_ongoing()) {
 		return true;
 	}
@@ -84093,13 +84097,16 @@ bool func_419() {
 }
 
 // Position - 0x626FC
-void func_420() {
+// @decoded partial
+void Clear_Current_Phone_Call_And_Mark_Global() {
 	Global_14611 = 0;
-	func_421();
+	Clear_Current_Phone_Call();
 }
 
 // Position - 0x6270C
-void func_421() {
+// Stops the current ongoing phone call.
+// @decoded partial
+void Clear_Current_Phone_Call() {
 	audio::restart_scripted_conversation();
 	Global_16756 = 0;
 	if (audio::is_mobile_phone_call_ongoing() || Global_14443.f_1 == 9 || Global_14442 == 1) {
@@ -84372,8 +84379,8 @@ void func_427(int iParam0, int iParam1, int iParam2, int iParam3) {
 					iLocal_389 = 0;
 					iLocal_390 = 0;
 					if (!ui::does_blip_exist(iLocal_265) && iLocal_31 != 5) {
-						func_14(0, 1, 0, 0);
-						func_319();
+						Clear_UI(0, 1, 0, 0);
+						Cleanup_Blips();
 						switch (iLocal_31) {
 						case 1:
 							if (!ui::does_blip_exist(Global_90948)) {
@@ -84424,7 +84431,7 @@ void func_427(int iParam0, int iParam1, int iParam2, int iParam3) {
 				}
 				else {
 					if (!iLocal_389) {
-						func_319();
+						Cleanup_Blips();
 						iLocal_389 = 1;
 					}
 					func_440();
@@ -84438,8 +84445,8 @@ void func_427(int iParam0, int iParam1, int iParam2, int iParam3) {
 			}
 			else {
 				if (!ui::does_blip_exist(iLocal_266)) {
-					func_14(0, 1, 0, 0);
-					func_319();
+					Clear_UI(0, 1, 0, 0);
+					Cleanup_Blips();
 					iLocal_266 = func_436(iVar0, 0);
 				}
 				if (!iLocal_392) {
@@ -84465,9 +84472,9 @@ void func_427(int iParam0, int iParam1, int iParam2, int iParam3) {
 				}
 			}
 			if (!ui::does_blip_exist(iLocal_264)) {
-				func_14(0, 1, 0, 0);
+				Clear_UI(0, 1, 0, 0);
 				if (iParam3) {
-					func_319();
+					Cleanup_Blips();
 				}
 				if (iLocal_660 == 0 || iLocal_660 == 2) {
 					iLocal_386 = 1;
@@ -84502,8 +84509,8 @@ void func_427(int iParam0, int iParam1, int iParam2, int iParam3) {
 	}
 	else {
 		if (!ui::does_blip_exist(iLocal_266)) {
-			func_14(0, 1, 0, 0);
-			func_319();
+			Clear_UI(0, 1, 0, 0);
+			Cleanup_Blips();
 			iLocal_266 = func_436(iVar0, 0);
 		}
 		if (!bLocal_393) {
@@ -84516,7 +84523,7 @@ void func_427(int iParam0, int iParam1, int iParam2, int iParam3) {
 		}
 	}
 	if (iVar6) {
-		if (func_431()) {
+		if (Global_Mission_Can_Fail()) {
 			iVar6 = 0;
 		}
 	}
@@ -84524,7 +84531,7 @@ void func_427(int iParam0, int iParam1, int iParam2, int iParam3) {
 		if (iLocal_31 != 1 || bLocal_568 || !bVar4) {
 			if (!iLocal_388) {
 				if (func_428()) {
-					func_420();
+					Clear_Current_Phone_Call_And_Mark_Global();
 				}
 			}
 		}
@@ -84535,7 +84542,7 @@ void func_427(int iParam0, int iParam1, int iParam2, int iParam3) {
 bool func_428() {
 	struct<6> Var0;
 
-	if (func_419()) {
+	if (Is_Conversation_Active()) {
 		Var0 = {func_430()};
 		if (gameplay::are_strings_equal(&Var0, "FBI2_B1AV1") || gameplay::are_strings_equal(&Var0, "FBI2_B1BV1") ||
 			gameplay::are_strings_equal(&Var0, "FBI2_B2AV1") || gameplay::are_strings_equal(&Var0, "FBI2_B2AV2") ||
@@ -84600,14 +84607,14 @@ func_430() {
 }
 
 //Position - 0x633D1
-bool func_431()
+bool Global_Mission_Can_Fail()
 {
 	return Global_91543.f_304 > 0;
 }
 
 // Position - 0x633E2
 int func_432(int iParam0, int iParam1) {
-	if (func_461()) {
+	if (Mission_Can_Fail()) {
 		return func_433(iParam0, iParam1, 0);
 	}
 	return 0;
@@ -84653,7 +84660,7 @@ var func_435(bool bParam0, float fParam1, float fParam2) {
 
 // Position - 0x634CC
 int func_436(int iParam0, int iParam1) {
-	if (func_461()) {
+	if (Mission_Can_Fail()) {
 		return func_437(iParam0, iParam1, 145);
 	}
 	return 0;
@@ -84677,7 +84684,7 @@ void func_438() {
 		ui::remove_blip(&iLocal_264);
 	}
 	if (func_439("SG_GETDCAR1", 0, 0) || func_439("SG_GETDCAR2", 0, 0)) {
-		func_14(1, 1, 0, 0);
+		Clear_UI(1, 1, 0, 0);
 	}
 }
 
@@ -84696,15 +84703,15 @@ void func_440() {
 		ui::remove_blip(&iLocal_264);
 	}
 	if (func_439("CMN_GENGETINHE", 0, 0) || func_439("CMN_GENGETBCKHE", 0, 0)) {
-		func_14(1, 1, 0, 0);
+		Clear_UI(1, 1, 0, 0);
 	}
 }
 
 // Position - 0x635D9
 bool func_441(char *sParam0, int iParam1, int iParam2) {
 	if (iParam1 || !ui::is_message_being_displayed()) {
-		if (iParam2 || !func_419() || !ui::is_subtitle_preference_switched_on()) {
-			if (func_461()) {
+		if (iParam2 || !Is_Conversation_Active() || !ui::is_subtitle_preference_switched_on()) {
+			if (Mission_Can_Fail()) {
 				func_442(sParam0, 7500, 1);
 				return true;
 			}
@@ -84722,7 +84729,7 @@ void func_442(char *sParam0, int iParam1, int iParam2) {
 
 // Position - 0x6363B
 int func_443(vector3 vParam0, int iParam3) {
-	if (func_461()) {
+	if (Mission_Can_Fail()) {
 		return func_444(vParam0, iParam3);
 	}
 	return 0;
@@ -84747,7 +84754,7 @@ bool func_445(char *sParam0) {
 // Position - 0x63697
 int func_446(char *sParam0, int iParam1, int iParam2) {
 	if (!ui::is_help_message_being_displayed()) {
-		if (func_461()) {
+		if (Mission_Can_Fail()) {
 			if (!iParam1) {
 				func_448(sParam0, iParam2);
 			}
@@ -84778,8 +84785,8 @@ bool func_449(char *sParam0, int iParam1, int iParam2, int iParam3, int iParam4,
 	struct<2> Var1;
 
 	if (iParam1 || !ui::is_message_being_displayed() || !ui::is_subtitle_preference_switched_on()) {
-		if (!func_419() || iParam3) {
-			if (func_461()) {
+		if (!Is_Conversation_Active() || iParam3) {
+			if (Mission_Can_Fail()) {
 				if (iParam4) {
 					iVar0 = 0;
 				}
@@ -84844,7 +84851,7 @@ int func_451(char *sParam0, int iParam1, int iParam2) {
 					Global_14442 = 0;
 				}
 				else {
-					func_421();
+					Clear_Current_Phone_Call();
 					return 0;
 				}
 			}
@@ -84966,7 +84973,7 @@ int func_451(char *sParam0, int iParam1, int iParam2) {
 	if (iParam1 == 2) {
 	}
 	else {
-		func_421();
+		Clear_Current_Phone_Call();
 	}
 	return 0;
 }
@@ -85161,8 +85168,10 @@ int func_460(var *uParam0, char *sParam1, char *sParam2, int iParam3, int iParam
 }
 
 // Position - 0x63E5A
-bool func_461() {
-	if (iLocal_30 == 0 && !func_431()) {
+// Test if a mission can fail.
+// @decoded partial
+bool Mission_Can_Fail() {
+	if (mission_is_failing == 0 && !Global_Mission_Can_Fail()) {
 		return true;
 	}
 	return false;
@@ -85443,7 +85452,7 @@ void func_463() {
 		else if (gameplay::get_game_timer() <= iLocal_793 + 200) {
 			controls::disable_control_action(0, 75, 1);
 		}
-		if (func_461() && ped::is_ped_sitting_in_vehicle(player::player_ped_id(), player_mission_vehicles[0]) && !iLocal_561) {
+		if (Mission_Can_Fail() && ped::is_ped_sitting_in_vehicle(player::player_ped_id(), player_mission_vehicles[0]) && !iLocal_561) {
 			if (func_558(&iLocal_64, 0, 1)) {
 				bVar10 = false;
 				fLocal_654 = graphics::_0xE59343E9E96529E7();
@@ -85494,7 +85503,7 @@ void func_463() {
 			iLocal_783 = gameplay::get_game_timer() + 5000;
 		}
 		if (iLocal_446) {
-			if (func_461() && ped::is_ped_sitting_in_vehicle(player::player_ped_id(), player_mission_vehicles[0]) && !iLocal_561) {
+			if (Mission_Can_Fail() && ped::is_ped_sitting_in_vehicle(player::player_ped_id(), player_mission_vehicles[0]) && !iLocal_561) {
 				if (func_558(&iLocal_64, 0, 1)) {
 					fLocal_654 = graphics::_0xE59343E9E96529E7();
 					if (iLocal_64.f_7 == 2) {
@@ -85529,7 +85538,7 @@ void func_463() {
 			}
 		}
 		bVar14 = false;
-		if (func_461()) {
+		if (Mission_Can_Fail()) {
 			bVar14 = func_558(&iLocal_64, 0, 1);
 		}
 		if (!bLocal_602) {
@@ -85537,7 +85546,7 @@ void func_463() {
 				bLocal_602 = func_449("FBI2_LEAVE", 0, 0, 0, 1, 0);
 			}
 		}
-		else if (!func_419()) {
+		else if (!Is_Conversation_Active()) {
 			iLocal_64.f_7 = 2;
 			bVar14 = true;
 		}
@@ -85989,7 +85998,7 @@ bool func_470(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4) {
 	vVar9 = {0.34073f, 0f, -103.845f};
 	switch (iLocal_33) {
 	case 0:
-		func_14(0, 1, 1, 0);
+		Clear_UI(0, 1, 1, 0);
 		iLocal_64.f_39 = 1;
 		iLocal_64.f_7 = iParam0;
 		Local_108.f_12 = iLocal_64[iParam0];
@@ -96030,7 +96039,7 @@ void func_635() {
 					if (ped::is_ped_ragdoll(iLocal_165[iVar0])) {
 						if (entity::is_entity_at_entity(player::player_ped_id(), iLocal_165[iVar0], 10f, 10f, 10f, 0, 0,
 														0)) {
-							func_636(18);
+							Fail_Mission(18);
 						}
 					}
 				}
@@ -96063,7 +96072,7 @@ void func_635() {
 	while (iVar0 < iLocal_228) {
 		if (entity::does_entity_exist(iLocal_228[iVar0])) {
 			if (entity::is_entity_dead(iLocal_228[iVar0], 0)) {
-				func_636(18);
+				Fail_Mission(18);
 			}
 		}
 		iVar0++;
@@ -96071,17 +96080,17 @@ void func_635() {
 	if (iLocal_31 == 1) {
 		if (vehicle::is_vehicle_driveable(player_mission_vehicles[0], 0)) {
 			if (entity::has_entity_been_damaged_by_entity(player_mission_vehicles[0], player::player_ped_id(), 1)) {
-				func_636(18);
+				Fail_Mission(18);
 			}
 		}
 		if (!ped::is_ped_injured(iLocal_64[2])) {
 			if (ped::is_ped_ragdoll(iLocal_64[2])) {
 				if (entity::is_entity_at_entity(player::player_ped_id(), iLocal_64[2], 10f, 10f, 10f, 0, 0, 0)) {
-					func_636(18);
+					Fail_Mission(18);
 				}
 			}
 			if (entity::has_entity_been_damaged_by_entity(iLocal_64[2], player::player_ped_id(), 1)) {
-				func_636(18);
+				Fail_Mission(18);
 			}
 		}
 		if (!ped::is_ped_injured(player::player_ped_id())) {
@@ -96091,11 +96100,11 @@ void func_635() {
 				}
 				if (ped::is_ped_ragdoll(iLocal_64[1])) {
 					if (entity::is_entity_at_entity(player::player_ped_id(), iLocal_64[1], 10f, 10f, 10f, 0, 0, 0)) {
-						func_636(18);
+						Fail_Mission(18);
 					}
 				}
 				if (entity::has_entity_been_damaged_by_entity(iLocal_64[1], player::player_ped_id(), 1)) {
-					func_636(18);
+					Fail_Mission(18);
 				}
 			}
 			if (vehicle::is_vehicle_driveable(player_mission_vehicles[2], 0)) {
@@ -96104,7 +96113,7 @@ void func_635() {
 						ped::set_ped_to_ragdoll(iLocal_64[1], 2500, 2500, 0, 1, 1, 0);
 					}
 					entity::freeze_entity_position(player_mission_vehicles[2], 0);
-					func_636(18);
+					Fail_Mission(18);
 				}
 			}
 			else if (entity::does_entity_exist(player_mission_vehicles[2])) {
@@ -96115,7 +96124,7 @@ void func_635() {
 		}
 	}
 	if (bVar1) {
-		if (iLocal_30 == 0) {
+		if (mission_is_failing == 0) {
 			iVar0 = 0;
 			while (iVar0 < iLocal_165) {
 				if (!ped::is_ped_injured(iLocal_165[iVar0])) {
@@ -96130,7 +96139,7 @@ void func_635() {
 				}
 				iVar0++;
 			}
-			func_636(11);
+			Fail_Mission(11);
 		}
 	}
 	else if (iLocal_31 >= 5) {
@@ -96191,17 +96200,18 @@ void func_635() {
 }
 
 // Position - 0x796DD
-void func_636(int iParam0) {
+// @decoded partial
+void Fail_Mission(int reason_id) {
 	char *sVar0;
 
-	if (func_461()) {
-		func_319();
-		func_14(1, 1, 1, 1);
+	if (Mission_Can_Fail()) {
+		Cleanup_Blips();
+		Clear_UI(1, 1, 1, 1);
 		audio::trigger_music_event("FIB2_DEATH_FAIL");
-		iLocal_30 = 1;
-		iLocal_32 = iParam0;
+		mission_is_failing = 1;
+		current_reason_id = reason_id;
 		gameplay::set_time_scale(1f);
-		switch (iLocal_32) {
+		switch (current_reason_id) {
 		case 1: sVar0 = "CMN_MDIED"; break;
 
 		case 0: sVar0 = "CMN_FDIED"; break;
@@ -96250,18 +96260,21 @@ void func_636(int iParam0) {
 
 		case 23: sVar0 = "SG_FAIL21"; break;
 		}
-		func_637(sVar0);
+		Trigger_Mission_Fail(sVar0);
 	}
 }
 
 // Position - 0x7989B
-void func_637(char *sParam0) {
-	func_645(sParam0);
-	func_638(0);
+// Display the reason why a mission failed.
+// @decoded partial
+void Trigger_Mission_Fail(char *sParam0) {
+	Show_Mission_Fail_Title(sParam0);
+	Mark_Mission_Failed(0);
 }
 
 // Position - 0x798AE
-void func_638(int iParam0) {
+// Mark that the current mission has failed globally.
+void Mark_Mission_Failed(int iParam0) {
 	int iVar0;
 
 	if (Global_101700.f_8044 || func_390(0)) {
@@ -96745,7 +96758,7 @@ void func_644() {
 }
 
 // Position - 0x7A683
-void func_645(char *sParam0) {
+void Show_Mission_Fail_Title(char *sParam0) {
 	if (!gameplay::is_string_null_or_empty(sParam0)) {
 		if (ui::get_length_of_literal_string(sParam0) <= 16) {
 			StringCopy(&Global_69934, sParam0, 16);
@@ -97670,7 +97683,7 @@ void func_650() {
 	}
 	if (!iLocal_497) {
 		if (fLocal_636 >= 0f) {
-			if (func_461()) {
+			if (Mission_Can_Fail()) {
 				iVar12 = 0;
 				while (iVar12 < 4) {
 					if (vehicle::is_vehicle_driveable(chase_helicopters[iVar12], 0)) {
@@ -97684,7 +97697,7 @@ void func_650() {
 			}
 		}
 	}
-	else if (func_461()) {
+	else if (Mission_Can_Fail()) {
 		if (iLocal_686 < 0) {
 			iVar51 = 1;
 			iVar12 = 0;
@@ -97712,8 +97725,8 @@ void func_650() {
 				}
 				iLocal_473 = 1;
 				iLocal_466 = 1;
-				func_14(0, 1, 0, 0);
-				func_420();
+				Clear_UI(0, 1, 0, 0);
+				Clear_Current_Phone_Call_And_Mark_Global();
 				iLocal_686 = gameplay::get_game_timer() + 300;
 			}
 			if (!iLocal_473) {
@@ -97724,7 +97737,7 @@ void func_650() {
 			if (!uLocal_555) {
 				uLocal_555 = func_417("FIB2_HELICOPTERS_GONE");
 			}
-			if (gameplay::get_game_timer() >= iLocal_686 && iLocal_43 != 1 && !func_419()) {
+			if (gameplay::get_game_timer() >= iLocal_686 && iLocal_43 != 1 && !Is_Conversation_Active()) {
 				iVar12 = 0;
 				while (iVar12 < 4) {
 					func_851(iVar12);
@@ -97851,7 +97864,7 @@ void Progress_To_Segment(int iParam0, int iParam1, int iParam2, int iParam3, int
 	func_838(iParam0, iVar5, 0);
 	func_833(iParam0, iVar5, 0);
 	func_831(iParam0);
-	func_319();
+	Cleanup_Blips();
 	func_826(iParam0, iVar5, 0);
 	func_819(iParam0, iVar5, 0);
 	func_813(iParam0, iVar5, 0);
@@ -97860,7 +97873,7 @@ void Progress_To_Segment(int iParam0, int iParam1, int iParam2, int iParam3, int
 		cutscene::remove_cutscene();
 		iLocal_35 = 0;
 	}
-	func_14(iParam2 | iParam1, iParam2 | iParam1, 1, 0);
+	Clear_UI(iParam2 | iParam1, iParam2 | iParam1, 1, 0);
 	if (iParam0 >= 2 && iParam0 <= 4) {
 		rope::rope_load_textures();
 		if (iParam1) {
@@ -102382,7 +102395,7 @@ void func_737(int *iParam0, int iParam1, int iParam2, int iParam3, int iParam4, 
 						if (iParam0->f_3 == player::player_ped_id()) {
 							if (!iParam0->f_78) {
 								if (fVar4 >= 0.82f) {
-									if (!func_419()) {
+									if (!Is_Conversation_Active()) {
 										if (gameplay::get_random_int_in_range(0, 4) == 0) {
 											audio::play_pain(player::player_ped_id(), 23, 0f, 0);
 										}
@@ -102978,7 +102991,7 @@ void func_743(int *iParam0, int iParam1, int iParam2, int iParam3, int iParam4, 
 void func_744(var *uParam0) {
 	if (!uParam0->f_77) {
 		if (uParam0->f_3 == player::player_ped_id()) {
-			if (!func_419()) {
+			if (!Is_Conversation_Active()) {
 				if (gameplay::get_random_int_in_range(0, 2) == 0) {
 					audio::play_pain(player::player_ped_id(), 23, 0f, 0);
 				}
@@ -110700,7 +110713,7 @@ void func_865() {
 					ped::set_ped_can_ragdoll(iLocal_175[5], 0);
 				}
 				bVar4 = false;
-				if (func_461()) {
+				if (Mission_Can_Fail()) {
 					bVar4 = func_558(&iLocal_64, 0, 1);
 				}
 				if (bVar4) {
@@ -110744,7 +110757,7 @@ void func_865() {
 				else {
 					audio::set_variable_on_sound(iLocal_734, "PlayerSpeed", entity::get_entity_speed(player_mission_vehicles[0]));
 				}
-				if (func_461()) {
+				if (Mission_Can_Fail()) {
 					if (func_558(&iLocal_64, 0, 1)) {
 						if (iLocal_64.f_7 == 1) {
 							func_557(291, 1, 0);
@@ -110904,7 +110917,7 @@ void func_865() {
 
 		case 4:
 			if (gameplay::get_game_timer() >= iLocal_739 + 100 && (iLocal_1152 || !bLocal_1153)) {
-				func_420();
+				Clear_Current_Phone_Call_And_Mark_Global();
 				iLocal_39 = 5;
 				iLocal_740 = gameplay::get_game_timer() + 800;
 			}
@@ -111120,7 +111133,7 @@ void func_865() {
 					if (!ped::is_ped_ragdoll(iLocal_64[0])) {
 						ai::clear_ped_tasks(iLocal_64[0]);
 						ped::set_ped_to_ragdoll(iLocal_64[0], 25000, 25000, 0, 1, 1, 0);
-						func_636(1);
+						Fail_Mission(1);
 					}
 				}
 			}
@@ -111215,7 +111228,7 @@ void func_865() {
 								bLocal_443 = true;
 							}
 							else if (gameplay::get_game_timer() >= iLocal_788 + 3000) {
-								func_420();
+								Clear_Current_Phone_Call_And_Mark_Global();
 								bLocal_443 = true;
 							}
 						}
@@ -111230,7 +111243,7 @@ void func_865() {
 							func_468(&iLocal_64, 2, 1);
 							func_468(&iLocal_64, 1, 0);
 							func_468(&iLocal_64, 0, 0);
-							func_14(0, 1, 0, 0);
+							Clear_UI(0, 1, 0, 0);
 							iLocal_668 = 0;
 							func_878(1);
 							iLocal_37 = 1;
@@ -111658,7 +111671,7 @@ void func_865() {
 		if (iLocal_39 == 5) {
 			if (gameplay::get_game_timer() >= iLocal_740) {
 				if (iLocal_38 == 1 || iLocal_38 == 2)
-					&&!func_419() {
+					&&!Is_Conversation_Active() {
 						if (func_416()) {
 							fLocal_643 = 1f;
 							iLocal_378 = 1;
@@ -113597,7 +113610,7 @@ void func_903() {
 					if (entity::get_entity_anim_current_time(player::player_ped_id(), func_530(), "Rappel_jump_a") <=
 						0.1f) {
 						if (bLocal_558 || !iLocal_422) {
-							if (!func_419()) {
+							if (!Is_Conversation_Active()) {
 								if (gameplay::get_random_int_in_range(0, 2) == 0) {
 									audio::play_pain(player::player_ped_id(), 23, 0f, 0);
 								}
@@ -113625,7 +113638,7 @@ void func_903() {
 					if (entity::get_entity_anim_current_time(player::player_ped_id(), func_530(), "Rappel_jump_a") >=
 						0.74f) {
 						if (bLocal_558 || !iLocal_422) {
-							if (!func_419()) {
+							if (!Is_Conversation_Active()) {
 								audio::play_pain(player::player_ped_id(), 23, 0f, 0);
 							}
 							iLocal_143 = 0;
@@ -113706,7 +113719,7 @@ void func_903() {
 					}
 					if (Local_817.f_10.f_2 >= fVar7) {
 						if (gameplay::get_game_timer() >= uLocal_673[iVar0] + 10000) {
-							func_636(14);
+							Fail_Mission(14);
 						}
 					}
 				}
@@ -114260,7 +114273,7 @@ void func_903() {
 									}
 									if (!ped::is_ped_injured(player::player_ped_id())) {
 										if (iLocal_669 == 3) {
-											func_636(14);
+											Fail_Mission(14);
 										}
 									}
 								}
@@ -114276,7 +114289,7 @@ void func_903() {
 							fVar40 = entity::get_entity_anim_current_time(player::player_ped_id(), func_530(),
 																		  "Rappel_jump_a");
 							if (fVar40 >= 0.1f && fVar40 <= 0.8f) {
-								if (func_461()) {
+								if (Mission_Can_Fail()) {
 									func_418(5);
 									iLocal_431 = 1;
 								}
@@ -114284,7 +114297,7 @@ void func_903() {
 						}
 					}
 				}
-				else if (func_461()) {
+				else if (Mission_Can_Fail()) {
 					if (entity::is_entity_playing_anim(player::player_ped_id(), func_530(), "Rappel_jump_a", 3)) {
 						if (entity::get_entity_anim_current_time(player::player_ped_id(), func_530(),
 																 "Rappel_jump_a") >= 0.7f) {
@@ -114737,10 +114750,10 @@ void func_904() {
 					iLocal_664 = gameplay::get_game_timer();
 					iLocal_428 = 1;
 				}
-				else if (func_461()) {
+				else if (Mission_Can_Fail()) {
 					if (func_558(&iLocal_64, 0, 1)) {
 						if (iLocal_64.f_7 == 1) {
-							func_14(1, 1, 1, 0);
+							Clear_UI(1, 1, 1, 0);
 							func_907();
 							iLocal_35 = 0;
 							iLocal_657 = gameplay::get_game_timer();
@@ -114761,7 +114774,7 @@ void func_904() {
 				}
 				if (gameplay::get_game_timer() >= iLocal_664 + 1000) {
 					ped::set_ped_to_ragdoll(player::player_ped_id(), 8000, 8000, 0, 1, 1, 0);
-					func_636(1);
+					Fail_Mission(1);
 					iLocal_429 = 1;
 				}
 			}
@@ -114798,7 +114811,7 @@ void func_904() {
 				}
 			}
 			else if (!bLocal_435) {
-				if (!func_419()) {
+				if (!Is_Conversation_Active()) {
 					bLocal_435 = func_449("FBI2_SNIPE", 1, 3, 0, 1, 0);
 				}
 			}
@@ -115391,7 +115404,7 @@ void func_922() {
 				}
 			}
 			if (iVar0 == 0) {
-				if (func_461()) {
+				if (Mission_Can_Fail()) {
 					if (ped::is_ped_in_vehicle(player::player_ped_id(), player_mission_vehicles[0], 0) &&
 						ped::is_ped_in_vehicle(iLocal_64[0], player_mission_vehicles[0], 0)) {
 					}
@@ -115425,7 +115438,7 @@ void func_922() {
 															 -609.76f, 284f, 20f, 0, 0, 0);
 					vVar8 = {entity::get_entity_coords(player::player_ped_id(), 1)};
 					if (bVar7 && vVar8.z <= 284f && vVar8.z >= 257f || iLocal_377 || iLocal_616) {
-						if (func_461() && !func_419() && All_Vehicles_Loaded() && func_842() || iLocal_616) {
+						if (Mission_Can_Fail() && !Is_Conversation_Active() && All_Vehicles_Loaded() && func_842() || iLocal_616) {
 							iLocal_616 = 1;
 							if (func_416()) {
 								iLocal_378 = 1;
@@ -115436,7 +115449,7 @@ void func_922() {
 														0)) {
 						if (!iLocal_377) {
 							if (!iLocal_410) {
-								func_420();
+								Clear_Current_Phone_Call_And_Mark_Global();
 								iLocal_410 = 1;
 							}
 							else if (!iLocal_409) {
@@ -115644,7 +115657,7 @@ void func_924() {
 // Position - 0x99D94
 bool func_925() {
 	if (iLocal_388) {
-		if (func_461()) {
+		if (Mission_Can_Fail()) {
 			if (func_450(&uLocal_924, "FBI2AUD", &Local_1115, &cLocal_1121, 8, 0, 0)) {
 				return true;
 			}
@@ -116261,7 +116274,7 @@ void func_942() {
 			if (iVar4 > 0) {
 				if (entity::is_entity_in_angled_area(player::player_ped_id(), 1370.22f, -2049.72f, -10f, 1401.82f,
 													 -2087.4f, 110f, 97f, 0, 1, 0)) {
-					func_636(15);
+					Fail_Mission(15);
 				}
 			}
 		}
@@ -116291,13 +116304,13 @@ void func_942() {
 						if (player::has_player_damaged_at_least_one_ped(player::player_id())) {
 							if (!entity::is_entity_in_area(player::player_ped_id(), 140.2791f, -689.8296f, 41.02893f,
 														   158.8461f, -661.9821f, 45.26525f, 0, 1, 0)) {
-								if (!bLocal_568 || !func_419()) {
+								if (!bLocal_568 || !Is_Conversation_Active()) {
 									if (entity::is_entity_at_entity(player::player_ped_id(), iLocal_154, 20f, 20f, 10f,
 																	0, 1, 0) &&
 										!entity::has_entity_been_damaged_by_entity(iLocal_154, player::player_ped_id(),
 																				   1)) {
 										if (!iLocal_581) {
-											func_420();
+											Clear_Current_Phone_Call_And_Mark_Global();
 											iLocal_581 = 1;
 										}
 										switch (iLocal_777) {
@@ -116327,7 +116340,7 @@ void func_942() {
 								}
 							}
 							else {
-								func_636(23);
+								Fail_Mission(23);
 							}
 						}
 					}
@@ -116336,7 +116349,7 @@ void func_942() {
 					if (entity::is_entity_at_entity(player::player_ped_id(), iLocal_154, 20f, 20f, 10f, 0, 1, 0)) {
 						if (!iLocal_582) {
 							if (!bLocal_568) {
-								func_420();
+								Clear_Current_Phone_Call_And_Mark_Global();
 								iLocal_582 = 1;
 							}
 						}
@@ -116365,7 +116378,7 @@ void func_942() {
 								if (ped::is_ped_getting_into_a_vehicle(player::player_ped_id()) ||
 									ped::is_ped_in_any_vehicle(player::player_ped_id(), 0)) {
 									if (ped::get_vehicle_ped_is_using(player::player_ped_id()) == player_mission_vehicles[1]) {
-										func_420();
+										Clear_Current_Phone_Call_And_Mark_Global();
 										iLocal_600 = 1;
 									}
 								}
@@ -116381,18 +116394,18 @@ void func_942() {
 		if (!iLocal_402) {
 			if (entity::does_entity_exist(iLocal_155)) {
 				if (ped::is_ped_injured(iLocal_155)) {
-					func_636(21);
+					Fail_Mission(21);
 				}
 				else if (entity::has_entity_been_damaged_by_entity(iLocal_155, player::player_ped_id(), 1)) {
-					func_636(23);
+					Fail_Mission(23);
 				}
 			}
 			if (entity::does_entity_exist(iLocal_156)) {
 				if (ped::is_ped_injured(iLocal_156)) {
-					func_636(22);
+					Fail_Mission(22);
 				}
 				else if (entity::has_entity_been_damaged_by_entity(iLocal_156, player::player_ped_id(), 1)) {
-					func_636(23);
+					Fail_Mission(23);
 				}
 			}
 			if (gameplay::get_distance_between_coords(148.3425f, -677.2178f, 41.84525f,
@@ -116532,7 +116545,7 @@ void func_942() {
 							}
 							bLocal_576 = audio::prepare_synchronized_audio_event("FBI_2_MCS_1_LeadIn", 0);
 						}
-						if (iLocal_30 == 0) {
+						if (mission_is_failing == 0) {
 							if (ped::is_synchronized_scene_running(iLocal_688)) {
 								if (ped::get_synchronized_scene_phase(iLocal_688) >= 0.98f) {
 									if (entity::is_entity_at_entity(player::player_ped_id(), iLocal_64[2], 57f, 57f,
@@ -116557,7 +116570,7 @@ void func_942() {
 						break;
 
 					case 2:
-						if (iLocal_30 == 0) {
+						if (mission_is_failing == 0) {
 							if (ped::is_synchronized_scene_running(iLocal_688)) {
 								if (ped::get_synchronized_scene_phase(iLocal_688) >= 0.75f) {
 									iLocal_578 = 1;
@@ -116665,7 +116678,7 @@ void func_942() {
 							!entity::is_entity_at_entity(player::player_ped_id(), iLocal_154, 10f, 10f, 4f, 0, 1, 0)) {
 							if (!iLocal_388) {
 								if (func_428()) {
-									func_420();
+									Clear_Current_Phone_Call_And_Mark_Global();
 								}
 							}
 						}
@@ -116730,7 +116743,7 @@ void func_942() {
 					case 1:
 						if (ped::is_ped_in_vehicle(iLocal_154, player_mission_vehicles[1], 0)) {
 							ped::remove_ped_from_group(iLocal_154);
-							func_420();
+							Clear_Current_Phone_Call_And_Mark_Global();
 							ai::task_clear_look_at(iLocal_154);
 							ped::set_blocking_of_non_temporary_events(iLocal_154, 1);
 							unk1::_0x293220DA1B46CEBC(5f, 10f, 4);
@@ -116839,7 +116852,7 @@ void func_942() {
 										break;
 
 									case 1:
-										if (!func_419() && !ui::is_message_being_displayed() &&
+										if (!Is_Conversation_Active() && !ui::is_message_being_displayed() &&
 											ped::is_ped_sitting_in_vehicle(player::player_ped_id(), player_mission_vehicles[1])) {
 											if (!iLocal_529) {
 												if (iLocal_655 % 2 == 0) {
@@ -116885,13 +116898,13 @@ void func_942() {
 							if (!iLocal_529) {
 								if (entity::is_entity_at_coord(player::player_ped_id(), func_425(20), 50f, 50f, 50f, 0,
 															   0, 0)) {
-									func_420();
+									Clear_Current_Phone_Call_And_Mark_Global();
 									iLocal_529 = 1;
 								}
 							}
 						}
 					}
-					if (func_461()) {
+					if (Mission_Can_Fail()) {
 						if (ped::is_ped_in_vehicle(player::player_ped_id(), player_mission_vehicles[1], 0) &&
 							ped::is_ped_in_vehicle(iLocal_154, player_mission_vehicles[1], 0)) {
 							if (entity::is_entity_at_coord(player::player_ped_id(), func_425(5), 9f, 9f, 2f, 0, 1, 0) ||
@@ -116905,7 +116918,7 @@ void func_942() {
 									ped::is_ped_sitting_in_vehicle(player::player_ped_id(), player_mission_vehicles[1]) &&
 									ped::is_ped_sitting_in_vehicle(iLocal_154, player_mission_vehicles[1])) {
 									func_951();
-									func_420();
+									Clear_Current_Phone_Call_And_Mark_Global();
 									uLocal_658 = gameplay::get_game_timer();
 									iLocal_381 = 1;
 								}
@@ -116926,7 +116939,7 @@ void func_942() {
 				}
 				else if (!iLocal_613) {
 					if (gameplay::get_game_timer() >= iLocal_784 + 6000) {
-						func_420();
+						Clear_Current_Phone_Call_And_Mark_Global();
 						iLocal_613 = 1;
 					}
 				}
@@ -116975,8 +116988,8 @@ void func_942() {
 							iLocal_580 = 1;
 						}
 					}
-					if (!func_419() && gameplay::get_game_timer() >= iLocal_786 + 2000 && (iLocal_578 || iLocal_377)) {
-						if (func_461()) {
+					if (!Is_Conversation_Active() && gameplay::get_game_timer() >= iLocal_786 + 2000 && (iLocal_578 || iLocal_377)) {
+						if (Mission_Can_Fail()) {
 							if (func_416()) {
 								iLocal_378 = 1;
 							}
@@ -116996,7 +117009,7 @@ void func_942() {
 								bLocal_385 = true;
 							}
 							else {
-								func_420();
+								Clear_Current_Phone_Call_And_Mark_Global();
 								iLocal_619 = 0;
 							}
 						}
@@ -117393,7 +117406,7 @@ void func_956() {
 		fire::is_explosion_in_area(-1, 112.4255f, -697.9334f, 38.0273f, 180.0502f, -654.663f, 53.14103f) ||
 		iLocal_31 == 0 && player::get_player_wanted_level(player::player_id()) > 0 ||
 		!bLocal_568 && player::get_player_wanted_level(player::player_id()) > 0) {
-		func_636(23);
+		Fail_Mission(23);
 	}
 	if (ped::is_ped_in_any_vehicle(player::player_ped_id(), 0)) {
 		iVar0 = ped::get_vehicle_ped_is_using(player::player_ped_id());
@@ -117401,12 +117414,12 @@ void func_956() {
 			if (entity::get_entity_speed(iVar0) >= 1f) {
 				if (entity::does_entity_exist(uLocal_243[0])) {
 					if (entity::is_entity_touching_entity(iVar0, uLocal_243[0])) {
-						func_636(23);
+						Fail_Mission(23);
 					}
 				}
 				if (entity::does_entity_exist(uLocal_243[2])) {
 					if (entity::is_entity_touching_entity(iVar0, uLocal_243[2])) {
-						func_636(23);
+						Fail_Mission(23);
 					}
 				}
 			}
@@ -117486,30 +117499,30 @@ void func_960() {
 		}
 		if (entity::does_entity_exist(iLocal_155)) {
 			if (ped::is_ped_injured(iLocal_155)) {
-				func_636(21);
+				Fail_Mission(21);
 			}
 			else if (entity::has_entity_been_damaged_by_entity(iLocal_155, player::player_ped_id(), 1)) {
-				func_636(23);
+				Fail_Mission(23);
 			}
 		}
 		if (entity::does_entity_exist(iLocal_156)) {
 			if (ped::is_ped_injured(iLocal_156)) {
-				func_636(22);
+				Fail_Mission(22);
 			}
 			else if (entity::has_entity_been_damaged_by_entity(iLocal_156, player::player_ped_id(), 1)) {
-				func_636(23);
+				Fail_Mission(23);
 			}
 		}
 		if (entity::does_entity_exist(iLocal_154)) {
 			if (ped::is_ped_injured(iLocal_154)) {
-				func_636(3);
+				Fail_Mission(3);
 			}
 			else {
 				if (func_466(player::player_ped_id(), iLocal_154, 0) > 100f) {
-					func_636(4);
+					Fail_Mission(4);
 				}
 				if (entity::has_entity_been_damaged_by_entity(iLocal_154, player::player_ped_id(), 1)) {
-					func_636(23);
+					Fail_Mission(23);
 				}
 			}
 		}
@@ -117610,7 +117623,7 @@ void func_960() {
 					}
 				}
 			}
-			if (func_968(1, 0, 1) && !func_419() && func_461()) {
+			if (func_968(1, 0, 1) && !Is_Conversation_Active() && Mission_Can_Fail()) {
 				if (ped::is_synchronized_scene_running(iLocal_688)) {
 					if (ped::get_synchronized_scene_phase(iLocal_688) >= 0.8f) {
 						if (func_416()) {
@@ -117686,7 +117699,7 @@ void func_961() {
 				fire::stop_fire_in_range(148.2744f, -677.2391f, 41.84525f, 20f);
 				graphics::remove_particle_fx_in_range(148.2744f, -677.2391f, 41.84525f, 20f);
 				func_951();
-				func_319();
+				Cleanup_Blips();
 				func_395();
 				if (cam::is_screen_faded_out()) {
 					cam::do_screen_fade_in(800);
@@ -118112,7 +118125,7 @@ void func_971() {
 	int iVar1;
 
 	func_976();
-	switch (iLocal_30) {
+	switch (mission_is_failing) {
 	case 0: break;
 
 	case 1:
@@ -118212,14 +118225,14 @@ void func_976() {
 									entity::detach_entity(iLocal_157, 1, 1);
 								}
 							}
-							func_636(1);
+							Fail_Mission(1);
 							break;
 
-						case 2: func_636(2); break;
+						case 2: Fail_Mission(2); break;
 
 						case 1:
 							if (iLocal_31 == 1 || iLocal_31 == 5 || iLocal_31 == 6) {
-								func_636(0);
+								Fail_Mission(0);
 							}
 							break;
 						}
@@ -118230,12 +118243,12 @@ void func_976() {
 		}
 		if (iLocal_31 == 1) {
 			if (ped::is_ped_injured(iLocal_154)) {
-				func_636(3);
+				Fail_Mission(3);
 			}
 			else if (!bLocal_568) {
 				if (func_466(player::player_ped_id(), iLocal_154, 0) > 100f) {
 					if (!iLocal_377) {
-						func_636(4);
+						Fail_Mission(4);
 					}
 				}
 			}
@@ -118243,26 +118256,26 @@ void func_976() {
 		if (iLocal_31 > 3 || iLocal_417) {
 			if (entity::does_entity_exist(iLocal_157)) {
 				if (ped::is_ped_injured(iLocal_157)) {
-					func_636(5);
+					Fail_Mission(5);
 				}
 			}
 		}
 		if (entity::does_entity_exist(player_mission_vehicles[0])) {
 			if (!vehicle::is_vehicle_driveable(player_mission_vehicles[0], 0)) {
 				func_440();
-				func_636(6);
+				Fail_Mission(6);
 			}
 			else if (iLocal_31 == 2 || iLocal_31 == 6 ||
 					 iLocal_31 == 5 && gameplay::get_game_timer() >= iLocal_687 + 3000) {
 				if (func_422() == 2) {
 					if (func_466(player::player_ped_id(), player_mission_vehicles[0], 1) > 100f) {
-						func_636(9);
+						Fail_Mission(9);
 					}
 					if (vehicle::is_vehicle_stuck_timer_up(player_mission_vehicles[0], 3, 30000) ||
 						vehicle::is_vehicle_stuck_timer_up(player_mission_vehicles[0], 1, 40000) ||
 						vehicle::is_vehicle_stuck_timer_up(player_mission_vehicles[0], 0, 7000)) {
 						func_440();
-						func_636(17);
+						Fail_Mission(17);
 					}
 				}
 			}
@@ -118270,7 +118283,7 @@ void func_976() {
 		if (iLocal_31 == 1) {
 			if (!vehicle::is_vehicle_driveable(player_mission_vehicles[1], 0)) {
 				func_438();
-				func_636(7);
+				Fail_Mission(7);
 			}
 			else {
 				if (vehicle::is_vehicle_stuck_timer_up(player_mission_vehicles[1], 3, 30000) ||
@@ -118278,10 +118291,10 @@ void func_976() {
 					vehicle::is_vehicle_stuck_timer_up(player_mission_vehicles[1], 1, 40000) ||
 					vehicle::is_vehicle_stuck_timer_up(player_mission_vehicles[1], 0, 7000)) {
 					func_438();
-					func_636(16);
+					Fail_Mission(16);
 				}
 				if (func_466(player::player_ped_id(), player_mission_vehicles[1], 0) > 100f) {
-					func_636(8);
+					Fail_Mission(8);
 				}
 			}
 		}
@@ -118399,11 +118412,11 @@ bool func_979() {
 
 	case 1:
 		if (!func_849() && !Global_3) {
-			func_14(1, 1, 0, 0);
+			Clear_UI(1, 1, 0, 0);
 			iLocal_29 = 2;
 		}
 		else {
-			func_14(1, 1, 1, 0);
+			Clear_UI(1, 1, 1, 0);
 			func_1008();
 		}
 		break;
@@ -120249,8 +120262,8 @@ void func_1022() {
 	}
 	streaming::new_load_scene_stop();
 	func_316();
-	func_14(1, 1, 1, 0);
-	func_420();
+	Clear_UI(1, 1, 1, 0);
+	Clear_Current_Phone_Call_And_Mark_Global();
 	func_1017(1);
 	ped::remove_scenario_blocking_area(iLocal_914, 0);
 	ped::remove_scenario_blocking_area(iLocal_915, 0);
