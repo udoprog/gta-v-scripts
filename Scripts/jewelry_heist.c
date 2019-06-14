@@ -25617,8 +25617,8 @@ void func_132() {
 	}
 	weapon::set_current_ped_weapon(player::player_ped_id(), joaat("weapon_unarmed"), 1);
 	ped::delete_ped(&Local_2660[0]);
-	entity::set_entity_coords(player::player_ped_id(), Global_89995[11 /*3*/], 1, 0, 0, 1);
-	func_168(Global_89995[11 /*3*/], 40f, 0, 10000);
+	entity::set_entity_coords(player::player_ped_id(), Global_Switch_Positions[11 /*3*/], 1, 0, 0, 1);
+	func_168(Global_Switch_Positions[11 /*3*/], 40f, 0, 10000);
 	entity::set_entity_only_damaged_by_player(player::player_ped_id(), 0);
 	while (!func_151()) {
 		system::wait(0);

@@ -34970,7 +34970,7 @@ int func_333(var *uParam0, int iParam1, int iParam2) {
 		return 0;
 	}
 	if (!func_170(uParam0->f_1528[iParam1 /*3*/], 0f, 0f, 0f, 0)) {
-		if (!func_170(Global_89995[iParam2 /*3*/], 0f, 0f, 0f, 0)) {
+		if (!func_170(Global_Switch_Positions[iParam2 /*3*/], 0f, 0f, 0f, 0)) {
 			Var1.f_11 = 12;
 			Var1.f_31 = 49;
 			Var1.f_81 = 2;
@@ -36149,325 +36149,325 @@ bool func_334(int iParam0, int iParam1, int *iParam2, var *uParam3, float *fPara
 	switch (iParam1) {
 	case 110:
 		func_335(iParam0, iParam2, 0);
-		*uParam3 = {Vector(32.5629f, -387.5143f, -147.166f) - Global_89995[iParam1 /*3*/]};
+		*uParam3 = {Vector(32.5629f, -387.5143f, -147.166f) - Global_Switch_Positions[iParam1 /*3*/]};
 		*fParam4 = 341.4322f - 133f;
 		return true;
 
 	case 111:
 		func_335(iParam0, iParam2, 0);
-		*uParam3 = {Vector(24.4283f, -689.1462f, -1306.782f) - Global_89995[iParam1 /*3*/]};
+		*uParam3 = {Vector(24.4283f, -689.1462f, -1306.782f) - Global_Switch_Positions[iParam1 /*3*/]};
 		*fParam4 = 214.6826f - 33f;
 		return true;
 
 	case 153:
 		func_335(iParam0, iParam2, 0);
-		*uParam3 = {Vector(79.3324f, 254.0631f, -708.9244f) - Global_89995[iParam1 /*3*/]};
+		*uParam3 = {Vector(79.3324f, 254.0631f, -708.9244f) - Global_Switch_Positions[iParam1 /*3*/]};
 		*fParam4 = 115.2022f - -176.25f;
 		return true;
 
 	case 154:
 		func_335(iParam0, iParam2, 0);
-		*uParam3 = {Vector(79.3324f, 254.0631f, -708.9244f) - Global_89995[iParam1 /*3*/]};
+		*uParam3 = {Vector(79.3324f, 254.0631f, -708.9244f) - Global_Switch_Positions[iParam1 /*3*/]};
 		*fParam4 = 115.2022f - -147.192f;
 		return true;
 
 	case 165:
 		func_335(iParam0, iParam2, 0);
-		*uParam3 = {Vector(35.0054f, -441.1681f, -1100.878f) - Global_89995[iParam1 /*3*/]};
+		*uParam3 = {Vector(35.0054f, -441.1681f, -1100.878f) - Global_Switch_Positions[iParam1 /*3*/]};
 		*fParam4 = 297.5568f - -144.622f;
 		return true;
 
 	case 159:
 		func_335(iParam0, iParam2, 0);
-		*uParam3 = {Vector(36.3852f, -199.5354f, -825.3141f) - Global_89995[iParam1 /*3*/]};
+		*uParam3 = {Vector(36.3852f, -199.5354f, -825.3141f) - Global_Switch_Positions[iParam1 /*3*/]};
 		*fParam4 = 29.4869f - -62.5f;
 		return true;
 
 	case 160:
 		func_335(iParam0, iParam2, 0);
-		*uParam3 = {Vector(36.2086f, -144.1027f, -730.8218f) - Global_89995[iParam1 /*3*/]};
+		*uParam3 = {Vector(36.2086f, -144.1027f, -730.8218f) - Global_Switch_Positions[iParam1 /*3*/]};
 		*fParam4 = 28.532f - 119f;
 		return true;
 
 	case 167:
 		func_335(iParam0, iParam2, 0);
-		*uParam3 = {Vector(31.7307f, -523.2257f, -1144.174f) - Global_89995[iParam1 /*3*/]};
+		*uParam3 = {Vector(31.7307f, -523.2257f, -1144.174f) - Global_Switch_Positions[iParam1 /*3*/]};
 		*fParam4 = 299.2956f - -22.32f;
 		return true;
 
 	case 152:
 		func_335(iParam0, iParam2, 0);
-		*uParam3 = {Vector(60.9436f, 314.6989f, -1421.8f) - Global_89995[iParam1 /*3*/]};
+		*uParam3 = {Vector(60.9436f, 314.6989f, -1421.8f) - Global_Switch_Positions[iParam1 /*3*/]};
 		*fParam4 = 335.4134f - 72f;
 		return true;
 
 	case 157:
 		func_335(iParam0, iParam2, 0);
-		*uParam3 = {Vector(79.469f, 255.3143f, -706.187f) - Global_89995[iParam1 /*3*/]};
+		*uParam3 = {Vector(79.469f, 255.3143f, -706.187f) - Global_Switch_Positions[iParam1 /*3*/]};
 		*fParam4 = 117.3069f - 37.27f;
 		return true;
 
 	case 225:
 		func_335(iParam0, iParam2, 0);
-		*uParam3 = {Vector(28.7165f, -1677.734f, 185.4888f) - Global_89995[iParam1 /*3*/]};
+		*uParam3 = {Vector(28.7165f, -1677.734f, 185.4888f) - Global_Switch_Positions[iParam1 /*3*/]};
 		*fParam4 = 54.2538f - -83.8f;
 		return true;
 
 	case 218:
 		func_335(iParam0, iParam2, 0);
-		*uParam3 = {Vector(28.3218f, -1405.159f, -17.556f) - Global_89995[iParam1 /*3*/]};
+		*uParam3 = {Vector(28.3218f, -1405.159f, -17.556f) - Global_Switch_Positions[iParam1 /*3*/]};
 		*fParam4 = 91.3098f - -70.4124f;
 		return true;
 
 	case 219:
 		func_335(iParam0, iParam2, 0);
-		*uParam3 = {Vector(30.2611f, -1492.151f, -219.3172f) - Global_89995[iParam1 /*3*/]};
+		*uParam3 = {Vector(30.2611f, -1492.151f, -219.3172f) - Global_Switch_Positions[iParam1 /*3*/]};
 		*fParam4 = 139.2572f - -12f;
 		return true;
 
 	case 220:
 		func_335(iParam0, iParam2, 0);
-		*uParam3 = {Vector(25.3018f, -1811.693f, -22.6138f) - Global_89995[iParam1 /*3*/]};
+		*uParam3 = {Vector(25.3018f, -1811.693f, -22.6138f) - Global_Switch_Positions[iParam1 /*3*/]};
 		*fParam4 = 141.0423f - -117.356f;
 		return true;
 
 	case 206:
 		func_335(iParam0, iParam2, 0);
-		*uParam3 = {Vector(208.5337f, 773.6719f, 164.1308f) - Global_89995[iParam1 /*3*/]};
+		*uParam3 = {Vector(208.5337f, 773.6719f, 164.1308f) - Global_Switch_Positions[iParam1 /*3*/]};
 		*fParam4 = 136.3104f - -36f;
 		return true;
 
 	case 207:
 		func_335(iParam0, iParam2, 0);
-		*uParam3 = {Vector(108.9995f, 396.924f, -263.3745f) - Global_89995[iParam1 /*3*/]};
+		*uParam3 = {Vector(108.9995f, 396.924f, -263.3745f) - Global_Switch_Positions[iParam1 /*3*/]};
 		*fParam4 = 284.4611f - -95.588f;
 		return true;
 
 	case 274:
 		func_335(iParam0, iParam2, 0);
-		*uParam3 = {Vector(139.5782f, 2030.446f, -1883.836f) - Global_89995[iParam1 /*3*/]};
+		*uParam3 = {Vector(139.5782f, 2030.446f, -1883.836f) - Global_Switch_Positions[iParam1 /*3*/]};
 		*fParam4 = 340.5746f - 9f;
 		return true;
 
 	case 312:
 		func_335(iParam0, iParam2, 0);
-		*uParam3 = {Vector(10.0296f, 6560.557f, -200.684f) - Global_89995[iParam1 /*3*/]};
+		*uParam3 = {Vector(10.0296f, 6560.557f, -200.684f) - Global_Switch_Positions[iParam1 /*3*/]};
 		*fParam4 = 134.5505f - 110.5931f;
 		return true;
 
 	case 271:
 		func_335(iParam0, iParam2, 0);
-		*uParam3 = {Vector(6.4647f, -1083.751f, -1278.023f) - Global_89995[iParam1 /*3*/]};
+		*uParam3 = {Vector(6.4647f, -1083.751f, -1278.023f) - Global_Switch_Positions[iParam1 /*3*/]};
 		*fParam4 = 115.8919f - 26.3597f;
 		return true;
 
 	case 248:
 		func_335(iParam0, iParam2, 0);
-		*uParam3 = {Vector(102.4417f, 164.5124f, 325.8113f) - Global_89995[iParam1 /*3*/]};
+		*uParam3 = {Vector(102.4417f, 164.5124f, 325.8113f) - Global_Switch_Positions[iParam1 /*3*/]};
 		*fParam4 = 68.4108f - 10.77f;
 		return true;
 
 	case 242:
 		func_335(iParam0, iParam2, 0);
-		*uParam3 = {Vector(56.616f, -122.9896f, -1622.22f) - Global_89995[iParam1 /*3*/]};
+		*uParam3 = {Vector(56.616f, -122.9896f, -1622.22f) - Global_Switch_Positions[iParam1 /*3*/]};
 		*fParam4 = 210.8653f - 13.7207f;
 		return true;
 
 	case 254:
 		func_335(iParam0, iParam2, 0);
-		*uParam3 = {Vector(53.0019f, -213.7796f, 172.442f) - Global_89995[iParam1 /*3*/]};
+		*uParam3 = {Vector(53.0019f, -213.7796f, 172.442f) - Global_Switch_Positions[iParam1 /*3*/]};
 		*fParam4 = 250.3032f - -40f;
 		return true;
 
 	case 287:
 		func_335(iParam0, iParam2, 0);
-		*uParam3 = {Vector(17.3426f, -836.0328f, -887.9977f) - Global_89995[iParam1 /*3*/]};
+		*uParam3 = {Vector(17.3426f, -836.0328f, -887.9977f) - Global_Switch_Positions[iParam1 /*3*/]};
 		*fParam4 = 270.8607f - -81f;
 		return true;
 
 	case 286:
 		func_335(iParam0, iParam2, 0);
-		*uParam3 = {Vector(4.8359f, -1182.704f, -1264.218f) - Global_89995[iParam1 /*3*/]};
+		*uParam3 = {Vector(4.8359f, -1182.704f, -1264.218f) - Global_Switch_Positions[iParam1 /*3*/]};
 		*fParam4 = 298.4328f - -150f;
 		return true;
 
 	case 239:
 		func_335(iParam0, iParam2, 0);
-		*uParam3 = {Vector(104.8218f, 289.0073f, -80.4564f) - Global_89995[iParam1 /*3*/]};
+		*uParam3 = {Vector(104.8218f, 289.0073f, -80.4564f) - Global_Switch_Positions[iParam1 /*3*/]};
 		*fParam4 = 247.6446f - -122f;
 		return true;
 
 	case 243:
 		func_335(iParam0, iParam2, 0);
-		*uParam3 = {Vector(28.2762f, -1477.282f, 434.9171f) - Global_89995[iParam1 /*3*/]};
+		*uParam3 = {Vector(28.2762f, -1477.282f, 434.9171f) - Global_Switch_Positions[iParam1 /*3*/]};
 		*fParam4 = 228.6353f - 18f;
 		return true;
 
 	case 244:
 		func_335(iParam0, iParam2, 0);
-		*uParam3 = {Vector(28.2762f, -1477.282f, 434.9171f) - Global_89995[iParam1 /*3*/]};
+		*uParam3 = {Vector(28.2762f, -1477.282f, 434.9171f) - Global_Switch_Positions[iParam1 /*3*/]};
 		*fParam4 = 228.6353f - -51f;
 		return true;
 
 	case 249:
 		func_335(iParam0, iParam2, 0);
-		*uParam3 = {Vector(103.1881f, 177.7729f, 288.977f) - Global_89995[iParam1 /*3*/]};
+		*uParam3 = {Vector(103.1881f, 177.7729f, 288.977f) - Global_Switch_Positions[iParam1 /*3*/]};
 		*fParam4 = 68.9831f - (138f - 180f);
 		return true;
 
 	case 273:
 		func_335(iParam0, iParam2, 0);
-		*uParam3 = {Vector(32.7794f, -432.4635f, -161.4589f) - Global_89995[iParam1 /*3*/]};
+		*uParam3 = {Vector(32.7794f, -432.4635f, -161.4589f) - Global_Switch_Positions[iParam1 /*3*/]};
 		*fParam4 = 340.0368f - -153f;
 		return true;
 
 	case 92:
 		func_335(iParam0, iParam2, 0);
-		*uParam3 = {Vector(202.1143f, 828.3607f, -806.8813f) - Global_89995[iParam1 /*3*/]};
+		*uParam3 = {Vector(202.1143f, 828.3607f, -806.8813f) - Global_Switch_Positions[iParam1 /*3*/]};
 		*fParam4 = 101.1612f - -54.347f;
 		return true;
 
 	case 103:
 		func_335(iParam0, iParam2, 0);
-		*uParam3 = {Vector(12.0174f, -1108.081f, -1724.72f) - Global_89995[iParam1 /*3*/]};
+		*uParam3 = {Vector(12.0174f, -1108.081f, -1724.72f) - Global_Switch_Positions[iParam1 /*3*/]};
 		*fParam4 = 319.8931f - 143.4931f;
 		return true;
 
 	case 109:
 		func_335(iParam0, iParam2, 0);
-		*uParam3 = {Vector(10.2248f, -628.4899f, -1859.505f) - Global_89995[iParam1 /*3*/]};
+		*uParam3 = {Vector(10.2248f, -628.4899f, -1859.505f) - Global_Switch_Positions[iParam1 /*3*/]};
 		*fParam4 = 229.0784f - 99f;
 		return true;
 
 	case 81:
 		func_335(iParam0, iParam2, 0);
-		*uParam3 = {Vector(53.1469f, 90.4242f, -1393.442f) - Global_89995[iParam1 /*3*/]};
+		*uParam3 = {Vector(53.1469f, 90.4242f, -1393.442f) - Global_Switch_Positions[iParam1 /*3*/]};
 		*fParam4 = 123.1782f - -45f;
 		return true;
 
 	case 95:
 		func_335(iParam0, iParam2, 0);
-		*uParam3 = {Vector(101.921f, 186.1865f, 370.5876f) - Global_89995[iParam1 /*3*/]};
+		*uParam3 = {Vector(101.921f, 186.1865f, 370.5876f) - Global_Switch_Positions[iParam1 /*3*/]};
 		*fParam4 = 159.7861f - 70f;
 		return true;
 
 	case 97:
 		func_335(iParam0, iParam2, 0);
-		*uParam3 = {Vector(45.9871f, -188.5636f, -1391.156f) - Global_89995[iParam1 /*3*/]};
+		*uParam3 = {Vector(45.9871f, -188.5636f, -1391.156f) - Global_Switch_Positions[iParam1 /*3*/]};
 		*fParam4 = 36.5172f - -45f;
 		return true;
 
 	case 134:
 		func_335(iParam0, iParam2, 0);
-		*uParam3 = {Vector(46.0567f, 3076.742f, 2001.918f) - Global_89995[iParam1 /*3*/]};
+		*uParam3 = {Vector(46.0567f, 3076.742f, 2001.918f) - Global_Switch_Positions[iParam1 /*3*/]};
 		*fParam4 = 328.101f - -33.128f;
 		return true;
 
 	case 88:
 		func_335(iParam0, iParam2, 0);
-		*uParam3 = {Vector(60.9442f, 314.7191f, -1421.821f) - Global_89995[iParam1 /*3*/]};
+		*uParam3 = {Vector(60.9442f, 314.7191f, -1421.821f) - Global_Switch_Positions[iParam1 /*3*/]};
 		*fParam4 = 336.5938f - -132f;
 		return true;
 
 	case 306:
 		func_335(iParam0, iParam2, 0);
-		*uParam3 = {Vector(37.4888f, 5643.726f, -569.3535f) - Global_89995[iParam1 /*3*/]};
+		*uParam3 = {Vector(37.4888f, 5643.726f, -569.3535f) - Global_Switch_Positions[iParam1 /*3*/]};
 		*fParam4 = 296.1685f - gameplay::get_heading_from_vector_2d(7.4998f, -7.4995f);
 		return true;
 
 	case 307:
 		func_335(iParam0, iParam2, 0);
-		*uParam3 = {Vector(47.4526f, 4717.728f, -1555.593f) - Global_89995[iParam1 /*3*/]};
+		*uParam3 = {Vector(47.4526f, 4717.728f, -1555.593f) - Global_Switch_Positions[iParam1 /*3*/]};
 		*fParam4 = 236.223f - gameplay::get_heading_from_vector_2d(-10.6345f, -0.7246f);
 		return true;
 
 	case 308:
 		func_335(iParam0, iParam2, 0);
-		*uParam3 = {Vector(22.7549f, 4629.148f, -1553.861f) - Global_89995[iParam1 /*3*/]};
+		*uParam3 = {Vector(22.7549f, 4629.148f, -1553.861f) - Global_Switch_Positions[iParam1 /*3*/]};
 		*fParam4 = 332.7842f - gameplay::get_heading_from_vector_2d(3.4271f, 13.6787f);
 		return true;
 
 	case 278:
 		func_335(iParam0, iParam2, 0);
-		*uParam3 = {Vector(35.9161f, -1009.745f, 631.8275f) - Global_89995[iParam1 /*3*/]};
+		*uParam3 = {Vector(35.9161f, -1009.745f, 631.8275f) - Global_Switch_Positions[iParam1 /*3*/]};
 		*fParam4 = 98.8128f - -33.77f;
 		return true;
 
 	case 279:
 		func_335(iParam0, iParam2, 0);
-		*uParam3 = {Vector(234.6825f, 900.8749f, -111.9033f) - Global_89995[iParam1 /*3*/]};
+		*uParam3 = {Vector(234.6825f, 900.8749f, -111.9033f) - Global_Switch_Positions[iParam1 /*3*/]};
 		*fParam4 = 6.1087f - 155.68f;
 		return true;
 
 	case 240:
 		func_335(iParam0, iParam2, 0);
-		*uParam3 = {Vector(33.5351f, 3636.151f, 1546.323f) - Global_89995[iParam1 /*3*/]};
+		*uParam3 = {Vector(33.5351f, 3636.151f, 1546.323f) - Global_Switch_Positions[iParam1 /*3*/]};
 		*fParam4 = 298.4009f - -4.124f;
 		return true;
 
 	case 241:
 		func_335(iParam0, iParam2, 0);
-		*uParam3 = {Vector(30.512f, 6439.667f, -179.4242f) - Global_89995[iParam1 /*3*/]};
+		*uParam3 = {Vector(30.512f, 6439.667f, -179.4242f) - Global_Switch_Positions[iParam1 /*3*/]};
 		*fParam4 = 225.5593f - 108f;
 		return true;
 
 	case 264:
 		func_335(iParam0, iParam2, 0);
-		*uParam3 = {Vector(28.2977f, -1390.545f, 486.7419f) - Global_89995[iParam1 /*3*/]};
+		*uParam3 = {Vector(28.2977f, -1390.545f, 486.7419f) - Global_Switch_Positions[iParam1 /*3*/]};
 		*fParam4 = 178.298f - -90f;
 		return true;
 
 	case 266:
 		func_335(iParam0, iParam2, 0);
-		*uParam3 = {Vector(10.5662f, 143.2342f, -3052.895f) - Global_89995[iParam1 /*3*/]};
+		*uParam3 = {Vector(10.5662f, 143.2342f, -3052.895f) - Global_Switch_Positions[iParam1 /*3*/]};
 		*fParam4 = 85.3429f - 68.8227f;
 		return true;
 
 	case 267:
 		func_335(iParam0, iParam2, 0);
-		*uParam3 = {Vector(39.9155f, 4934.08f, 2202.375f) - Global_89995[iParam1 /*3*/]};
+		*uParam3 = {Vector(39.9155f, 4934.08f, 2202.375f) - Global_Switch_Positions[iParam1 /*3*/]};
 		*fParam4 = 314.2654f - 56.2037f;
 		return true;
 
 	case 269:
 		func_335(iParam0, iParam2, 0);
-		*uParam3 = {Vector(28.149f, -782.0952f, 401.2502f) - Global_89995[iParam1 /*3*/]};
+		*uParam3 = {Vector(28.149f, -782.0952f, 401.2502f) - Global_Switch_Positions[iParam1 /*3*/]};
 		*fParam4 = 179.9905f - -106.6605f;
 		return true;
 
 	case 246:
 		func_335(iParam0, iParam2, 0);
-		*uParam3 = {Vector(3.3919f, -1534.507f, -1195.256f) - Global_89995[iParam1 /*3*/]};
+		*uParam3 = {Vector(3.3919f, -1534.507f, -1195.256f) - Global_Switch_Positions[iParam1 /*3*/]};
 		*fParam4 = 305.8221f - -165f;
 		return true;
 
 	case 263:
 		func_335(iParam0, iParam2, 0);
-		*uParam3 = {Vector(12.8792f, -1241.213f, -573.3765f) - Global_89995[iParam1 /*3*/]};
+		*uParam3 = {Vector(12.8792f, -1241.213f, -573.3765f) - Global_Switch_Positions[iParam1 /*3*/]};
 		*fParam4 = 316.9941f - -171f;
 		return true;
 
 	case 259:
 		func_335(iParam0, iParam2, 0);
-		*uParam3 = {Vector(4.0002f, -1298.539f, -724.429f) - Global_89995[iParam1 /*3*/]};
+		*uParam3 = {Vector(4.0002f, -1298.539f, -724.429f) - Global_Switch_Positions[iParam1 /*3*/]};
 		*fParam4 = 230.5715f - -32.488f;
 		return true;
 
 	case 260:
 		func_335(iParam0, iParam2, 0);
-		*uParam3 = {Vector(61.203f, 250.8387f, -1309.114f) - Global_89995[iParam1 /*3*/]};
+		*uParam3 = {Vector(61.203f, 250.8387f, -1309.114f) - Global_Switch_Positions[iParam1 /*3*/]};
 		*fParam4 = 10.7756f - -29.093f;
 		return true;
 
 	case 261:
 		func_335(iParam0, iParam2, 0);
-		*uParam3 = {Vector(79.764f, 60.3233f, 917.6678f) - Global_89995[iParam1 /*3*/]};
+		*uParam3 = {Vector(79.764f, 60.3233f, 917.6678f) - Global_Switch_Positions[iParam1 /*3*/]};
 		*fParam4 = 148.021f - 229.6085f;
 		return true;
 
 	case 270:
 		func_335(iParam0, iParam2, 0);
-		*uParam3 = {Vector(350f, 8588f, 2919f) - Global_89995[iParam1 /*3*/]};
+		*uParam3 = {Vector(350f, 8588f, 2919f) - Global_Switch_Positions[iParam1 /*3*/]};
 		*fParam4 = gameplay::get_random_float_in_range(-180f, 180f);
 		return true;
 

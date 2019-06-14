@@ -2497,7 +2497,7 @@ int func_25(int iParam0, var *uParam1, var *uParam2, char *sParam3) {
 			StringCopy(sParam3, "", 32);
 			return 1;
 		}
-		*uParam1 = {Global_89995[iParam0 /*3*/]};
+		*uParam1 = {Global_Switch_Positions[iParam0 /*3*/]};
 		return 1;
 	}
 	return 0;

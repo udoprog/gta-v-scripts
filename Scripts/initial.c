@@ -1485,7 +1485,7 @@ void func_72() {
 	iVar0 = 0;
 	while (iVar0 < 317) {
 		if (func_73(iVar0, &vVar1)) {
-			Global_89995[iVar0 /*3*/] = {vVar1};
+			Global_Switch_Positions[iVar0 /*3*/] = {vVar1};
 		}
 		iVar0++;
 	}
