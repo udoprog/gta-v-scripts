@@ -119803,7 +119803,7 @@ int func_1156(int iParam0)
 	iVar0 = 0;
 	while (iVar0 < Global_82576) {
 		if (Global_82576[iVar0 /*5*/] != -1) {
-			if (Global_69971.f_109[Global_82576[iVar0 /*5*/] /*4*/] == iParam0) {
+			if (G_TextMessageConfig.f_109[Global_82576[iVar0 /*5*/] /*4*/] == iParam0) {
 				return 1;
 			}
 		}
@@ -123893,7 +123893,7 @@ int func_1217(var *uParam0, int iParam1, int iParam2, int iParam3) {
 					if (gameplay::is_bit_set(Global_82576[iVar4 /*5*/].f_1, 2)) {
 						iVar5 = Global_82576[iVar4 /*5*/];
 						StringCopy(&cVar6, "MISS_SWITCH_", 64);
-						StringConCat(&cVar6, &Global_82612[Global_69971.f_109[iVar5 /*4*/] /*34*/], 64);
+						StringConCat(&cVar6, &Global_82612[G_TextMessageConfig.f_109[iVar5 /*4*/] /*34*/], 64);
 						stats::stat_increment(gameplay::get_hash_key(&cVar6), 1f);
 					}
 					iVar4++;

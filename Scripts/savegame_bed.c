@@ -72287,7 +72287,7 @@ var func_348(int iParam0) {
 
 	StringCopy(&Var0, "NULL", 64);
 	if (iParam0 != -1) {
-		switch (Global_69971.f_6825[iParam0 /*3*/].f_1) {
+		switch (G_TextMessageConfig.f_6825[iParam0 /*3*/].f_1) {
 		case 12: func_357(iParam0, &Var0); break;
 
 		case 0: func_356(iParam0, &Var0); break;
@@ -72312,25 +72312,25 @@ var func_348(int iParam0) {
 void func_349(int iParam0, char *sParam1) {
 	char cVar0[64];
 
-	IntToString(sParam1, Global_69971.f_6825[iParam0 /*3*/], 64);
+	IntToString(sParam1, G_TextMessageConfig.f_6825[iParam0 /*3*/], 64);
 	StringIntConCat(sParam1, func_350(iParam0), 64);
-	IntToString(&cVar0, Global_69971.f_6684[Global_69971.f_6825[iParam0 /*3*/].f_2 /*14*/], 64);
-	StringIntConCat(&cVar0, Global_69971.f_6684[Global_69971.f_6825[iParam0 /*3*/].f_2 /*14*/].f_1, 64);
-	StringIntConCat(&cVar0, Global_69971.f_6684[Global_69971.f_6825[iParam0 /*3*/].f_2 /*14*/].f_2, 64);
+	IntToString(&cVar0, G_TextMessageConfig.f_6684[G_TextMessageConfig.f_6825[iParam0 /*3*/].f_2 /*14*/], 64);
+	StringIntConCat(&cVar0, G_TextMessageConfig.f_6684[G_TextMessageConfig.f_6825[iParam0 /*3*/].f_2 /*14*/].f_1, 64);
+	StringIntConCat(&cVar0, G_TextMessageConfig.f_6684[G_TextMessageConfig.f_6825[iParam0 /*3*/].f_2 /*14*/].f_2, 64);
 	StringIntConCat(sParam1, gameplay::get_hash_key(&cVar0), 64);
-	IntToString(&cVar0, Global_69971.f_6684[Global_69971.f_6825[iParam0 /*3*/].f_2 /*14*/].f_3, 64);
-	StringIntConCat(&cVar0, Global_69971.f_6684[Global_69971.f_6825[iParam0 /*3*/].f_2 /*14*/].f_4, 64);
-	StringIntConCat(&cVar0, Global_69971.f_6684[Global_69971.f_6825[iParam0 /*3*/].f_2 /*14*/].f_5, 64);
+	IntToString(&cVar0, G_TextMessageConfig.f_6684[G_TextMessageConfig.f_6825[iParam0 /*3*/].f_2 /*14*/].f_3, 64);
+	StringIntConCat(&cVar0, G_TextMessageConfig.f_6684[G_TextMessageConfig.f_6825[iParam0 /*3*/].f_2 /*14*/].f_4, 64);
+	StringIntConCat(&cVar0, G_TextMessageConfig.f_6684[G_TextMessageConfig.f_6825[iParam0 /*3*/].f_2 /*14*/].f_5, 64);
 	StringIntConCat(sParam1, gameplay::get_hash_key(&cVar0), 64);
-	IntToString(&cVar0, Global_69971.f_6684[Global_69971.f_6825[iParam0 /*3*/].f_2 /*14*/].f_6, 64);
-	StringIntConCat(&cVar0, Global_69971.f_6684[Global_69971.f_6825[iParam0 /*3*/].f_2 /*14*/].f_7, 64);
-	StringIntConCat(&cVar0, Global_69971.f_6684[Global_69971.f_6825[iParam0 /*3*/].f_2 /*14*/].f_8, 64);
+	IntToString(&cVar0, G_TextMessageConfig.f_6684[G_TextMessageConfig.f_6825[iParam0 /*3*/].f_2 /*14*/].f_6, 64);
+	StringIntConCat(&cVar0, G_TextMessageConfig.f_6684[G_TextMessageConfig.f_6825[iParam0 /*3*/].f_2 /*14*/].f_7, 64);
+	StringIntConCat(&cVar0, G_TextMessageConfig.f_6684[G_TextMessageConfig.f_6825[iParam0 /*3*/].f_2 /*14*/].f_8, 64);
 	StringIntConCat(sParam1, gameplay::get_hash_key(&cVar0), 64);
-	IntToString(&cVar0, Global_69971.f_6684[Global_69971.f_6825[iParam0 /*3*/].f_2 /*14*/].f_9, 64);
-	StringIntConCat(&cVar0, Global_69971.f_6684[Global_69971.f_6825[iParam0 /*3*/].f_2 /*14*/].f_10, 64);
-	StringIntConCat(&cVar0, Global_69971.f_6684[Global_69971.f_6825[iParam0 /*3*/].f_2 /*14*/].f_11, 64);
-	StringIntConCat(&cVar0, Global_69971.f_6684[Global_69971.f_6825[iParam0 /*3*/].f_2 /*14*/].f_12, 64);
-	StringIntConCat(&cVar0, Global_69971.f_6684[Global_69971.f_6825[iParam0 /*3*/].f_2 /*14*/].f_13, 64);
+	IntToString(&cVar0, G_TextMessageConfig.f_6684[G_TextMessageConfig.f_6825[iParam0 /*3*/].f_2 /*14*/].f_9, 64);
+	StringIntConCat(&cVar0, G_TextMessageConfig.f_6684[G_TextMessageConfig.f_6825[iParam0 /*3*/].f_2 /*14*/].f_10, 64);
+	StringIntConCat(&cVar0, G_TextMessageConfig.f_6684[G_TextMessageConfig.f_6825[iParam0 /*3*/].f_2 /*14*/].f_11, 64);
+	StringIntConCat(&cVar0, G_TextMessageConfig.f_6684[G_TextMessageConfig.f_6825[iParam0 /*3*/].f_2 /*14*/].f_12, 64);
+	StringIntConCat(&cVar0, G_TextMessageConfig.f_6684[G_TextMessageConfig.f_6825[iParam0 /*3*/].f_2 /*14*/].f_13, 64);
 	StringIntConCat(sParam1, gameplay::get_hash_key(&cVar0), 64);
 }
 
@@ -72340,7 +72340,7 @@ int func_350(int iParam0) {
 
 	iVar0 = 0;
 	while (iVar0 < 32) {
-		if (iParam0 >= Global_69971.f_12526[iVar0 /*2*/] && iParam0 <= Global_69971.f_12526[iVar0 /*2*/].f_1) {
+		if (iParam0 >= G_TextMessageConfig.f_12526[iVar0 /*2*/] && iParam0 <= G_TextMessageConfig.f_12526[iVar0 /*2*/].f_1) {
 			return iVar0;
 		}
 		iVar0++;
@@ -72352,20 +72352,20 @@ int func_350(int iParam0) {
 void func_351(int iParam0, char *sParam1) {
 	char cVar0[64];
 
-	IntToString(sParam1, Global_69971.f_6825[iParam0 /*3*/], 64);
+	IntToString(sParam1, G_TextMessageConfig.f_6825[iParam0 /*3*/], 64);
 	StringIntConCat(sParam1, func_350(iParam0), 64);
-	IntToString(&cVar0, Global_69971.f_4824[Global_69971.f_6825[iParam0 /*3*/].f_2 /*11*/], 64);
-	StringIntConCat(&cVar0, Global_69971.f_4824[Global_69971.f_6825[iParam0 /*3*/].f_2 /*11*/].f_1, 64);
+	IntToString(&cVar0, G_TextMessageConfig.f_4824[G_TextMessageConfig.f_6825[iParam0 /*3*/].f_2 /*11*/], 64);
+	StringIntConCat(&cVar0, G_TextMessageConfig.f_4824[G_TextMessageConfig.f_6825[iParam0 /*3*/].f_2 /*11*/].f_1, 64);
 	StringIntConCat(sParam1, gameplay::get_hash_key(&cVar0), 64);
-	IntToString(&cVar0, Global_69971.f_4824[Global_69971.f_6825[iParam0 /*3*/].f_2 /*11*/].f_2, 64);
-	StringIntConCat(&cVar0, Global_69971.f_4824[Global_69971.f_6825[iParam0 /*3*/].f_2 /*11*/].f_3, 64);
+	IntToString(&cVar0, G_TextMessageConfig.f_4824[G_TextMessageConfig.f_6825[iParam0 /*3*/].f_2 /*11*/].f_2, 64);
+	StringIntConCat(&cVar0, G_TextMessageConfig.f_4824[G_TextMessageConfig.f_6825[iParam0 /*3*/].f_2 /*11*/].f_3, 64);
 	StringIntConCat(sParam1, gameplay::get_hash_key(&cVar0), 64);
-	IntToString(&cVar0, Global_69971.f_4824[Global_69971.f_6825[iParam0 /*3*/].f_2 /*11*/].f_4, 64);
-	StringIntConCat(&cVar0, Global_69971.f_4824[Global_69971.f_6825[iParam0 /*3*/].f_2 /*11*/].f_5, 64);
+	IntToString(&cVar0, G_TextMessageConfig.f_4824[G_TextMessageConfig.f_6825[iParam0 /*3*/].f_2 /*11*/].f_4, 64);
+	StringIntConCat(&cVar0, G_TextMessageConfig.f_4824[G_TextMessageConfig.f_6825[iParam0 /*3*/].f_2 /*11*/].f_5, 64);
 	StringIntConCat(sParam1, gameplay::get_hash_key(&cVar0), 64);
-	IntToString(&cVar0, Global_69971.f_4824[Global_69971.f_6825[iParam0 /*3*/].f_2 /*11*/].f_6, 64);
-	StringIntConCat(&cVar0, Global_69971.f_4824[Global_69971.f_6825[iParam0 /*3*/].f_2 /*11*/].f_7, 64);
-	StringIntConCat(&cVar0, Global_69971.f_4824[Global_69971.f_6825[iParam0 /*3*/].f_2 /*11*/].f_8, 64);
+	IntToString(&cVar0, G_TextMessageConfig.f_4824[G_TextMessageConfig.f_6825[iParam0 /*3*/].f_2 /*11*/].f_6, 64);
+	StringIntConCat(&cVar0, G_TextMessageConfig.f_4824[G_TextMessageConfig.f_6825[iParam0 /*3*/].f_2 /*11*/].f_7, 64);
+	StringIntConCat(&cVar0, G_TextMessageConfig.f_4824[G_TextMessageConfig.f_6825[iParam0 /*3*/].f_2 /*11*/].f_8, 64);
 	StringIntConCat(sParam1, gameplay::get_hash_key(&cVar0), 64);
 }
 
@@ -72373,57 +72373,57 @@ void func_351(int iParam0, char *sParam1) {
 void func_352(int iParam0, char *sParam1) {
 	char cVar0[64];
 
-	IntToString(sParam1, Global_69971.f_6825[iParam0 /*3*/], 64);
+	IntToString(sParam1, G_TextMessageConfig.f_6825[iParam0 /*3*/], 64);
 	StringIntConCat(sParam1, func_350(iParam0), 64);
-	MemCopy(&cVar0, {Global_69971.f_4160[Global_69971.f_6825[iParam0 /*3*/].f_2 /*12*/]}, 16);
+	MemCopy(&cVar0, {G_TextMessageConfig.f_4160[G_TextMessageConfig.f_6825[iParam0 /*3*/].f_2 /*12*/]}, 16);
 	StringIntConCat(sParam1, gameplay::get_hash_key(&cVar0), 64);
-	IntToString(&cVar0, Global_69971.f_4160[Global_69971.f_6825[iParam0 /*3*/].f_2 /*12*/].f_8, 64);
-	StringIntConCat(&cVar0, Global_69971.f_4160[Global_69971.f_6825[iParam0 /*3*/].f_2 /*12*/].f_9, 64);
+	IntToString(&cVar0, G_TextMessageConfig.f_4160[G_TextMessageConfig.f_6825[iParam0 /*3*/].f_2 /*12*/].f_8, 64);
+	StringIntConCat(&cVar0, G_TextMessageConfig.f_4160[G_TextMessageConfig.f_6825[iParam0 /*3*/].f_2 /*12*/].f_9, 64);
 	StringIntConCat(sParam1, gameplay::get_hash_key(&cVar0), 64);
-	IntToString(&cVar0, Global_69971.f_4160[Global_69971.f_6825[iParam0 /*3*/].f_2 /*12*/].f_10, 64);
-	StringIntConCat(&cVar0, Global_69971.f_4160[Global_69971.f_6825[iParam0 /*3*/].f_2 /*12*/].f_11, 64);
+	IntToString(&cVar0, G_TextMessageConfig.f_4160[G_TextMessageConfig.f_6825[iParam0 /*3*/].f_2 /*12*/].f_10, 64);
+	StringIntConCat(&cVar0, G_TextMessageConfig.f_4160[G_TextMessageConfig.f_6825[iParam0 /*3*/].f_2 /*12*/].f_11, 64);
 	StringIntConCat(sParam1, gameplay::get_hash_key(&cVar0), 64);
 }
 
 // Position - 0x5EBC8
 void func_353(int iParam0, char *sParam1) {
-	IntToString(sParam1, Global_69971.f_6825[iParam0 /*3*/], 64);
+	IntToString(sParam1, G_TextMessageConfig.f_6825[iParam0 /*3*/], 64);
 	StringIntConCat(sParam1, func_350(iParam0), 64);
-	StringConCat(sParam1, &Global_69971.f_4151[Global_69971.f_6825[iParam0 /*3*/].f_2 /*8*/], 64);
+	StringConCat(sParam1, &G_TextMessageConfig.f_4151[G_TextMessageConfig.f_6825[iParam0 /*3*/].f_2 /*8*/], 64);
 }
 
 // Position - 0x5EC03
 void func_354(int iParam0, char *sParam1) {
-	IntToString(sParam1, Global_69971.f_6825[iParam0 /*3*/], 64);
+	IntToString(sParam1, G_TextMessageConfig.f_6825[iParam0 /*3*/], 64);
 	StringIntConCat(sParam1, func_350(iParam0), 64);
-	StringIntConCat(sParam1, Global_69971.f_3590[Global_69971.f_6825[iParam0 /*3*/].f_2 /*2*/], 64);
-	StringIntConCat(sParam1, Global_69971.f_3590[Global_69971.f_6825[iParam0 /*3*/].f_2 /*2*/].f_1, 64);
+	StringIntConCat(sParam1, G_TextMessageConfig.f_3590[G_TextMessageConfig.f_6825[iParam0 /*3*/].f_2 /*2*/], 64);
+	StringIntConCat(sParam1, G_TextMessageConfig.f_3590[G_TextMessageConfig.f_6825[iParam0 /*3*/].f_2 /*2*/].f_1, 64);
 }
 
 // Position - 0x5EC5A
 void func_355(int iParam0, char *sParam1) {
 	char cVar0[64];
 
-	IntToString(sParam1, Global_69971.f_6825[iParam0 /*3*/], 64);
+	IntToString(sParam1, G_TextMessageConfig.f_6825[iParam0 /*3*/], 64);
 	StringIntConCat(sParam1, func_350(iParam0), 64);
-	IntToString(&cVar0, Global_69971.f_109[Global_69971.f_6825[iParam0 /*3*/].f_2 /*4*/], 64);
-	StringIntConCat(&cVar0, Global_69971.f_109[Global_69971.f_6825[iParam0 /*3*/].f_2 /*4*/].f_1, 64);
+	IntToString(&cVar0, G_TextMessageConfig.f_109[G_TextMessageConfig.f_6825[iParam0 /*3*/].f_2 /*4*/], 64);
+	StringIntConCat(&cVar0, G_TextMessageConfig.f_109[G_TextMessageConfig.f_6825[iParam0 /*3*/].f_2 /*4*/].f_1, 64);
 	StringIntConCat(sParam1, gameplay::get_hash_key(&cVar0), 64);
-	IntToString(&cVar0, Global_69971.f_109[Global_69971.f_6825[iParam0 /*3*/].f_2 /*4*/].f_2, 64);
-	StringIntConCat(&cVar0, Global_69971.f_109[Global_69971.f_6825[iParam0 /*3*/].f_2 /*4*/].f_3, 64);
+	IntToString(&cVar0, G_TextMessageConfig.f_109[G_TextMessageConfig.f_6825[iParam0 /*3*/].f_2 /*4*/].f_2, 64);
+	StringIntConCat(&cVar0, G_TextMessageConfig.f_109[G_TextMessageConfig.f_6825[iParam0 /*3*/].f_2 /*4*/].f_3, 64);
 	StringIntConCat(sParam1, gameplay::get_hash_key(&cVar0), 64);
 }
 
 // Position - 0x5ECF9
 void func_356(int iParam0, char *sParam1) {
-	IntToString(sParam1, Global_69971.f_6825[iParam0 /*3*/], 64);
+	IntToString(sParam1, G_TextMessageConfig.f_6825[iParam0 /*3*/], 64);
 	StringIntConCat(sParam1, func_350(iParam0), 64);
-	StringIntConCat(sParam1, Global_69971.f_6825[iParam0 /*3*/].f_2, 64);
+	StringIntConCat(sParam1, G_TextMessageConfig.f_6825[iParam0 /*3*/].f_2, 64);
 }
 
 // Position - 0x5ED2B
 void func_357(int iParam0, char *sParam1) {
-	IntToString(sParam1, Global_69971.f_6825[iParam0 /*3*/], 64);
+	IntToString(sParam1, G_TextMessageConfig.f_6825[iParam0 /*3*/], 64);
 	StringIntConCat(sParam1, func_350(iParam0), 64);
 }
 

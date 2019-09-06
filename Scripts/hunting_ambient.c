@@ -87670,7 +87670,7 @@ func_771(int iParam0) {
 //Position - 0x77894
 bool func_772(int iParam0, var uParam1, var uParam2, var uParam3, var uParam4, var uParam5, var uParam6)
 {
-	if (!func_774(0) || Global_69971 || Global_69960 == 1 || !cam::is_screen_faded_in()) {
+	if (!func_774(0) || G_TextMessageConfig || Global_69960 == 1 || !cam::is_screen_faded_in()) {
 		return false;
 	}
 	switch (Global_69956) {

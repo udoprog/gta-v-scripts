@@ -75924,7 +75924,7 @@ void func_378(int iParam0, int iParam1, int iParam2) {
 		if (!gameplay::is_bit_set(Global_82612[iParam0 /*34*/].f_15, 7)) {
 			if (iParam1 != joaat("cities_passed")) {
 				stats::stat_set_int(iParam1, Global_101700.f_8975.f_21, 1);
-				if (!Global_69971) {
+				if (!G_TextMessageConfig) {
 					stats::_0x11FF1C80276097ED(iParam1, Global_101700.f_8044.f_330[iParam0 /*6*/].f_4, 0);
 				}
 			}

@@ -48134,7 +48134,7 @@ func_828(int iParam0) {
 //Position - 0x468E1
 bool func_829(int iParam0, var uParam1, var uParam2, var uParam3, var uParam4, var uParam5, var uParam6)
 {
-	if (!func_831(0) || Global_69971 || Global_69960 == 1 || !cam::is_screen_faded_in()) {
+	if (!func_831(0) || G_TextMessageConfig || Global_69960 == 1 || !cam::is_screen_faded_in()) {
 		return false;
 	}
 	switch (Global_69956) {
@@ -97036,7 +97036,7 @@ int func_1123(int iParam0) {
 		player::start_firing_amnesty(5000);
 	}
 	iVar0 = Global_82576[iParam0 /*5*/];
-	iVar1 = Global_69971.f_109[iVar0 /*4*/];
+	iVar1 = G_TextMessageConfig.f_109[iVar0 /*4*/];
 	func_1124(iVar1, 1);
 	player::_0xC9A763D8FE87436A(player::player_id());
 	player::special_ability_deactivate(player::player_id());

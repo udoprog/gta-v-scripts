@@ -9589,7 +9589,7 @@ void func_179(var *uParam0) {
 	}
 	if (!Global_69970) {
 		if (!player::is_player_dead(player::get_player_index())) {
-			if (!Global_69971) {
+			if (!G_TextMessageConfig) {
 				if (cam::is_screen_faded_out() && !func_181(0)) {
 					cam::do_screen_fade_in(800);
 				}
@@ -24025,7 +24025,7 @@ func_491(int iParam0) {
 //Position - 0x25E2F
 bool func_492(int iParam0, var uParam1, var uParam2, var uParam3, var uParam4, var uParam5, var uParam6)
 {
-	if (!func_494(0) || Global_69971 || Global_69960 == 1 || !cam::is_screen_faded_in()) {
+	if (!func_494(0) || G_TextMessageConfig || Global_69960 == 1 || !cam::is_screen_faded_in()) {
 		return false;
 	}
 	switch (Global_69956) {

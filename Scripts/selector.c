@@ -3633,7 +3633,7 @@ int func_111(int iParam0) {
 		if (player::is_player_being_arrested(player::player_id(), 1) ||
 			ped::is_ped_ragdoll(player::player_ped_id()) && iParam0 && !func_121(player::player_ped_id()) ||
 			func_120() || func_119(player::player_ped_id()) || !streaming::_0x71E7B2E657449AAD() ||
-			Global_69971.f_1 && !network::network_is_game_in_progress() && !func_66(0) && !func_66(3) && !func_116(2) &&
+			G_TextMessageConfig.f_1 && !network::network_is_game_in_progress() && !func_66(0) && !func_66(3) && !func_116(2) &&
 				!func_66(9) && !func_66(10) ||
 			Global_69962 ||
 			ped::is_ped_in_any_train(player::player_ped_id()) &&
@@ -4985,7 +4985,7 @@ int func_133(var *uParam0, int iParam1, int iParam2, int iParam3) {
 					if (gameplay::is_bit_set(Global_82576[iVar4 /*5*/].f_1, 2)) {
 						iVar5 = Global_82576[iVar4 /*5*/];
 						StringCopy(&cVar6, "MISS_SWITCH_", 64);
-						StringConCat(&cVar6, &Global_82612[Global_69971.f_109[iVar5 /*4*/] /*34*/], 64);
+						StringConCat(&cVar6, &Global_82612[G_TextMessageConfig.f_109[iVar5 /*4*/] /*34*/], 64);
 						stats::stat_increment(gameplay::get_hash_key(&cVar6), 1f);
 					}
 					iVar4++;

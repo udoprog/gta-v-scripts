@@ -2371,7 +2371,7 @@ void func_40(int iParam0, int iParam1) {
 	if (Global_101700.f_8044 || func_43(0)) {
 		iVar0 = func_41();
 		iVar1 = Global_82576[iVar0 /*5*/];
-		uVar2 = Global_69971.f_109[iVar1 /*4*/];
+		uVar2 = G_TextMessageConfig.f_109[iVar1 /*4*/];
 		if (iVar0 == -1) {
 			if (Global_101700.f_8044) {
 			}

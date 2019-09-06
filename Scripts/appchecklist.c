@@ -621,7 +621,7 @@ void func_20() {
 	while (iVar0 < 7) {
 		if (Global_82576[iVar0 /*5*/] != -1) {
 			if (Global_86825 < 52) {
-				iVar1 = Global_69971.f_109[Global_82576[iVar0 /*5*/] /*4*/];
+				iVar1 = G_TextMessageConfig.f_109[Global_82576[iVar0 /*5*/] /*4*/];
 				MemCopy(&Global_86616[Global_86825 /*4*/], {func_24(iVar1)}, 4);
 				Global_86825++;
 			}

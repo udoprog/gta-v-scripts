@@ -1554,7 +1554,7 @@ void func_57() {
 		}
 	}
 	else {
-		Global_14443 = func_58();
+		Global_14443 = ModifyAndGetSomeMessageCallState();
 		if (Global_14443 == 145) {
 			Global_14443 = 3;
 		}
@@ -1568,7 +1568,7 @@ void func_57() {
 }
 
 // Position - 0x212A
-int func_58() {
+int ModifyAndGetSomeMessageCallState() {
 	func_59();
 	return Global_101700.f_2095.f_539.f_3549;
 }
@@ -1660,7 +1660,7 @@ void func_63(int iParam0, char *sParam1) {
 
 		case 1943637475: StringCopy(sParam1, "AH3B_UNLK", 16); break;
 
-		case 1635608802: StringCopy(sParam1, "ASS1_MIS", 16); break;
+		case /* Assassination 1 Text */1635608802: StringCopy(sParam1, "ASS1_MIS", 16); break;
 
 		case -799417230: StringCopy(sParam1, "ASS_FINA", 16); break;
 
@@ -1748,7 +1748,7 @@ void func_63(int iParam0, char *sParam1) {
 
 		case -1501908698: StringCopy(sParam1, "FRAN0_END", 16); break;
 
-		case 943848816: StringCopy(sParam1, "FRA1_END", 16); break;
+		case /* lamar's text */943848816: StringCopy(sParam1, "FRA1_END", 16); break;
 
 		case 689367973: StringCopy(sParam1, "JP1A_U", 16); break;
 
@@ -2154,7 +2154,7 @@ int GetMessageType(int iParam0) {
 		case 230961098:
 		case 639116137:
 		case 1943637475:
-		case 1635608802:
+		case /* Assassination 1 Text */1635608802:
 		case -799417230:
 		case -2135245515:
 		case -1982006572:
@@ -2198,7 +2198,7 @@ int GetMessageType(int iParam0) {
 		case -1198893762:
 		case 497850717:
 		case -1501908698:
-		case 943848816:
+		case /* lamar's text */943848816:
 		case 689367973:
 		case -666454256:
 		case -270587643:
@@ -3782,7 +3782,7 @@ int func_87() {
 	else if (iVar3 < iVar1 && iVar3 >= iVar2) {
 		return 0;
 	}
-	iVar4 = func_91(func_92(func_58()), 4);
+	iVar4 = func_91(func_92(ModifyAndGetSomeMessageCallState()), 4);
 	if (iVar4 >= 9) {
 		return 0;
 	}
@@ -4018,7 +4018,7 @@ bool func_104(int iParam0) {
 	iVar0 = 0;
 	while (iVar0 < Global_82576) {
 		if (Global_82576[iVar0 /*5*/] != -1) {
-			if (Global_69971.f_109[Global_82576[iVar0 /*5*/] /*4*/] == iParam0) {
+			if (G_TextMessageConfig.f_109[Global_82576[iVar0 /*5*/] /*4*/] == iParam0) {
 				return true;
 			}
 		}
@@ -4193,7 +4193,7 @@ void func_118(var *uParam0) {
 		}
 		else {
 			G_SomeGlobalState.MessageCallStates.f_912 = 1;
-			func_120(G_SomeGlobalState.MessageCallStates[LastDispatchedMessageOrCall /*15*/].f_6, func_58());
+			func_120(G_SomeGlobalState.MessageCallStates[LastDispatchedMessageOrCall /*15*/].f_6, ModifyAndGetSomeMessageCallState());
 			func_119();
 			func_53(&G_SomeGlobalState.MessageCallStates[LastDispatchedMessageOrCall /*15*/]);
 			G_SomeGlobalState.MessageCallStates.f_911 = G_SomeGlobalState.MessageCallStates[LastDispatchedMessageOrCall /*15*/];
@@ -4203,7 +4203,7 @@ void func_118(var *uParam0) {
 			func_10(G_SomeGlobalState.MessageCallStates[LastDispatchedMessageOrCall /*15*/]);
 			func_14(LastDispatchedMessageOrCall);
 			if (gameplay::is_bit_set(G_SomeGlobalState.MessageCallStates[LastDispatchedMessageOrCall /*15*/].f_1, 15)) {
-				switch (func_58()) {
+				switch (ModifyAndGetSomeMessageCallState()) {
 				case 0: iVar0 = 0; break;
 
 				case 1: iVar0 = 1; break;
@@ -4524,7 +4524,7 @@ void func_138(var *uParam0, int iParam1) {
 		ui::clear_help(0);
 	}
 	if (gameplay::is_bit_set(G_SomeGlobalState.MessageCallStates[LastDispatchedMessageOrCall /*15*/].f_1, 15)) {
-		switch (func_58()) {
+		switch (ModifyAndGetSomeMessageCallState()) {
 		case 0: iVar0 = 0; break;
 
 		case 1: iVar0 = 1; break;
@@ -4871,7 +4871,7 @@ void func_148() {
 		}
 	}
 	else if (gameplay::get_game_timer() - iLocal_86 >= 10000 || iLocal_85 >= 1) {
-		if (func_58() == 2) {
+		if (ModifyAndGetSomeMessageCallState() == 2) {
 			if (player::is_player_playing(player::player_id())) {
 				if (ped::is_ped_in_any_vehicle(player::player_ped_id(), 0)) {
 					if (audio::_is_vehicle_radio_loud(ped::get_vehicle_ped_is_in(player::player_ped_id(), 0))) {
@@ -5531,7 +5531,7 @@ void func_169(var *uParam0) {
 	int iVar0;
 	int iVar1;
 
-	if (!func_9(func_58())) {
+	if (!func_9(ModifyAndGetSomeMessageCallState())) {
 		return;
 	}
 	iVar0 = 0;
@@ -5858,7 +5858,7 @@ void func_177(int iParam0, int iParam1, int iParam2, char *sParam3, char *sParam
 	if (cutscene::is_cutscene_playing()) {
 		return;
 	}
-	iVar0 = func_58();
+	iVar0 = ModifyAndGetSomeMessageCallState();
 	bVar1 = false;
 	StringCopy(&cVar2, func_180(iParam1, &bVar1), 64);
 	if (iVar0 == iParam0) {
@@ -6511,7 +6511,7 @@ int CanMessageOrCallBeReceived(int iParam0, int iParam1, int iParam2, int iParam
 		}
 		if (iParam1 == 17 || iParam1 == 19 || iParam1 == 14 || iParam1 == 0 || iParam1 == 1 || iParam1 == 2) {
 			if (gameplay::is_bit_set(iParam0, func_185())) {
-				iVar1 = func_92(func_58());
+				iVar1 = func_92(ModifyAndGetSomeMessageCallState());
 				iVar2 = func_92(iParam1);
 				iVar3 = func_91(iVar1, iVar2);
 				if (iVar3 < 9) {
@@ -6554,7 +6554,7 @@ int CanMessageOrCallBeReceived(int iParam0, int iParam1, int iParam2, int iParam
 			return 0;
 		}
 	}
-	iVar4 = func_58();
+	iVar4 = ModifyAndGetSomeMessageCallState();
 	if (func_9(iVar4)) {
 		ped::get_ped_nearby_peds(player::player_ped_id(), &uVar5, -1);
 		switch (iParam1) {
@@ -7500,7 +7500,7 @@ void func_205(var *uParam0) {
 				if (func_227() || func_226() || func_225() || func_224() || func_223()) {
 					if (!entity::does_entity_exist(func_222(60)) && !entity::does_entity_exist(func_222(61)) &&
 						Global_69698 == -1 && !func_221() && !func_220()) {
-						if (func_58() == 0) {
+						if (ModifyAndGetSomeMessageCallState() == 0) {
 							func_160(&uLocal_91, 0, player::player_ped_id(), "MICHAEL", 0, 1);
 							func_160(&uLocal_91, 3, 0, "DBLIMPOperator", 0, 1);
 							cVar0[0] = "DAB_HELLO";
@@ -7509,7 +7509,7 @@ void func_205(var *uParam0) {
 							cVar0[3] = "DAB_THANK_M";
 							cVar0[4] = "DAB_BYE";
 						}
-						else if (func_58() == 1) {
+						else if (ModifyAndGetSomeMessageCallState() == 1) {
 							func_160(&uLocal_91, 1, player::player_ped_id(), "FRANKLIN", 0, 1);
 							func_160(&uLocal_91, 3, 0, "DBLIMPOperator", 0, 1);
 							cVar0[0] = "DAB_HELLO";
@@ -7518,7 +7518,7 @@ void func_205(var *uParam0) {
 							cVar0[3] = "DAB_THANK_F";
 							cVar0[4] = "DAB_BYE";
 						}
-						else if (func_58() == 2) {
+						else if (ModifyAndGetSomeMessageCallState() == 2) {
 							func_160(&uLocal_91, 2, player::player_ped_id(), "TREVOR", 0, 1);
 							func_160(&uLocal_91, 3, 0, "DBLIMPOperator", 0, 1);
 							cVar0[0] = "DAB_HELLO";
@@ -8890,7 +8890,7 @@ void func_229(var *uParam0) {
 
 	iVar0 = 0;
 	while (iVar0 < G_SomeGlobalState.MessageCallStates.f_650) {
-		iVar1 = func_58();
+		iVar1 = ModifyAndGetSomeMessageCallState();
 		if (func_9(iVar1)) {
 			if (gameplay::is_bit_set(G_SomeGlobalState.MessageCallStates.f_199[iVar0 /*15*/].f_2, iVar1)) {
 				if (func_228(G_SomeGlobalState.MessageCallStates.f_199[iVar0 /*15*/].f_6)) {
@@ -8994,7 +8994,7 @@ bool func_231(var *uParam0, var uParam1, char *sParam2, char *sParam3, int iPara
 // Position - 0xDA68
 void func_232(var *uParam0) {
 	if (gameplay::is_bit_set(uParam0->f_2, func_185())) {
-		switch (func_58()) {
+		switch (ModifyAndGetSomeMessageCallState()) {
 		case 0: func_160(&Global_36163, 0, player::player_ped_id(), "MICHAEL", 0, 1); break;
 
 		case 1: func_160(&Global_36163, 1, player::player_ped_id(), "FRANKLIN", 0, 1); break;
@@ -9010,7 +9010,7 @@ void func_232(var *uParam0) {
 	case 2: func_160(&Global_36163, 2, 0, "TREVOR", 0, 1); break;
 
 	case 4:
-		switch (func_58()) {
+		switch (ModifyAndGetSomeMessageCallState()) {
 		case 0:
 			func_160(&Global_36163, 1, 0, "FRANKLIN", 0, 1);
 			func_160(&Global_36163, 2, 0, "TREVOR", 0, 1);
@@ -9170,7 +9170,7 @@ bool func_234(int iParam0) {
 		iVar1 = Global_82576[iVar0 /*5*/];
 		if (iVar1 != -1) {
 			iVar2 = -1;
-			iVar2 = Global_69971.f_109[Global_82576[iVar0 /*5*/] /*4*/];
+			iVar2 = G_TextMessageConfig.f_109[Global_82576[iVar0 /*5*/] /*4*/];
 			if (iVar2 != -1) {
 				if (func_235(Global_82612[iVar2 /*34*/].f_12, iParam0)) {
 					return true;
@@ -9273,7 +9273,7 @@ bool DispatchTextOrCall(var *messageOrCall, int *iParam1) {
 			return false;
 		}
 	}
-	if (func_9(func_58())) {
+	if (func_9(ModifyAndGetSomeMessageCallState())) {
 		if (gameplay::is_bit_set(messageOrCall->f_2, func_185())) {
 			func_232(messageOrCall);
 			if (GetMessageType(*messageOrCall) == 1) {
@@ -9530,7 +9530,7 @@ void func_245(var *uParam0) {
 	int iVar0;
 	int iVar1;
 
-	if (!func_9(func_58())) {
+	if (!func_9(ModifyAndGetSomeMessageCallState())) {
 		return;
 	}
 	iVar0 = 0;
@@ -9677,7 +9677,7 @@ bool func_248(var *uParam0) {
 			}
 			if (!func_48(4)) {
 				if (func_47(1)) {
-					switch (func_58()) {
+					switch (ModifyAndGetSomeMessageCallState()) {
 					case 0: func_44("AM_H_FTXT", 2, 3000, -1, 7500, 1, 0, 0, 1); break;
 
 					case 1: func_44("AM_H_FTXT", 2, 3000, -1, 7500, 2, 0, 0, 1); break;
@@ -10615,7 +10615,7 @@ void func_266(var *uParam0) {
 	int iVar0;
 	int iVar1;
 
-	if (!func_9(func_58())) {
+	if (!func_9(ModifyAndGetSomeMessageCallState())) {
 		return;
 	}
 	iVar0 = 0;
@@ -10627,7 +10627,7 @@ void func_266(var *uParam0) {
 				iVar1 = 1;
 			}
 			if (*uParam0 >= Global_36332 || gameplay::is_bit_set(G_SomeGlobalState.MessageCallStates[iVar0 /*15*/].f_1, 21) || iVar1) {
-				if (G_SomeGlobalState.MessageCallStates[iVar0 /*15*/].f_3 == G_SomeGlobalState.MessageCallStates.f_919[func_58()] ||
+				if (G_SomeGlobalState.MessageCallStates[iVar0 /*15*/].f_3 == G_SomeGlobalState.MessageCallStates.f_919[ModifyAndGetSomeMessageCallState()] ||
 					!gameplay::is_bit_set(G_SomeGlobalState.MessageCallStates[iVar0 /*15*/].f_2, func_185())) {
 					if (*uParam0 >= G_SomeGlobalState.MessageCallStates[iVar0 /*15*/].f_4) {
 						if (func_267(&G_SomeGlobalState.MessageCallStates[iVar0 /*15*/], &iLocal_80)) {
@@ -10680,7 +10680,7 @@ bool func_267(var *uParam0, int *iParam1) {
 	if (gameplay::is_bit_set(uParam0->f_2, func_185())) {
 		func_232(uParam0);
 		if (gameplay::is_bit_set(uParam0->f_1, 14)) {
-			switch (func_58()) {
+			switch (ModifyAndGetSomeMessageCallState()) {
 			case 0: iVar1 = 0; break;
 
 			case 1: iVar1 = 1; break;
@@ -10873,7 +10873,7 @@ void func_273(var *uParam0) {
 	int iVar0;
 	int iVar1;
 
-	if (!func_9(func_58())) {
+	if (!func_9(ModifyAndGetSomeMessageCallState())) {
 		return;
 	}
 	iVar0 = 0;
@@ -10885,7 +10885,7 @@ void func_273(var *uParam0) {
 				iVar1 = 1;
 			}
 			if (*uParam0 >= Global_36332 || iVar1 || gameplay::is_bit_set(G_SomeGlobalState.MessageCallStates[iVar0 /*15*/].f_1, 21)) {
-				if (G_SomeGlobalState.MessageCallStates[iVar0 /*15*/].f_3 == G_SomeGlobalState.MessageCallStates.f_919[func_58()] ||
+				if (G_SomeGlobalState.MessageCallStates[iVar0 /*15*/].f_3 == G_SomeGlobalState.MessageCallStates.f_919[ModifyAndGetSomeMessageCallState()] ||
 					!gameplay::is_bit_set(G_SomeGlobalState.MessageCallStates[iVar0 /*15*/].f_2, func_185())) {
 					if (*uParam0 >= Global_36333[G_SomeGlobalState.MessageCallStates[iVar0 /*15*/].f_6] || iVar1) {
 						if (*uParam0 >= G_SomeGlobalState.MessageCallStates[iVar0 /*15*/].f_4) {

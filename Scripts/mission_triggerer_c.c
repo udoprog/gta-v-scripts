@@ -5980,7 +5980,7 @@ bool func_125(int iParam0, var *uParam1) {
 						gameplay::set_bit(&Global_88757[iParam0 /*17*/].f_10.f_1, 8);
 						ped::remove_relationship_group(Global_88321.f_42);
 						func_121(iVar0, 4, Global_88757[iParam0 /*17*/].f_10.f_6);
-						Global_69971.f_7 = 1;
+						G_TextMessageConfig.f_7 = 1;
 						uParam1->f_111 = -1;
 						if (!gameplay::is_bit_set(Global_82612[iVar0 /*34*/].f_15, 11)) {
 							func_140(Global_82612[iVar0 /*34*/].f_10, 0, 0);
@@ -7242,7 +7242,7 @@ bool func_173(int iParam0) {
 	iVar0 = 0;
 	while (iVar0 < Global_82576) {
 		if (Global_82576[iVar0 /*5*/] != -1) {
-			if (Global_69971.f_109[Global_82576[iVar0 /*5*/] /*4*/] == iParam0) {
+			if (G_TextMessageConfig.f_109[Global_82576[iVar0 /*5*/] /*4*/] == iParam0) {
 				return true;
 			}
 		}

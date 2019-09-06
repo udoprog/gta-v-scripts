@@ -80505,7 +80505,7 @@ bool func_498(int iParam0) {
 	iVar0 = 0;
 	while (iVar0 < Global_82576) {
 		if (Global_82576[iVar0 /*5*/] != -1) {
-			if (Global_69971.f_109[Global_82576[iVar0 /*5*/] /*4*/] == iParam0) {
+			if (G_TextMessageConfig.f_109[Global_82576[iVar0 /*5*/] /*4*/] == iParam0) {
 				return true;
 			}
 		}
@@ -82435,7 +82435,7 @@ bool func_541(int iParam0) {
 			iVar2 = 0;
 			while (iVar2 < Global_82576) {
 				if (Global_82576[iVar2 /*5*/] != -1) {
-					uVar3 = Global_69971.f_109[Global_82576[iVar2 /*5*/] /*4*/];
+					uVar3 = G_TextMessageConfig.f_109[Global_82576[iVar2 /*5*/] /*4*/];
 					iVar4 = uVar3;
 					if (func_427(Global_82612[iVar4 /*34*/].f_12, iVar1)) {
 						return true;
@@ -87589,8 +87589,8 @@ void func_591(struct<4> Param0) {
 int func_592(int iParam0) {
 	int iVar0;
 
-	if (Global_69971.f_1) {
-		while (Global_69971.f_1) {
+	if (G_TextMessageConfig.f_1) {
+		while (G_TextMessageConfig.f_1) {
 			system::wait(0);
 		}
 	}

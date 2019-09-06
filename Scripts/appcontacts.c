@@ -3857,7 +3857,7 @@ int func_47(int iParam0)
 	iVar0 = 0;
 	while (iVar0 < Global_82576) {
 		if (Global_82576[iVar0 /*5*/] != -1) {
-			if (Global_69971.f_109[Global_82576[iVar0 /*5*/] /*4*/] == iParam0) {
+			if (G_TextMessageConfig.f_109[Global_82576[iVar0 /*5*/] /*4*/] == iParam0) {
 				return 1;
 			}
 		}
@@ -5583,7 +5583,7 @@ bool func_101(int iParam0) {
 		iVar1 = Global_82576[iVar0 /*5*/];
 		if (iVar1 != -1) {
 			iVar2 = -1;
-			iVar2 = Global_69971.f_109[Global_82576[iVar0 /*5*/] /*4*/];
+			iVar2 = G_TextMessageConfig.f_109[Global_82576[iVar0 /*5*/] /*4*/];
 			if (iVar2 != -1) {
 				if (func_102(Global_82612[iVar2 /*34*/].f_12, iParam0)) {
 					return true;

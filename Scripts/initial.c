@@ -971,8 +971,8 @@ int func_44(int iParam0) {
 	int iVar1;
 
 	iVar0 = Global_101700.f_8044.f_2[iParam0 /*3*/].f_2;
-	iVar1 = Global_69971.f_12526[iParam0 /*2*/];
-	while (iVar1 <= Global_69971.f_12526[iParam0 /*2*/].f_1) {
+	iVar1 = G_TextMessageConfig.f_12526[iParam0 /*2*/];
+	while (iVar1 <= G_TextMessageConfig.f_12526[iParam0 /*2*/].f_1) {
 		if (iVar0 == func_45(iVar1)) {
 			Global_101700.f_8044.f_2[iParam0 /*3*/].f_1 = iVar1;
 			return 1;
@@ -988,7 +988,7 @@ int func_45(int iParam0) {
 
 	StringCopy(&Var0, "NULL", 64);
 	if (iParam0 != -1) {
-		switch (Global_69971.f_6825[iParam0 /*3*/].f_1) {
+		switch (G_TextMessageConfig.f_6825[iParam0 /*3*/].f_1) {
 		case 12: func_54(iParam0, &Var0); break;
 
 		case 0: func_53(iParam0, &Var0); break;
@@ -1013,25 +1013,25 @@ int func_45(int iParam0) {
 void func_46(int iParam0, char *sParam1) {
 	char cVar0[64];
 
-	IntToString(sParam1, Global_69971.f_6825[iParam0 /*3*/], 64);
+	IntToString(sParam1, G_TextMessageConfig.f_6825[iParam0 /*3*/], 64);
 	StringIntConCat(sParam1, func_47(iParam0), 64);
-	IntToString(&cVar0, Global_69971.f_6684[Global_69971.f_6825[iParam0 /*3*/].f_2 /*14*/], 64);
-	StringIntConCat(&cVar0, Global_69971.f_6684[Global_69971.f_6825[iParam0 /*3*/].f_2 /*14*/].f_1, 64);
-	StringIntConCat(&cVar0, Global_69971.f_6684[Global_69971.f_6825[iParam0 /*3*/].f_2 /*14*/].f_2, 64);
+	IntToString(&cVar0, G_TextMessageConfig.f_6684[G_TextMessageConfig.f_6825[iParam0 /*3*/].f_2 /*14*/], 64);
+	StringIntConCat(&cVar0, G_TextMessageConfig.f_6684[G_TextMessageConfig.f_6825[iParam0 /*3*/].f_2 /*14*/].f_1, 64);
+	StringIntConCat(&cVar0, G_TextMessageConfig.f_6684[G_TextMessageConfig.f_6825[iParam0 /*3*/].f_2 /*14*/].f_2, 64);
 	StringIntConCat(sParam1, gameplay::get_hash_key(&cVar0), 64);
-	IntToString(&cVar0, Global_69971.f_6684[Global_69971.f_6825[iParam0 /*3*/].f_2 /*14*/].f_3, 64);
-	StringIntConCat(&cVar0, Global_69971.f_6684[Global_69971.f_6825[iParam0 /*3*/].f_2 /*14*/].f_4, 64);
-	StringIntConCat(&cVar0, Global_69971.f_6684[Global_69971.f_6825[iParam0 /*3*/].f_2 /*14*/].f_5, 64);
+	IntToString(&cVar0, G_TextMessageConfig.f_6684[G_TextMessageConfig.f_6825[iParam0 /*3*/].f_2 /*14*/].f_3, 64);
+	StringIntConCat(&cVar0, G_TextMessageConfig.f_6684[G_TextMessageConfig.f_6825[iParam0 /*3*/].f_2 /*14*/].f_4, 64);
+	StringIntConCat(&cVar0, G_TextMessageConfig.f_6684[G_TextMessageConfig.f_6825[iParam0 /*3*/].f_2 /*14*/].f_5, 64);
 	StringIntConCat(sParam1, gameplay::get_hash_key(&cVar0), 64);
-	IntToString(&cVar0, Global_69971.f_6684[Global_69971.f_6825[iParam0 /*3*/].f_2 /*14*/].f_6, 64);
-	StringIntConCat(&cVar0, Global_69971.f_6684[Global_69971.f_6825[iParam0 /*3*/].f_2 /*14*/].f_7, 64);
-	StringIntConCat(&cVar0, Global_69971.f_6684[Global_69971.f_6825[iParam0 /*3*/].f_2 /*14*/].f_8, 64);
+	IntToString(&cVar0, G_TextMessageConfig.f_6684[G_TextMessageConfig.f_6825[iParam0 /*3*/].f_2 /*14*/].f_6, 64);
+	StringIntConCat(&cVar0, G_TextMessageConfig.f_6684[G_TextMessageConfig.f_6825[iParam0 /*3*/].f_2 /*14*/].f_7, 64);
+	StringIntConCat(&cVar0, G_TextMessageConfig.f_6684[G_TextMessageConfig.f_6825[iParam0 /*3*/].f_2 /*14*/].f_8, 64);
 	StringIntConCat(sParam1, gameplay::get_hash_key(&cVar0), 64);
-	IntToString(&cVar0, Global_69971.f_6684[Global_69971.f_6825[iParam0 /*3*/].f_2 /*14*/].f_9, 64);
-	StringIntConCat(&cVar0, Global_69971.f_6684[Global_69971.f_6825[iParam0 /*3*/].f_2 /*14*/].f_10, 64);
-	StringIntConCat(&cVar0, Global_69971.f_6684[Global_69971.f_6825[iParam0 /*3*/].f_2 /*14*/].f_11, 64);
-	StringIntConCat(&cVar0, Global_69971.f_6684[Global_69971.f_6825[iParam0 /*3*/].f_2 /*14*/].f_12, 64);
-	StringIntConCat(&cVar0, Global_69971.f_6684[Global_69971.f_6825[iParam0 /*3*/].f_2 /*14*/].f_13, 64);
+	IntToString(&cVar0, G_TextMessageConfig.f_6684[G_TextMessageConfig.f_6825[iParam0 /*3*/].f_2 /*14*/].f_9, 64);
+	StringIntConCat(&cVar0, G_TextMessageConfig.f_6684[G_TextMessageConfig.f_6825[iParam0 /*3*/].f_2 /*14*/].f_10, 64);
+	StringIntConCat(&cVar0, G_TextMessageConfig.f_6684[G_TextMessageConfig.f_6825[iParam0 /*3*/].f_2 /*14*/].f_11, 64);
+	StringIntConCat(&cVar0, G_TextMessageConfig.f_6684[G_TextMessageConfig.f_6825[iParam0 /*3*/].f_2 /*14*/].f_12, 64);
+	StringIntConCat(&cVar0, G_TextMessageConfig.f_6684[G_TextMessageConfig.f_6825[iParam0 /*3*/].f_2 /*14*/].f_13, 64);
 	StringIntConCat(sParam1, gameplay::get_hash_key(&cVar0), 64);
 }
 
@@ -1041,7 +1041,7 @@ int func_47(int iParam0) {
 
 	iVar0 = 0;
 	while (iVar0 < 32) {
-		if (iParam0 >= Global_69971.f_12526[iVar0 /*2*/] && iParam0 <= Global_69971.f_12526[iVar0 /*2*/].f_1) {
+		if (iParam0 >= G_TextMessageConfig.f_12526[iVar0 /*2*/] && iParam0 <= G_TextMessageConfig.f_12526[iVar0 /*2*/].f_1) {
 			return iVar0;
 		}
 		iVar0++;
@@ -1053,20 +1053,20 @@ int func_47(int iParam0) {
 void func_48(int iParam0, char *sParam1) {
 	char cVar0[64];
 
-	IntToString(sParam1, Global_69971.f_6825[iParam0 /*3*/], 64);
+	IntToString(sParam1, G_TextMessageConfig.f_6825[iParam0 /*3*/], 64);
 	StringIntConCat(sParam1, func_47(iParam0), 64);
-	IntToString(&cVar0, Global_69971.f_4824[Global_69971.f_6825[iParam0 /*3*/].f_2 /*11*/], 64);
-	StringIntConCat(&cVar0, Global_69971.f_4824[Global_69971.f_6825[iParam0 /*3*/].f_2 /*11*/].f_1, 64);
+	IntToString(&cVar0, G_TextMessageConfig.f_4824[G_TextMessageConfig.f_6825[iParam0 /*3*/].f_2 /*11*/], 64);
+	StringIntConCat(&cVar0, G_TextMessageConfig.f_4824[G_TextMessageConfig.f_6825[iParam0 /*3*/].f_2 /*11*/].f_1, 64);
 	StringIntConCat(sParam1, gameplay::get_hash_key(&cVar0), 64);
-	IntToString(&cVar0, Global_69971.f_4824[Global_69971.f_6825[iParam0 /*3*/].f_2 /*11*/].f_2, 64);
-	StringIntConCat(&cVar0, Global_69971.f_4824[Global_69971.f_6825[iParam0 /*3*/].f_2 /*11*/].f_3, 64);
+	IntToString(&cVar0, G_TextMessageConfig.f_4824[G_TextMessageConfig.f_6825[iParam0 /*3*/].f_2 /*11*/].f_2, 64);
+	StringIntConCat(&cVar0, G_TextMessageConfig.f_4824[G_TextMessageConfig.f_6825[iParam0 /*3*/].f_2 /*11*/].f_3, 64);
 	StringIntConCat(sParam1, gameplay::get_hash_key(&cVar0), 64);
-	IntToString(&cVar0, Global_69971.f_4824[Global_69971.f_6825[iParam0 /*3*/].f_2 /*11*/].f_4, 64);
-	StringIntConCat(&cVar0, Global_69971.f_4824[Global_69971.f_6825[iParam0 /*3*/].f_2 /*11*/].f_5, 64);
+	IntToString(&cVar0, G_TextMessageConfig.f_4824[G_TextMessageConfig.f_6825[iParam0 /*3*/].f_2 /*11*/].f_4, 64);
+	StringIntConCat(&cVar0, G_TextMessageConfig.f_4824[G_TextMessageConfig.f_6825[iParam0 /*3*/].f_2 /*11*/].f_5, 64);
 	StringIntConCat(sParam1, gameplay::get_hash_key(&cVar0), 64);
-	IntToString(&cVar0, Global_69971.f_4824[Global_69971.f_6825[iParam0 /*3*/].f_2 /*11*/].f_6, 64);
-	StringIntConCat(&cVar0, Global_69971.f_4824[Global_69971.f_6825[iParam0 /*3*/].f_2 /*11*/].f_7, 64);
-	StringIntConCat(&cVar0, Global_69971.f_4824[Global_69971.f_6825[iParam0 /*3*/].f_2 /*11*/].f_8, 64);
+	IntToString(&cVar0, G_TextMessageConfig.f_4824[G_TextMessageConfig.f_6825[iParam0 /*3*/].f_2 /*11*/].f_6, 64);
+	StringIntConCat(&cVar0, G_TextMessageConfig.f_4824[G_TextMessageConfig.f_6825[iParam0 /*3*/].f_2 /*11*/].f_7, 64);
+	StringIntConCat(&cVar0, G_TextMessageConfig.f_4824[G_TextMessageConfig.f_6825[iParam0 /*3*/].f_2 /*11*/].f_8, 64);
 	StringIntConCat(sParam1, gameplay::get_hash_key(&cVar0), 64);
 }
 
@@ -1074,57 +1074,57 @@ void func_48(int iParam0, char *sParam1) {
 void func_49(int iParam0, char *sParam1) {
 	char cVar0[64];
 
-	IntToString(sParam1, Global_69971.f_6825[iParam0 /*3*/], 64);
+	IntToString(sParam1, G_TextMessageConfig.f_6825[iParam0 /*3*/], 64);
 	StringIntConCat(sParam1, func_47(iParam0), 64);
-	MemCopy(&cVar0, {Global_69971.f_4160[Global_69971.f_6825[iParam0 /*3*/].f_2 /*12*/]}, 16);
+	MemCopy(&cVar0, {G_TextMessageConfig.f_4160[G_TextMessageConfig.f_6825[iParam0 /*3*/].f_2 /*12*/]}, 16);
 	StringIntConCat(sParam1, gameplay::get_hash_key(&cVar0), 64);
-	IntToString(&cVar0, Global_69971.f_4160[Global_69971.f_6825[iParam0 /*3*/].f_2 /*12*/].f_8, 64);
-	StringIntConCat(&cVar0, Global_69971.f_4160[Global_69971.f_6825[iParam0 /*3*/].f_2 /*12*/].f_9, 64);
+	IntToString(&cVar0, G_TextMessageConfig.f_4160[G_TextMessageConfig.f_6825[iParam0 /*3*/].f_2 /*12*/].f_8, 64);
+	StringIntConCat(&cVar0, G_TextMessageConfig.f_4160[G_TextMessageConfig.f_6825[iParam0 /*3*/].f_2 /*12*/].f_9, 64);
 	StringIntConCat(sParam1, gameplay::get_hash_key(&cVar0), 64);
-	IntToString(&cVar0, Global_69971.f_4160[Global_69971.f_6825[iParam0 /*3*/].f_2 /*12*/].f_10, 64);
-	StringIntConCat(&cVar0, Global_69971.f_4160[Global_69971.f_6825[iParam0 /*3*/].f_2 /*12*/].f_11, 64);
+	IntToString(&cVar0, G_TextMessageConfig.f_4160[G_TextMessageConfig.f_6825[iParam0 /*3*/].f_2 /*12*/].f_10, 64);
+	StringIntConCat(&cVar0, G_TextMessageConfig.f_4160[G_TextMessageConfig.f_6825[iParam0 /*3*/].f_2 /*12*/].f_11, 64);
 	StringIntConCat(sParam1, gameplay::get_hash_key(&cVar0), 64);
 }
 
 // Position - 0x211D
 void func_50(int iParam0, char *sParam1) {
-	IntToString(sParam1, Global_69971.f_6825[iParam0 /*3*/], 64);
+	IntToString(sParam1, G_TextMessageConfig.f_6825[iParam0 /*3*/], 64);
 	StringIntConCat(sParam1, func_47(iParam0), 64);
-	StringConCat(sParam1, &Global_69971.f_4151[Global_69971.f_6825[iParam0 /*3*/].f_2 /*8*/], 64);
+	StringConCat(sParam1, &G_TextMessageConfig.f_4151[G_TextMessageConfig.f_6825[iParam0 /*3*/].f_2 /*8*/], 64);
 }
 
 // Position - 0x2158
 void func_51(int iParam0, char *sParam1) {
-	IntToString(sParam1, Global_69971.f_6825[iParam0 /*3*/], 64);
+	IntToString(sParam1, G_TextMessageConfig.f_6825[iParam0 /*3*/], 64);
 	StringIntConCat(sParam1, func_47(iParam0), 64);
-	StringIntConCat(sParam1, Global_69971.f_3590[Global_69971.f_6825[iParam0 /*3*/].f_2 /*2*/], 64);
-	StringIntConCat(sParam1, Global_69971.f_3590[Global_69971.f_6825[iParam0 /*3*/].f_2 /*2*/].f_1, 64);
+	StringIntConCat(sParam1, G_TextMessageConfig.f_3590[G_TextMessageConfig.f_6825[iParam0 /*3*/].f_2 /*2*/], 64);
+	StringIntConCat(sParam1, G_TextMessageConfig.f_3590[G_TextMessageConfig.f_6825[iParam0 /*3*/].f_2 /*2*/].f_1, 64);
 }
 
 // Position - 0x21AF
 void func_52(int iParam0, char *sParam1) {
 	char cVar0[64];
 
-	IntToString(sParam1, Global_69971.f_6825[iParam0 /*3*/], 64);
+	IntToString(sParam1, G_TextMessageConfig.f_6825[iParam0 /*3*/], 64);
 	StringIntConCat(sParam1, func_47(iParam0), 64);
-	IntToString(&cVar0, Global_69971.f_109[Global_69971.f_6825[iParam0 /*3*/].f_2 /*4*/], 64);
-	StringIntConCat(&cVar0, Global_69971.f_109[Global_69971.f_6825[iParam0 /*3*/].f_2 /*4*/].f_1, 64);
+	IntToString(&cVar0, G_TextMessageConfig.f_109[G_TextMessageConfig.f_6825[iParam0 /*3*/].f_2 /*4*/], 64);
+	StringIntConCat(&cVar0, G_TextMessageConfig.f_109[G_TextMessageConfig.f_6825[iParam0 /*3*/].f_2 /*4*/].f_1, 64);
 	StringIntConCat(sParam1, gameplay::get_hash_key(&cVar0), 64);
-	IntToString(&cVar0, Global_69971.f_109[Global_69971.f_6825[iParam0 /*3*/].f_2 /*4*/].f_2, 64);
-	StringIntConCat(&cVar0, Global_69971.f_109[Global_69971.f_6825[iParam0 /*3*/].f_2 /*4*/].f_3, 64);
+	IntToString(&cVar0, G_TextMessageConfig.f_109[G_TextMessageConfig.f_6825[iParam0 /*3*/].f_2 /*4*/].f_2, 64);
+	StringIntConCat(&cVar0, G_TextMessageConfig.f_109[G_TextMessageConfig.f_6825[iParam0 /*3*/].f_2 /*4*/].f_3, 64);
 	StringIntConCat(sParam1, gameplay::get_hash_key(&cVar0), 64);
 }
 
 // Position - 0x224E
 void func_53(int iParam0, char *sParam1) {
-	IntToString(sParam1, Global_69971.f_6825[iParam0 /*3*/], 64);
+	IntToString(sParam1, G_TextMessageConfig.f_6825[iParam0 /*3*/], 64);
 	StringIntConCat(sParam1, func_47(iParam0), 64);
-	StringIntConCat(sParam1, Global_69971.f_6825[iParam0 /*3*/].f_2, 64);
+	StringIntConCat(sParam1, G_TextMessageConfig.f_6825[iParam0 /*3*/].f_2, 64);
 }
 
 // Position - 0x2280
 void func_54(int iParam0, char *sParam1) {
-	IntToString(sParam1, Global_69971.f_6825[iParam0 /*3*/], 64);
+	IntToString(sParam1, G_TextMessageConfig.f_6825[iParam0 /*3*/], 64);
 	StringIntConCat(sParam1, func_47(iParam0), 64);
 }
 
@@ -4195,7 +4195,7 @@ void func_81() {
 	func_122(63, -2, 162, -1, -1);
 	func_120(87, 0);
 	func_120(99, 0);
-	func_98(4, 20, 1, -815326385, 20000, 10000, -1, 100, -1, 0, 0);
+	InitializeMessage(4, 20, 1, -815326385, 20000, 10000, -1, 100, -1, 0, 0);
 	func_106(7, 96, 6, 2021846885, 220000, 10000, -1, 0, -1, 0);
 	func_120(161, 0);
 	func_120(28, 0);
@@ -4244,8 +4244,8 @@ void func_81() {
 	func_90(-643694497);
 	func_90(-278713375);
 	func_118(20, 4, 1089542219, -1);
-	func_98(4, 20, 1, 152157591, 220000, 20000, 11, 0, -1, 0, 0);
-	func_98(4, 20, 5, 772720529, 70000, 10000, 38, 9, -1, 0, 0);
+	InitializeMessage(4, 20, 1, 152157591, 220000, 20000, 11, 0, -1, 0, 0);
+	InitializeMessage(4, 20, 5, 772720529, 70000, 10000, 38, 9, -1, 0, 0);
 	func_115(175);
 	func_114(192, 1, 1, 0);
 	func_114(193, 1, 1, 0);
@@ -4306,19 +4306,19 @@ void func_82(int iParam0) {
 	if (iParam0 >= 32) {
 		return;
 	}
-	if (Global_69971.f_12526[iParam0 /*2*/] == -1) {
+	if (G_TextMessageConfig.f_12526[iParam0 /*2*/] == -1) {
 		return;
 	}
-	if (Global_69971.f_12526[iParam0 /*2*/].f_1 != -1) {
+	if (G_TextMessageConfig.f_12526[iParam0 /*2*/].f_1 != -1) {
 		return;
 	}
-	if (Global_69971.f_12526[iParam0 /*2*/] == Global_69971.f_12591) {
-		Global_69971.f_12526[iParam0 /*2*/] = -1;
+	if (G_TextMessageConfig.f_12526[iParam0 /*2*/] == G_TextMessageConfig.f_12591) {
+		G_TextMessageConfig.f_12526[iParam0 /*2*/] = -1;
 		return;
 	}
-	Global_69971.f_12526[iParam0 /*2*/].f_1 = Global_69971.f_12591 - 1;
+	G_TextMessageConfig.f_12526[iParam0 /*2*/].f_1 = G_TextMessageConfig.f_12591 - 1;
 	if (Global_101700.f_8044.f_2[iParam0 /*3*/].f_1 == -1) {
-		Global_101700.f_8044.f_2[iParam0 /*3*/].f_1 = Global_69971.f_12526[iParam0 /*2*/];
+		Global_101700.f_8044.f_2[iParam0 /*3*/].f_1 = G_TextMessageConfig.f_12526[iParam0 /*2*/];
 	}
 }
 
@@ -4327,24 +4327,24 @@ void func_83() {
 	int iVar0;
 
 	iVar0 = 12;
-	func_85(iVar0);
-	Global_69971.f_6825[Global_69971.f_12591 /*3*/] = 1909997983;
-	Global_69971.f_6825[Global_69971.f_12591 /*3*/].f_1 = iVar0;
-	Global_69971.f_6825[Global_69971.f_12591 /*3*/].f_2 = -1;
+	NoOp1(iVar0);
+	G_TextMessageConfig.f_6825[G_TextMessageConfig.f_12591 /*3*/] = 1909997983;
+	G_TextMessageConfig.f_6825[G_TextMessageConfig.f_12591 /*3*/].f_1 = iVar0;
+	G_TextMessageConfig.f_6825[G_TextMessageConfig.f_12591 /*3*/].f_2 = -1;
 	func_84(iVar0);
 }
 
 // Position - 0x8879
 void func_84(int iParam0) {
-	Global_69971.f_12591++;
+	G_TextMessageConfig.f_12591++;
 	if (iParam0 != 12) {
-		Global_69971.f_12592[iParam0]++;
+		G_TextMessageConfig.f_12592[iParam0]++;
 	}
 }
 
 // Position - 0x88B2
-void func_85(int iParam0) {
-	if (Global_69971.f_12591 >= 1900) {
+void NoOp1(int iParam0) {
+	if (G_TextMessageConfig.f_12591 >= 1900) {
 		return;
 	}
 	switch (iParam0) {
@@ -4352,49 +4352,49 @@ void func_85(int iParam0) {
 	case 0: break;
 
 	case 1:
-		if (Global_69971.f_12592[iParam0] >= 870) {
+		if (G_TextMessageConfig.f_12592[iParam0] >= 870) {
 			return;
 		}
 		break;
 
 	case 2:
-		if (Global_69971.f_12592[iParam0] >= 280) {
+		if (G_TextMessageConfig.f_12592[iParam0] >= 280) {
 			return;
 		}
 		break;
 
 	case 7:
-		if (Global_69971.f_12592[iParam0] >= 169) {
+		if (G_TextMessageConfig.f_12592[iParam0] >= 169) {
 			return;
 		}
 		break;
 
 	case 8:
-		if (Global_69971.f_12592[iParam0] >= 10) {
+		if (G_TextMessageConfig.f_12592[iParam0] >= 10) {
 			return;
 		}
 		break;
 
 	case 3:
-		if (Global_69971.f_12592[iParam0] >= 1) {
+		if (G_TextMessageConfig.f_12592[iParam0] >= 1) {
 			return;
 		}
 		break;
 
 	case 4:
-		if (Global_69971.f_12592[iParam0] >= 53) {
+		if (G_TextMessageConfig.f_12592[iParam0] >= 53) {
 			return;
 		}
 		break;
 
 	case 5:
-		if (Global_69971.f_12592[iParam0] >= 1) {
+		if (G_TextMessageConfig.f_12592[iParam0] >= 1) {
 			return;
 		}
 		break;
 
 	case 6:
-		if (Global_69971.f_12592[iParam0] >= 1) {
+		if (G_TextMessageConfig.f_12592[iParam0] >= 1) {
 			return;
 		}
 		break;
@@ -4411,18 +4411,18 @@ void func_86(int iParam0, int iParam1) {
 	if (iParam1 != 0 && iParam1 != 1 && iParam1 != 2) {
 		return;
 	}
-	func_85(iVar0);
-	Global_69971.f_6825[Global_69971.f_12591 /*3*/] = 749713072;
-	Global_69971.f_6825[Global_69971.f_12591 /*3*/].f_1 = iVar0;
-	Global_69971.f_6825[Global_69971.f_12591 /*3*/].f_2 = Global_69971.f_12592[iVar0];
-	func_87(Global_69971.f_12592[iVar0], iParam1, iParam0);
+	NoOp1(iVar0);
+	G_TextMessageConfig.f_6825[G_TextMessageConfig.f_12591 /*3*/] = 749713072;
+	G_TextMessageConfig.f_6825[G_TextMessageConfig.f_12591 /*3*/].f_1 = iVar0;
+	G_TextMessageConfig.f_6825[G_TextMessageConfig.f_12591 /*3*/].f_2 = G_TextMessageConfig.f_12592[iVar0];
+	func_87(G_TextMessageConfig.f_12592[iVar0], iParam1, iParam0);
 	func_84(iVar0);
 }
 
 // Position - 0x8A4E
 void func_87(int iParam0, int iParam1, int iParam2) {
-	Global_69971.f_3590[iParam0 /*2*/] = iParam1;
-	Global_69971.f_3590[iParam0 /*2*/].f_1 = iParam2;
+	G_TextMessageConfig.f_3590[iParam0 /*2*/] = iParam1;
+	G_TextMessageConfig.f_3590[iParam0 /*2*/].f_1 = iParam2;
 }
 
 // Position - 0x8A72
@@ -4431,29 +4431,29 @@ void func_88(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4, in
 	int iVar0;
 
 	iVar0 = 7;
-	func_85(iVar0);
-	Global_69971.f_6825[Global_69971.f_12591 /*3*/] = 1289835772;
-	Global_69971.f_6825[Global_69971.f_12591 /*3*/].f_1 = iVar0;
-	Global_69971.f_6825[Global_69971.f_12591 /*3*/].f_2 = Global_69971.f_12592[iVar0];
-	func_89(Global_69971.f_12592[iVar0], iParam5, iParam6, iParam0, iParam1, iParam2, iParam3, iParam4, iParam10,
+	NoOp1(iVar0);
+	G_TextMessageConfig.f_6825[G_TextMessageConfig.f_12591 /*3*/] = 1289835772;
+	G_TextMessageConfig.f_6825[G_TextMessageConfig.f_12591 /*3*/].f_1 = iVar0;
+	G_TextMessageConfig.f_6825[G_TextMessageConfig.f_12591 /*3*/].f_2 = G_TextMessageConfig.f_12592[iVar0];
+	SetTextParameters(G_TextMessageConfig.f_12592[iVar0], iParam5, iParam6, iParam0, iParam1, iParam2, iParam3, iParam4, iParam10,
 			iParam7, iParam8, iParam9);
 	func_84(iVar0);
 }
 
 // Position - 0x8AF4
-void func_89(int iParam0, int iParam1, int iParam2, var uParam3, var uParam4, var uParam5, int iParam6, int iParam7,
+void SetTextParameters(int iParam0, int iParam1, int iParam2, var uParam3, var uParam4, var textDelay, int iParam6, int iParam7,
 			 int iParam8, int iParam9, int iParam10, int iParam11) {
-	Global_69971.f_4824[iParam0 /*11*/] = iParam1;
-	Global_69971.f_4824[iParam0 /*11*/].f_1 = iParam2;
-	Global_69971.f_4824[iParam0 /*11*/].f_2 = uParam3;
-	Global_69971.f_4824[iParam0 /*11*/].f_3 = uParam4;
-	Global_69971.f_4824[iParam0 /*11*/].f_4 = uParam5;
-	Global_69971.f_4824[iParam0 /*11*/].f_5 = iParam6;
-	Global_69971.f_4824[iParam0 /*11*/].f_6 = iParam7;
-	Global_69971.f_4824[iParam0 /*11*/].f_7 = iParam8;
-	Global_69971.f_4824[iParam0 /*11*/].f_8 = iParam9;
-	Global_69971.f_4824[iParam0 /*11*/].f_9 = iParam10;
-	Global_69971.f_4824[iParam0 /*11*/].f_10 = iParam11;
+	G_TextMessageConfig.f_4824[iParam0 /*11*/] = iParam1;
+	G_TextMessageConfig.f_4824[iParam0 /*11*/].f_1 = iParam2;
+	G_TextMessageConfig.f_4824[iParam0 /*11*/].f_2 = uParam3;
+	G_TextMessageConfig.f_4824[iParam0 /*11*/].f_3 = uParam4;
+	G_TextMessageConfig.f_4824[iParam0 /*11*/].f_4 = textDelay;
+	G_TextMessageConfig.f_4824[iParam0 /*11*/].f_5 = iParam6;
+	G_TextMessageConfig.f_4824[iParam0 /*11*/].f_6 = iParam7;
+	G_TextMessageConfig.f_4824[iParam0 /*11*/].f_7 = iParam8;
+	G_TextMessageConfig.f_4824[iParam0 /*11*/].f_8 = iParam9;
+	G_TextMessageConfig.f_4824[iParam0 /*11*/].f_9 = iParam10;
+	G_TextMessageConfig.f_4824[iParam0 /*11*/].f_10 = iParam11;
 }
 
 // Position - 0x8B9F
@@ -4461,10 +4461,10 @@ void func_90(int iParam0) {
 	int iVar0;
 
 	iVar0 = 0;
-	func_85(iVar0);
-	Global_69971.f_6825[Global_69971.f_12591 /*3*/] = -885022960;
-	Global_69971.f_6825[Global_69971.f_12591 /*3*/].f_1 = iVar0;
-	Global_69971.f_6825[Global_69971.f_12591 /*3*/].f_2 = iParam0;
+	NoOp1(iVar0);
+	G_TextMessageConfig.f_6825[G_TextMessageConfig.f_12591 /*3*/] = -885022960;
+	G_TextMessageConfig.f_6825[G_TextMessageConfig.f_12591 /*3*/].f_1 = iVar0;
+	G_TextMessageConfig.f_6825[G_TextMessageConfig.f_12591 /*3*/].f_2 = iParam0;
 	func_84(iVar0);
 }
 
@@ -4477,20 +4477,20 @@ void func_91(int iParam0, int iParam1, int iParam2) {
 	if (iParam1 <= 0) {
 	}
 	iVar0 = 1;
-	func_85(iVar0);
-	Global_69971.f_6825[Global_69971.f_12591 /*3*/] = 1845155857;
-	Global_69971.f_6825[Global_69971.f_12591 /*3*/].f_1 = iVar0;
-	Global_69971.f_6825[Global_69971.f_12591 /*3*/].f_2 = Global_69971.f_12592[iVar0];
-	func_92(Global_69971.f_12592[iVar0], iParam0, iParam1, iParam2, 0);
+	NoOp1(iVar0);
+	G_TextMessageConfig.f_6825[G_TextMessageConfig.f_12591 /*3*/] = 1845155857;
+	G_TextMessageConfig.f_6825[G_TextMessageConfig.f_12591 /*3*/].f_1 = iVar0;
+	G_TextMessageConfig.f_6825[G_TextMessageConfig.f_12591 /*3*/].f_2 = G_TextMessageConfig.f_12592[iVar0];
+	func_92(G_TextMessageConfig.f_12592[iVar0], iParam0, iParam1, iParam2, 0);
 	func_84(iVar0);
 }
 
 // Position - 0x8C72
 void func_92(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4) {
-	Global_69971.f_109[iParam0 /*4*/] = iParam1;
-	Global_69971.f_109[iParam0 /*4*/].f_1 = iParam2;
-	Global_69971.f_109[iParam0 /*4*/].f_2 = iParam3;
-	Global_69971.f_109[iParam0 /*4*/].f_3 = iParam4;
+	G_TextMessageConfig.f_109[iParam0 /*4*/] = iParam1;
+	G_TextMessageConfig.f_109[iParam0 /*4*/].f_1 = iParam2;
+	G_TextMessageConfig.f_109[iParam0 /*4*/].f_2 = iParam3;
+	G_TextMessageConfig.f_109[iParam0 /*4*/].f_3 = iParam4;
 }
 
 // Position - 0x8CB0
@@ -4500,24 +4500,24 @@ void func_93(char *sParam0, int iParam1, int iParam2, int iParam3, int iParam4, 
 	int iVar9;
 
 	iVar0 = 4;
-	func_85(iVar0);
-	Global_69971.f_6825[Global_69971.f_12591 /*3*/] = -2146402779;
-	Global_69971.f_6825[Global_69971.f_12591 /*3*/].f_1 = iVar0;
-	Global_69971.f_6825[Global_69971.f_12591 /*3*/].f_2 = Global_69971.f_12592[iVar0];
+	NoOp1(iVar0);
+	G_TextMessageConfig.f_6825[G_TextMessageConfig.f_12591 /*3*/] = -2146402779;
+	G_TextMessageConfig.f_6825[G_TextMessageConfig.f_12591 /*3*/].f_1 = iVar0;
+	G_TextMessageConfig.f_6825[G_TextMessageConfig.f_12591 /*3*/].f_2 = G_TextMessageConfig.f_12592[iVar0];
 	StringCopy(&Var1, sParam0, 32);
 	iVar9 = iParam2;
 	iVar9 += iParam5 * 1000000;
-	func_94(Global_69971.f_12592[iVar0], Var1, iVar9, iParam1, iParam3, iParam4);
+	func_94(G_TextMessageConfig.f_12592[iVar0], Var1, iVar9, iParam1, iParam3, iParam4);
 	func_84(iVar0);
 }
 
 // Position - 0x8D3F
 void func_94(int iParam0, char[32] cParam1, int iParam9, int iParam10, int iParam11, int iParam12) {
-	Global_69971.f_4160[iParam0 /*12*/] = {cParam1};
-	Global_69971.f_4160[iParam0 /*12*/].f_8 = iParam9;
-	Global_69971.f_4160[iParam0 /*12*/].f_9 = iParam10;
-	Global_69971.f_4160[iParam0 /*12*/].f_10 = iParam11;
-	Global_69971.f_4160[iParam0 /*12*/].f_11 = iParam12;
+	G_TextMessageConfig.f_4160[iParam0 /*12*/] = {cParam1};
+	G_TextMessageConfig.f_4160[iParam0 /*12*/].f_8 = iParam9;
+	G_TextMessageConfig.f_4160[iParam0 /*12*/].f_9 = iParam10;
+	G_TextMessageConfig.f_4160[iParam0 /*12*/].f_10 = iParam11;
+	G_TextMessageConfig.f_4160[iParam0 /*12*/].f_11 = iParam12;
 }
 
 // Position - 0x8D96
@@ -4533,11 +4533,11 @@ void func_95(int iParam0, int iParam1, int iParam2) {
 	if (iParam2) {
 		iVar1 = 1;
 	}
-	func_85(iVar0);
-	Global_69971.f_6825[Global_69971.f_12591 /*3*/] = 744218195;
-	Global_69971.f_6825[Global_69971.f_12591 /*3*/].f_1 = iVar0;
-	Global_69971.f_6825[Global_69971.f_12591 /*3*/].f_2 = Global_69971.f_12592[iVar0];
-	func_92(Global_69971.f_12592[iVar0], iParam1, iParam0, iVar1, 0);
+	NoOp1(iVar0);
+	G_TextMessageConfig.f_6825[G_TextMessageConfig.f_12591 /*3*/] = 744218195;
+	G_TextMessageConfig.f_6825[G_TextMessageConfig.f_12591 /*3*/].f_1 = iVar0;
+	G_TextMessageConfig.f_6825[G_TextMessageConfig.f_12591 /*3*/].f_2 = G_TextMessageConfig.f_12592[iVar0];
+	func_92(G_TextMessageConfig.f_12592[iVar0], iParam1, iParam0, iVar1, 0);
 	func_84(iVar0);
 }
 
@@ -4547,12 +4547,12 @@ void func_96(int iParam0, int iParam1) {
 	int iVar1;
 
 	iVar0 = 0;
-	func_85(iVar0);
+	NoOp1(iVar0);
 	iVar1 = iParam0;
 	iVar1 += iParam1 * 1000000;
-	Global_69971.f_6825[Global_69971.f_12591 /*3*/] = -964850613;
-	Global_69971.f_6825[Global_69971.f_12591 /*3*/].f_1 = iVar0;
-	Global_69971.f_6825[Global_69971.f_12591 /*3*/].f_2 = iVar1;
+	G_TextMessageConfig.f_6825[G_TextMessageConfig.f_12591 /*3*/] = -964850613;
+	G_TextMessageConfig.f_6825[G_TextMessageConfig.f_12591 /*3*/].f_1 = iVar0;
+	G_TextMessageConfig.f_6825[G_TextMessageConfig.f_12591 /*3*/].f_2 = iVar1;
 	func_84(iVar0);
 }
 
@@ -4562,26 +4562,26 @@ void func_97(char *sParam0, int iParam1) {
 	struct<8> Var1;
 
 	iVar0 = 4;
-	func_85(iVar0);
-	Global_69971.f_6825[Global_69971.f_12591 /*3*/] = 566451265;
-	Global_69971.f_6825[Global_69971.f_12591 /*3*/].f_1 = iVar0;
-	Global_69971.f_6825[Global_69971.f_12591 /*3*/].f_2 = Global_69971.f_12592[iVar0];
+	NoOp1(iVar0);
+	G_TextMessageConfig.f_6825[G_TextMessageConfig.f_12591 /*3*/] = 566451265;
+	G_TextMessageConfig.f_6825[G_TextMessageConfig.f_12591 /*3*/].f_1 = iVar0;
+	G_TextMessageConfig.f_6825[G_TextMessageConfig.f_12591 /*3*/].f_2 = G_TextMessageConfig.f_12592[iVar0];
 	StringCopy(&Var1, sParam0, 32);
-	func_94(Global_69971.f_12592[iVar0], Var1, iParam1, 0, 0, 0);
+	func_94(G_TextMessageConfig.f_12592[iVar0], Var1, iParam1, 0, 0, 0);
 	func_84(iVar0);
 }
 
 // Position - 0x8F10
-void func_98(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4, int iParam5, int iParam6, int iParam7,
+void InitializeMessage(int iParam0, int iParam1, int iParam2, int iParam3, int textDelay, int iParam5, int iParam6, int iParam7,
 			 int iParam8, int iParam9, int iParam10) {
 	int iVar0;
 
 	iVar0 = 7;
-	func_85(iVar0);
-	Global_69971.f_6825[Global_69971.f_12591 /*3*/] = 322211806;
-	Global_69971.f_6825[Global_69971.f_12591 /*3*/].f_1 = iVar0;
-	Global_69971.f_6825[Global_69971.f_12591 /*3*/].f_2 = Global_69971.f_12592[iVar0];
-	func_89(Global_69971.f_12592[iVar0], iParam3, iParam0, iParam1, iParam2, iParam4, iParam5, iParam9, iParam10,
+	NoOp1(iVar0);
+	G_TextMessageConfig.f_6825[G_TextMessageConfig.f_12591 /*3*/] = 322211806;
+	G_TextMessageConfig.f_6825[G_TextMessageConfig.f_12591 /*3*/].f_1 = iVar0;
+	G_TextMessageConfig.f_6825[G_TextMessageConfig.f_12591 /*3*/].f_2 = G_TextMessageConfig.f_12592[iVar0];
+	SetTextParameters(G_TextMessageConfig.f_12592[iVar0], iParam3, iParam0, iParam1, iParam2, textDelay, iParam5, iParam9, iParam10,
 			iParam6, iParam7, iParam8);
 	func_84(iVar0);
 }
@@ -4592,12 +4592,12 @@ void func_99(int iParam0, int iParam1) {
 	int iVar1;
 
 	iVar0 = 0;
-	func_85(iVar0);
+	NoOp1(iVar0);
 	iVar1 = iParam0;
 	iVar1 += iParam1 * 1000000;
-	Global_69971.f_6825[Global_69971.f_12591 /*3*/] = -1982716178;
-	Global_69971.f_6825[Global_69971.f_12591 /*3*/].f_1 = iVar0;
-	Global_69971.f_6825[Global_69971.f_12591 /*3*/].f_2 = iVar1;
+	G_TextMessageConfig.f_6825[G_TextMessageConfig.f_12591 /*3*/] = -1982716178;
+	G_TextMessageConfig.f_6825[G_TextMessageConfig.f_12591 /*3*/].f_1 = iVar0;
+	G_TextMessageConfig.f_6825[G_TextMessageConfig.f_12591 /*3*/].f_2 = iVar1;
 	func_84(iVar0);
 }
 
@@ -4606,11 +4606,11 @@ void func_100(int iParam0, int iParam1, int iParam2, int iParam3) {
 	int iVar0;
 
 	iVar0 = 1;
-	func_85(iVar0);
-	Global_69971.f_6825[Global_69971.f_12591 /*3*/] = -1309218325;
-	Global_69971.f_6825[Global_69971.f_12591 /*3*/].f_1 = iVar0;
-	Global_69971.f_6825[Global_69971.f_12591 /*3*/].f_2 = Global_69971.f_12592[iVar0];
-	func_92(Global_69971.f_12592[iVar0], iParam0, iParam1, iParam2, iParam3);
+	NoOp1(iVar0);
+	G_TextMessageConfig.f_6825[G_TextMessageConfig.f_12591 /*3*/] = -1309218325;
+	G_TextMessageConfig.f_6825[G_TextMessageConfig.f_12591 /*3*/].f_1 = iVar0;
+	G_TextMessageConfig.f_6825[G_TextMessageConfig.f_12591 /*3*/].f_2 = G_TextMessageConfig.f_12592[iVar0];
+	func_92(G_TextMessageConfig.f_12592[iVar0], iParam0, iParam1, iParam2, iParam3);
 	func_84(iVar0);
 }
 
@@ -4619,10 +4619,10 @@ void func_101(int iParam0) {
 	int iVar0;
 
 	iVar0 = 0;
-	func_85(iVar0);
-	Global_69971.f_6825[Global_69971.f_12591 /*3*/] = 1677774865;
-	Global_69971.f_6825[Global_69971.f_12591 /*3*/].f_1 = iVar0;
-	Global_69971.f_6825[Global_69971.f_12591 /*3*/].f_2 = iParam0;
+	NoOp1(iVar0);
+	G_TextMessageConfig.f_6825[G_TextMessageConfig.f_12591 /*3*/] = 1677774865;
+	G_TextMessageConfig.f_6825[G_TextMessageConfig.f_12591 /*3*/].f_1 = iVar0;
+	G_TextMessageConfig.f_6825[G_TextMessageConfig.f_12591 /*3*/].f_2 = iParam0;
 	func_84(iVar0);
 }
 
@@ -4631,10 +4631,10 @@ void func_102(int iParam0, int iParam1, int iParam2) {
 	int iVar0;
 
 	iVar0 = 0;
-	func_85(iVar0);
-	Global_69971.f_6825[Global_69971.f_12591 /*3*/] = 485486536;
-	Global_69971.f_6825[Global_69971.f_12591 /*3*/].f_1 = iVar0;
-	Global_69971.f_6825[Global_69971.f_12591 /*3*/].f_2 = iParam2;
+	NoOp1(iVar0);
+	G_TextMessageConfig.f_6825[G_TextMessageConfig.f_12591 /*3*/] = 485486536;
+	G_TextMessageConfig.f_6825[G_TextMessageConfig.f_12591 /*3*/].f_1 = iVar0;
+	G_TextMessageConfig.f_6825[G_TextMessageConfig.f_12591 /*3*/].f_2 = iParam2;
 	func_84(iVar0);
 }
 
@@ -4644,15 +4644,15 @@ void func_103(int iParam0, int iParam1) {
 	int iVar1;
 
 	iVar0 = 2;
-	func_85(iVar0);
-	Global_69971.f_6825[Global_69971.f_12591 /*3*/] = -69665631;
-	Global_69971.f_6825[Global_69971.f_12591 /*3*/].f_1 = iVar0;
-	Global_69971.f_6825[Global_69971.f_12591 /*3*/].f_2 = Global_69971.f_12592[iVar0];
+	NoOp1(iVar0);
+	G_TextMessageConfig.f_6825[G_TextMessageConfig.f_12591 /*3*/] = -69665631;
+	G_TextMessageConfig.f_6825[G_TextMessageConfig.f_12591 /*3*/].f_1 = iVar0;
+	G_TextMessageConfig.f_6825[G_TextMessageConfig.f_12591 /*3*/].f_2 = G_TextMessageConfig.f_12592[iVar0];
 	iVar1 = 0;
 	if (iParam1) {
 		iVar1 = 1;
 	}
-	func_87(Global_69971.f_12592[iVar0], iParam0, iVar1);
+	func_87(G_TextMessageConfig.f_12592[iVar0], iParam0, iVar1);
 	func_84(iVar0);
 }
 
@@ -4661,11 +4661,11 @@ void func_104(int iParam0, int iParam1) {
 	int iVar0;
 
 	iVar0 = 1;
-	func_85(iVar0);
-	Global_69971.f_6825[Global_69971.f_12591 /*3*/] = 939785963;
-	Global_69971.f_6825[Global_69971.f_12591 /*3*/].f_1 = iVar0;
-	Global_69971.f_6825[Global_69971.f_12591 /*3*/].f_2 = Global_69971.f_12592[iVar0];
-	func_92(Global_69971.f_12592[iVar0], iParam0, func_105(iParam1, 1, 0), -1, -1);
+	NoOp1(iVar0);
+	G_TextMessageConfig.f_6825[G_TextMessageConfig.f_12591 /*3*/] = 939785963;
+	G_TextMessageConfig.f_6825[G_TextMessageConfig.f_12591 /*3*/].f_1 = iVar0;
+	G_TextMessageConfig.f_6825[G_TextMessageConfig.f_12591 /*3*/].f_2 = G_TextMessageConfig.f_12592[iVar0];
+	func_92(G_TextMessageConfig.f_12592[iVar0], iParam0, func_105(iParam1, 1, 0), -1, -1);
 	func_84(iVar0);
 }
 
@@ -4683,11 +4683,11 @@ void func_106(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4, i
 	int iVar0;
 
 	iVar0 = 7;
-	func_85(iVar0);
-	Global_69971.f_6825[Global_69971.f_12591 /*3*/] = -656046692;
-	Global_69971.f_6825[Global_69971.f_12591 /*3*/].f_1 = iVar0;
-	Global_69971.f_6825[Global_69971.f_12591 /*3*/].f_2 = Global_69971.f_12592[iVar0];
-	func_89(Global_69971.f_12592[iVar0], iParam3, iParam0, iParam1, iParam2, iParam4, iParam5, iParam9, 0, iParam6,
+	NoOp1(iVar0);
+	G_TextMessageConfig.f_6825[G_TextMessageConfig.f_12591 /*3*/] = -656046692;
+	G_TextMessageConfig.f_6825[G_TextMessageConfig.f_12591 /*3*/].f_1 = iVar0;
+	G_TextMessageConfig.f_6825[G_TextMessageConfig.f_12591 /*3*/].f_2 = G_TextMessageConfig.f_12592[iVar0];
+	SetTextParameters(G_TextMessageConfig.f_12592[iVar0], iParam3, iParam0, iParam1, iParam2, iParam4, iParam5, iParam9, 0, iParam6,
 			iParam7, iParam8);
 	func_84(iVar0);
 }
@@ -4698,16 +4698,16 @@ void func_107(int iParam0, int iParam1, int iParam2) {
 	int iVar1;
 
 	iVar0 = 2;
-	func_85(iVar0);
-	Global_69971.f_6825[Global_69971.f_12591 /*3*/] = -436729813;
-	Global_69971.f_6825[Global_69971.f_12591 /*3*/].f_1 = iVar0;
-	Global_69971.f_6825[Global_69971.f_12591 /*3*/].f_2 = Global_69971.f_12592[iVar0];
+	NoOp1(iVar0);
+	G_TextMessageConfig.f_6825[G_TextMessageConfig.f_12591 /*3*/] = -436729813;
+	G_TextMessageConfig.f_6825[G_TextMessageConfig.f_12591 /*3*/].f_1 = iVar0;
+	G_TextMessageConfig.f_6825[G_TextMessageConfig.f_12591 /*3*/].f_2 = G_TextMessageConfig.f_12592[iVar0];
 	iVar1 = 0;
 	if (iParam1 == 0) {
 		iVar1 = 1;
 	}
 	iVar1 += iParam2 * 1000000;
-	func_87(Global_69971.f_12592[iVar0], iParam0, iVar1);
+	func_87(G_TextMessageConfig.f_12592[iVar0], iParam0, iVar1);
 	func_84(iVar0);
 }
 
@@ -4717,15 +4717,15 @@ void func_108(int iParam0, int iParam1) {
 	int iVar1;
 
 	iVar0 = 2;
-	func_85(iVar0);
-	Global_69971.f_6825[Global_69971.f_12591 /*3*/] = 2088328892;
-	Global_69971.f_6825[Global_69971.f_12591 /*3*/].f_1 = iVar0;
-	Global_69971.f_6825[Global_69971.f_12591 /*3*/].f_2 = Global_69971.f_12592[iVar0];
+	NoOp1(iVar0);
+	G_TextMessageConfig.f_6825[G_TextMessageConfig.f_12591 /*3*/] = 2088328892;
+	G_TextMessageConfig.f_6825[G_TextMessageConfig.f_12591 /*3*/].f_1 = iVar0;
+	G_TextMessageConfig.f_6825[G_TextMessageConfig.f_12591 /*3*/].f_2 = G_TextMessageConfig.f_12592[iVar0];
 	iVar1 = 0;
 	if (iParam1) {
 		iVar1 = 1;
 	}
-	func_87(Global_69971.f_12592[iVar0], func_109(iParam0), iVar1);
+	func_87(G_TextMessageConfig.f_12592[iVar0], func_109(iParam0), iVar1);
 	func_84(iVar0);
 }
 
@@ -4902,17 +4902,17 @@ void func_111(int iParam0, int iParam1) {
 	int iVar1;
 
 	iVar0 = 2;
-	func_85(iVar0);
-	Global_69971.f_6825[Global_69971.f_12591 /*3*/] = -806419157;
-	Global_69971.f_6825[Global_69971.f_12591 /*3*/].f_1 = iVar0;
-	Global_69971.f_6825[Global_69971.f_12591 /*3*/].f_2 = Global_69971.f_12592[iVar0];
+	NoOp1(iVar0);
+	G_TextMessageConfig.f_6825[G_TextMessageConfig.f_12591 /*3*/] = -806419157;
+	G_TextMessageConfig.f_6825[G_TextMessageConfig.f_12591 /*3*/].f_1 = iVar0;
+	G_TextMessageConfig.f_6825[G_TextMessageConfig.f_12591 /*3*/].f_2 = G_TextMessageConfig.f_12592[iVar0];
 	if (iParam1) {
 		iVar1 = 1;
 	}
 	else {
 		iVar1 = 0;
 	}
-	func_87(Global_69971.f_12592[iVar0], iParam0, iVar1);
+	func_87(G_TextMessageConfig.f_12592[iVar0], iParam0, iVar1);
 	func_84(iVar0);
 }
 
@@ -4922,17 +4922,17 @@ void func_112(int iParam0, int iParam1) {
 	int iVar1;
 
 	iVar0 = 2;
-	func_85(iVar0);
-	Global_69971.f_6825[Global_69971.f_12591 /*3*/] = 424223666;
-	Global_69971.f_6825[Global_69971.f_12591 /*3*/].f_1 = iVar0;
-	Global_69971.f_6825[Global_69971.f_12591 /*3*/].f_2 = Global_69971.f_12592[iVar0];
+	NoOp1(iVar0);
+	G_TextMessageConfig.f_6825[G_TextMessageConfig.f_12591 /*3*/] = 424223666;
+	G_TextMessageConfig.f_6825[G_TextMessageConfig.f_12591 /*3*/].f_1 = iVar0;
+	G_TextMessageConfig.f_6825[G_TextMessageConfig.f_12591 /*3*/].f_2 = G_TextMessageConfig.f_12592[iVar0];
 	if (!func_66(iParam0)) {
 	}
 	iVar1 = 0;
 	if (iParam1) {
 		iVar1 = 1;
 	}
-	func_87(Global_69971.f_12592[iVar0], iParam0, iVar1);
+	func_87(G_TextMessageConfig.f_12592[iVar0], iParam0, iVar1);
 	func_84(iVar0);
 }
 
@@ -4942,15 +4942,15 @@ void func_113(int iParam0, int iParam1) {
 	int iVar1;
 
 	iVar0 = 2;
-	func_85(iVar0);
-	Global_69971.f_6825[Global_69971.f_12591 /*3*/] = -319289499;
-	Global_69971.f_6825[Global_69971.f_12591 /*3*/].f_1 = iVar0;
-	Global_69971.f_6825[Global_69971.f_12591 /*3*/].f_2 = Global_69971.f_12592[iVar0];
+	NoOp1(iVar0);
+	G_TextMessageConfig.f_6825[G_TextMessageConfig.f_12591 /*3*/] = -319289499;
+	G_TextMessageConfig.f_6825[G_TextMessageConfig.f_12591 /*3*/].f_1 = iVar0;
+	G_TextMessageConfig.f_6825[G_TextMessageConfig.f_12591 /*3*/].f_2 = G_TextMessageConfig.f_12592[iVar0];
 	iVar1 = 0;
 	if (iParam1) {
 		iVar1 = 1;
 	}
-	func_87(Global_69971.f_12592[iVar0], iParam0, iVar1);
+	func_87(G_TextMessageConfig.f_12592[iVar0], iParam0, iVar1);
 	func_84(iVar0);
 }
 
@@ -4960,15 +4960,15 @@ void func_114(int iParam0, int iParam1, int iParam2, int iParam3) {
 	int iVar1;
 
 	iVar0 = 1;
-	func_85(iVar0);
-	Global_69971.f_6825[Global_69971.f_12591 /*3*/] = -1110793538;
-	Global_69971.f_6825[Global_69971.f_12591 /*3*/].f_1 = iVar0;
-	Global_69971.f_6825[Global_69971.f_12591 /*3*/].f_2 = Global_69971.f_12592[iVar0];
+	NoOp1(iVar0);
+	G_TextMessageConfig.f_6825[G_TextMessageConfig.f_12591 /*3*/] = -1110793538;
+	G_TextMessageConfig.f_6825[G_TextMessageConfig.f_12591 /*3*/].f_1 = iVar0;
+	G_TextMessageConfig.f_6825[G_TextMessageConfig.f_12591 /*3*/].f_2 = G_TextMessageConfig.f_12592[iVar0];
 	iVar1 = 0;
 	if (iParam2) {
 		iVar1 = 1;
 	}
-	func_92(Global_69971.f_12592[iVar0], iParam0, iParam1, iVar1, iParam3);
+	func_92(G_TextMessageConfig.f_12592[iVar0], iParam0, iParam1, iVar1, iParam3);
 	func_84(iVar0);
 }
 
@@ -4977,10 +4977,10 @@ void func_115(int iParam0) {
 	int iVar0;
 
 	iVar0 = 12;
-	func_85(iVar0);
-	Global_69971.f_6825[Global_69971.f_12591 /*3*/] = 485486536;
-	Global_69971.f_6825[Global_69971.f_12591 /*3*/].f_1 = iVar0;
-	Global_69971.f_6825[Global_69971.f_12591 /*3*/].f_2 = -1;
+	NoOp1(iVar0);
+	G_TextMessageConfig.f_6825[G_TextMessageConfig.f_12591 /*3*/] = 485486536;
+	G_TextMessageConfig.f_6825[G_TextMessageConfig.f_12591 /*3*/].f_1 = iVar0;
+	G_TextMessageConfig.f_6825[G_TextMessageConfig.f_12591 /*3*/].f_2 = -1;
 	func_84(iVar0);
 }
 
@@ -4990,17 +4990,17 @@ void func_116(int iParam0, int iParam1, int iParam2) {
 	int iVar1;
 
 	iVar0 = 2;
-	func_85(iVar0);
-	Global_69971.f_6825[Global_69971.f_12591 /*3*/] = -1334818538;
-	Global_69971.f_6825[Global_69971.f_12591 /*3*/].f_1 = iVar0;
-	Global_69971.f_6825[Global_69971.f_12591 /*3*/].f_2 = Global_69971.f_12592[iVar0];
+	NoOp1(iVar0);
+	G_TextMessageConfig.f_6825[G_TextMessageConfig.f_12591 /*3*/] = -1334818538;
+	G_TextMessageConfig.f_6825[G_TextMessageConfig.f_12591 /*3*/].f_1 = iVar0;
+	G_TextMessageConfig.f_6825[G_TextMessageConfig.f_12591 /*3*/].f_2 = G_TextMessageConfig.f_12592[iVar0];
 	if (iParam1) {
 		gameplay::set_bit(&iVar1, 0);
 	}
 	if (iParam2) {
 		gameplay::set_bit(&iVar1, 1);
 	}
-	func_87(Global_69971.f_12592[iVar0], iParam0, iVar1);
+	func_87(G_TextMessageConfig.f_12592[iVar0], iParam0, iVar1);
 	func_84(iVar0);
 }
 
@@ -5010,15 +5010,15 @@ void func_117(int iParam0, int iParam1, int iParam2) {
 	int iVar1;
 
 	iVar0 = 1;
-	func_85(iVar0);
-	Global_69971.f_6825[Global_69971.f_12591 /*3*/] = 1144707570;
-	Global_69971.f_6825[Global_69971.f_12591 /*3*/].f_1 = iVar0;
-	Global_69971.f_6825[Global_69971.f_12591 /*3*/].f_2 = Global_69971.f_12592[iVar0];
+	NoOp1(iVar0);
+	G_TextMessageConfig.f_6825[G_TextMessageConfig.f_12591 /*3*/] = 1144707570;
+	G_TextMessageConfig.f_6825[G_TextMessageConfig.f_12591 /*3*/].f_1 = iVar0;
+	G_TextMessageConfig.f_6825[G_TextMessageConfig.f_12591 /*3*/].f_2 = G_TextMessageConfig.f_12592[iVar0];
 	iVar1 = 0;
 	if (iParam1) {
 		iVar1 = 1;
 	}
-	func_92(Global_69971.f_12592[iVar0], iParam0, iVar1, iParam2, -1);
+	func_92(G_TextMessageConfig.f_12592[iVar0], iParam0, iVar1, iParam2, -1);
 	func_84(iVar0);
 }
 
@@ -5027,11 +5027,11 @@ void func_118(int iParam0, int iParam1, int iParam2, int iParam3) {
 	int iVar0;
 
 	iVar0 = 1;
-	func_85(iVar0);
-	Global_69971.f_6825[Global_69971.f_12591 /*3*/] = -1030591046;
-	Global_69971.f_6825[Global_69971.f_12591 /*3*/].f_1 = iVar0;
-	Global_69971.f_6825[Global_69971.f_12591 /*3*/].f_2 = Global_69971.f_12592[iVar0];
-	func_92(Global_69971.f_12592[iVar0], iParam2, iParam1, iParam0, iParam3);
+	NoOp1(iVar0);
+	G_TextMessageConfig.f_6825[G_TextMessageConfig.f_12591 /*3*/] = -1030591046;
+	G_TextMessageConfig.f_6825[G_TextMessageConfig.f_12591 /*3*/].f_1 = iVar0;
+	G_TextMessageConfig.f_6825[G_TextMessageConfig.f_12591 /*3*/].f_2 = G_TextMessageConfig.f_12592[iVar0];
+	func_92(G_TextMessageConfig.f_12592[iVar0], iParam2, iParam1, iParam0, iParam3);
 	func_84(iVar0);
 }
 
@@ -5040,10 +5040,10 @@ void func_119(int iParam0) {
 	int iVar0;
 
 	iVar0 = 0;
-	func_85(iVar0);
-	Global_69971.f_6825[Global_69971.f_12591 /*3*/] = -885022960;
-	Global_69971.f_6825[Global_69971.f_12591 /*3*/].f_1 = iVar0;
-	Global_69971.f_6825[Global_69971.f_12591 /*3*/].f_2 = iParam0;
+	NoOp1(iVar0);
+	G_TextMessageConfig.f_6825[G_TextMessageConfig.f_12591 /*3*/] = -885022960;
+	G_TextMessageConfig.f_6825[G_TextMessageConfig.f_12591 /*3*/].f_1 = iVar0;
+	G_TextMessageConfig.f_6825[G_TextMessageConfig.f_12591 /*3*/].f_2 = iParam0;
 	func_84(iVar0);
 }
 
@@ -5052,11 +5052,11 @@ void func_120(int iParam0, int iParam1) {
 	int iVar0;
 
 	iVar0 = 2;
-	func_85(iVar0);
-	Global_69971.f_6825[Global_69971.f_12591 /*3*/] = -115271859;
-	Global_69971.f_6825[Global_69971.f_12591 /*3*/].f_1 = iVar0;
-	Global_69971.f_6825[Global_69971.f_12591 /*3*/].f_2 = Global_69971.f_12592[iVar0];
-	func_87(Global_69971.f_12592[iVar0], iParam0, iParam1);
+	NoOp1(iVar0);
+	G_TextMessageConfig.f_6825[G_TextMessageConfig.f_12591 /*3*/] = -115271859;
+	G_TextMessageConfig.f_6825[G_TextMessageConfig.f_12591 /*3*/].f_1 = iVar0;
+	G_TextMessageConfig.f_6825[G_TextMessageConfig.f_12591 /*3*/].f_2 = G_TextMessageConfig.f_12592[iVar0];
+	func_87(G_TextMessageConfig.f_12592[iVar0], iParam0, iParam1);
 	func_84(iVar0);
 }
 
@@ -5065,10 +5065,10 @@ void func_121(int iParam0) {
 	int iVar0;
 
 	iVar0 = 0;
-	func_85(iVar0);
-	Global_69971.f_6825[Global_69971.f_12591 /*3*/] = 918415331;
-	Global_69971.f_6825[Global_69971.f_12591 /*3*/].f_1 = iVar0;
-	Global_69971.f_6825[Global_69971.f_12591 /*3*/].f_2 = iParam0;
+	NoOp1(iVar0);
+	G_TextMessageConfig.f_6825[G_TextMessageConfig.f_12591 /*3*/] = 918415331;
+	G_TextMessageConfig.f_6825[G_TextMessageConfig.f_12591 /*3*/].f_1 = iVar0;
+	G_TextMessageConfig.f_6825[G_TextMessageConfig.f_12591 /*3*/].f_2 = iParam0;
 	func_84(iVar0);
 }
 
@@ -5080,12 +5080,12 @@ void func_122(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4) {
 		iParam4 = iParam1;
 	}
 	iVar0 = 1;
-	func_85(iVar0);
-	Global_69971.f_6825[Global_69971.f_12591 /*3*/] = -2093459088;
-	Global_69971.f_6825[Global_69971.f_12591 /*3*/].f_1 = iVar0;
-	Global_69971.f_6825[Global_69971.f_12591 /*3*/].f_2 = Global_69971.f_12592[iVar0];
-	Global_82612[iParam0 /*34*/].f_7 = Global_69971.f_12592[iVar0];
-	func_92(Global_69971.f_12592[iVar0], iParam0, iParam1, iParam2, iParam4);
+	NoOp1(iVar0);
+	G_TextMessageConfig.f_6825[G_TextMessageConfig.f_12591 /*3*/] = -2093459088;
+	G_TextMessageConfig.f_6825[G_TextMessageConfig.f_12591 /*3*/].f_1 = iVar0;
+	G_TextMessageConfig.f_6825[G_TextMessageConfig.f_12591 /*3*/].f_2 = G_TextMessageConfig.f_12592[iVar0];
+	Global_82612[iParam0 /*34*/].f_7 = G_TextMessageConfig.f_12592[iVar0];
+	func_92(G_TextMessageConfig.f_12592[iVar0], iParam0, iParam1, iParam2, iParam4);
 	func_84(iVar0);
 }
 
@@ -5099,25 +5099,25 @@ void func_123(int iParam0, int iParam1) {
 
 	iVar0 = 1;
 	iVar1 = 0;
-	while (iVar1 < Global_69971.f_12591) {
-		if (Global_69971.f_6825[iVar1 /*3*/] == 531432813) {
-			iVar2 = Global_69971.f_6825[iVar1 /*3*/].f_2;
-			iVar3 = Global_69971.f_109[iVar2 /*4*/];
+	while (iVar1 < G_TextMessageConfig.f_12591) {
+		if (G_TextMessageConfig.f_6825[iVar1 /*3*/] == 531432813) {
+			iVar2 = G_TextMessageConfig.f_6825[iVar1 /*3*/].f_2;
+			iVar3 = G_TextMessageConfig.f_109[iVar2 /*4*/];
 			if (iVar3 == iParam0) {
 				return;
 			}
 		}
 		iVar1++;
 	}
-	func_85(iVar0);
-	Global_69971.f_6825[Global_69971.f_12591 /*3*/] = 531432813;
-	Global_69971.f_6825[Global_69971.f_12591 /*3*/].f_1 = iVar0;
-	Global_69971.f_6825[Global_69971.f_12591 /*3*/].f_2 = Global_69971.f_12592[iVar0];
+	NoOp1(iVar0);
+	G_TextMessageConfig.f_6825[G_TextMessageConfig.f_12591 /*3*/] = 531432813;
+	G_TextMessageConfig.f_6825[G_TextMessageConfig.f_12591 /*3*/].f_1 = iVar0;
+	G_TextMessageConfig.f_6825[G_TextMessageConfig.f_12591 /*3*/].f_2 = G_TextMessageConfig.f_12592[iVar0];
 	iVar4 = 0;
 	if (iParam1) {
 		iVar4 = 1;
 	}
-	func_92(Global_69971.f_12592[iVar0], iParam0, iVar4, -1, -1);
+	func_92(G_TextMessageConfig.f_12592[iVar0], iParam0, iVar4, -1, -1);
 	func_84(iVar0);
 }
 
@@ -5132,13 +5132,13 @@ void func_124(int iParam0, int iParam1, int iParam2) {
 		iVar1 = 1;
 	}
 	iVar1 += iParam2 * 1000000;
-	func_85(iVar0);
-	Global_69971.f_6825[Global_69971.f_12591 /*3*/] = -1597354430;
-	Global_69971.f_6825[Global_69971.f_12591 /*3*/].f_1 = iVar0;
-	Global_69971.f_6825[Global_69971.f_12591 /*3*/].f_2 = Global_69971.f_12592[iVar0];
+	NoOp1(iVar0);
+	G_TextMessageConfig.f_6825[G_TextMessageConfig.f_12591 /*3*/] = -1597354430;
+	G_TextMessageConfig.f_6825[G_TextMessageConfig.f_12591 /*3*/].f_1 = iVar0;
+	G_TextMessageConfig.f_6825[G_TextMessageConfig.f_12591 /*3*/].f_2 = G_TextMessageConfig.f_12592[iVar0];
 	if (iParam0 != 0 && iParam0 != 1 && iParam0 != 2) {
 	}
-	func_87(Global_69971.f_12592[iVar0], iParam0, iVar1);
+	func_87(G_TextMessageConfig.f_12592[iVar0], iParam0, iVar1);
 	func_84(iVar0);
 }
 
@@ -5148,15 +5148,15 @@ void func_125(int iParam0, int iParam1) {
 	int iVar1;
 
 	iVar0 = 2;
-	func_85(iVar0);
-	Global_69971.f_6825[Global_69971.f_12591 /*3*/] = 2048332261;
-	Global_69971.f_6825[Global_69971.f_12591 /*3*/].f_1 = iVar0;
-	Global_69971.f_6825[Global_69971.f_12591 /*3*/].f_2 = Global_69971.f_12592[iVar0];
+	NoOp1(iVar0);
+	G_TextMessageConfig.f_6825[G_TextMessageConfig.f_12591 /*3*/] = 2048332261;
+	G_TextMessageConfig.f_6825[G_TextMessageConfig.f_12591 /*3*/].f_1 = iVar0;
+	G_TextMessageConfig.f_6825[G_TextMessageConfig.f_12591 /*3*/].f_2 = G_TextMessageConfig.f_12592[iVar0];
 	iVar1 = 0;
 	if (iParam1) {
 		iVar1 = 1;
 	}
-	func_87(Global_69971.f_12592[iVar0], iParam0, iVar1);
+	func_87(G_TextMessageConfig.f_12592[iVar0], iParam0, iVar1);
 	func_84(iVar0);
 }
 
@@ -5165,10 +5165,10 @@ void func_126() {
 	int iVar0;
 
 	iVar0 = 12;
-	func_85(iVar0);
-	Global_69971.f_6825[Global_69971.f_12591 /*3*/] = -1750917831;
-	Global_69971.f_6825[Global_69971.f_12591 /*3*/].f_1 = iVar0;
-	Global_69971.f_6825[Global_69971.f_12591 /*3*/].f_2 = -1;
+	NoOp1(iVar0);
+	G_TextMessageConfig.f_6825[G_TextMessageConfig.f_12591 /*3*/] = -1750917831;
+	G_TextMessageConfig.f_6825[G_TextMessageConfig.f_12591 /*3*/].f_1 = iVar0;
+	G_TextMessageConfig.f_6825[G_TextMessageConfig.f_12591 /*3*/].f_2 = -1;
 	func_84(iVar0);
 }
 
@@ -5177,10 +5177,10 @@ void func_127(int iParam0) {
 	if (iParam0 >= 32) {
 		return;
 	}
-	if (Global_69971.f_12526[iParam0 /*2*/] != -1) {
+	if (G_TextMessageConfig.f_12526[iParam0 /*2*/] != -1) {
 		return;
 	}
-	Global_69971.f_12526[iParam0 /*2*/] = Global_69971.f_12591;
+	G_TextMessageConfig.f_12526[iParam0 /*2*/] = G_TextMessageConfig.f_12591;
 }
 
 // Position - 0x9FF8
@@ -5247,11 +5247,11 @@ void func_129(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4, i
 	int iVar0;
 
 	iVar0 = 7;
-	func_85(iVar0);
-	Global_69971.f_6825[Global_69971.f_12591 /*3*/] = -1034402456;
-	Global_69971.f_6825[Global_69971.f_12591 /*3*/].f_1 = iVar0;
-	Global_69971.f_6825[Global_69971.f_12591 /*3*/].f_2 = Global_69971.f_12592[iVar0];
-	func_89(Global_69971.f_12592[iVar0], iParam5, iParam1, iParam0, iParam2, iParam3, iParam4, iParam9, 0, iParam6,
+	NoOp1(iVar0);
+	G_TextMessageConfig.f_6825[G_TextMessageConfig.f_12591 /*3*/] = -1034402456;
+	G_TextMessageConfig.f_6825[G_TextMessageConfig.f_12591 /*3*/].f_1 = iVar0;
+	G_TextMessageConfig.f_6825[G_TextMessageConfig.f_12591 /*3*/].f_2 = G_TextMessageConfig.f_12592[iVar0];
+	SetTextParameters(G_TextMessageConfig.f_12592[iVar0], iParam5, iParam1, iParam0, iParam2, iParam3, iParam4, iParam9, 0, iParam6,
 			iParam7, iParam8);
 	if (gameplay::is_bit_set(iParam9, 7)) {
 	}
@@ -5263,10 +5263,10 @@ void func_130(int iParam0) {
 	int iVar0;
 
 	iVar0 = 0;
-	func_85(iVar0);
-	Global_69971.f_6825[Global_69971.f_12591 /*3*/] = 952363713;
-	Global_69971.f_6825[Global_69971.f_12591 /*3*/].f_1 = iVar0;
-	Global_69971.f_6825[Global_69971.f_12591 /*3*/].f_2 = iParam0;
+	NoOp1(iVar0);
+	G_TextMessageConfig.f_6825[G_TextMessageConfig.f_12591 /*3*/] = 952363713;
+	G_TextMessageConfig.f_6825[G_TextMessageConfig.f_12591 /*3*/].f_1 = iVar0;
+	G_TextMessageConfig.f_6825[G_TextMessageConfig.f_12591 /*3*/].f_2 = iParam0;
 	func_84(iVar0);
 }
 
@@ -5292,7 +5292,7 @@ void func_131() {
 	func_135(30000);
 	func_115(151);
 	func_136(2, 0);
-	func_98(1, 36, 1, 1516526930, 10000, 10000, -1, 0, -1, 32, 0);
+	InitializeMessage(1, 36, 1, 1516526930, 10000, 10000, -1, 0, -1, 32, 0);
 	func_123(152, 1);
 	func_125(56, 0);
 	func_136(2, 1);
@@ -5302,7 +5302,7 @@ void func_131() {
 	func_99(47, 0);
 	func_115(153);
 	func_136(3, 0);
-	func_98(1, 36, 1, -685399607, 10000, 10000, -1, 0, -1, 32, 0);
+	InitializeMessage(1, 36, 1, -685399607, 10000, 10000, -1, 0, -1, 32, 0);
 	func_123(154, 1);
 	func_125(57, 0);
 	func_136(3, 1);
@@ -5329,13 +5329,13 @@ void func_132(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4) {
 	int iVar1;
 
 	iVar0 = 1;
-	func_85(iVar0);
-	Global_69971.f_6825[Global_69971.f_12591 /*3*/] = -1532130030;
-	Global_69971.f_6825[Global_69971.f_12591 /*3*/].f_1 = iVar0;
-	Global_69971.f_6825[Global_69971.f_12591 /*3*/].f_2 = Global_69971.f_12592[iVar0];
+	NoOp1(iVar0);
+	G_TextMessageConfig.f_6825[G_TextMessageConfig.f_12591 /*3*/] = -1532130030;
+	G_TextMessageConfig.f_6825[G_TextMessageConfig.f_12591 /*3*/].f_1 = iVar0;
+	G_TextMessageConfig.f_6825[G_TextMessageConfig.f_12591 /*3*/].f_2 = G_TextMessageConfig.f_12592[iVar0];
 	iVar1 = iParam0;
 	iVar1 += iParam4 * 1000000;
-	func_92(Global_69971.f_12592[iVar0], iVar1, iParam1, iParam2, iParam3);
+	func_92(G_TextMessageConfig.f_12592[iVar0], iVar1, iParam1, iParam2, iParam3);
 	func_84(iVar0);
 }
 
@@ -5347,12 +5347,12 @@ void func_133(int iParam0, int iParam1, int iParam2, int iParam3) {
 		iParam3 = iParam1;
 	}
 	iVar0 = 1;
-	func_85(iVar0);
-	Global_69971.f_6825[Global_69971.f_12591 /*3*/] = -868169264;
-	Global_69971.f_6825[Global_69971.f_12591 /*3*/].f_1 = iVar0;
-	Global_69971.f_6825[Global_69971.f_12591 /*3*/].f_2 = Global_69971.f_12592[iVar0];
-	Global_82612[iParam0 /*34*/].f_7 = Global_69971.f_12592[iVar0];
-	func_92(Global_69971.f_12592[iVar0], iParam0, iParam1, iParam2, iParam3);
+	NoOp1(iVar0);
+	G_TextMessageConfig.f_6825[G_TextMessageConfig.f_12591 /*3*/] = -868169264;
+	G_TextMessageConfig.f_6825[G_TextMessageConfig.f_12591 /*3*/].f_1 = iVar0;
+	G_TextMessageConfig.f_6825[G_TextMessageConfig.f_12591 /*3*/].f_2 = G_TextMessageConfig.f_12592[iVar0];
+	Global_82612[iParam0 /*34*/].f_7 = G_TextMessageConfig.f_12592[iVar0];
+	func_92(G_TextMessageConfig.f_12592[iVar0], iParam0, iParam1, iParam2, iParam3);
 	func_84(iVar0);
 }
 
@@ -5361,11 +5361,11 @@ void func_134(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4, i
 	int iVar0;
 
 	iVar0 = 7;
-	func_85(iVar0);
-	Global_69971.f_6825[Global_69971.f_12591 /*3*/] = 1370985682;
-	Global_69971.f_6825[Global_69971.f_12591 /*3*/].f_1 = iVar0;
-	Global_69971.f_6825[Global_69971.f_12591 /*3*/].f_2 = Global_69971.f_12592[iVar0];
-	func_89(Global_69971.f_12592[iVar0], iParam0, iParam1, iParam2, iParam3, iParam4, iParam5, 0, 0, -1, 0, -1);
+	NoOp1(iVar0);
+	G_TextMessageConfig.f_6825[G_TextMessageConfig.f_12591 /*3*/] = 1370985682;
+	G_TextMessageConfig.f_6825[G_TextMessageConfig.f_12591 /*3*/].f_1 = iVar0;
+	G_TextMessageConfig.f_6825[G_TextMessageConfig.f_12591 /*3*/].f_2 = G_TextMessageConfig.f_12592[iVar0];
+	SetTextParameters(G_TextMessageConfig.f_12592[iVar0], iParam0, iParam1, iParam2, iParam3, iParam4, iParam5, 0, 0, -1, 0, -1);
 	func_84(iVar0);
 }
 
@@ -5374,10 +5374,10 @@ void func_135(int iParam0) {
 	int iVar0;
 
 	iVar0 = 0;
-	func_85(iVar0);
-	Global_69971.f_6825[Global_69971.f_12591 /*3*/] = 427205337;
-	Global_69971.f_6825[Global_69971.f_12591 /*3*/].f_1 = iVar0;
-	Global_69971.f_6825[Global_69971.f_12591 /*3*/].f_2 = iParam0;
+	NoOp1(iVar0);
+	G_TextMessageConfig.f_6825[G_TextMessageConfig.f_12591 /*3*/] = 427205337;
+	G_TextMessageConfig.f_6825[G_TextMessageConfig.f_12591 /*3*/].f_1 = iVar0;
+	G_TextMessageConfig.f_6825[G_TextMessageConfig.f_12591 /*3*/].f_2 = iParam0;
 	if (iParam0 < 0) {
 		return;
 	}
@@ -5390,12 +5390,12 @@ void func_136(int iParam0, int iParam1) {
 	int iVar1;
 
 	iVar0 = 0;
-	func_85(iVar0);
+	NoOp1(iVar0);
 	iVar1 = iParam0;
 	iVar1 += iParam1 * 1000000;
-	Global_69971.f_6825[Global_69971.f_12591 /*3*/] = 553813353;
-	Global_69971.f_6825[Global_69971.f_12591 /*3*/].f_1 = iVar0;
-	Global_69971.f_6825[Global_69971.f_12591 /*3*/].f_2 = iVar1;
+	G_TextMessageConfig.f_6825[G_TextMessageConfig.f_12591 /*3*/] = 553813353;
+	G_TextMessageConfig.f_6825[G_TextMessageConfig.f_12591 /*3*/].f_1 = iVar0;
+	G_TextMessageConfig.f_6825[G_TextMessageConfig.f_12591 /*3*/].f_2 = iVar1;
 	func_84(iVar0);
 }
 
@@ -5439,7 +5439,7 @@ void func_137() {
 	func_119(610159002);
 	func_88(4, 1, 0, 6000, 6000, -1451910289, -1, -1, 0, -1, 104);
 	func_96(7, 0);
-	func_98(5, 12, 1, -831144864, 30000, 10000, -1, 0, -1, 1064, 0);
+	InitializeMessage(5, 12, 1, -831144864, 30000, 10000, -1, 0, -1, 1064, 0);
 	func_135(3000);
 	func_123(68, 1);
 	func_122(92, -2, 68, -1, -1);
@@ -5486,11 +5486,11 @@ void func_138(int iParam0, int iParam1, int iParam2, int iParam3) {
 		iParam3 = iParam1;
 	}
 	iVar0 = 1;
-	func_85(iVar0);
-	Global_69971.f_6825[Global_69971.f_12591 /*3*/] = -1785731347;
-	Global_69971.f_6825[Global_69971.f_12591 /*3*/].f_1 = iVar0;
-	Global_69971.f_6825[Global_69971.f_12591 /*3*/].f_2 = Global_69971.f_12592[iVar0];
-	func_92(Global_69971.f_12592[iVar0], iParam0, iParam1, iParam2, iParam3);
+	NoOp1(iVar0);
+	G_TextMessageConfig.f_6825[G_TextMessageConfig.f_12591 /*3*/] = -1785731347;
+	G_TextMessageConfig.f_6825[G_TextMessageConfig.f_12591 /*3*/].f_1 = iVar0;
+	G_TextMessageConfig.f_6825[G_TextMessageConfig.f_12591 /*3*/].f_2 = G_TextMessageConfig.f_12592[iVar0];
+	func_92(G_TextMessageConfig.f_12592[iVar0], iParam0, iParam1, iParam2, iParam3);
 	func_84(iVar0);
 }
 
@@ -5500,33 +5500,33 @@ void func_139(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4, i
 	int iVar0;
 
 	iVar0 = 8;
-	func_85(iVar0);
-	Global_69971.f_6825[Global_69971.f_12591 /*3*/] = 246500489;
-	Global_69971.f_6825[Global_69971.f_12591 /*3*/].f_1 = iVar0;
-	Global_69971.f_6825[Global_69971.f_12591 /*3*/].f_2 = Global_69971.f_12592[iVar0];
-	func_140(Global_69971.f_12592[iVar0], iParam5, iParam6, iParam7, iParam1, iParam0, iParam2, iParam3, iParam4,
+	NoOp1(iVar0);
+	G_TextMessageConfig.f_6825[G_TextMessageConfig.f_12591 /*3*/] = 246500489;
+	G_TextMessageConfig.f_6825[G_TextMessageConfig.f_12591 /*3*/].f_1 = iVar0;
+	G_TextMessageConfig.f_6825[G_TextMessageConfig.f_12591 /*3*/].f_2 = G_TextMessageConfig.f_12592[iVar0];
+	func_140(G_TextMessageConfig.f_12592[iVar0], iParam5, iParam6, iParam7, iParam1, iParam0, iParam2, iParam3, iParam4,
 			 iParam11, -1, -1, -1, iParam9, iParam10, iParam8);
 	func_84(iVar0);
 }
 
 // Position - 0xAA87
-void func_140(int iParam0, var uParam1, var uParam2, var uParam3, var uParam4, var uParam5, var uParam6, var uParam7,
+void func_140(int iParam0, var uParam1, var uParam2, var uParam3, var uParam4, var textDelay, var uParam6, var uParam7,
 			  var uParam8, var uParam9, int iParam10, int iParam11, int iParam12, var uParam13, var uParam14,
 			  var uParam15) {
-	Global_69971.f_6684[iParam0 /*14*/] = uParam1;
-	Global_69971.f_6684[iParam0 /*14*/].f_1 = uParam2;
-	Global_69971.f_6684[iParam0 /*14*/].f_2 = uParam3;
-	Global_69971.f_6684[iParam0 /*14*/].f_3 = uParam4;
-	Global_69971.f_6684[iParam0 /*14*/].f_4 = uParam5;
-	Global_69971.f_6684[iParam0 /*14*/].f_5 = uParam6;
-	Global_69971.f_6684[iParam0 /*14*/].f_6 = uParam7;
-	Global_69971.f_6684[iParam0 /*14*/].f_7 = uParam8;
-	Global_69971.f_6684[iParam0 /*14*/].f_8 = uParam9;
-	Global_69971.f_6684[iParam0 /*14*/].f_9 = iParam10;
-	Global_69971.f_6684[iParam0 /*14*/].f_10 = iParam11;
-	Global_69971.f_6684[iParam0 /*14*/].f_11 = uParam13;
-	Global_69971.f_6684[iParam0 /*14*/].f_12 = uParam14;
-	Global_69971.f_6684[iParam0 /*14*/].f_13 = uParam15;
+	G_TextMessageConfig.f_6684[iParam0 /*14*/] = uParam1;
+	G_TextMessageConfig.f_6684[iParam0 /*14*/].f_1 = uParam2;
+	G_TextMessageConfig.f_6684[iParam0 /*14*/].f_2 = uParam3;
+	G_TextMessageConfig.f_6684[iParam0 /*14*/].f_3 = uParam4;
+	G_TextMessageConfig.f_6684[iParam0 /*14*/].f_4 = textDelay;
+	G_TextMessageConfig.f_6684[iParam0 /*14*/].f_5 = uParam6;
+	G_TextMessageConfig.f_6684[iParam0 /*14*/].f_6 = uParam7;
+	G_TextMessageConfig.f_6684[iParam0 /*14*/].f_7 = uParam8;
+	G_TextMessageConfig.f_6684[iParam0 /*14*/].f_8 = uParam9;
+	G_TextMessageConfig.f_6684[iParam0 /*14*/].f_9 = iParam10;
+	G_TextMessageConfig.f_6684[iParam0 /*14*/].f_10 = iParam11;
+	G_TextMessageConfig.f_6684[iParam0 /*14*/].f_11 = uParam13;
+	G_TextMessageConfig.f_6684[iParam0 /*14*/].f_12 = uParam14;
+	G_TextMessageConfig.f_6684[iParam0 /*14*/].f_13 = uParam15;
 }
 
 // Position - 0xAB5F
@@ -5544,11 +5544,11 @@ void func_141(int iParam0, int iParam1, int iParam2, int iParam3) {
 	if (iParam2) {
 		gameplay::set_bit(&iVar1, 2);
 	}
-	func_85(iVar0);
-	Global_69971.f_6825[Global_69971.f_12591 /*3*/] = 828625388;
-	Global_69971.f_6825[Global_69971.f_12591 /*3*/].f_1 = iVar0;
-	Global_69971.f_6825[Global_69971.f_12591 /*3*/].f_2 = Global_69971.f_12592[iVar0];
-	func_92(Global_69971.f_12592[iVar0], iParam0, iParam3, iVar1, 0);
+	NoOp1(iVar0);
+	G_TextMessageConfig.f_6825[G_TextMessageConfig.f_12591 /*3*/] = 828625388;
+	G_TextMessageConfig.f_6825[G_TextMessageConfig.f_12591 /*3*/].f_1 = iVar0;
+	G_TextMessageConfig.f_6825[G_TextMessageConfig.f_12591 /*3*/].f_2 = G_TextMessageConfig.f_12592[iVar0];
+	func_92(G_TextMessageConfig.f_12592[iVar0], iParam0, iParam3, iVar1, 0);
 	func_84(iVar0);
 }
 
@@ -5558,15 +5558,15 @@ void func_142(int iParam0, int iParam1, int iParam2, int iParam3) {
 	int iVar1;
 
 	iVar0 = 1;
-	func_85(iVar0);
-	Global_69971.f_6825[Global_69971.f_12591 /*3*/] = 1822409727;
-	Global_69971.f_6825[Global_69971.f_12591 /*3*/].f_1 = iVar0;
-	Global_69971.f_6825[Global_69971.f_12591 /*3*/].f_2 = Global_69971.f_12592[iVar0];
+	NoOp1(iVar0);
+	G_TextMessageConfig.f_6825[G_TextMessageConfig.f_12591 /*3*/] = 1822409727;
+	G_TextMessageConfig.f_6825[G_TextMessageConfig.f_12591 /*3*/].f_1 = iVar0;
+	G_TextMessageConfig.f_6825[G_TextMessageConfig.f_12591 /*3*/].f_2 = G_TextMessageConfig.f_12592[iVar0];
 	iVar1 = 0;
 	if (iParam2) {
 		gameplay::set_bit(&iVar1, 3);
 	}
-	func_92(Global_69971.f_12592[iVar0], iParam0, iParam1, iVar1, iParam3);
+	func_92(G_TextMessageConfig.f_12592[iVar0], iParam0, iParam1, iVar1, iParam3);
 	func_84(iVar0);
 }
 
@@ -5587,11 +5587,11 @@ void func_143(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4, i
 	if (iParam6) {
 		gameplay::set_bit(&iVar1, 1);
 	}
-	func_85(iVar0);
-	Global_69971.f_6825[Global_69971.f_12591 /*3*/] = -635831521;
-	Global_69971.f_6825[Global_69971.f_12591 /*3*/].f_1 = iVar0;
-	Global_69971.f_6825[Global_69971.f_12591 /*3*/].f_2 = Global_69971.f_12592[iVar0];
-	func_89(Global_69971.f_12592[iVar0], iParam0, iParam1, iParam2, iParam3, iParam4, iVar1, 0, 0, -1, 0, -1);
+	NoOp1(iVar0);
+	G_TextMessageConfig.f_6825[G_TextMessageConfig.f_12591 /*3*/] = -635831521;
+	G_TextMessageConfig.f_6825[G_TextMessageConfig.f_12591 /*3*/].f_1 = iVar0;
+	G_TextMessageConfig.f_6825[G_TextMessageConfig.f_12591 /*3*/].f_2 = G_TextMessageConfig.f_12592[iVar0];
+	SetTextParameters(G_TextMessageConfig.f_12592[iVar0], iParam0, iParam1, iParam2, iParam3, iParam4, iVar1, 0, 0, -1, 0, -1);
 	func_84(iVar0);
 }
 
@@ -5600,11 +5600,11 @@ void func_144(int iParam0, int iParam1) {
 	int iVar0;
 
 	iVar0 = 1;
-	func_85(iVar0);
-	Global_69971.f_6825[Global_69971.f_12591 /*3*/] = 1984622930;
-	Global_69971.f_6825[Global_69971.f_12591 /*3*/].f_1 = iVar0;
-	Global_69971.f_6825[Global_69971.f_12591 /*3*/].f_2 = Global_69971.f_12592[iVar0];
-	func_92(Global_69971.f_12592[iVar0], iParam0, iParam1, -1, -1);
+	NoOp1(iVar0);
+	G_TextMessageConfig.f_6825[G_TextMessageConfig.f_12591 /*3*/] = 1984622930;
+	G_TextMessageConfig.f_6825[G_TextMessageConfig.f_12591 /*3*/].f_1 = iVar0;
+	G_TextMessageConfig.f_6825[G_TextMessageConfig.f_12591 /*3*/].f_2 = G_TextMessageConfig.f_12592[iVar0];
+	func_92(G_TextMessageConfig.f_12592[iVar0], iParam0, iParam1, -1, -1);
 	func_84(iVar0);
 }
 
@@ -5674,10 +5674,10 @@ void func_146(int iParam0) {
 	if (!func_66(iParam0)) {
 	}
 	iVar0 = 0;
-	func_85(iVar0);
-	Global_69971.f_6825[Global_69971.f_12591 /*3*/] = -49496173;
-	Global_69971.f_6825[Global_69971.f_12591 /*3*/].f_1 = iVar0;
-	Global_69971.f_6825[Global_69971.f_12591 /*3*/].f_2 = iParam0;
+	NoOp1(iVar0);
+	G_TextMessageConfig.f_6825[G_TextMessageConfig.f_12591 /*3*/] = -49496173;
+	G_TextMessageConfig.f_6825[G_TextMessageConfig.f_12591 /*3*/].f_1 = iVar0;
+	G_TextMessageConfig.f_6825[G_TextMessageConfig.f_12591 /*3*/].f_2 = iParam0;
 	func_84(iVar0);
 }
 
@@ -5689,10 +5689,10 @@ void func_147(int iParam0) {
 	if (iParam0 != 0 && iParam0 != 1 && iParam0 != 2) {
 		return;
 	}
-	func_85(iVar0);
-	Global_69971.f_6825[Global_69971.f_12591 /*3*/] = 213552929;
-	Global_69971.f_6825[Global_69971.f_12591 /*3*/].f_1 = iVar0;
-	Global_69971.f_6825[Global_69971.f_12591 /*3*/].f_2 = iParam0;
+	NoOp1(iVar0);
+	G_TextMessageConfig.f_6825[G_TextMessageConfig.f_12591 /*3*/] = 213552929;
+	G_TextMessageConfig.f_6825[G_TextMessageConfig.f_12591 /*3*/].f_1 = iVar0;
+	G_TextMessageConfig.f_6825[G_TextMessageConfig.f_12591 /*3*/].f_2 = iParam0;
 	func_84(iVar0);
 }
 
@@ -5704,11 +5704,11 @@ void func_148(int iParam0, int iParam1) {
 	if (iParam1 != 0 && iParam1 != 1 && iParam1 != 2) {
 		return;
 	}
-	func_85(iVar0);
-	Global_69971.f_6825[Global_69971.f_12591 /*3*/] = 139009950;
-	Global_69971.f_6825[Global_69971.f_12591 /*3*/].f_1 = iVar0;
-	Global_69971.f_6825[Global_69971.f_12591 /*3*/].f_2 = Global_69971.f_12592[iVar0];
-	func_87(Global_69971.f_12592[iVar0], iParam0, iParam1);
+	NoOp1(iVar0);
+	G_TextMessageConfig.f_6825[G_TextMessageConfig.f_12591 /*3*/] = 139009950;
+	G_TextMessageConfig.f_6825[G_TextMessageConfig.f_12591 /*3*/].f_1 = iVar0;
+	G_TextMessageConfig.f_6825[G_TextMessageConfig.f_12591 /*3*/].f_2 = G_TextMessageConfig.f_12592[iVar0];
+	func_87(G_TextMessageConfig.f_12592[iVar0], iParam0, iParam1);
 	func_84(iVar0);
 }
 
@@ -5718,14 +5718,14 @@ void func_149(int iParam0) {
 	int iVar1;
 
 	iVar0 = 0;
-	func_85(iVar0);
+	NoOp1(iVar0);
 	iVar1 = 0;
 	if (iParam0) {
 		iVar1 = 1;
 	}
-	Global_69971.f_6825[Global_69971.f_12591 /*3*/] = -2093560018;
-	Global_69971.f_6825[Global_69971.f_12591 /*3*/].f_1 = iVar0;
-	Global_69971.f_6825[Global_69971.f_12591 /*3*/].f_2 = iVar1;
+	G_TextMessageConfig.f_6825[G_TextMessageConfig.f_12591 /*3*/] = -2093560018;
+	G_TextMessageConfig.f_6825[G_TextMessageConfig.f_12591 /*3*/].f_1 = iVar0;
+	G_TextMessageConfig.f_6825[G_TextMessageConfig.f_12591 /*3*/].f_2 = iVar1;
 	func_84(iVar0);
 }
 
@@ -5744,7 +5744,7 @@ void func_150() {
 	func_123(138, 1);
 	func_121(0);
 	func_132(79, 139, -2, -1, 0);
-	func_98(1, 17, 6, -1207693656, 720000, 20000, -1, 82, -1, 1024, 0);
+	InitializeMessage(1, 17, 6, -1207693656, 720000, 20000, -1, 82, -1, 1024, 0);
 	func_123(139, 1);
 	func_121(1);
 	func_99(42, 0);
@@ -5756,7 +5756,7 @@ void func_150() {
 	func_123(142, 1);
 	func_121(2);
 	func_118(15, 1, -1130010274, -1);
-	func_98(1, 15, 6, 1245740196, 720000, 20000, -1, 84, -1, 1024, 0);
+	InitializeMessage(1, 15, 6, 1245740196, 720000, 20000, -1, 84, -1, 1024, 0);
 	func_123(143, 1);
 	func_121(3);
 	func_90(-2062910056);
@@ -5768,7 +5768,7 @@ void func_150() {
 	func_133(51, 147, 146, 147);
 	func_123(146, 1);
 	func_121(4);
-	func_98(1, 14, 6, -149728591, 720000, 20000, -1, 83, -1, 1024, 0);
+	InitializeMessage(1, 14, 6, -149728591, 720000, 20000, -1, 83, -1, 1024, 0);
 	func_123(147, 1);
 	func_121(5);
 	func_83();
@@ -5787,11 +5787,11 @@ void func_151(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4, i
 	iVar0 = 8;
 	uVar1 = iParam14;
 	gameplay::set_bit(&uVar1, 5);
-	func_85(iVar0);
-	Global_69971.f_6825[Global_69971.f_12591 /*3*/] = -546916353;
-	Global_69971.f_6825[Global_69971.f_12591 /*3*/].f_1 = iVar0;
-	Global_69971.f_6825[Global_69971.f_12591 /*3*/].f_2 = Global_69971.f_12592[iVar0];
-	func_140(Global_69971.f_12592[iVar0], iParam5, iParam6, iParam7, iParam0, iParam1, iParam2, iParam3, iParam4, uVar1,
+	NoOp1(iVar0);
+	G_TextMessageConfig.f_6825[G_TextMessageConfig.f_12591 /*3*/] = -546916353;
+	G_TextMessageConfig.f_6825[G_TextMessageConfig.f_12591 /*3*/].f_1 = iVar0;
+	G_TextMessageConfig.f_6825[G_TextMessageConfig.f_12591 /*3*/].f_2 = G_TextMessageConfig.f_12592[iVar0];
+	func_140(G_TextMessageConfig.f_12592[iVar0], iParam5, iParam6, iParam7, iParam0, iParam1, iParam2, iParam3, iParam4, uVar1,
 			 iParam8, iParam9, iParam10, iParam11, iParam12, iParam13);
 	func_84(iVar0);
 }
@@ -5852,7 +5852,7 @@ void func_152() {
 	func_99(38, 0);
 	func_99(39, 0);
 	func_88(1, 14, 0, 6000, 5000, -375893868, -1589024007, 13, 56, -1, 136);
-	func_98(2, 14, 0, -658009473, 6000, 5000, 13, 56, -1, 1032, 0);
+	InitializeMessage(2, 14, 0, -658009473, 6000, 5000, 13, 56, -1, 1032, 0);
 	func_132(50, -2, -1, -2, 0);
 	func_123(135, 1);
 	func_122(49, -2, 135, -1, -1);
@@ -5890,11 +5890,11 @@ void func_153(int iParam0, int iParam1, int iParam2) {
 	if (iParam2) {
 		iVar1 = 1;
 	}
-	func_85(iVar0);
-	Global_69971.f_6825[Global_69971.f_12591 /*3*/] = 1641341968;
-	Global_69971.f_6825[Global_69971.f_12591 /*3*/].f_1 = iVar0;
-	Global_69971.f_6825[Global_69971.f_12591 /*3*/].f_2 = Global_69971.f_12592[iVar0];
-	func_92(Global_69971.f_12592[iVar0], iParam1, iParam0, iVar1, 0);
+	NoOp1(iVar0);
+	G_TextMessageConfig.f_6825[G_TextMessageConfig.f_12591 /*3*/] = 1641341968;
+	G_TextMessageConfig.f_6825[G_TextMessageConfig.f_12591 /*3*/].f_1 = iVar0;
+	G_TextMessageConfig.f_6825[G_TextMessageConfig.f_12591 /*3*/].f_2 = G_TextMessageConfig.f_12592[iVar0];
+	func_92(G_TextMessageConfig.f_12592[iVar0], iParam1, iParam0, iVar1, 0);
 	func_84(iVar0);
 }
 
@@ -5911,11 +5911,11 @@ void func_154(int iParam0, int iParam1, int iParam2, int iParam3) {
 	if (iParam2) {
 		iVar1 = 1;
 	}
-	func_85(iVar0);
-	Global_69971.f_6825[Global_69971.f_12591 /*3*/] = 1389104680;
-	Global_69971.f_6825[Global_69971.f_12591 /*3*/].f_1 = iVar0;
-	Global_69971.f_6825[Global_69971.f_12591 /*3*/].f_2 = Global_69971.f_12592[iVar0];
-	func_92(Global_69971.f_12592[iVar0], iParam1, iParam0, iVar1, iParam3);
+	NoOp1(iVar0);
+	G_TextMessageConfig.f_6825[G_TextMessageConfig.f_12591 /*3*/] = 1389104680;
+	G_TextMessageConfig.f_6825[G_TextMessageConfig.f_12591 /*3*/].f_1 = iVar0;
+	G_TextMessageConfig.f_6825[G_TextMessageConfig.f_12591 /*3*/].f_2 = G_TextMessageConfig.f_12592[iVar0];
+	func_92(G_TextMessageConfig.f_12592[iVar0], iParam1, iParam0, iVar1, iParam3);
 	func_84(iVar0);
 }
 
@@ -5928,7 +5928,7 @@ void func_155() {
 	func_126();
 	func_99(36, 0);
 	func_132(51, -2, -1, -1, 0);
-	func_98(4, 31, 1, 251204761, 1000, 1000, -1, 0, -1, 2048, 0);
+	InitializeMessage(4, 31, 1, 251204761, 1000, 1000, -1, 0, -1, 2048, 0);
 	func_123(131, 1);
 	func_122(45, -2, 131, -1, -1);
 	func_114(130, 1, 1, 0);
@@ -5957,7 +5957,7 @@ void func_155() {
 	func_118(29, 1, 1906711117, -1);
 	func_118(26, 1, -1613846760, -1);
 	func_118(19, 4, 556840426, -1);
-	func_98(4, 24, 1, 1328243545, 220000, 20000, 10, 0, -1, 0, 0);
+	InitializeMessage(4, 24, 1, 1328243545, 220000, 20000, 10, 0, -1, 0, 0);
 	func_104(32, 1);
 	func_96(3, 0);
 	func_135(110000);
@@ -6029,14 +6029,14 @@ void func_158(int iParam0) {
 	int iVar1;
 
 	iVar0 = 0;
-	func_85(iVar0);
+	NoOp1(iVar0);
 	iVar1 = 0;
 	if (iParam0) {
 		iVar1 = 1;
 	}
-	Global_69971.f_6825[Global_69971.f_12591 /*3*/] = -26112892;
-	Global_69971.f_6825[Global_69971.f_12591 /*3*/].f_1 = iVar0;
-	Global_69971.f_6825[Global_69971.f_12591 /*3*/].f_2 = iVar1;
+	G_TextMessageConfig.f_6825[G_TextMessageConfig.f_12591 /*3*/] = -26112892;
+	G_TextMessageConfig.f_6825[G_TextMessageConfig.f_12591 /*3*/].f_1 = iVar0;
+	G_TextMessageConfig.f_6825[G_TextMessageConfig.f_12591 /*3*/].f_2 = iVar1;
 	func_84(iVar0);
 }
 
@@ -6047,7 +6047,7 @@ void func_159() {
 	iVar0 = 21;
 	func_127(iVar0);
 	func_126();
-	func_98(1, 12, 1, -270587643, 240000, 10000, -1, 118, -1, 1032, 0);
+	InitializeMessage(1, 12, 1, -270587643, 240000, 10000, -1, 118, -1, 1032, 0);
 	func_132(15, -2, -1, -2, 0);
 	func_135(3000);
 	func_93("AM_H_PREP2A", 10000, 2, 1, 0, 0);
@@ -6071,12 +6071,12 @@ void func_160(char *sParam0, int iParam1) {
 	struct<8> Var1;
 
 	iVar0 = 4;
-	func_85(iVar0);
-	Global_69971.f_6825[Global_69971.f_12591 /*3*/] = 2110689209;
-	Global_69971.f_6825[Global_69971.f_12591 /*3*/].f_1 = iVar0;
-	Global_69971.f_6825[Global_69971.f_12591 /*3*/].f_2 = Global_69971.f_12592[iVar0];
+	NoOp1(iVar0);
+	G_TextMessageConfig.f_6825[G_TextMessageConfig.f_12591 /*3*/] = 2110689209;
+	G_TextMessageConfig.f_6825[G_TextMessageConfig.f_12591 /*3*/].f_1 = iVar0;
+	G_TextMessageConfig.f_6825[G_TextMessageConfig.f_12591 /*3*/].f_2 = G_TextMessageConfig.f_12592[iVar0];
 	StringCopy(&Var1, sParam0, 32);
-	func_94(Global_69971.f_12592[iVar0], Var1, iParam1, 0, 0, 0);
+	func_94(G_TextMessageConfig.f_12592[iVar0], Var1, iParam1, 0, 0, 0);
 	func_84(iVar0);
 }
 
@@ -6121,13 +6121,13 @@ void func_161() {
 	func_121(0);
 	func_129(0, 1, 0, 6000, 6000, 327673956, 23, 0, -1, 0);
 	func_118(19, 2, -1621970384, -1);
-	func_98(1, 12, 1, -1608680660, 80000, 30000, -1, 0, 8, 0, 0);
+	InitializeMessage(1, 12, 1, -1608680660, 80000, 30000, -1, 0, 8, 0, 0);
 	func_115(222);
 	func_135(20000);
 	func_99(33, 0);
 	func_119(-1608680660);
 	func_164(7, 1, -2, 61);
-	func_98(1, 12, 1, 689367973, 10000, 10000, -1, 0, -1, 1064, 0);
+	InitializeMessage(1, 12, 1, 689367973, 10000, 10000, -1, 0, -1, 1064, 0);
 	func_114(182, 1, 1, 0);
 	func_114(183, 1, 1, 0);
 	func_114(184, 1, 1, 0);
@@ -6144,7 +6144,7 @@ void func_161() {
 	func_114(183, 0, 1, 0);
 	func_114(184, 0, 1, 0);
 	func_114(164, 1, 1, 0);
-	func_98(2, 0, 1, -666454256, 15000, 5000, -1, 0, -1, 1088, 0);
+	InitializeMessage(2, 0, 1, -666454256, 15000, 5000, -1, 0, -1, 1088, 0);
 	func_138(88, 58, -2, -1);
 	func_100(12, -2, 57, -2);
 	func_129(0, 12, 0, 6000, 6000, -1945164276, -1, 0, -1, 32);
@@ -6157,11 +6157,11 @@ void func_161() {
 	func_163(65, 0);
 	func_123(61, 1);
 	func_162(21);
-	func_98(1, 12, 1, -1641645609, 10000, 10000, -1, 0, -1, 1064, 0);
+	InitializeMessage(1, 12, 1, -1641645609, 10000, 10000, -1, 0, -1, 1064, 0);
 	func_135(6000);
 	func_93("AM_H_PREP1B", 10000, 2, 1, 0, 1);
 	func_93("AM_H_PREP2", 10000, 2, 1, 0, 1);
-	func_98(2, 0, 1, -666454256, 15000, 5000, -1, 0, -1, 1088, 1);
+	InitializeMessage(2, 0, 1, -666454256, 15000, 5000, -1, 0, -1, 1088, 1);
 	func_123(62, 1);
 	func_122(89, -2, 62, -1, -1);
 	func_160("AM_H_PREP1B", 1);
@@ -6192,7 +6192,7 @@ void func_161() {
 	func_90(1311040108);
 	func_130(54);
 	func_95(12, 1, 1);
-	func_98(2, 0, 0, -1879623490, 5000, 20000, -1, 0, -1, 40, 0);
+	InitializeMessage(2, 0, 0, -1879623490, 5000, 20000, -1, 0, -1, 40, 0);
 	func_95(20, 2, 0);
 	func_95(24, 2, 0);
 	func_95(39, 2, 0);
@@ -6212,10 +6212,10 @@ void func_162(int iParam0) {
 	int iVar0;
 
 	iVar0 = 0;
-	func_85(iVar0);
-	Global_69971.f_6825[Global_69971.f_12591 /*3*/] = 2058194871;
-	Global_69971.f_6825[Global_69971.f_12591 /*3*/].f_1 = iVar0;
-	Global_69971.f_6825[Global_69971.f_12591 /*3*/].f_2 = iParam0;
+	NoOp1(iVar0);
+	G_TextMessageConfig.f_6825[G_TextMessageConfig.f_12591 /*3*/] = 2058194871;
+	G_TextMessageConfig.f_6825[G_TextMessageConfig.f_12591 /*3*/].f_1 = iVar0;
+	G_TextMessageConfig.f_6825[G_TextMessageConfig.f_12591 /*3*/].f_2 = iParam0;
 	func_84(iVar0);
 }
 
@@ -6225,12 +6225,12 @@ void func_163(int iParam0, int iParam1) {
 	int iVar1;
 
 	iVar0 = 0;
-	func_85(iVar0);
+	NoOp1(iVar0);
 	iVar1 = iParam0;
 	iVar1 += iParam1 * 1000000;
-	Global_69971.f_6825[Global_69971.f_12591 /*3*/] = -1878191811;
-	Global_69971.f_6825[Global_69971.f_12591 /*3*/].f_1 = iVar0;
-	Global_69971.f_6825[Global_69971.f_12591 /*3*/].f_2 = iVar1;
+	G_TextMessageConfig.f_6825[G_TextMessageConfig.f_12591 /*3*/] = -1878191811;
+	G_TextMessageConfig.f_6825[G_TextMessageConfig.f_12591 /*3*/].f_1 = iVar0;
+	G_TextMessageConfig.f_6825[G_TextMessageConfig.f_12591 /*3*/].f_2 = iVar1;
 	func_84(iVar0);
 }
 
@@ -6239,11 +6239,11 @@ void func_164(int iParam0, int iParam1, int iParam2, int iParam3) {
 	int iVar0;
 
 	iVar0 = 1;
-	func_85(iVar0);
-	Global_69971.f_6825[Global_69971.f_12591 /*3*/] = 1174602905;
-	Global_69971.f_6825[Global_69971.f_12591 /*3*/].f_1 = iVar0;
-	Global_69971.f_6825[Global_69971.f_12591 /*3*/].f_2 = Global_69971.f_12592[iVar0];
-	func_92(Global_69971.f_12592[iVar0], iParam0, iParam1, iParam2, iParam3);
+	NoOp1(iVar0);
+	G_TextMessageConfig.f_6825[G_TextMessageConfig.f_12591 /*3*/] = 1174602905;
+	G_TextMessageConfig.f_6825[G_TextMessageConfig.f_12591 /*3*/].f_1 = iVar0;
+	G_TextMessageConfig.f_6825[G_TextMessageConfig.f_12591 /*3*/].f_2 = G_TextMessageConfig.f_12592[iVar0];
+	func_92(G_TextMessageConfig.f_12592[iVar0], iParam0, iParam1, iParam2, iParam3);
 	func_84(iVar0);
 }
 
@@ -6277,7 +6277,7 @@ void func_165() {
 	func_96(35, 0);
 	func_132(62, 125, -2, 125, 0);
 	func_106(2, 19, 6, -132533604, 80000, 30000, -1, 0, -1, 0);
-	func_98(2, 19, 1, -1501908698, 30000, 10000, -1, 41, -1, 0, 0);
+	InitializeMessage(2, 19, 1, -1501908698, 30000, 10000, -1, 41, -1, 0, 0);
 	func_123(125, 1);
 	func_88(2, 19, 1, 180000, 30000, 546458037, 1674644829, 9, 55, -1, 129);
 	func_123(239, 1);
@@ -6286,7 +6286,7 @@ void func_165() {
 	func_123(126, 1);
 	func_122(41, -2, 126, -1, -1);
 	func_114(155, 1, 1, 0);
-	func_98(4, 19, 1, 943848816, 300000, 10000, -1, 66, 22, 262144, 0);
+	InitializeMessage(4, 19, 1, /* lamar's text */943848816, 300000, 10000, -1, 66, 22, 262144, 0);
 	func_120(121, 0);
 	func_90(522335044);
 	func_90(-1621970384);
@@ -6375,7 +6375,7 @@ void func_168() {
 	func_96(26, 0);
 	func_163(47, 0);
 	func_123(45, 1);
-	func_98(7, 12, 1, 2073240496, 240000, 10000, -1, 0, -1, 1064, 0);
+	InitializeMessage(7, 12, 1, 2073240496, 240000, 10000, -1, 0, -1, 1064, 0);
 	func_135(3001);
 	func_123(46, 1);
 	func_122(83, -2, 46, -1, -1);
@@ -6398,8 +6398,8 @@ void func_169() {
 	func_122(76, -2, 29, -1, -1);
 	func_114(172, 1, 1, 0);
 	func_142(4, 1, 1, 0);
-	func_98(2, 45, 1, 1023767, 15000, 10000, -1, 155, -1, 0, 0);
-	func_98(5, 45, 1, 190444893, 15000, 10000, -1, 155, -1, 0, 0);
+	InitializeMessage(2, 45, 1, 1023767, 15000, 10000, -1, 155, -1, 0, 0);
+	InitializeMessage(5, 45, 1, 190444893, 15000, 10000, -1, 155, -1, 0, 0);
 	func_101(25);
 	func_99(25, 0);
 	func_120(98, 0);
@@ -6432,7 +6432,7 @@ void func_169() {
 	func_101(16);
 	func_164(11, 8, 35, 38);
 	func_123(35, 1);
-	func_98(7, 12, 1, -1942568571, 30000, 10000, -1, 0, -1, 1064, 0);
+	InitializeMessage(7, 12, 1, -1942568571, 30000, 10000, -1, 0, -1, 1064, 0);
 	func_135(3000);
 	func_123(36, 1);
 	func_122(78, -2, 36, -1, -1);
@@ -6451,11 +6451,11 @@ void func_169() {
 	func_108(joaat("weapon_pumpshotgun"), 1);
 	func_163(50, 0);
 	func_123(38, 1);
-	func_98(7, 12, 1, -408163515, 30000, 10000, -1, 0, -1, 1064, 0);
+	InitializeMessage(7, 12, 1, -408163515, 30000, 10000, -1, 0, -1, 1064, 0);
 	func_162(17);
 	func_162(18);
 	func_135(3001);
-	func_98(7, 12, 1, -1216150262, 600000, 30000, -1, 0, 9, 0, 0);
+	InitializeMessage(7, 12, 1, -1216150262, 600000, 30000, -1, 0, 9, 0, 0);
 	func_123(39, 1);
 	func_97("finale_heist_prepEamb", 2050);
 	func_122(79, -2, 39, -1, -1);
@@ -6575,31 +6575,31 @@ void func_170() {
 	func_106(2, 17, 6, 632406285, 450000, 120000, -1, 0, -1, 0);
 	func_106(2, 19, 6, -1523625340, 850000, 120000, -1, 0, -1, 0);
 	func_106(2, 2, 6, -2076002026, 120000, 60000, -1, 0, -1, 0);
-	func_98(6, 12, 1, 704657460, 3000, 1000, -1, 79, -1, 0, 0);
+	InitializeMessage(6, 12, 1, 704657460, 3000, 1000, -1, 79, -1, 0, 0);
 	func_129(1, 29, 1, 30000, 60000, -121056641, -1, 0, -1, 0);
 	func_88(2, 14, 1, 250000, 180000, -1398697867, -1, -1, 129, -1, 0);
 	func_120(190, 0);
 	func_132(49, 122, -2, 122, 0);
-	func_98(2, 12, 1, -799417230, 200000, 1000, -1, 0, -1, 0, 0);
+	InitializeMessage(2, 12, 1, -799417230, 200000, 1000, -1, 0, -1, 0, 0);
 	func_163(122, 0);
 	func_123(121, 1);
 	func_132(136, -2, 123, -1, 0);
 	func_106(2, 0, 6, -1897604564, 300000, 60000, -1, 0, -1, 0);
 	func_106(2, 19, 6, 711875844, 800000, 60000, -1, 0, -1, 0);
 	func_106(1, 20, 6, 430981897, 600000, 120000, -1, 0, -1, 0);
-	func_98(3, 12, 1, -1198893762, 3000, 1000, -1, 79, -1, 0, 0);
+	InitializeMessage(3, 12, 1, -1198893762, 3000, 1000, -1, 79, -1, 0, 0);
 	func_88(1, 14, 1, 250000, 180000, -288258721, -1, -1, 0, -1, 0);
 	func_88(2, 14, 1, 480000, 180000, -47439340, -1, -1, 0, -1, 0);
 	func_88(2, 23, 1, 120000, 180000, 1972824823, -1, -1, 0, -1, 0);
 	func_120(191, 0);
 	func_132(49, 122, -2, 122, 1);
-	func_98(2, 12, 1, -2135245515, 200000, 1000, -1, 0, -1, 0, 0);
+	InitializeMessage(2, 12, 1, -2135245515, 200000, 1000, -1, 0, -1, 0, 0);
 	func_123(122, 1);
 	func_88(2, 19, 1, 600000, 180000, -579786137, -1, -1, 0, -1, 0);
 	func_123(123, 1);
 	func_132(136, 255, -2, -2, 0);
 	func_106(4, 30, 6, 183426861, 30000, 20000, -1, 0, -1, 0);
-	func_98(4, 20, 6, 65881433, 60000, 10000, 10, 207, -1, 0, 0);
+	InitializeMessage(4, 20, 6, 65881433, 60000, 10000, 10, 207, -1, 0, 0);
 	func_104(35, 1);
 	func_115(209);
 	func_123(255, 1);
@@ -6612,10 +6612,10 @@ void func_171(int iParam0) {
 	int iVar0;
 
 	iVar0 = 0;
-	func_85(iVar0);
-	Global_69971.f_6825[Global_69971.f_12591 /*3*/] = 1572323470;
-	Global_69971.f_6825[Global_69971.f_12591 /*3*/].f_1 = iVar0;
-	Global_69971.f_6825[Global_69971.f_12591 /*3*/].f_2 = iParam0;
+	NoOp1(iVar0);
+	G_TextMessageConfig.f_6825[G_TextMessageConfig.f_12591 /*3*/] = 1572323470;
+	G_TextMessageConfig.f_6825[G_TextMessageConfig.f_12591 /*3*/].f_1 = iVar0;
+	G_TextMessageConfig.f_6825[G_TextMessageConfig.f_12591 /*3*/].f_2 = iParam0;
 	func_84(iVar0);
 }
 
@@ -6624,11 +6624,11 @@ void func_172(int iParam0, int iParam1) {
 	int iVar0;
 
 	iVar0 = 2;
-	func_85(iVar0);
-	Global_69971.f_6825[Global_69971.f_12591 /*3*/] = -217347738;
-	Global_69971.f_6825[Global_69971.f_12591 /*3*/].f_1 = iVar0;
-	Global_69971.f_6825[Global_69971.f_12591 /*3*/].f_2 = Global_69971.f_12592[iVar0];
-	func_87(Global_69971.f_12592[iVar0], iParam0, iParam1);
+	NoOp1(iVar0);
+	G_TextMessageConfig.f_6825[G_TextMessageConfig.f_12591 /*3*/] = -217347738;
+	G_TextMessageConfig.f_6825[G_TextMessageConfig.f_12591 /*3*/].f_1 = iVar0;
+	G_TextMessageConfig.f_6825[G_TextMessageConfig.f_12591 /*3*/].f_2 = G_TextMessageConfig.f_12592[iVar0];
+	func_87(G_TextMessageConfig.f_12592[iVar0], iParam0, iParam1);
 	func_84(iVar0);
 }
 
@@ -6640,11 +6640,11 @@ void func_173(int iParam0, int iParam1) {
 	if (iParam0 != 0 && iParam0 != 1 && iParam0 != 2) {
 		return;
 	}
-	func_85(iVar0);
-	Global_69971.f_6825[Global_69971.f_12591 /*3*/] = 215526917;
-	Global_69971.f_6825[Global_69971.f_12591 /*3*/].f_1 = iVar0;
-	Global_69971.f_6825[Global_69971.f_12591 /*3*/].f_2 = Global_69971.f_12592[iVar0];
-	func_87(Global_69971.f_12592[iVar0], iParam1, iParam0);
+	NoOp1(iVar0);
+	G_TextMessageConfig.f_6825[G_TextMessageConfig.f_12591 /*3*/] = 215526917;
+	G_TextMessageConfig.f_6825[G_TextMessageConfig.f_12591 /*3*/].f_1 = iVar0;
+	G_TextMessageConfig.f_6825[G_TextMessageConfig.f_12591 /*3*/].f_2 = G_TextMessageConfig.f_12592[iVar0];
+	func_87(G_TextMessageConfig.f_12592[iVar0], iParam1, iParam0);
 	func_84(iVar0);
 }
 
@@ -6728,7 +6728,7 @@ void func_178() {
 	func_123(101, 1);
 	func_122(30, -2, 101, -1, -1);
 	func_114(67, 2, 1, 0);
-	func_98(2, 2, 1, 839361606, 30000, 20000, -1, 0, 17, 0, 0);
+	InitializeMessage(2, 2, 1, 839361606, 30000, 20000, -1, 0, 17, 0, 0);
 	func_108(joaat("weapon_appistol"), 1);
 	func_108(joaat("weapon_heavysniper"), 1);
 	func_106(7, 97, 6, -929373866, 130000, 10000, -1, 0, -1, 0);
@@ -6764,7 +6764,7 @@ void func_178() {
 	func_153(2, 0, 0);
 	func_96(5, 0);
 	func_99(21, 0);
-	func_98(7, 23, 1, 6861963, 10000, 10000, -1, 0, -1, 40, 0);
+	InitializeMessage(7, 23, 1, 6861963, 10000, 10000, -1, 0, -1, 40, 0);
 	func_95(23, 1, 1);
 	func_123(104, 1);
 	func_122(32, -2, 104, -1, -1);
@@ -6778,8 +6778,8 @@ void func_178() {
 	func_162(11);
 	func_101(12);
 	func_101(13);
-	func_98(1, 1, 1, -655205392, 600000, 30000, -1, 154, 6, 0, 0);
-	func_98(6, 0, 1, 1266526796, 600000, 30000, -1, 154, 6, 0, 0);
+	InitializeMessage(1, 1, 1, -655205392, 600000, 30000, -1, 154, 6, 0, 0);
+	InitializeMessage(6, 0, 1, 1266526796, 600000, 30000, -1, 154, 6, 0, 0);
 	func_123(105, 1);
 	func_122(33, -2, 105, -1, -1);
 	func_113(40, 1);
@@ -6818,7 +6818,7 @@ void func_178() {
 	func_108(joaat("weapon_stickybomb"), 1);
 	func_108(joaat("weapon_combatmg"), 1);
 	func_106(7, 97, 6, -1252410668, 120000, 10000, -1, 0, -1, 0);
-	func_98(4, 47, 1, 736324744, 120000, 10000, -1, 73, -1, 1024, 0);
+	InitializeMessage(4, 47, 1, 736324744, 120000, 10000, -1, 73, -1, 1024, 0);
 	func_104(0, 1);
 	func_115(195);
 	func_101(3);
@@ -6895,15 +6895,15 @@ void func_179(int iParam0, int iParam1, int iParam2) {
 	int iVar1;
 
 	iVar0 = 1;
-	func_85(iVar0);
-	Global_69971.f_6825[Global_69971.f_12591 /*3*/] = -1730578455;
-	Global_69971.f_6825[Global_69971.f_12591 /*3*/].f_1 = iVar0;
-	Global_69971.f_6825[Global_69971.f_12591 /*3*/].f_2 = Global_69971.f_12592[iVar0];
+	NoOp1(iVar0);
+	G_TextMessageConfig.f_6825[G_TextMessageConfig.f_12591 /*3*/] = -1730578455;
+	G_TextMessageConfig.f_6825[G_TextMessageConfig.f_12591 /*3*/].f_1 = iVar0;
+	G_TextMessageConfig.f_6825[G_TextMessageConfig.f_12591 /*3*/].f_2 = G_TextMessageConfig.f_12592[iVar0];
 	iVar1 = 0;
 	if (iParam2) {
 		iVar1 = 1;
 	}
-	func_92(Global_69971.f_12592[iVar0], iParam0, iParam1, iVar1, 0);
+	func_92(G_TextMessageConfig.f_12592[iVar0], iParam0, iParam1, iVar1, 0);
 	func_84(iVar0);
 }
 
@@ -6928,7 +6928,7 @@ void func_180() {
 	func_114(176, 2, 1, 0);
 	func_114(177, 2, 1, 0);
 	func_113(36, 0);
-	func_98(2, 14, 0, -1428654185, 6000, 10000, -1, 0, -1, 0, 0);
+	InitializeMessage(2, 14, 0, -1428654185, 6000, 10000, -1, 0, -1, 0, 0);
 	func_118(14, 2, -1893250473, -1);
 	func_112(0, 1);
 	func_173(1, 9);
@@ -6943,19 +6943,19 @@ void func_180() {
 	func_114(2, 1, 1, 0);
 	func_117(58, 1, 0);
 	func_119(-1900821691);
-	func_98(1, 17, 1, -1845612607, 35000, 10000, -1, 22, -1, 262144, 0);
+	InitializeMessage(1, 17, 1, -1845612607, 35000, 10000, -1, 22, -1, 262144, 0);
 	func_101(29);
 	func_101(23);
 	func_117(57, 1, 0);
 	func_117(127, 1, 0);
 	func_95(12, 0, 1);
-	func_98(1, 31, 1, -1577577773, 300000, 10000, -1, 67, -1, 2048, 0);
+	InitializeMessage(1, 31, 1, -1577577773, 300000, 10000, -1, 67, -1, 2048, 0);
 	func_118(17, 1, 1290939985, -1);
 	func_118(17, 1, -1690219790, -1);
 	func_118(14, 1, -1878340166, -1);
 	func_118(14, 2, -1160994395, -1);
 	func_132(82, 93, -2, -2, 0);
-	func_98(2, 0, 1, 486824538, 30000, 10000, -1, 35, -1, 1024, 0);
+	InitializeMessage(2, 0, 1, 486824538, 30000, 10000, -1, 35, -1, 1024, 0);
 	func_123(93, 1);
 	func_115(177);
 	func_115(193);
@@ -6988,7 +6988,7 @@ void func_180() {
 	func_90(-1893250473);
 	func_90(-1160994395);
 	func_106(4, 14, 6, 1424059178, 120000, 30000, -1, 0, 23, 512);
-	func_98(1, 31, 1, -1235391473, 180000, 10000, -1, 0, -1, 0, 0);
+	InitializeMessage(1, 31, 1, -1235391473, 180000, 10000, -1, 0, -1, 0, 0);
 	func_106(4, 20, 6, -771149390, 500000, 60000, -1, 0, -1, 512);
 	func_118(15, 1, 1388615949, -1);
 	func_118(14, 1, 460547213, -1);
@@ -7036,7 +7036,7 @@ void func_180() {
 	func_118(15, 1, -2062910056, -1);
 	func_118(14, 2, 1730771548, -1);
 	func_118(14, 4, 170512742, -1);
-	func_98(1, 14, 1, 25048086, 30000, 10000, -1, 0, -1, 0, 0);
+	InitializeMessage(1, 14, 1, 25048086, 30000, 10000, -1, 0, -1, 0, 0);
 	func_88(1, 15, 1, 100000, 120000, -881570909, -1, -1, 0, -1, 69);
 	func_93("AM_H_YOGA", 10000, 2, 1, 0, 0);
 	func_120(21, 0);
@@ -7056,7 +7056,7 @@ void func_180() {
 	func_130(56);
 	func_132(10, 99, -2, -1, 0);
 	func_119(2114893093);
-	func_98(1, 1, 0, 2114893093, 6000, 2000, -1, 148, -1, 2048, 0);
+	InitializeMessage(1, 1, 0, 2114893093, 6000, 2000, -1, 148, -1, 2048, 0);
 	func_123(99, 1);
 	func_138(57, 98, -2, -1);
 	func_130(57);
@@ -7084,10 +7084,10 @@ void func_181(int iParam0) {
 	int iVar0;
 
 	iVar0 = 0;
-	func_85(iVar0);
-	Global_69971.f_6825[Global_69971.f_12591 /*3*/] = 1883604486;
-	Global_69971.f_6825[Global_69971.f_12591 /*3*/].f_1 = iVar0;
-	Global_69971.f_6825[Global_69971.f_12591 /*3*/].f_2 = iParam0;
+	NoOp1(iVar0);
+	G_TextMessageConfig.f_6825[G_TextMessageConfig.f_12591 /*3*/] = 1883604486;
+	G_TextMessageConfig.f_6825[G_TextMessageConfig.f_12591 /*3*/].f_1 = iVar0;
+	G_TextMessageConfig.f_6825[G_TextMessageConfig.f_12591 /*3*/].f_2 = iParam0;
 	func_84(iVar0);
 }
 
@@ -7097,15 +7097,15 @@ void func_182(int iParam0, int iParam1) {
 	int iVar1;
 
 	iVar0 = 2;
-	func_85(iVar0);
-	Global_69971.f_6825[Global_69971.f_12591 /*3*/] = 1542529269;
-	Global_69971.f_6825[Global_69971.f_12591 /*3*/].f_1 = iVar0;
-	Global_69971.f_6825[Global_69971.f_12591 /*3*/].f_2 = Global_69971.f_12592[iVar0];
+	NoOp1(iVar0);
+	G_TextMessageConfig.f_6825[G_TextMessageConfig.f_12591 /*3*/] = 1542529269;
+	G_TextMessageConfig.f_6825[G_TextMessageConfig.f_12591 /*3*/].f_1 = iVar0;
+	G_TextMessageConfig.f_6825[G_TextMessageConfig.f_12591 /*3*/].f_2 = G_TextMessageConfig.f_12592[iVar0];
 	iVar1 = 0;
 	if (iParam1) {
 		iVar1 = 1;
 	}
-	func_87(Global_69971.f_12592[iVar0], iParam0, iVar1);
+	func_87(G_TextMessageConfig.f_12592[iVar0], iParam0, iVar1);
 	func_84(iVar0);
 }
 
@@ -7162,8 +7162,8 @@ void func_183() {
 	func_88(2, 17, 6, 200000, 100000, 1645231, -1, -1, 0, -1, 0);
 	func_88(4, 31, 6, 240000, 60000, 520422857, -1, -1, 0, -1, 0);
 	func_88(1, 31, 6, 480000, 60000, -1141042322, -1, -1, 0, -1, 0);
-	func_98(4, 54, 6, 1400447159, 60000, 60000, 10, 0, 20, 512, 0);
-	func_98(1, 2, 6, -1293573249, 30000, 10000, -1, 0, -1, 0, 0);
+	InitializeMessage(4, 54, 6, 1400447159, 60000, 60000, 10, 0, 20, 512, 0);
+	InitializeMessage(1, 2, 6, -1293573249, 30000, 10000, -1, 0, -1, 0, 0);
 	func_106(1, 15, 6, 2022687760, 30000, 10000, -1, 0, -1, 0);
 	func_104(17, 1);
 	func_115(201);
@@ -7188,7 +7188,7 @@ void func_183() {
 	func_114(66, 1, 1, 0);
 	func_114(0, 0, 1, 0);
 	func_113(0, 1);
-	func_98(1, 14, 1, 981904836, 30000, 10000, 12, 0, -1, 0, 0);
+	InitializeMessage(1, 14, 1, 981904836, 30000, 10000, 12, 0, -1, 0, 0);
 	func_88(4, 10, 0, 6000, 5000, -769656371, -1, -1, 0, -1, 106);
 	func_96(22, 0);
 	func_83();
@@ -7202,10 +7202,10 @@ void func_184() {
 	iVar0 = 6;
 	func_127(iVar0);
 	func_126();
-	func_98(4, 24, 1, -631719301, 240000, 10000, -1, 0, -1, 1064, 0);
+	InitializeMessage(4, 24, 1, -631719301, 240000, 10000, -1, 0, -1, 1064, 0);
 	func_135(3000);
 	func_93("AM_H_PREP3B", 7500, 2, 4, 0, 0);
-	func_98(4, 24, 1, -549935988, 600000, 10000, -1, 0, -1, 0, 0);
+	InitializeMessage(4, 24, 1, -549935988, 600000, 10000, -1, 0, -1, 0, 0);
 	func_123(22, 1);
 	func_122(73, -2, 22, -1, -1);
 	func_119(-549935988);
@@ -7262,10 +7262,10 @@ void func_185() {
 	func_164(8, 3, 17, 21);
 	func_123(21, 1);
 	func_93("AM_H_FLYM", 10000, 2, 7, 0, 0);
-	func_98(1, 2, 1, 1759805585, 40000, 10000, -1, 0, -1, 1024, 0);
+	InitializeMessage(1, 2, 1, 1759805585, 40000, 10000, -1, 0, -1, 1024, 0);
 	func_101(6);
 	func_123(17, 1);
-	func_98(4, 24, 1, 411396589, 20000, 10000, -1, 0, -1, 1064, 0);
+	InitializeMessage(4, 24, 1, 411396589, 20000, 10000, -1, 0, -1, 1064, 0);
 	func_135(3000);
 	func_93("AM_H_PREP3A", 7500, 2, 4, 0, 0);
 	func_123(18, 1);
@@ -7280,7 +7280,7 @@ void func_185() {
 	func_162(6);
 	func_99(5, 0);
 	func_96(21, 0);
-	func_98(3, 2, 1, 1269300253, 40000, 10000, 24, 54, -1, 1032, 0);
+	InitializeMessage(3, 2, 1, 1269300253, 40000, 10000, 24, 54, -1, 1032, 0);
 	func_88(4, 24, 2, 60000, 10000, -749738207, -1, 24, 54, -1, 72);
 	func_132(23, -2, -1, -1, 0);
 	func_123(25, 1);
@@ -7413,11 +7413,11 @@ void func_188(int iParam0, int iParam1, int iParam2) {
 	if (iParam1 != 0 && iParam1 != 1 && iParam1 != 2 && iParam1 != 19) {
 		return;
 	}
-	func_85(iVar0);
-	Global_69971.f_6825[Global_69971.f_12591 /*3*/] = -1575504933;
-	Global_69971.f_6825[Global_69971.f_12591 /*3*/].f_1 = iVar0;
-	Global_69971.f_6825[Global_69971.f_12591 /*3*/].f_2 = Global_69971.f_12592[iVar0];
-	func_92(Global_69971.f_12592[iVar0], iParam1, iParam0, iParam2, 0);
+	NoOp1(iVar0);
+	G_TextMessageConfig.f_6825[G_TextMessageConfig.f_12591 /*3*/] = -1575504933;
+	G_TextMessageConfig.f_6825[G_TextMessageConfig.f_12591 /*3*/].f_1 = iVar0;
+	G_TextMessageConfig.f_6825[G_TextMessageConfig.f_12591 /*3*/].f_2 = G_TextMessageConfig.f_12592[iVar0];
+	func_92(G_TextMessageConfig.f_12592[iVar0], iParam1, iParam0, iParam2, 0);
 	func_84(iVar0);
 }
 
@@ -7429,13 +7429,13 @@ void func_189() {
 	func_127(iVar0);
 	func_126();
 	func_115(165);
-	func_98(2, 12, 1, 1635608802, 50000, 30000, 71, 52, -1, 1096, 0);
+	InitializeMessage(2, 12, 1, /* Assassination 1 Text */1635608802, 50000, 30000, 71, 52, -1, 1096, 0);
 	func_132(48, -2, -1, -2, 0);
 	func_123(77, 1);
 	func_122(3, -2, 77, -1, -1);
 	func_119(1323596299);
 	func_119(-1205448796);
-	func_119(1635608802);
+	func_119(/* Assassination 1 Text */1635608802);
 	func_129(1, 12, 0, 6000, 6000, 343235192, 2, 45, -1, 96);
 	func_97("SH_Intro_F_Hills", 1424);
 	func_123(240, 1);
@@ -7532,7 +7532,7 @@ void func_190() {
 	func_97("letterScraps", 1424);
 	func_115(199);
 	func_132(62, 75, -2, -2, 0);
-	func_98(2, 19, 1, -1982006572, 35000, 10000, -1, 41, -1, 0, 0);
+	InitializeMessage(2, 19, 1, -1982006572, 35000, 10000, -1, 41, -1, 0, 0);
 	func_123(75, 1);
 	func_95(17, 0, 0);
 	func_95(14, 0, 0);
@@ -7558,7 +7558,7 @@ void func_190() {
 	func_88(2, 18, 1, 200000, 60000, -1753640864, 410510653, 72, 42, -1, 128);
 	func_90(1867406480);
 	func_118(30, 1, 1438498239, -1);
-	func_98(1, 17, 1, -1900821691, 35000, 10000, -1, 22, -1, 262144, 0);
+	InitializeMessage(1, 17, 1, -1900821691, 35000, 10000, -1, 22, -1, 262144, 0);
 	func_115(168);
 	func_115(171);
 	func_173(1, 8);
@@ -7584,15 +7584,15 @@ void func_191(int iParam0, int iParam1, int iParam2) {
 	int iVar1;
 
 	iVar0 = 1;
-	func_85(iVar0);
-	Global_69971.f_6825[Global_69971.f_12591 /*3*/] = -661286798;
-	Global_69971.f_6825[Global_69971.f_12591 /*3*/].f_1 = iVar0;
-	Global_69971.f_6825[Global_69971.f_12591 /*3*/].f_2 = Global_69971.f_12592[iVar0];
+	NoOp1(iVar0);
+	G_TextMessageConfig.f_6825[G_TextMessageConfig.f_12591 /*3*/] = -661286798;
+	G_TextMessageConfig.f_6825[G_TextMessageConfig.f_12591 /*3*/].f_1 = iVar0;
+	G_TextMessageConfig.f_6825[G_TextMessageConfig.f_12591 /*3*/].f_2 = G_TextMessageConfig.f_12592[iVar0];
 	iVar1 = 0;
 	if (iParam2) {
 		iVar1 = 1;
 	}
-	func_92(Global_69971.f_12592[iVar0], iParam0, iParam1, iVar1, -1);
+	func_92(G_TextMessageConfig.f_12592[iVar0], iParam0, iParam1, iVar1, -1);
 	func_84(iVar0);
 }
 
@@ -7605,11 +7605,11 @@ void func_192(int iParam0, int iParam1, int iParam2, int iParam3) {
 	if (iParam3 <= 0) {
 	}
 	iVar0 = 1;
-	func_85(iVar0);
-	Global_69971.f_6825[Global_69971.f_12591 /*3*/] = -1283556585;
-	Global_69971.f_6825[Global_69971.f_12591 /*3*/].f_1 = iVar0;
-	Global_69971.f_6825[Global_69971.f_12591 /*3*/].f_2 = Global_69971.f_12592[iVar0];
-	func_92(Global_69971.f_12592[iVar0], iParam0, iParam1, iParam2, iParam3);
+	NoOp1(iVar0);
+	G_TextMessageConfig.f_6825[G_TextMessageConfig.f_12591 /*3*/] = -1283556585;
+	G_TextMessageConfig.f_6825[G_TextMessageConfig.f_12591 /*3*/].f_1 = iVar0;
+	G_TextMessageConfig.f_6825[G_TextMessageConfig.f_12591 /*3*/].f_2 = G_TextMessageConfig.f_12592[iVar0];
+	func_92(G_TextMessageConfig.f_12592[iVar0], iParam0, iParam1, iParam2, iParam3);
 	func_84(iVar0);
 }
 
@@ -7618,10 +7618,10 @@ void func_193(int iParam0) {
 	int iVar0;
 
 	iVar0 = 0;
-	func_85(iVar0);
-	Global_69971.f_6825[Global_69971.f_12591 /*3*/] = -159886710;
-	Global_69971.f_6825[Global_69971.f_12591 /*3*/].f_1 = iVar0;
-	Global_69971.f_6825[Global_69971.f_12591 /*3*/].f_2 = iParam0;
+	NoOp1(iVar0);
+	G_TextMessageConfig.f_6825[G_TextMessageConfig.f_12591 /*3*/] = -159886710;
+	G_TextMessageConfig.f_6825[G_TextMessageConfig.f_12591 /*3*/].f_1 = iVar0;
+	G_TextMessageConfig.f_6825[G_TextMessageConfig.f_12591 /*3*/].f_2 = iParam0;
 	func_84(iVar0);
 }
 
@@ -7637,7 +7637,7 @@ void func_194() {
 	func_114(73, 1, 1, 0);
 	func_114(72, 0, 1, 0);
 	func_114(74, 0, 1, 0);
-	func_98(1, 12, 1, 1834414893, 25000, 10000, 22, 0, -1, 40, 0);
+	InitializeMessage(1, 12, 1, 1834414893, 25000, 10000, 22, 0, -1, 40, 0);
 	func_97("heist_ctrl_agency", 2050);
 	func_123(0, 1);
 	func_122(66, -2, 0, -1, -1);
@@ -7646,7 +7646,7 @@ void func_194() {
 	func_142(3, 1, 1, 0);
 	func_96(13, 0);
 	func_97("buildingSiteAmbience", 128);
-	func_98(1, 1, 1, 2114893093, 240000, 10000, -1, 148, -1, 1024, 0);
+	InitializeMessage(1, 1, 1, 2114893093, 240000, 10000, -1, 148, -1, 1024, 0);
 	func_132(10, -2, -1, -2, 0);
 	func_117(11, 0, 0);
 	func_117(70, 1, 0);
@@ -7687,11 +7687,11 @@ void func_194() {
 	func_121(0);
 	func_164(10, 6, -2, 9);
 	func_97("agency_prep2Amb", 2050);
-	func_98(3, 12, 1, 230961098, 10000, 10000, -1, 0, -1, 1064, 0);
+	InitializeMessage(3, 12, 1, 230961098, 10000, 10000, -1, 0, -1, 1064, 0);
 	func_142(3, 6, 1, 0);
 	func_135(3000);
 	func_93("AM_H_PREP6", 10000, 2, 3, 0, 0);
-	func_98(3, 12, 1, 639116137, 600000, 30000, -1, 0, 11, 0, 0);
+	InitializeMessage(3, 12, 1, 639116137, 600000, 30000, -1, 0, 11, 0, 0);
 	func_123(7, 1);
 	func_122(68, -2, 7, -1, -1);
 	func_114(169, 1, 0, 0);
@@ -7723,7 +7723,7 @@ void func_194() {
 	func_123(11, 1);
 	func_107(62, 1, 2);
 	func_107(63, 1, 2);
-	func_98(3, 12, 1, 1943637475, 30000, 60000, 21, 43, -1, 72, 0);
+	InitializeMessage(3, 12, 1, 1943637475, 30000, 60000, 21, 43, -1, 72, 0);
 	func_132(9, -2, -1, -2, 0);
 	func_142(3, 6, 1, 1);
 	func_114(70, 1, 0, 2);
@@ -7775,12 +7775,12 @@ void func_195(int iParam0, int iParam1, int iParam2, int iParam3) {
 		iParam3 = iParam1;
 	}
 	iVar0 = 1;
-	func_85(iVar0);
-	Global_69971.f_6825[Global_69971.f_12591 /*3*/] = 889972124;
-	Global_69971.f_6825[Global_69971.f_12591 /*3*/].f_1 = iVar0;
-	Global_69971.f_6825[Global_69971.f_12591 /*3*/].f_2 = Global_69971.f_12592[iVar0];
-	Global_82612[iParam0 /*34*/].f_7 = Global_69971.f_12592[iVar0];
-	func_92(Global_69971.f_12592[iVar0], iParam0, iParam1, iParam2, iParam3);
+	NoOp1(iVar0);
+	G_TextMessageConfig.f_6825[G_TextMessageConfig.f_12591 /*3*/] = 889972124;
+	G_TextMessageConfig.f_6825[G_TextMessageConfig.f_12591 /*3*/].f_1 = iVar0;
+	G_TextMessageConfig.f_6825[G_TextMessageConfig.f_12591 /*3*/].f_2 = G_TextMessageConfig.f_12592[iVar0];
+	Global_82612[iParam0 /*34*/].f_7 = G_TextMessageConfig.f_12592[iVar0];
+	func_92(G_TextMessageConfig.f_12592[iVar0], iParam0, iParam1, iParam2, iParam3);
 	func_84(iVar0);
 }
 
@@ -7916,20 +7916,20 @@ void func_203() {
 	iVar0 = 0;
 	iVar0 = 0;
 	while (iVar0 < 10) {
-		Global_69971.f_6684[iVar0 /*14*/] = 0;
-		Global_69971.f_6684[iVar0 /*14*/].f_1 = 0;
-		Global_69971.f_6684[iVar0 /*14*/].f_2 = 0;
-		Global_69971.f_6684[iVar0 /*14*/].f_3 = 0;
-		Global_69971.f_6684[iVar0 /*14*/].f_4 = 0;
-		Global_69971.f_6684[iVar0 /*14*/].f_5 = 0;
-		Global_69971.f_6684[iVar0 /*14*/].f_6 = 0;
-		Global_69971.f_6684[iVar0 /*14*/].f_7 = 0;
-		Global_69971.f_6684[iVar0 /*14*/].f_8 = 0;
-		Global_69971.f_6684[iVar0 /*14*/].f_9 = -1;
-		Global_69971.f_6684[iVar0 /*14*/].f_10 = -1;
-		Global_69971.f_6684[iVar0 /*14*/].f_11 = -1;
-		Global_69971.f_6684[iVar0 /*14*/].f_12 = 0;
-		Global_69971.f_6684[iVar0 /*14*/].f_13 = -1;
+		G_TextMessageConfig.f_6684[iVar0 /*14*/] = 0;
+		G_TextMessageConfig.f_6684[iVar0 /*14*/].f_1 = 0;
+		G_TextMessageConfig.f_6684[iVar0 /*14*/].f_2 = 0;
+		G_TextMessageConfig.f_6684[iVar0 /*14*/].f_3 = 0;
+		G_TextMessageConfig.f_6684[iVar0 /*14*/].f_4 = 0;
+		G_TextMessageConfig.f_6684[iVar0 /*14*/].f_5 = 0;
+		G_TextMessageConfig.f_6684[iVar0 /*14*/].f_6 = 0;
+		G_TextMessageConfig.f_6684[iVar0 /*14*/].f_7 = 0;
+		G_TextMessageConfig.f_6684[iVar0 /*14*/].f_8 = 0;
+		G_TextMessageConfig.f_6684[iVar0 /*14*/].f_9 = -1;
+		G_TextMessageConfig.f_6684[iVar0 /*14*/].f_10 = -1;
+		G_TextMessageConfig.f_6684[iVar0 /*14*/].f_11 = -1;
+		G_TextMessageConfig.f_6684[iVar0 /*14*/].f_12 = 0;
+		G_TextMessageConfig.f_6684[iVar0 /*14*/].f_13 = -1;
 		iVar0++;
 	}
 }
@@ -7941,17 +7941,17 @@ void func_204() {
 	iVar0 = 0;
 	iVar0 = 0;
 	while (iVar0 < 169) {
-		Global_69971.f_4824[iVar0 /*11*/] = 0;
-		Global_69971.f_4824[iVar0 /*11*/].f_1 = 0;
-		Global_69971.f_4824[iVar0 /*11*/].f_2 = 0;
-		Global_69971.f_4824[iVar0 /*11*/].f_3 = 0;
-		Global_69971.f_4824[iVar0 /*11*/].f_4 = 0;
-		Global_69971.f_4824[iVar0 /*11*/].f_5 = 0;
-		Global_69971.f_4824[iVar0 /*11*/].f_6 = 0;
-		Global_69971.f_4824[iVar0 /*11*/].f_7 = 0;
-		Global_69971.f_4824[iVar0 /*11*/].f_8 = -1;
-		Global_69971.f_4824[iVar0 /*11*/].f_9 = 0;
-		Global_69971.f_4824[iVar0 /*11*/].f_10 = -1;
+		G_TextMessageConfig.f_4824[iVar0 /*11*/] = 0;
+		G_TextMessageConfig.f_4824[iVar0 /*11*/].f_1 = 0;
+		G_TextMessageConfig.f_4824[iVar0 /*11*/].f_2 = 0;
+		G_TextMessageConfig.f_4824[iVar0 /*11*/].f_3 = 0;
+		G_TextMessageConfig.f_4824[iVar0 /*11*/].f_4 = 0;
+		G_TextMessageConfig.f_4824[iVar0 /*11*/].f_5 = 0;
+		G_TextMessageConfig.f_4824[iVar0 /*11*/].f_6 = 0;
+		G_TextMessageConfig.f_4824[iVar0 /*11*/].f_7 = 0;
+		G_TextMessageConfig.f_4824[iVar0 /*11*/].f_8 = -1;
+		G_TextMessageConfig.f_4824[iVar0 /*11*/].f_9 = 0;
+		G_TextMessageConfig.f_4824[iVar0 /*11*/].f_10 = -1;
 		iVar0++;
 	}
 }
@@ -7963,8 +7963,8 @@ void func_205() {
 	iVar0 = 0;
 	iVar0 = 0;
 	while (iVar0 < 32) {
-		Global_69971.f_12526[iVar0 /*2*/] = -1;
-		Global_69971.f_12526[iVar0 /*2*/].f_1 = -1;
+		G_TextMessageConfig.f_12526[iVar0 /*2*/] = -1;
+		G_TextMessageConfig.f_12526[iVar0 /*2*/].f_1 = -1;
 		iVar0++;
 	}
 }
@@ -7976,12 +7976,12 @@ void func_206() {
 	iVar0 = 0;
 	iVar0 = 0;
 	while (iVar0 < 1900) {
-		Global_69971.f_6825[iVar0 /*3*/] = -1;
-		Global_69971.f_6825[iVar0 /*3*/].f_1 = 12;
-		Global_69971.f_6825[iVar0 /*3*/].f_2 = -1;
+		G_TextMessageConfig.f_6825[iVar0 /*3*/] = -1;
+		G_TextMessageConfig.f_6825[iVar0 /*3*/].f_1 = 12;
+		G_TextMessageConfig.f_6825[iVar0 /*3*/].f_2 = -1;
 		iVar0++;
 	}
-	Global_69971.f_12591 = 0;
+	G_TextMessageConfig.f_12591 = 0;
 }
 
 // Position - 0xFDBA
@@ -7991,12 +7991,12 @@ void func_207() {
 	iVar0 = 0;
 	iVar0 = 0;
 	while (iVar0 < 1) {
-		Global_69971.f_4797[iVar0 /*13*/] = 0;
-		StringCopy(&Global_69971.f_4797[iVar0 /*13*/].f_1, "", 32);
-		Global_69971.f_4797[iVar0 /*13*/].f_9 = 0;
-		Global_69971.f_4797[iVar0 /*13*/].f_10 = -1;
-		Global_69971.f_4797[iVar0 /*13*/].f_11 = -1;
-		Global_69971.f_4797[iVar0 /*13*/].f_12 = 0;
+		G_TextMessageConfig.f_4797[iVar0 /*13*/] = 0;
+		StringCopy(&G_TextMessageConfig.f_4797[iVar0 /*13*/].f_1, "", 32);
+		G_TextMessageConfig.f_4797[iVar0 /*13*/].f_9 = 0;
+		G_TextMessageConfig.f_4797[iVar0 /*13*/].f_10 = -1;
+		G_TextMessageConfig.f_4797[iVar0 /*13*/].f_11 = -1;
+		G_TextMessageConfig.f_4797[iVar0 /*13*/].f_12 = 0;
 		iVar0++;
 	}
 }
@@ -8008,15 +8008,15 @@ void func_208() {
 	iVar0 = 0;
 	iVar0 = 0;
 	while (iVar0 < 1) {
-		Global_69971.f_4811[iVar0 /*12*/] = -1;
-		Global_69971.f_4811[iVar0 /*12*/].f_1 = -1;
-		Global_69971.f_4811[iVar0 /*12*/].f_2 = -1;
-		Global_69971.f_4811[iVar0 /*12*/].f_3 = -1;
-		Global_69971.f_4811[iVar0 /*12*/].f_4 = -1;
-		Global_69971.f_4811[iVar0 /*12*/].f_6 = -1;
-		Global_69971.f_4811[iVar0 /*12*/].f_7 = -1;
-		Global_69971.f_4811[iVar0 /*12*/].f_10 = 0;
-		Global_69971.f_4811[iVar0 /*12*/].f_11 = 0;
+		G_TextMessageConfig.f_4811[iVar0 /*12*/] = -1;
+		G_TextMessageConfig.f_4811[iVar0 /*12*/].f_1 = -1;
+		G_TextMessageConfig.f_4811[iVar0 /*12*/].f_2 = -1;
+		G_TextMessageConfig.f_4811[iVar0 /*12*/].f_3 = -1;
+		G_TextMessageConfig.f_4811[iVar0 /*12*/].f_4 = -1;
+		G_TextMessageConfig.f_4811[iVar0 /*12*/].f_6 = -1;
+		G_TextMessageConfig.f_4811[iVar0 /*12*/].f_7 = -1;
+		G_TextMessageConfig.f_4811[iVar0 /*12*/].f_10 = 0;
+		G_TextMessageConfig.f_4811[iVar0 /*12*/].f_11 = 0;
 		iVar0++;
 	}
 }
@@ -8028,11 +8028,11 @@ void func_209() {
 	iVar0 = 0;
 	iVar0 = 0;
 	while (iVar0 < 53) {
-		StringCopy(&Global_69971.f_4160[iVar0 /*12*/], "NOT_SETUP", 32);
-		Global_69971.f_4160[iVar0 /*12*/].f_8 = 0;
-		Global_69971.f_4160[iVar0 /*12*/].f_9 = 0;
-		Global_69971.f_4160[iVar0 /*12*/].f_10 = 0;
-		Global_69971.f_4160[iVar0 /*12*/].f_11 = 0;
+		StringCopy(&G_TextMessageConfig.f_4160[iVar0 /*12*/], "NOT_SETUP", 32);
+		G_TextMessageConfig.f_4160[iVar0 /*12*/].f_8 = 0;
+		G_TextMessageConfig.f_4160[iVar0 /*12*/].f_9 = 0;
+		G_TextMessageConfig.f_4160[iVar0 /*12*/].f_10 = 0;
+		G_TextMessageConfig.f_4160[iVar0 /*12*/].f_11 = 0;
 		iVar0++;
 	}
 }
@@ -8044,7 +8044,7 @@ void func_210() {
 	iVar0 = 0;
 	iVar0 = 0;
 	while (iVar0 < 1) {
-		StringCopy(&Global_69971.f_4151[iVar0 /*8*/], "NOT_SETUP", 32);
+		StringCopy(&G_TextMessageConfig.f_4151[iVar0 /*8*/], "NOT_SETUP", 32);
 		iVar0++;
 	}
 }
@@ -8056,8 +8056,8 @@ void func_211() {
 	iVar0 = 0;
 	iVar0 = 0;
 	while (iVar0 < 280) {
-		Global_69971.f_3590[iVar0 /*2*/] = 0;
-		Global_69971.f_3590[iVar0 /*2*/].f_1 = 1;
+		G_TextMessageConfig.f_3590[iVar0 /*2*/] = 0;
+		G_TextMessageConfig.f_3590[iVar0 /*2*/].f_1 = 1;
 		iVar0++;
 	}
 }
@@ -8069,10 +8069,10 @@ void func_212() {
 	iVar0 = 0;
 	iVar0 = 0;
 	while (iVar0 < 870) {
-		Global_69971.f_109[iVar0 /*4*/] = 0;
-		Global_69971.f_109[iVar0 /*4*/].f_1 = 1;
-		Global_69971.f_109[iVar0 /*4*/].f_2 = 2;
-		Global_69971.f_109[iVar0 /*4*/].f_3 = 3;
+		G_TextMessageConfig.f_109[iVar0 /*4*/] = 0;
+		G_TextMessageConfig.f_109[iVar0 /*4*/].f_1 = 1;
+		G_TextMessageConfig.f_109[iVar0 /*4*/].f_2 = 2;
+		G_TextMessageConfig.f_109[iVar0 /*4*/].f_3 = 3;
 		iVar0++;
 	}
 }
@@ -8084,7 +8084,7 @@ void func_213() {
 	iVar0 = 0;
 	iVar0 = 0;
 	while (iVar0 < 11) {
-		Global_69971.f_12592[iVar0] = 0;
+		G_TextMessageConfig.f_12592[iVar0] = 0;
 		iVar0++;
 	}
 }
@@ -8121,7 +8121,7 @@ void func_214() {
 			if (!iVar0) {
 				iVar2 = Global_101700.f_8044.f_2[iVar1 /*3*/].f_1;
 				if (iVar2 != -1) {
-					if (Global_69971.f_6825[iVar2 /*3*/] == -868169264) {
+					if (G_TextMessageConfig.f_6825[iVar2 /*3*/] == -868169264) {
 						if (!cam::is_screen_faded_out()) {
 							if (!cam::is_screen_fading_out()) {
 								cam::do_screen_fade_out(800);
@@ -8184,7 +8184,7 @@ void func_214() {
 	Global_101691 = gameplay::get_game_timer() - 90000;
 	object::_door_control(joaat("prop_gate_prison_01"), 1845f, 2605f, 45f, 1, 0f, 0f, 0f);
 	object::_door_control(joaat("prop_gate_prison_01"), 1819.274f, 2608.537f, 44.6195f, 1, 0f, 50f, 0f);
-	Global_69971.f_7 = 1;
+	G_TextMessageConfig.f_7 = 1;
 }
 
 // Position - 0x102AB

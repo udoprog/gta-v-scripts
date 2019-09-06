@@ -29483,7 +29483,7 @@ void func_203(int iParam0, int iParam1) {
 	if (Var0.f_22 != 0) {
 		func_227(Var0.f_22, 0);
 	}
-	func_218(iParam0, Global_69971);
+	func_218(iParam0, G_TextMessageConfig);
 	if (!iParam1) {
 		iVar32 = func_217(iParam0);
 		if (iVar32 != 0) {
@@ -38645,7 +38645,7 @@ bool func_291(var *uParam0, int iParam1, int iParam2, int iParam3) {
 					if (gameplay::is_bit_set(Global_82576[iVar4 /*5*/].f_1, 2)) {
 						iVar5 = Global_82576[iVar4 /*5*/];
 						StringCopy(&cVar6, "MISS_SWITCH_", 64);
-						StringConCat(&cVar6, &Global_82612[Global_69971.f_109[iVar5 /*4*/] /*34*/], 64);
+						StringConCat(&cVar6, &Global_82612[G_TextMessageConfig.f_109[iVar5 /*4*/] /*34*/], 64);
 						stats::stat_increment(gameplay::get_hash_key(&cVar6), 1f);
 					}
 					iVar4++;
@@ -98156,7 +98156,7 @@ func_671(int iParam0) {
 //Position - 0x8BE69
 bool func_672(int iParam0, var uParam1, var uParam2, var uParam3, var uParam4, var uParam5, var uParam6)
 {
-	if (!func_328(0) || Global_69971 || Global_69960 == 1 || !cam::is_screen_faded_in()) {
+	if (!func_328(0) || G_TextMessageConfig || Global_69960 == 1 || !cam::is_screen_faded_in()) {
 		return false;
 	}
 	switch (Global_69956) {

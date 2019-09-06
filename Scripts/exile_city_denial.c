@@ -119,7 +119,7 @@ void __EntryFunction__() {
 		}
 		vVar2 = {entity::get_entity_coords(player::player_ped_id(), 0)};
 		bLocal_29 = func_23(vVar2, &bLocal_32);
-		if (Global_69971 || Global_69971.f_1) {
+		if (G_TextMessageConfig || G_TextMessageConfig.f_1) {
 			bLocal_29 = false;
 		}
 		bVar5 = false;

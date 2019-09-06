@@ -308,7 +308,7 @@ void __EntryFunction__() {
 	func_223(&Local_46.f_1, func_233(Global_87853[1 /*19*/], Global_87853[2 /*19*/]));
 	func_222(&Local_46, 0);
 	while (!func_221(4)) {
-		if (!Global_69971) {
+		if (!G_TextMessageConfig) {
 			if (!func_220(86) && !func_219(14)) {
 				func_208(&Local_46, 32f, 35f);
 			}
@@ -8859,7 +8859,7 @@ int func_220(int iParam0) {
 	iVar0 = 0;
 	while (iVar0 < Global_82576) {
 		if (Global_82576[iVar0 /*5*/] != -1) {
-			if (Global_69971.f_109[Global_82576[iVar0 /*5*/] /*4*/] == iParam0) {
+			if (G_TextMessageConfig.f_109[Global_82576[iVar0 /*5*/] /*4*/] == iParam0) {
 				return 1;
 			}
 		}

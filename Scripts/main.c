@@ -2734,7 +2734,7 @@ int func_91(var *uParam0, int iParam1, int iParam2, int iParam3) {
 					if (gameplay::is_bit_set(Global_82576[iVar4 /*5*/].f_1, 2)) {
 						iVar5 = Global_82576[iVar4 /*5*/];
 						StringCopy(&cVar6, "MISS_SWITCH_", 64);
-						StringConCat(&cVar6, &Global_82612[Global_69971.f_109[iVar5 /*4*/] /*34*/], 64);
+						StringConCat(&cVar6, &Global_82612[G_TextMessageConfig.f_109[iVar5 /*4*/] /*34*/], 64);
 						stats::stat_increment(gameplay::get_hash_key(&cVar6), 1f);
 					}
 					iVar4++;
@@ -75459,7 +75459,7 @@ void func_455() {
 
 // Position - 0x63378
 void func_456() {
-	Global_69971 = 1;
+	G_TextMessageConfig = 1;
 	func_638();
 	func_625();
 	func_624();
@@ -75492,7 +75492,7 @@ void func_456() {
 	func_459();
 	func_458();
 	func_457();
-	Global_69971 = 0;
+	G_TextMessageConfig = 0;
 }
 
 // Position - 0x6340A
@@ -86467,15 +86467,15 @@ void func_625() {
 	Global_101700.f_8044.f_99.f_219[10] = 0;
 	iVar0 = 0;
 	while (iVar0 < 32) {
-		Global_69971.f_10[iVar0] = 0;
+		G_TextMessageConfig.f_10[iVar0] = 0;
 		iVar0++;
 	}
 	Global_101700.f_8044.f_1 = 0;
 	Global_101700.f_8975.f_25 = 0;
-	Global_69971.f_9 = -1;
-	Global_69971.f_7 = 0;
-	Global_69971.f_6 = 0;
-	Global_69971.f_2 = 1;
+	G_TextMessageConfig.f_9 = -1;
+	G_TextMessageConfig.f_7 = 0;
+	G_TextMessageConfig.f_6 = 0;
+	G_TextMessageConfig.f_2 = 1;
 	Global_69964 = -1;
 	Global_91529 = -1;
 }
@@ -86487,7 +86487,7 @@ void func_626() {
 	iVar0 = 0;
 	iVar0 = 0;
 	while (iVar0 < 32) {
-		Global_101700.f_8044.f_2[iVar0 /*3*/].f_1 = Global_69971.f_12526[iVar0 /*2*/];
+		Global_101700.f_8044.f_2[iVar0 /*3*/].f_1 = G_TextMessageConfig.f_12526[iVar0 /*2*/];
 		iVar0++;
 	}
 }
@@ -114160,7 +114160,7 @@ bool func_1516(int iParam0) {
 	iVar0 = 0;
 	while (iVar0 < Global_82576) {
 		if (Global_82576[iVar0 /*5*/] != -1) {
-			if (Global_69971.f_109[Global_82576[iVar0 /*5*/] /*4*/] == iParam0) {
+			if (G_TextMessageConfig.f_109[Global_82576[iVar0 /*5*/] /*4*/] == iParam0) {
 				return true;
 			}
 		}
@@ -114451,7 +114451,7 @@ void func_1530(int *iParam0) {
 			return;
 		}
 		if (player::is_player_playing(player::player_id())) {
-			if (!Global_69971.f_1) {
+			if (!G_TextMessageConfig.f_1) {
 				switch (iParam0->f_1) {
 				case 0: func_1540(iParam0, 0, "family_scene_m"); break;
 
@@ -116347,7 +116347,7 @@ void func_1593() {
 	if (Global_101700.f_9008.f_135[1] != -1) {
 		if (!Global_69702) {
 			if (script::_get_number_of_instances_of_script_with_name_hash(joaat("photographymonkey")) == 0 &&
-				!Global_69971) {
+				!G_TextMessageConfig) {
 				func_1558(joaat("photographymonkey"), 2050);
 			}
 		}
@@ -116360,7 +116360,7 @@ void func_1594() {
 		if (func_80(83)) {
 			if (func_21() == 1) {
 				if (script::_get_number_of_instances_of_script_with_name_hash(joaat("photographywildlife")) == 0 &&
-					!gameplay::is_bit_set(Global_101700.f_9008.f_99, 0) && !Global_69971) {
+					!gameplay::is_bit_set(Global_101700.f_9008.f_99, 0) && !G_TextMessageConfig) {
 					func_1558(joaat("photographywildlife"), 1424);
 				}
 			}
@@ -116779,7 +116779,7 @@ void func_1619() {
 	if (!entity::is_entity_dead(player::player_ped_id(), 0) &&
 		!player::is_player_being_arrested(player::player_id(), 0)) {
 		if (!Global_101700.f_8044.f_1) {
-			if (!Global_69971.f_1) {
+			if (!G_TextMessageConfig.f_1) {
 				if (func_143(0) && !func_27(0)) {
 					if (!func_79(62)) {
 						if (script::_get_number_of_instances_of_script_with_name_hash(joaat("mission_triggerer_a")) ==

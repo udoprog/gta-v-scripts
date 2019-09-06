@@ -341,7 +341,7 @@ void func_7(int iParam0) {
 	audio::trigger_music_event("GLOBAL_KILL_MUSIC");
 	func_8();
 	Global_25500 = 0;
-	Global_69971.f_9 = -1;
+	G_TextMessageConfig.f_9 = -1;
 	Global_69964 = -1;
 }
 
@@ -1315,7 +1315,7 @@ int func_64(int iParam0, int iParam1) {
 		return -2;
 	}
 	iVar0 = func_558(iParam0);
-	iVar1 = Global_69971.f_109[iParam0 /*4*/];
+	iVar1 = G_TextMessageConfig.f_109[iParam0 /*4*/];
 	iVar2 = Global_82612[iVar1 /*34*/].f_6;
 	if (!gameplay::is_bit_set(Global_82612[iVar1 /*34*/].f_15, 4)) {
 		script::request_script_with_name_hash(joaat("mission_stat_watcher"));
@@ -1328,7 +1328,7 @@ int func_64(int iParam0, int iParam1) {
 		if (Global_91491 == 11) {
 			func_7(iVar1);
 			func_538(iParam0, iVar0, 0);
-			return Global_69971.f_109[iParam0 /*4*/].f_2;
+			return G_TextMessageConfig.f_109[iParam0 /*4*/].f_2;
 		}
 	}
 	if (entity::is_entity_dead(player::player_ped_id(), 0)) {
@@ -1376,7 +1376,7 @@ int func_64(int iParam0, int iParam1) {
 					return -1;
 				}
 				else if (iVar5 == 0) {
-					return Global_69971.f_109[iParam0 /*4*/].f_2;
+					return G_TextMessageConfig.f_109[iParam0 /*4*/].f_2;
 				}
 			}
 			gameplay::set_bit(&Global_82576[iVar0 /*5*/].f_1, 1);
@@ -1473,7 +1473,7 @@ int func_65(int iParam0, int iParam1, int iParam2, int iParam3) {
 	Global_91527 = 0;
 	func_538(iParam0, iParam1, iParam3);
 	func_66(0, iParam2);
-	return Global_69971.f_109[iParam0 /*4*/].f_2;
+	return G_TextMessageConfig.f_109[iParam0 /*4*/].f_2;
 }
 
 // Position - 0x1F27
@@ -1537,7 +1537,7 @@ void func_68(int iParam0) {
 	char *sVar9;
 
 	if (Global_91491 != 12) {
-		iVar6 = Global_69971.f_109[iParam0 /*4*/];
+		iVar6 = G_TextMessageConfig.f_109[iParam0 /*4*/];
 		Var0 = {Global_82612[iVar6 /*34*/]};
 		if (gameplay::is_bit_set(Global_82612[iVar6 /*34*/].f_15, 1)) {
 			return;
@@ -2690,10 +2690,10 @@ var func_99(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4) {
 			func_100(4);
 		}
 	}
-	Global_69971.f_7 = 1;
-	Global_69971.f_6 = 1;
+	G_TextMessageConfig.f_7 = 1;
+	G_TextMessageConfig.f_6 = 1;
 	func_55(iParam2, 0);
-	return Global_69971.f_109[iParam0 /*4*/].f_1;
+	return G_TextMessageConfig.f_109[iParam0 /*4*/].f_1;
 }
 
 // Position - 0x45C0
@@ -30804,7 +30804,7 @@ void func_259(int iParam0, int iParam1, int iParam2) {
 		if (!gameplay::is_bit_set(Global_82612[iParam0 /*34*/].f_15, 7)) {
 			if (iParam1 != joaat("cities_passed")) {
 				stats::stat_set_int(iParam1, Global_101700.f_8975.f_21, 1);
-				if (!Global_69971) {
+				if (!G_TextMessageConfig) {
 					stats::_0x11FF1C80276097ED(iParam1, Global_101700.f_8044.f_330[iParam0 /*6*/].f_4, 0);
 				}
 			}
@@ -31981,7 +31981,7 @@ void func_292(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4) {
 	struct<2> Var5;
 
 	if (iParam3 != -1) {
-		Global_69971.f_9 = iParam3;
+		G_TextMessageConfig.f_9 = iParam3;
 	}
 	if (Global_88744) {
 		player::set_max_wanted_level(5);
@@ -33532,7 +33532,7 @@ void func_308(int iParam0) {
 	int iVar2;
 	int iVar3;
 
-	iVar0 = Global_69971.f_109[iParam0 /*4*/];
+	iVar0 = G_TextMessageConfig.f_109[iParam0 /*4*/];
 	gameplay::clear_bit(&Global_91491.f_20, 17);
 	func_311(&Global_82612[iVar0 /*34*/], 1, 0);
 	if (Global_82612[iVar0 /*34*/].f_13 != -1 && Global_82612[iVar0 /*34*/].f_14 != -1 &&
@@ -79667,7 +79667,7 @@ void func_538(int iParam0, int iParam1, int iParam2) {
 		func_6(&Global_82576[iParam1 /*5*/].f_3);
 	}
 	func_541();
-	script::set_script_with_name_hash_as_no_longer_needed(Global_82612[Global_69971.f_109[iParam0 /*4*/] /*34*/].f_6);
+	script::set_script_with_name_hash_as_no_longer_needed(Global_82612[G_TextMessageConfig.f_109[iParam0 /*4*/] /*34*/].f_6);
 	script::set_script_with_name_hash_as_no_longer_needed(joaat("mission_stat_watcher"));
 	func_539(iParam0);
 	graphics::_stop_all_screen_effects();
@@ -80273,7 +80273,7 @@ void func_562(int iParam0, int iParam1) {
 	if (Var0.f_22 != 0) {
 		func_578(Var0.f_22, 0);
 	}
-	func_577(iParam0, Global_69971);
+	func_577(iParam0, G_TextMessageConfig);
 	if (!iParam1) {
 		iVar32 = func_576(iParam0);
 		if (iVar32 != 0) {
@@ -83845,7 +83845,7 @@ int func_597(var *uParam0, int iParam1, int iParam2, int iParam3) {
 					if (gameplay::is_bit_set(Global_82576[iVar4 /*5*/].f_1, 2)) {
 						iVar5 = Global_82576[iVar4 /*5*/];
 						StringCopy(&cVar6, "MISS_SWITCH_", 64);
-						StringConCat(&cVar6, &Global_82612[Global_69971.f_109[iVar5 /*4*/] /*34*/], 64);
+						StringConCat(&cVar6, &Global_82612[G_TextMessageConfig.f_109[iVar5 /*4*/] /*34*/], 64);
 						stats::stat_increment(gameplay::get_hash_key(&cVar6), 1f);
 					}
 					iVar4++;
@@ -92238,7 +92238,7 @@ bool func_740(int iParam0, char *sParam1) {
 
 // Position - 0x8145C
 void func_741() {
-	Global_69971 = 1;
+	G_TextMessageConfig = 1;
 	func_809();
 	func_808();
 	Global_36330 = 1;
@@ -92262,7 +92262,7 @@ void func_741() {
 	func_745();
 	func_743();
 	func_742();
-	Global_69971 = 0;
+	G_TextMessageConfig = 0;
 }
 
 // Position - 0x814CB
@@ -98474,15 +98474,15 @@ void func_809() {
 	Global_101700.f_8044.f_99.f_219[10] = 0;
 	iVar0 = 0;
 	while (iVar0 < 32) {
-		Global_69971.f_10[iVar0] = 0;
+		G_TextMessageConfig.f_10[iVar0] = 0;
 		iVar0++;
 	}
 	Global_101700.f_8044.f_1 = 0;
 	Global_101700.f_8975.f_25 = 0;
-	Global_69971.f_9 = -1;
-	Global_69971.f_7 = 0;
-	Global_69971.f_6 = 0;
-	Global_69971.f_2 = 1;
+	G_TextMessageConfig.f_9 = -1;
+	G_TextMessageConfig.f_7 = 0;
+	G_TextMessageConfig.f_6 = 0;
+	G_TextMessageConfig.f_2 = 1;
 	Global_69964 = -1;
 	Global_91529 = -1;
 }
@@ -98494,7 +98494,7 @@ void func_810() {
 	iVar0 = 0;
 	iVar0 = 0;
 	while (iVar0 < 32) {
-		Global_101700.f_8044.f_2[iVar0 /*3*/].f_1 = Global_69971.f_12526[iVar0 /*2*/];
+		Global_101700.f_8044.f_2[iVar0 /*3*/].f_1 = G_TextMessageConfig.f_12526[iVar0 /*2*/];
 		iVar0++;
 	}
 }
@@ -99080,7 +99080,7 @@ var func_839(int iParam0) {
 
 	StringCopy(&Var0, "NULL", 64);
 	if (iParam0 != -1) {
-		switch (Global_69971.f_6825[iParam0 /*3*/].f_1) {
+		switch (G_TextMessageConfig.f_6825[iParam0 /*3*/].f_1) {
 		case 12: func_848(iParam0, &Var0); break;
 
 		case 0: func_847(iParam0, &Var0); break;
@@ -99105,25 +99105,25 @@ var func_839(int iParam0) {
 void func_840(int iParam0, char *sParam1) {
 	char cVar0[64];
 
-	IntToString(sParam1, Global_69971.f_6825[iParam0 /*3*/], 64);
+	IntToString(sParam1, G_TextMessageConfig.f_6825[iParam0 /*3*/], 64);
 	StringIntConCat(sParam1, func_841(iParam0), 64);
-	IntToString(&cVar0, Global_69971.f_6684[Global_69971.f_6825[iParam0 /*3*/].f_2 /*14*/], 64);
-	StringIntConCat(&cVar0, Global_69971.f_6684[Global_69971.f_6825[iParam0 /*3*/].f_2 /*14*/].f_1, 64);
-	StringIntConCat(&cVar0, Global_69971.f_6684[Global_69971.f_6825[iParam0 /*3*/].f_2 /*14*/].f_2, 64);
+	IntToString(&cVar0, G_TextMessageConfig.f_6684[G_TextMessageConfig.f_6825[iParam0 /*3*/].f_2 /*14*/], 64);
+	StringIntConCat(&cVar0, G_TextMessageConfig.f_6684[G_TextMessageConfig.f_6825[iParam0 /*3*/].f_2 /*14*/].f_1, 64);
+	StringIntConCat(&cVar0, G_TextMessageConfig.f_6684[G_TextMessageConfig.f_6825[iParam0 /*3*/].f_2 /*14*/].f_2, 64);
 	StringIntConCat(sParam1, gameplay::get_hash_key(&cVar0), 64);
-	IntToString(&cVar0, Global_69971.f_6684[Global_69971.f_6825[iParam0 /*3*/].f_2 /*14*/].f_3, 64);
-	StringIntConCat(&cVar0, Global_69971.f_6684[Global_69971.f_6825[iParam0 /*3*/].f_2 /*14*/].f_4, 64);
-	StringIntConCat(&cVar0, Global_69971.f_6684[Global_69971.f_6825[iParam0 /*3*/].f_2 /*14*/].f_5, 64);
+	IntToString(&cVar0, G_TextMessageConfig.f_6684[G_TextMessageConfig.f_6825[iParam0 /*3*/].f_2 /*14*/].f_3, 64);
+	StringIntConCat(&cVar0, G_TextMessageConfig.f_6684[G_TextMessageConfig.f_6825[iParam0 /*3*/].f_2 /*14*/].f_4, 64);
+	StringIntConCat(&cVar0, G_TextMessageConfig.f_6684[G_TextMessageConfig.f_6825[iParam0 /*3*/].f_2 /*14*/].f_5, 64);
 	StringIntConCat(sParam1, gameplay::get_hash_key(&cVar0), 64);
-	IntToString(&cVar0, Global_69971.f_6684[Global_69971.f_6825[iParam0 /*3*/].f_2 /*14*/].f_6, 64);
-	StringIntConCat(&cVar0, Global_69971.f_6684[Global_69971.f_6825[iParam0 /*3*/].f_2 /*14*/].f_7, 64);
-	StringIntConCat(&cVar0, Global_69971.f_6684[Global_69971.f_6825[iParam0 /*3*/].f_2 /*14*/].f_8, 64);
+	IntToString(&cVar0, G_TextMessageConfig.f_6684[G_TextMessageConfig.f_6825[iParam0 /*3*/].f_2 /*14*/].f_6, 64);
+	StringIntConCat(&cVar0, G_TextMessageConfig.f_6684[G_TextMessageConfig.f_6825[iParam0 /*3*/].f_2 /*14*/].f_7, 64);
+	StringIntConCat(&cVar0, G_TextMessageConfig.f_6684[G_TextMessageConfig.f_6825[iParam0 /*3*/].f_2 /*14*/].f_8, 64);
 	StringIntConCat(sParam1, gameplay::get_hash_key(&cVar0), 64);
-	IntToString(&cVar0, Global_69971.f_6684[Global_69971.f_6825[iParam0 /*3*/].f_2 /*14*/].f_9, 64);
-	StringIntConCat(&cVar0, Global_69971.f_6684[Global_69971.f_6825[iParam0 /*3*/].f_2 /*14*/].f_10, 64);
-	StringIntConCat(&cVar0, Global_69971.f_6684[Global_69971.f_6825[iParam0 /*3*/].f_2 /*14*/].f_11, 64);
-	StringIntConCat(&cVar0, Global_69971.f_6684[Global_69971.f_6825[iParam0 /*3*/].f_2 /*14*/].f_12, 64);
-	StringIntConCat(&cVar0, Global_69971.f_6684[Global_69971.f_6825[iParam0 /*3*/].f_2 /*14*/].f_13, 64);
+	IntToString(&cVar0, G_TextMessageConfig.f_6684[G_TextMessageConfig.f_6825[iParam0 /*3*/].f_2 /*14*/].f_9, 64);
+	StringIntConCat(&cVar0, G_TextMessageConfig.f_6684[G_TextMessageConfig.f_6825[iParam0 /*3*/].f_2 /*14*/].f_10, 64);
+	StringIntConCat(&cVar0, G_TextMessageConfig.f_6684[G_TextMessageConfig.f_6825[iParam0 /*3*/].f_2 /*14*/].f_11, 64);
+	StringIntConCat(&cVar0, G_TextMessageConfig.f_6684[G_TextMessageConfig.f_6825[iParam0 /*3*/].f_2 /*14*/].f_12, 64);
+	StringIntConCat(&cVar0, G_TextMessageConfig.f_6684[G_TextMessageConfig.f_6825[iParam0 /*3*/].f_2 /*14*/].f_13, 64);
 	StringIntConCat(sParam1, gameplay::get_hash_key(&cVar0), 64);
 }
 
@@ -99133,7 +99133,7 @@ int func_841(int iParam0) {
 
 	iVar0 = 0;
 	while (iVar0 < 32) {
-		if (iParam0 >= Global_69971.f_12526[iVar0 /*2*/] && iParam0 <= Global_69971.f_12526[iVar0 /*2*/].f_1) {
+		if (iParam0 >= G_TextMessageConfig.f_12526[iVar0 /*2*/] && iParam0 <= G_TextMessageConfig.f_12526[iVar0 /*2*/].f_1) {
 			return iVar0;
 		}
 		iVar0++;
@@ -99145,20 +99145,20 @@ int func_841(int iParam0) {
 void func_842(int iParam0, char *sParam1) {
 	char cVar0[64];
 
-	IntToString(sParam1, Global_69971.f_6825[iParam0 /*3*/], 64);
+	IntToString(sParam1, G_TextMessageConfig.f_6825[iParam0 /*3*/], 64);
 	StringIntConCat(sParam1, func_841(iParam0), 64);
-	IntToString(&cVar0, Global_69971.f_4824[Global_69971.f_6825[iParam0 /*3*/].f_2 /*11*/], 64);
-	StringIntConCat(&cVar0, Global_69971.f_4824[Global_69971.f_6825[iParam0 /*3*/].f_2 /*11*/].f_1, 64);
+	IntToString(&cVar0, G_TextMessageConfig.f_4824[G_TextMessageConfig.f_6825[iParam0 /*3*/].f_2 /*11*/], 64);
+	StringIntConCat(&cVar0, G_TextMessageConfig.f_4824[G_TextMessageConfig.f_6825[iParam0 /*3*/].f_2 /*11*/].f_1, 64);
 	StringIntConCat(sParam1, gameplay::get_hash_key(&cVar0), 64);
-	IntToString(&cVar0, Global_69971.f_4824[Global_69971.f_6825[iParam0 /*3*/].f_2 /*11*/].f_2, 64);
-	StringIntConCat(&cVar0, Global_69971.f_4824[Global_69971.f_6825[iParam0 /*3*/].f_2 /*11*/].f_3, 64);
+	IntToString(&cVar0, G_TextMessageConfig.f_4824[G_TextMessageConfig.f_6825[iParam0 /*3*/].f_2 /*11*/].f_2, 64);
+	StringIntConCat(&cVar0, G_TextMessageConfig.f_4824[G_TextMessageConfig.f_6825[iParam0 /*3*/].f_2 /*11*/].f_3, 64);
 	StringIntConCat(sParam1, gameplay::get_hash_key(&cVar0), 64);
-	IntToString(&cVar0, Global_69971.f_4824[Global_69971.f_6825[iParam0 /*3*/].f_2 /*11*/].f_4, 64);
-	StringIntConCat(&cVar0, Global_69971.f_4824[Global_69971.f_6825[iParam0 /*3*/].f_2 /*11*/].f_5, 64);
+	IntToString(&cVar0, G_TextMessageConfig.f_4824[G_TextMessageConfig.f_6825[iParam0 /*3*/].f_2 /*11*/].f_4, 64);
+	StringIntConCat(&cVar0, G_TextMessageConfig.f_4824[G_TextMessageConfig.f_6825[iParam0 /*3*/].f_2 /*11*/].f_5, 64);
 	StringIntConCat(sParam1, gameplay::get_hash_key(&cVar0), 64);
-	IntToString(&cVar0, Global_69971.f_4824[Global_69971.f_6825[iParam0 /*3*/].f_2 /*11*/].f_6, 64);
-	StringIntConCat(&cVar0, Global_69971.f_4824[Global_69971.f_6825[iParam0 /*3*/].f_2 /*11*/].f_7, 64);
-	StringIntConCat(&cVar0, Global_69971.f_4824[Global_69971.f_6825[iParam0 /*3*/].f_2 /*11*/].f_8, 64);
+	IntToString(&cVar0, G_TextMessageConfig.f_4824[G_TextMessageConfig.f_6825[iParam0 /*3*/].f_2 /*11*/].f_6, 64);
+	StringIntConCat(&cVar0, G_TextMessageConfig.f_4824[G_TextMessageConfig.f_6825[iParam0 /*3*/].f_2 /*11*/].f_7, 64);
+	StringIntConCat(&cVar0, G_TextMessageConfig.f_4824[G_TextMessageConfig.f_6825[iParam0 /*3*/].f_2 /*11*/].f_8, 64);
 	StringIntConCat(sParam1, gameplay::get_hash_key(&cVar0), 64);
 }
 
@@ -99166,57 +99166,57 @@ void func_842(int iParam0, char *sParam1) {
 void func_843(int iParam0, char *sParam1) {
 	char cVar0[64];
 
-	IntToString(sParam1, Global_69971.f_6825[iParam0 /*3*/], 64);
+	IntToString(sParam1, G_TextMessageConfig.f_6825[iParam0 /*3*/], 64);
 	StringIntConCat(sParam1, func_841(iParam0), 64);
-	MemCopy(&cVar0, {Global_69971.f_4160[Global_69971.f_6825[iParam0 /*3*/].f_2 /*12*/]}, 16);
+	MemCopy(&cVar0, {G_TextMessageConfig.f_4160[G_TextMessageConfig.f_6825[iParam0 /*3*/].f_2 /*12*/]}, 16);
 	StringIntConCat(sParam1, gameplay::get_hash_key(&cVar0), 64);
-	IntToString(&cVar0, Global_69971.f_4160[Global_69971.f_6825[iParam0 /*3*/].f_2 /*12*/].f_8, 64);
-	StringIntConCat(&cVar0, Global_69971.f_4160[Global_69971.f_6825[iParam0 /*3*/].f_2 /*12*/].f_9, 64);
+	IntToString(&cVar0, G_TextMessageConfig.f_4160[G_TextMessageConfig.f_6825[iParam0 /*3*/].f_2 /*12*/].f_8, 64);
+	StringIntConCat(&cVar0, G_TextMessageConfig.f_4160[G_TextMessageConfig.f_6825[iParam0 /*3*/].f_2 /*12*/].f_9, 64);
 	StringIntConCat(sParam1, gameplay::get_hash_key(&cVar0), 64);
-	IntToString(&cVar0, Global_69971.f_4160[Global_69971.f_6825[iParam0 /*3*/].f_2 /*12*/].f_10, 64);
-	StringIntConCat(&cVar0, Global_69971.f_4160[Global_69971.f_6825[iParam0 /*3*/].f_2 /*12*/].f_11, 64);
+	IntToString(&cVar0, G_TextMessageConfig.f_4160[G_TextMessageConfig.f_6825[iParam0 /*3*/].f_2 /*12*/].f_10, 64);
+	StringIntConCat(&cVar0, G_TextMessageConfig.f_4160[G_TextMessageConfig.f_6825[iParam0 /*3*/].f_2 /*12*/].f_11, 64);
 	StringIntConCat(sParam1, gameplay::get_hash_key(&cVar0), 64);
 }
 
 // Position - 0x90975
 void func_844(int iParam0, char *sParam1) {
-	IntToString(sParam1, Global_69971.f_6825[iParam0 /*3*/], 64);
+	IntToString(sParam1, G_TextMessageConfig.f_6825[iParam0 /*3*/], 64);
 	StringIntConCat(sParam1, func_841(iParam0), 64);
-	StringConCat(sParam1, &Global_69971.f_4151[Global_69971.f_6825[iParam0 /*3*/].f_2 /*8*/], 64);
+	StringConCat(sParam1, &G_TextMessageConfig.f_4151[G_TextMessageConfig.f_6825[iParam0 /*3*/].f_2 /*8*/], 64);
 }
 
 // Position - 0x909B0
 void func_845(int iParam0, char *sParam1) {
-	IntToString(sParam1, Global_69971.f_6825[iParam0 /*3*/], 64);
+	IntToString(sParam1, G_TextMessageConfig.f_6825[iParam0 /*3*/], 64);
 	StringIntConCat(sParam1, func_841(iParam0), 64);
-	StringIntConCat(sParam1, Global_69971.f_3590[Global_69971.f_6825[iParam0 /*3*/].f_2 /*2*/], 64);
-	StringIntConCat(sParam1, Global_69971.f_3590[Global_69971.f_6825[iParam0 /*3*/].f_2 /*2*/].f_1, 64);
+	StringIntConCat(sParam1, G_TextMessageConfig.f_3590[G_TextMessageConfig.f_6825[iParam0 /*3*/].f_2 /*2*/], 64);
+	StringIntConCat(sParam1, G_TextMessageConfig.f_3590[G_TextMessageConfig.f_6825[iParam0 /*3*/].f_2 /*2*/].f_1, 64);
 }
 
 // Position - 0x90A07
 void func_846(int iParam0, char *sParam1) {
 	char cVar0[64];
 
-	IntToString(sParam1, Global_69971.f_6825[iParam0 /*3*/], 64);
+	IntToString(sParam1, G_TextMessageConfig.f_6825[iParam0 /*3*/], 64);
 	StringIntConCat(sParam1, func_841(iParam0), 64);
-	IntToString(&cVar0, Global_69971.f_109[Global_69971.f_6825[iParam0 /*3*/].f_2 /*4*/], 64);
-	StringIntConCat(&cVar0, Global_69971.f_109[Global_69971.f_6825[iParam0 /*3*/].f_2 /*4*/].f_1, 64);
+	IntToString(&cVar0, G_TextMessageConfig.f_109[G_TextMessageConfig.f_6825[iParam0 /*3*/].f_2 /*4*/], 64);
+	StringIntConCat(&cVar0, G_TextMessageConfig.f_109[G_TextMessageConfig.f_6825[iParam0 /*3*/].f_2 /*4*/].f_1, 64);
 	StringIntConCat(sParam1, gameplay::get_hash_key(&cVar0), 64);
-	IntToString(&cVar0, Global_69971.f_109[Global_69971.f_6825[iParam0 /*3*/].f_2 /*4*/].f_2, 64);
-	StringIntConCat(&cVar0, Global_69971.f_109[Global_69971.f_6825[iParam0 /*3*/].f_2 /*4*/].f_3, 64);
+	IntToString(&cVar0, G_TextMessageConfig.f_109[G_TextMessageConfig.f_6825[iParam0 /*3*/].f_2 /*4*/].f_2, 64);
+	StringIntConCat(&cVar0, G_TextMessageConfig.f_109[G_TextMessageConfig.f_6825[iParam0 /*3*/].f_2 /*4*/].f_3, 64);
 	StringIntConCat(sParam1, gameplay::get_hash_key(&cVar0), 64);
 }
 
 // Position - 0x90AA6
 void func_847(int iParam0, char *sParam1) {
-	IntToString(sParam1, Global_69971.f_6825[iParam0 /*3*/], 64);
+	IntToString(sParam1, G_TextMessageConfig.f_6825[iParam0 /*3*/], 64);
 	StringIntConCat(sParam1, func_841(iParam0), 64);
-	StringIntConCat(sParam1, Global_69971.f_6825[iParam0 /*3*/].f_2, 64);
+	StringIntConCat(sParam1, G_TextMessageConfig.f_6825[iParam0 /*3*/].f_2, 64);
 }
 
 // Position - 0x90AD8
 void func_848(int iParam0, char *sParam1) {
-	IntToString(sParam1, Global_69971.f_6825[iParam0 /*3*/], 64);
+	IntToString(sParam1, G_TextMessageConfig.f_6825[iParam0 /*3*/], 64);
 	StringIntConCat(sParam1, func_841(iParam0), 64);
 }
 

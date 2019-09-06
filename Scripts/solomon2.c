@@ -740,7 +740,7 @@ int func_12(int iParam0) {
 		player::start_firing_amnesty(5000);
 	}
 	iVar0 = Global_82576[iParam0 /*5*/];
-	iVar1 = Global_69971.f_109[iVar0 /*4*/];
+	iVar1 = G_TextMessageConfig.f_109[iVar0 /*4*/];
 	func_16(iVar1, 1);
 	player::_0xC9A763D8FE87436A(player::player_id());
 	player::special_ability_deactivate(player::player_id());
@@ -1470,7 +1470,7 @@ void func_35(int iParam0, int iParam1) {
 	if (Global_101700.f_8044 || func_25(0)) {
 		iVar0 = func_24();
 		iVar1 = Global_82576[iVar0 /*5*/];
-		uVar2 = Global_69971.f_109[iVar1 /*4*/];
+		uVar2 = G_TextMessageConfig.f_109[iVar1 /*4*/];
 		if (iVar0 == -1) {
 			if (Global_101700.f_8044) {
 			}

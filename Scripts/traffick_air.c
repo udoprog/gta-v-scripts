@@ -7395,7 +7395,7 @@ void func_100(var *uParam0) {
 	}
 	if (!Global_69970) {
 		if (!player::is_player_dead(player::get_player_index())) {
-			if (!Global_69971) {
+			if (!G_TextMessageConfig) {
 				if (cam::is_screen_faded_out() && !func_82(0)) {
 					cam::do_screen_fade_in(800);
 				}

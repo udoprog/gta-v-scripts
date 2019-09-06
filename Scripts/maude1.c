@@ -26974,7 +26974,7 @@ void func_197(int iParam0, int iParam1) {
 	if (Var0.f_22 != 0) {
 		func_221(Var0.f_22, 0);
 	}
-	func_215(iParam0, Global_69971);
+	func_215(iParam0, G_TextMessageConfig);
 	if (!iParam1) {
 		iVar32 = func_214(iParam0);
 		if (iVar32 != 0) {

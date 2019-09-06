@@ -856,7 +856,7 @@ bool func_18(var *uParam0, int iParam1, int iParam2, int iParam3) {
 					if (gameplay::is_bit_set(Global_82576[iVar4 /*5*/].f_1, 2)) {
 						iVar5 = Global_82576[iVar4 /*5*/];
 						StringCopy(&cVar6, "MISS_SWITCH_", 64);
-						StringConCat(&cVar6, &Global_82612[Global_69971.f_109[iVar5 /*4*/] /*34*/], 64);
+						StringConCat(&cVar6, &Global_82612[G_TextMessageConfig.f_109[iVar5 /*4*/] /*34*/], 64);
 						stats::stat_increment(gameplay::get_hash_key(&cVar6), 1f);
 					}
 					iVar4++;
@@ -93867,7 +93867,7 @@ void func_584(int iParam0, int iParam1, int iParam2) {
 		if (!gameplay::is_bit_set(Global_82612[iParam0 /*34*/].f_15, 7)) {
 			if (iParam1 != joaat("cities_passed")) {
 				stats::stat_set_int(iParam1, Global_101700.f_8975.f_21, 1);
-				if (!Global_69971) {
+				if (!G_TextMessageConfig) {
 					stats::_0x11FF1C80276097ED(iParam1, Global_101700.f_8044.f_330[iParam0 /*6*/].f_4, 0);
 				}
 			}

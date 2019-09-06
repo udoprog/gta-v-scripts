@@ -83,7 +83,7 @@ void __EntryFunction__() {
 		func_3(1, 1);
 		func_1();
 	}
-	Global_69971.f_1 = 0;
+	G_TextMessageConfig.f_1 = 0;
 	gameplay::set_bit(&Global_101700.f_8975.f_25, 0);
 	func_6();
 }

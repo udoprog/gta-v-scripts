@@ -425,7 +425,7 @@ void __EntryFunction__() {
 					if (entity::get_entity_health(player::get_player_ped(player::get_player_index())) < 1) {
 						Global_55824 = 1;
 					}
-					if (func_98() || func_9() || Global_55823 || Global_69971 || Global_55824 || !iLocal_634) {
+					if (func_98() || func_9() || Global_55823 || G_TextMessageConfig || Global_55824 || !iLocal_634) {
 						Global_55812 = 0;
 						Global_55816 = 0;
 						iLocal_633 = 0;
@@ -470,7 +470,7 @@ void func_1(var *uParam0) {
 	}
 	if (!Global_69970) {
 		if (!player::is_player_dead(player::get_player_index())) {
-			if (!Global_69971) {
+			if (!G_TextMessageConfig) {
 				if (cam::is_screen_faded_out() && !func_94(0)) {
 					cam::do_screen_fade_in(800);
 				}

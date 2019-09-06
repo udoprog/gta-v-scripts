@@ -27530,15 +27530,15 @@ void func_223() {
 
 	if (func_234(43)) {
 		Global_101700.f_8044.f_99.f_58[81] = 1;
-		uVar0 = Global_69971.f_12526[22 /*2*/];
-		iVar1 = Global_69971.f_12526[22 /*2*/].f_1;
+		uVar0 = G_TextMessageConfig.f_12526[22 /*2*/];
+		iVar1 = G_TextMessageConfig.f_12526[22 /*2*/].f_1;
 		iVar2 = uVar0;
 		iVar3 = -1;
 		iVar4 = 0;
 		while (iVar2 <= iVar1 && !iVar4) {
-			if (Global_69971.f_6825[iVar2 /*3*/] == 531432813) {
-				iVar3 = Global_69971.f_6825[iVar2 /*3*/].f_2;
-				iVar5 = Global_69971.f_109[iVar3 /*4*/];
+			if (G_TextMessageConfig.f_6825[iVar2 /*3*/] == 531432813) {
+				iVar3 = G_TextMessageConfig.f_6825[iVar2 /*3*/].f_2;
+				iVar5 = G_TextMessageConfig.f_109[iVar3 /*4*/];
 				if (iVar5 == 128) {
 					Global_101700.f_8044.f_2[22 /*3*/].f_1 = iVar2;
 					iVar4 = 1;
@@ -27722,7 +27722,7 @@ int func_232(int iParam0) {
 	iVar0 = 0;
 	while (iVar0 < 7) {
 		if (Global_82576[iVar0 /*5*/] != -1) {
-			if (Global_69971.f_109[Global_82576[iVar0 /*5*/] /*4*/] == iParam0) {
+			if (G_TextMessageConfig.f_109[Global_82576[iVar0 /*5*/] /*4*/] == iParam0) {
 				return iVar0;
 			}
 		}
@@ -27758,7 +27758,7 @@ bool func_234(int iParam0) {
 	iVar0 = 0;
 	while (iVar0 < Global_82576) {
 		if (Global_82576[iVar0 /*5*/] != -1) {
-			if (Global_69971.f_109[Global_82576[iVar0 /*5*/] /*4*/] == iParam0) {
+			if (G_TextMessageConfig.f_109[Global_82576[iVar0 /*5*/] /*4*/] == iParam0) {
 				return true;
 			}
 		}
@@ -31623,7 +31623,7 @@ int func_418() {
 void func_419() {
 	func_181(1323596299, 1, 2, 12, 15000, 5000, -1, 51, -1, 0, 1);
 	func_181(-1205448796, 1, 5, 1, 15000, 5000, -1, 51, -1, 0, 1);
-	func_13(1635608802);
+	func_13(/* Assassination 1 Text */1635608802);
 }
 
 // Position - 0x28C0F

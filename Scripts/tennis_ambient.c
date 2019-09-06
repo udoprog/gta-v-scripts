@@ -8766,7 +8766,7 @@ int func_326(int iParam0) {
 		player::start_firing_amnesty(5000);
 	}
 	iVar0 = Global_82576[iParam0 /*5*/];
-	iVar1 = Global_69971.f_109[iVar0 /*4*/];
+	iVar1 = G_TextMessageConfig.f_109[iVar0 /*4*/];
 	func_330(iVar1, 1);
 	player::_0xC9A763D8FE87436A(player::player_id());
 	player::special_ability_deactivate(player::player_id());

@@ -742,7 +742,7 @@ bool func_7(var *uParam0, int iParam1, int iParam2, int iParam3) {
 					if (gameplay::is_bit_set(Global_82576[iVar4 /*5*/].f_1, 2)) {
 						iVar5 = Global_82576[iVar4 /*5*/];
 						StringCopy(&cVar6, "MISS_SWITCH_", 64);
-						StringConCat(&cVar6, &Global_82612[Global_69971.f_109[iVar5 /*4*/] /*34*/], 64);
+						StringConCat(&cVar6, &Global_82612[G_TextMessageConfig.f_109[iVar5 /*4*/] /*34*/], 64);
 						stats::stat_increment(gameplay::get_hash_key(&cVar6), 1f);
 					}
 					iVar4++;
@@ -93998,7 +93998,7 @@ bool func_578(int iParam0) {
 	iVar0 = 0;
 	while (iVar0 < Global_82576) {
 		if (Global_82576[iVar0 /*5*/] != -1) {
-			if (Global_69971.f_109[Global_82576[iVar0 /*5*/] /*4*/] == iParam0) {
+			if (G_TextMessageConfig.f_109[Global_82576[iVar0 /*5*/] /*4*/] == iParam0) {
 				return true;
 			}
 		}
@@ -94032,7 +94032,7 @@ bool func_579(int iParam0, var *uParam1, var *uParam2) {
 			iVar3 = 0;
 			while (iVar3 < Global_82576) {
 				if (Global_82576[iVar3 /*5*/] != -1) {
-					uVar1 = Global_69971.f_109[Global_82576[iVar3 /*5*/] /*4*/];
+					uVar1 = G_TextMessageConfig.f_109[Global_82576[iVar3 /*5*/] /*4*/];
 					iVar2 = uVar1;
 					if (func_580(Global_82612[iVar2 /*34*/].f_12, iVar0)) {
 						return true;
@@ -97814,9 +97814,9 @@ void func_640() {
 				if (!iVar0) {
 					iVar3 = Global_101700.f_8044.f_2[iVar2 /*3*/].f_1;
 					if (iVar3 != -1) {
-						if (Global_69971.f_6825[iVar3 /*3*/] == -868169264) {
+						if (G_TextMessageConfig.f_6825[iVar3 /*3*/] == -868169264) {
 							iVar0 = 1;
-							iVar4 = Global_69971.f_109[Global_69971.f_6825[iVar3 /*3*/].f_2 /*4*/];
+							iVar4 = G_TextMessageConfig.f_109[G_TextMessageConfig.f_6825[iVar3 /*3*/].f_2 /*4*/];
 							if (gameplay::is_bit_set(Global_82612[iVar4 /*34*/].f_11, 0)) {
 								iVar1 = 0;
 							}

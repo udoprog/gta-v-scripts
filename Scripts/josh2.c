@@ -27789,7 +27789,7 @@ void func_210(int iParam0, int iParam1) {
 	if (Var0.f_22 != 0) {
 		func_237(Var0.f_22, 0);
 	}
-	func_228(iParam0, Global_69971);
+	func_228(iParam0, G_TextMessageConfig);
 	if (!iParam1) {
 		iVar32 = func_227(iParam0);
 		if (iVar32 != 0) {
@@ -44215,7 +44215,7 @@ func_550(int iParam0) {
 //Position - 0x3ED72
 bool func_551(int iParam0, var uParam1, var uParam2, var uParam3, var uParam4, var uParam5, var uParam6)
 {
-	if (!func_553(0) || Global_69971 || Global_69960 == 1 || !cam::is_screen_faded_in()) {
+	if (!func_553(0) || G_TextMessageConfig || Global_69960 == 1 || !cam::is_screen_faded_in()) {
 		return false;
 	}
 	switch (Global_69956) {

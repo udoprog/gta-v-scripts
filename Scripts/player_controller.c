@@ -31491,7 +31491,7 @@ void func_223() {
 			if (iVar1 != -1) {
 				if (iVar2 != -1) {
 					if (!Global_88757[iVar2 /*17*/].f_2) {
-						iVar4 = Global_69971.f_109[iVar1 /*4*/];
+						iVar4 = G_TextMessageConfig.f_109[iVar1 /*4*/];
 						if (!gameplay::is_bit_set(Global_82612[iVar4 /*34*/].f_15, 12)) {
 							iVar5 = func_248(iVar4);
 							if (func_247(iVar5, iLocal_100)) {

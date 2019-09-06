@@ -874,7 +874,7 @@ void func_4(int iParam0, int iParam1) {
 	if (Global_101700.f_8044 || func_7(0)) {
 		iVar0 = func_5();
 		iVar1 = Global_82576[iVar0 /*5*/];
-		uVar2 = Global_69971.f_109[iVar1 /*4*/];
+		uVar2 = G_TextMessageConfig.f_109[iVar1 /*4*/];
 		if (iVar0 == -1) {
 			if (Global_101700.f_8044) {
 			}
@@ -5218,7 +5218,7 @@ bool func_88(int iParam0, int iParam1, int iParam2, int iParam3) {
 					if (gameplay::is_bit_set(Global_82576[iVar4 /*5*/].f_1, 2)) {
 						iVar5 = Global_82576[iVar4 /*5*/];
 						StringCopy(&cVar6, "MISS_SWITCH_", 64);
-						StringConCat(&cVar6, &Global_82612[Global_69971.f_109[iVar5 /*4*/] /*34*/], 64);
+						StringConCat(&cVar6, &Global_82612[G_TextMessageConfig.f_109[iVar5 /*4*/] /*34*/], 64);
 						stats::stat_increment(gameplay::get_hash_key(&cVar6), 1f);
 					}
 					iVar4++;
@@ -82652,7 +82652,7 @@ int func_547(int iParam0) {
 		player::start_firing_amnesty(5000);
 	}
 	iVar0 = Global_82576[iParam0 /*5*/];
-	iVar1 = Global_69971.f_109[iVar0 /*4*/];
+	iVar1 = G_TextMessageConfig.f_109[iVar0 /*4*/];
 	func_551(iVar1, 1);
 	player::_0xC9A763D8FE87436A(player::player_id());
 	player::special_ability_deactivate(player::player_id());
