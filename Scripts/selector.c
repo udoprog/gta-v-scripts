@@ -1866,7 +1866,7 @@ int func_22() {
 		func_43() || func_30() || func_29() || !func_27() || func_26(0) || ui::is_pause_menu_active() ||
 		player::is_system_ui_being_displayed() ||
 		script::_get_number_of_instances_of_script_with_name_hash(joaat("appcamera")) > 0 ||
-		script::_get_number_of_instances_of_script_with_name_hash(joaat("creator")) > 0 || Global_68131 ||
+		script::_get_number_of_instances_of_script_with_name_hash(joaat("creator")) > 0 || G_DisableMessagesAndCalls2 ||
 		Global_55813 || func_25() || !unk1::_0xDF4B952F7D381B95() || !unk1::_0x4282E08174868BE3() ||
 		func_24(Global_100725, 256) || network::network_is_game_in_progress() && func_23(player::player_id())) {
 		return 0;
@@ -1892,7 +1892,7 @@ var func_25() { return Global_89133; }
 bool func_26(int iParam0) {
 	if (iParam0 == 1) {
 		if (Global_14443.f_1 > 3) {
-			if (gameplay::is_bit_set(Global_2313, 14)) {
+			if (gameplay::is_bit_set(G_SleepModeOnOn25, 14)) {
 				return true;
 			}
 			else {
@@ -2131,7 +2131,7 @@ bool func_45(int iParam0) { return iParam0 < 3; }
 void func_46() {
 	controls::disable_control_action(0, 37, 1);
 	controls::disable_control_action(0, 85, 1);
-	if (!Global_68131) {
+	if (!G_DisableMessagesAndCalls2) {
 		controls::set_input_exclusive(0, 19);
 	}
 	controls::set_input_exclusive(0, 12);
@@ -3679,8 +3679,8 @@ int func_111(int iParam0) {
 		cutscene::is_cutscene_playing() || func_34() || ui::is_pause_menu_active() ||
 		player::is_system_ui_being_displayed() || gameplay::is_stunt_jump_in_progress() || func_29() ||
 		script::_get_number_of_instances_of_script_with_name_hash(joaat("appcamera")) > 0 || Global_100747 ||
-		Global_68131 || Global_55813 || ui::is_hud_component_active(19) && !Global_17151.f_4 ||
-		ui::is_hud_component_active(16) && !Global_17151.f_4 || func_30() || func_25() || Global_68131 ||
+		G_DisableMessagesAndCalls2 || Global_55813 || ui::is_hud_component_active(19) && !Global_17151.f_4 ||
+		ui::is_hud_component_active(16) && !Global_17151.f_4 || func_30() || func_25() || G_DisableMessagesAndCalls2 ||
 		Global_69956 == 4 || Global_69956 == 5 || func_112() || ui::_0x2F057596F2BD0061()) {
 		return 0;
 	}
@@ -3698,7 +3698,7 @@ int func_114(int iParam0) {
 	if (!func_45(iParam0)) {
 		return 7;
 	}
-	return Global_101700.f_6647.f_919[iParam0];
+	return G_SomeGlobalState.MessageCallStates.f_919[iParam0];
 }
 
 // Position - 0x5A3F
@@ -4562,7 +4562,7 @@ void func_126() {
 						iLocal_273 = 0;
 						if ((func_722() || func_723() || func_724()) && !streaming::is_player_switch_in_progress() &&
 							Global_89302.f_44 != 1) {
-							if (Global_69700 == 1 && cam::is_gameplay_cam_rendering() == 0) {
+							if (G_DisableMessagesAndCalls1 == 1 && cam::is_gameplay_cam_rendering() == 0) {
 								func_726(1);
 							}
 							else {
@@ -77174,7 +77174,7 @@ void func_475(int iParam0) {
 	if (iParam0) {
 		func_479();
 		if (Global_14443.f_1 == 10 || Global_14443.f_1 == 9) {
-			gameplay::set_bit(&Global_2314, 16);
+			gameplay::set_bit(&G_SleepModeOffOn11, 16);
 		}
 		Global_14443.f_1 = 1;
 		if (func_26(0)) {
@@ -77194,17 +77194,17 @@ void func_476(int iParam0) {
 		func_478(0, 0);
 	}
 	if (Global_14443.f_1 == 10 || Global_14443.f_1 == 9) {
-		gameplay::set_bit(&Global_2314, 16);
+		gameplay::set_bit(&G_SleepModeOffOn11, 16);
 	}
 	if (audio::is_mobile_phone_call_ongoing()) {
 		audio::stop_scripted_conversation(0);
 	}
 	Global_15745 = 5;
 	if (iParam0 == 1) {
-		gameplay::set_bit(&Global_2313, 30);
+		gameplay::set_bit(&G_SleepModeOnOn25, 30);
 	}
 	else {
-		gameplay::clear_bit(&Global_2313, 30);
+		gameplay::clear_bit(&G_SleepModeOnOn25, 30);
 	}
 	if (!func_477()) {
 		Global_14443.f_1 = 3;
@@ -77939,7 +77939,7 @@ void func_511() {
 		if (func_26(0)) {
 			func_476(0);
 		}
-		gameplay::set_bit(&Global_2314, 2);
+		gameplay::set_bit(&G_SleepModeOffOn11, 2);
 	}
 }
 
@@ -78435,10 +78435,10 @@ void func_550(int iParam0) { Global_2494199.f_4393 = iParam0; }
 // Position - 0x67FE5
 void func_551(int iParam0) {
 	if (iParam0 == 1) {
-		gameplay::set_bit(&Global_2313, 13);
+		gameplay::set_bit(&G_SleepModeOnOn25, 13);
 	}
 	else {
-		gameplay::clear_bit(&Global_2313, 13);
+		gameplay::clear_bit(&G_SleepModeOnOn25, 13);
 	}
 }
 

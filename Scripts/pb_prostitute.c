@@ -1073,8 +1073,8 @@ int func_12(char *sParam0, int iParam1, int iParam2) {
 		Global_15364.f_369 = Global_16733;
 		Global_15741 = Global_15742;
 		if (Global_15751) {
-			gameplay::clear_bit(&Global_2313, 20);
-			gameplay::clear_bit(&Global_2314, 17);
+			gameplay::clear_bit(&G_SleepModeOnOn25, 20);
+			gameplay::clear_bit(&G_SleepModeOffOn11, 17);
 			gameplay::clear_bit(&Global_2315, 0);
 			if (iParam2) {
 				func_17();
@@ -1141,7 +1141,7 @@ int func_12(char *sParam0, int iParam1, int iParam2) {
 
 				default: break;
 				}
-				if (gameplay::is_bit_set(Global_2313, 9)) {
+				if (gameplay::is_bit_set(G_SleepModeOnOn25, 9)) {
 					return 0;
 				}
 			}
@@ -1201,7 +1201,7 @@ void func_14() {
 	Global_16761 = 0;
 	Global_15794 = 0;
 	Global_15795 = 0;
-	gameplay::clear_bit(&Global_2314, 16);
+	gameplay::clear_bit(&G_SleepModeOffOn11, 16);
 }
 
 // Position - 0xB72
@@ -5845,7 +5845,7 @@ void func_206() {
 		if (func_209(0)) {
 			func_207(0);
 		}
-		gameplay::set_bit(&Global_2314, 2);
+		gameplay::set_bit(&G_SleepModeOffOn11, 2);
 	}
 }
 
@@ -5855,17 +5855,17 @@ void func_207(int iParam0) {
 		func_208(0, 0);
 	}
 	if (Global_14443.f_1 == 10 || Global_14443.f_1 == 9) {
-		gameplay::set_bit(&Global_2314, 16);
+		gameplay::set_bit(&G_SleepModeOffOn11, 16);
 	}
 	if (audio::is_mobile_phone_call_ongoing()) {
 		audio::stop_scripted_conversation(0);
 	}
 	Global_15745 = 5;
 	if (iParam0 == 1) {
-		gameplay::set_bit(&Global_2313, 30);
+		gameplay::set_bit(&G_SleepModeOnOn25, 30);
 	}
 	else {
-		gameplay::clear_bit(&Global_2313, 30);
+		gameplay::clear_bit(&G_SleepModeOnOn25, 30);
 	}
 	if (!func_15()) {
 		Global_14443.f_1 = 3;
@@ -5900,7 +5900,7 @@ void func_208(int iParam0, int iParam1) {
 bool func_209(int iParam0) {
 	if (iParam0 == 1) {
 		if (Global_14443.f_1 > 3) {
-			if (gameplay::is_bit_set(Global_2313, 14)) {
+			if (gameplay::is_bit_set(G_SleepModeOnOn25, 14)) {
 				return true;
 			}
 			else {
@@ -11982,7 +11982,7 @@ bool func_385(int iParam0, var uParam1) {
 }
 
 // Position - 0x11600
-bool func_386() { return Global_68131; }
+bool func_386() { return G_DisableMessagesAndCalls2; }
 
 // Position - 0x1160C
 bool func_387() {

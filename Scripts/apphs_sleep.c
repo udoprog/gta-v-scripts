@@ -128,8 +128,8 @@ void func_3() {
   if (Global_3118[2 /*2811*/][0 /*281*/].f_259 == 2) {
     Global_3118[2 /*2811*/][0 /*281*/].f_259 = 0;
   }
-  gameplay::clear_bit(&Global_2313, 25);
-  gameplay::set_bit(&Global_2314, 11);
+  gameplay::clear_bit(&G_SleepModeOnOn25, 25);
+  gameplay::set_bit(&G_SleepModeOffOn11, 11);
 }
 
 // Position - 0x1EF
@@ -494,7 +494,7 @@ void func_19() {
     func_20(Global_14424, "SET_SOFT_KEYS", 3f, 1f, 4f, -1f, -1f, 0, 0, 0, 0, 0);
   }
   func_20(Global_14424, "SET_SOFT_KEYS", 1f, 0f, 1f, -1f, -1f, 0, 0, 0, 0, 0);
-  gameplay::clear_bit(&Global_2313, 17);
+  gameplay::clear_bit(&G_SleepModeOnOn25, 17);
 }
 
 // Position - 0x942
@@ -673,7 +673,7 @@ void func_26() {
     func_20(Global_14424, "SET_SOFT_KEYS", 3f, 1f, 4f, -1f, -1f, 0, 0, 0, 0, 0);
   }
   func_20(Global_14424, "SET_SOFT_KEYS", 1f, 0f, 1f, -1f, -1f, 0, 0, 0, 0, 0);
-  gameplay::clear_bit(&Global_2313, 17);
+  gameplay::clear_bit(&G_SleepModeOnOn25, 17);
 }
 
 // Position - 0xCF9

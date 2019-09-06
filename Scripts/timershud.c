@@ -6969,7 +6969,7 @@ bool func_211() {
 	if (Global_1312367) {
 		return false;
 	}
-	if (Global_68131) {
+	if (G_DisableMessagesAndCalls2) {
 		return false;
 	}
 	if (ui::_is_text_chat_active()) {

@@ -75883,9 +75883,9 @@ void func_376(int iParam0) {
 			}
 			iVar0++;
 		}
-		Global_101700.f_6647.f_911 = -1;
-		Global_101700.f_6647.f_912 = 0;
-		Global_101700.f_6647.f_913 = 0;
+		G_SomeGlobalState.MessageCallStates.f_911 = -1;
+		G_SomeGlobalState.MessageCallStates.f_912 = 0;
+		G_SomeGlobalState.MessageCallStates.f_913 = 0;
 	}
 }
 
@@ -78938,30 +78938,30 @@ void func_487(var *uParam0, char *sParam1) {
 
 // Position - 0x6C26C
 void func_488() {
-	gameplay::_start_save_struct(&Global_101700.f_6647, 925, "COMM_CONTROL_DATA_STRUCT");
-	func_499(&Global_101700.f_6647, "COMM_CONTROL_QUEUED_CALLS_ARRAY");
-	gameplay::register_int_to_save(&Global_101700.f_6647.f_136, "No_Queued_Calls");
-	func_498(&Global_101700.f_6647.f_137, "COMM_CONTROL_MISSED_CALLS_ARRAY");
-	gameplay::register_int_to_save(&Global_101700.f_6647.f_198, "No_Missed_Calls");
-	func_496(&Global_101700.f_6647.f_199, "COMM_CONTROL_CHAT_CALLS_ARRAY");
-	gameplay::register_int_to_save(&Global_101700.f_6647.f_650, "No_Chat_Calls");
-	func_495(&Global_101700.f_6647.f_651, "COMM_CONTROL_QUEUED_TEXTS_ARRAY");
-	gameplay::register_int_to_save(&Global_101700.f_6647.f_764, "No_Queued_Texts");
-	func_493(&Global_101700.f_6647.f_867, "COMM_CONTROL_SENT_TEXTS_ARRAY");
-	gameplay::register_int_to_save(&Global_101700.f_6647.f_910, "No_Sent_Texts");
-	func_490(&Global_101700.f_6647.f_765, "COMM_CONTROL_QUEUED_EMAILS_ARRAY");
-	gameplay::register_int_to_save(&Global_101700.f_6647.f_866, "No_Queued_Emails");
-	gameplay::register_enum_to_save(&Global_101700.f_6647.f_911, "Last_Completed_Call");
-	gameplay::register_bool_to_save(&Global_101700.f_6647.f_912, "Last_Call_Answered");
-	gameplay::register_bool_to_save(&Global_101700.f_6647.f_913, "Last_Call_Had_Response");
-	gameplay::register_bool_to_save(&Global_101700.f_6647.f_914, "Last_Call_Response");
-	gameplay::register_enum_to_save(&Global_101700.f_6647.f_915, "Last_Completed_Text");
-	gameplay::register_bool_to_save(&Global_101700.f_6647.f_916, "Last_Text_Had_Response");
-	gameplay::register_bool_to_save(&Global_101700.f_6647.f_917, "Last_Text_Response");
-	gameplay::register_enum_to_save(&Global_101700.f_6647.f_918, "Last_Completed_Email");
-	func_489(&Global_101700.f_6647.f_919, "COMM_CONTROL_CHAR_PRIORITY_ARRAY");
-	gameplay::register_int_to_save(&Global_101700.f_6647.f_923, "Exile_Warning_Bitset");
-	gameplay::register_int_to_save(&Global_101700.f_6647.f_924, "Comms_Game_time");
+	gameplay::_start_save_struct(&G_SomeGlobalState.MessageCallStates, 925, "COMM_CONTROL_DATA_STRUCT");
+	func_499(&G_SomeGlobalState.MessageCallStates, "COMM_CONTROL_QUEUED_CALLS_ARRAY");
+	gameplay::register_int_to_save(&G_SomeGlobalState.MessageCallStates.f_136, "No_Queued_Calls");
+	func_498(&G_SomeGlobalState.MessageCallStates.f_137, "COMM_CONTROL_MISSED_CALLS_ARRAY");
+	gameplay::register_int_to_save(&G_SomeGlobalState.MessageCallStates.f_198, "No_Missed_Calls");
+	func_496(&G_SomeGlobalState.MessageCallStates.f_199, "COMM_CONTROL_CHAT_CALLS_ARRAY");
+	gameplay::register_int_to_save(&G_SomeGlobalState.MessageCallStates.f_650, "No_Chat_Calls");
+	func_495(&G_SomeGlobalState.MessageCallStates.f_651, "COMM_CONTROL_QUEUED_TEXTS_ARRAY");
+	gameplay::register_int_to_save(&G_SomeGlobalState.MessageCallStates.f_764, "No_Queued_Texts");
+	func_493(&G_SomeGlobalState.MessageCallStates.f_867, "COMM_CONTROL_SENT_TEXTS_ARRAY");
+	gameplay::register_int_to_save(&G_SomeGlobalState.MessageCallStates.f_910, "No_Sent_Texts");
+	func_490(&G_SomeGlobalState.MessageCallStates.f_765, "COMM_CONTROL_QUEUED_EMAILS_ARRAY");
+	gameplay::register_int_to_save(&G_SomeGlobalState.MessageCallStates.f_866, "No_Queued_Emails");
+	gameplay::register_enum_to_save(&G_SomeGlobalState.MessageCallStates.f_911, "Last_Completed_Call");
+	gameplay::register_bool_to_save(&G_SomeGlobalState.MessageCallStates.f_912, "Last_Call_Answered");
+	gameplay::register_bool_to_save(&G_SomeGlobalState.MessageCallStates.f_913, "Last_Call_Had_Response");
+	gameplay::register_bool_to_save(&G_SomeGlobalState.MessageCallStates.f_914, "Last_Call_Response");
+	gameplay::register_enum_to_save(&G_SomeGlobalState.MessageCallStates.f_915, "Last_Completed_Text");
+	gameplay::register_bool_to_save(&G_SomeGlobalState.MessageCallStates.f_916, "Last_Text_Had_Response");
+	gameplay::register_bool_to_save(&G_SomeGlobalState.MessageCallStates.f_917, "Last_Text_Response");
+	gameplay::register_enum_to_save(&G_SomeGlobalState.MessageCallStates.f_918, "Last_Completed_Email");
+	func_489(&G_SomeGlobalState.MessageCallStates.f_919, "COMM_CONTROL_CHAR_PRIORITY_ARRAY");
+	gameplay::register_int_to_save(&G_SomeGlobalState.MessageCallStates.f_923, "Exile_Warning_Bitset");
+	gameplay::register_int_to_save(&G_SomeGlobalState.MessageCallStates.f_924, "Comms_Game_time");
 	gameplay::stop_save_struct();
 }
 

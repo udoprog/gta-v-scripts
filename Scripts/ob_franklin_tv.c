@@ -1019,7 +1019,7 @@ void func_21(int iParam0, int iParam1, int iParam2, int iParam3) {
 		func_28(1, iParam3, iParam2, 0);
 		Global_55828 = 1;
 		Global_68134 = 1;
-		Global_69700 = 1;
+		G_DisableMessagesAndCalls1 = 1;
 	}
 	else {
 		func_30(0);
@@ -1040,7 +1040,7 @@ void func_21(int iParam0, int iParam1, int iParam2, int iParam3) {
 		else if (!ped::is_ped_injured(player::player_ped_id()) && !func_26(player::player_id())) {
 			entity::set_entity_invincible(player::player_ped_id(), 0);
 		}
-		Global_69700 = 0;
+		G_DisableMessagesAndCalls1 = 0;
 	}
 }
 
@@ -1134,10 +1134,10 @@ int func_29() {
 // Position - 0x12AD
 void func_30(int iParam0) {
 	if (iParam0 == 1) {
-		gameplay::set_bit(&Global_2313, 13);
+		gameplay::set_bit(&G_SleepModeOnOn25, 13);
 	}
 	else {
-		gameplay::clear_bit(&Global_2313, 13);
+		gameplay::clear_bit(&G_SleepModeOnOn25, 13);
 	}
 }
 
@@ -1298,7 +1298,7 @@ int func_38() {
 int func_39(int iParam0) {
 	if (iParam0 == 1) {
 		if (Global_14443.f_1 > 3) {
-			if (gameplay::is_bit_set(Global_2313, 14)) {
+			if (gameplay::is_bit_set(G_SleepModeOnOn25, 14)) {
 				return 1;
 			}
 			else {

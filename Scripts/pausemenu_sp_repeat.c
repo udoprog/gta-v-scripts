@@ -315,7 +315,7 @@ int func_8() {
 			}
 		}
 	}
-	if (Global_69700) {
+	if (G_DisableMessagesAndCalls1) {
 		return 2;
 	}
 	if (Global_68531.f_577) {
@@ -1097,7 +1097,7 @@ void func_46(int iParam0) {
 			}
 			break;
 		}
-		if (!Global_56047[iVar5 /*13*/].f_7 && iVar6) {
+		if (!MissionObjectives[iVar5 /*13*/].f_7 && iVar6) {
 			if (func_53(iVar5, iVar3, 0)) {
 				iVar4++;
 			}
@@ -1266,10 +1266,10 @@ bool func_53(int iParam0, int iParam1, int iParam2) {
 			return false;
 		}
 	}
-	if (Global_56047[iParam0 /*13*/].f_7) {
+	if (MissionObjectives[iParam0 /*13*/].f_7) {
 		return true;
 	}
-	Var0 = {Global_56047[iParam0 /*13*/]};
+	Var0 = {MissionObjectives[iParam0 /*13*/]};
 	iVar13 = func_63(iParam0);
 	switch (iParam0) {
 	case 38:
@@ -2994,7 +2994,7 @@ char *func_62(int iParam0) {
 
 // Position - 0x426B
 int func_63(int iParam0) {
-	if (func_64(iParam0, func_70(Global_56047[iParam0 /*13*/].f_4))) {
+	if (func_64(iParam0, func_70(MissionObjectives[iParam0 /*13*/].f_4))) {
 		return 1;
 	}
 	return 0;
@@ -3005,7 +3005,7 @@ bool func_64(int iParam0, int iParam1) {
 	if (iParam1 < 0) {
 		return false;
 	}
-	switch (Global_56047[iParam0 /*13*/]) {
+	switch (MissionObjectives[iParam0 /*13*/]) {
 	case 1:
 	case 2:
 	case 4:
@@ -3020,13 +3020,13 @@ bool func_64(int iParam0, int iParam1) {
 		return false;
 	}
 	if (iParam0 == 881 || iParam0 == 889 || iParam0 == 897)
-		&&Global_101700.f_23863[4 /*4*/] == func_65() { Global_56047[iParam0 /*13*/].f_2 = 0; }
-	if (Global_56047[iParam0 /*13*/].f_3) {
-		if (iParam1 < Global_56047[iParam0 /*13*/].f_2) {
+		&&Global_101700.f_23863[4 /*4*/] == func_65() { MissionObjectives[iParam0 /*13*/].f_2 = 0; }
+	if (MissionObjectives[iParam0 /*13*/].f_3) {
+		if (iParam1 < MissionObjectives[iParam0 /*13*/].f_2) {
 			return true;
 		}
 	}
-	else if (iParam1 >= Global_56047[iParam0 /*13*/].f_2) {
+	else if (iParam1 >= MissionObjectives[iParam0 /*13*/].f_2) {
 		return true;
 	}
 	return false;
@@ -3112,7 +3112,7 @@ int func_70(int iParam0) {
 int func_71(int iParam0) {
 	int iVar0;
 
-	iVar0 = func_70(Global_56047[iParam0 /*13*/].f_4);
+	iVar0 = func_70(MissionObjectives[iParam0 /*13*/].f_4);
 	if (iVar0 > -2) {
 		return iVar0;
 	}
@@ -3937,7 +3937,7 @@ void func_82() {
 		iVar7 = 0;
 		while (iVar7 < func_74(iVar1, Global_69951)) {
 			iVar4 = func_72(iVar1, Global_69951, iVar7);
-			if (!Global_56047[iVar4 /*13*/].f_7) {
+			if (!MissionObjectives[iVar4 /*13*/].f_7) {
 				if (func_63(iVar4) == 1) {
 					iVar3++;
 				}

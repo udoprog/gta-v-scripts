@@ -58694,7 +58694,7 @@ void func_406() {
 		if (func_410(0)) {
 			func_407(0);
 		}
-		gameplay::set_bit(&Global_2314, 2);
+		gameplay::set_bit(&G_SleepModeOffOn11, 2);
 	}
 }
 
@@ -58704,17 +58704,17 @@ void func_407(int iParam0) {
 		func_409(0, 0);
 	}
 	if (Global_14443.f_1 == 10 || Global_14443.f_1 == 9) {
-		gameplay::set_bit(&Global_2314, 16);
+		gameplay::set_bit(&G_SleepModeOffOn11, 16);
 	}
 	if (audio::is_mobile_phone_call_ongoing()) {
 		audio::stop_scripted_conversation(0);
 	}
 	Global_15745 = 5;
 	if (iParam0 == 1) {
-		gameplay::set_bit(&Global_2313, 30);
+		gameplay::set_bit(&G_SleepModeOnOn25, 30);
 	}
 	else {
-		gameplay::clear_bit(&Global_2313, 30);
+		gameplay::clear_bit(&G_SleepModeOnOn25, 30);
 	}
 	if (!func_408()) {
 		Global_14443.f_1 = 3;
@@ -58757,7 +58757,7 @@ void func_409(int iParam0, int iParam1) {
 bool func_410(int iParam0) {
 	if (iParam0 == 1) {
 		if (Global_14443.f_1 > 3) {
-			if (gameplay::is_bit_set(Global_2313, 14)) {
+			if (gameplay::is_bit_set(G_SleepModeOnOn25, 14)) {
 				return true;
 			}
 			else {
@@ -59615,7 +59615,7 @@ void func_430(int iParam0, int iParam1, int iParam2, int iParam3) {
 		func_434(1, iParam3, iParam2, 0);
 		Global_55828 = 1;
 		Global_68134 = 1;
-		Global_69700 = 1;
+		G_DisableMessagesAndCalls1 = 1;
 	}
 	else {
 		func_435(0);
@@ -59636,7 +59636,7 @@ void func_430(int iParam0, int iParam1, int iParam2, int iParam3) {
 		else if (!ped::is_ped_injured(player::player_ped_id()) && !func_432(player::player_id())) {
 			entity::set_entity_invincible(player::player_ped_id(), 0);
 		}
-		Global_69700 = 0;
+		G_DisableMessagesAndCalls1 = 0;
 	}
 }
 
@@ -59679,10 +59679,10 @@ int func_434(int iParam0, int iParam1, var uParam2, int iParam3) {
 // Position - 0x54066
 void func_435(int iParam0) {
 	if (iParam0 == 1) {
-		gameplay::set_bit(&Global_2313, 13);
+		gameplay::set_bit(&G_SleepModeOnOn25, 13);
 	}
 	else {
-		gameplay::clear_bit(&Global_2313, 13);
+		gameplay::clear_bit(&G_SleepModeOnOn25, 13);
 	}
 }
 
@@ -67192,7 +67192,7 @@ bool func_483(var *uParam0, int iParam1, int iParam2, int iParam3, int iParam4) 
 			cam::is_first_person_aim_cam_active()) {
 			return false;
 		}
-		if (func_410(0) || func_505() || func_504() || func_503() || func_502(1) || Global_69700 && iParam2) {
+		if (func_410(0) || func_505() || func_504() || func_503() || func_502(1) || G_DisableMessagesAndCalls1 && iParam2) {
 			return false;
 		}
 		if (!func_501() && func_500()) {

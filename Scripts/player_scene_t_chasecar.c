@@ -808,8 +808,8 @@ int func_8(char *sParam0, int iParam1, int iParam2) {
 		Global_15364.f_369 = Global_16733;
 		Global_15741 = Global_15742;
 		if (Global_15751) {
-			gameplay::clear_bit(&Global_2313, 20);
-			gameplay::clear_bit(&Global_2314, 17);
+			gameplay::clear_bit(&G_SleepModeOnOn25, 20);
+			gameplay::clear_bit(&G_SleepModeOffOn11, 17);
 			gameplay::clear_bit(&Global_2315, 0);
 			if (iParam2) {
 				func_13();
@@ -876,7 +876,7 @@ int func_8(char *sParam0, int iParam1, int iParam2) {
 
 				default: break;
 				}
-				if (gameplay::is_bit_set(Global_2313, 9)) {
+				if (gameplay::is_bit_set(G_SleepModeOnOn25, 9)) {
 					return 0;
 				}
 			}
@@ -936,7 +936,7 @@ void func_10() {
 	Global_16761 = 0;
 	Global_15794 = 0;
 	Global_15795 = 0;
-	gameplay::clear_bit(&Global_2314, 16);
+	gameplay::clear_bit(&G_SleepModeOffOn11, 16);
 }
 
 // Position - 0x8C4
@@ -1504,7 +1504,7 @@ int func_40(int iParam0, int iParam1, int iParam2) {
 	if (network::_network_is_text_chat_active()) {
 		return 0;
 	}
-	if (Global_68131) {
+	if (G_DisableMessagesAndCalls2) {
 		return 0;
 	}
 	if (script::_get_number_of_instances_of_script_with_name_hash(joaat("appinternet")) > 0) {
@@ -1558,7 +1558,7 @@ bool func_41() { return gameplay::get_game_timer() <= Global_17290.f_5745 + 100;
 bool func_42(int iParam0) {
 	if (iParam0 == 1) {
 		if (Global_14443.f_1 > 3) {
-			if (gameplay::is_bit_set(Global_2313, 14)) {
+			if (gameplay::is_bit_set(G_SleepModeOnOn25, 14)) {
 				return true;
 			}
 			else {
@@ -1888,7 +1888,7 @@ bool func_52(int iParam0) {
 }
 
 // Position - 0x1CBE
-void func_53() { gameplay::set_bit(&Global_2314, 4); }
+void func_53() { gameplay::set_bit(&G_SleepModeOffOn11, 4); }
 
 // Position - 0x1CCE
 bool func_54(char *sParam0) {

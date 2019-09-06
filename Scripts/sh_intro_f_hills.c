@@ -25013,7 +25013,7 @@ void func_135(int iParam0, int iParam1, int iParam2, int iParam3) {
 		func_141(1, iParam3, iParam2, 0);
 		Global_55828 = 1;
 		Global_68134 = 1;
-		Global_69700 = 1;
+		G_DisableMessagesAndCalls1 = 1;
 	}
 	else {
 		func_143(0);
@@ -25034,7 +25034,7 @@ void func_135(int iParam0, int iParam1, int iParam2, int iParam3) {
 		else if (!ped::is_ped_injured(player::player_ped_id()) && !func_139(player::player_id())) {
 			entity::set_entity_invincible(player::player_ped_id(), 0);
 		}
-		Global_69700 = 0;
+		G_DisableMessagesAndCalls1 = 0;
 	}
 }
 
@@ -25125,10 +25125,10 @@ int func_142() {
 // Position - 0x1DCCD
 void func_143(int iParam0) {
 	if (iParam0 == 1) {
-		gameplay::set_bit(&Global_2313, 13);
+		gameplay::set_bit(&G_SleepModeOnOn25, 13);
 	}
 	else {
-		gameplay::clear_bit(&Global_2313, 13);
+		gameplay::clear_bit(&G_SleepModeOnOn25, 13);
 	}
 }
 
@@ -25576,8 +25576,8 @@ bool func_161() {
 	if (func_162()) {
 		return false;
 	}
-	if (Global_36328 != -1) {
-		if (Global_101700.f_6647[Global_36328 /*15*/].f_3 >= 2) {
+	if (LastDispatchedMessageOrCall != -1) {
+		if (G_SomeGlobalState.MessageCallStates[LastDispatchedMessageOrCall /*15*/].f_3 >= 2) {
 			return false;
 		}
 	}

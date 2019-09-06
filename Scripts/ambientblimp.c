@@ -328,7 +328,7 @@ void func_12() {
 		ui::add_text_component_substring_text_label(&Global_2923[1 /*6*/]);
 		ui::_set_notification_message(&cVar0, &cVar0, 0, 3, "", 0);
 	}
-	gameplay::clear_bit(&Global_2313, 0);
+	gameplay::clear_bit(&G_SleepModeOnOn25, 0);
 }
 
 // Position - 0x7B5

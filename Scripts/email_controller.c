@@ -1474,16 +1474,16 @@ bool func_33(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4) {
 			}
 		}
 	}
-	if (Global_69700) {
+	if (G_DisableMessagesAndCalls1) {
 		return false;
 	}
 	if (cutscene::is_cutscene_playing()) {
 		return false;
 	}
-	if (Global_68131) {
+	if (G_DisableMessagesAndCalls2) {
 		return false;
 	}
-	if (Global_87831) {
+	if (G_DisableMessagesAndCalls3) {
 		return false;
 	}
 	if (func_51() || Global_17151.f_4 && Global_17151.f_104 == 4 || func_50()) {

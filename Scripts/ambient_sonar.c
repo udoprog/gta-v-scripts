@@ -214,12 +214,12 @@ void func_8() {
 // Position - 0x2F9
 void func_9(vector3 vParam0, int iParam3, int iParam4) {
 	Global_16851 = {vParam0};
-	gameplay::clear_bit(&Global_2314, 30);
+	gameplay::clear_bit(&G_SleepModeOffOn11, 30);
 	if (iParam3) {
-		gameplay::set_bit(&Global_2314, 29);
+		gameplay::set_bit(&G_SleepModeOffOn11, 29);
 	}
 	else {
-		gameplay::clear_bit(&Global_2314, 29);
+		gameplay::clear_bit(&G_SleepModeOffOn11, 29);
 	}
 	if (iParam4) {
 		gameplay::set_bit(&Global_2315, 1);
@@ -333,10 +333,10 @@ bool func_12(var *uParam0, int iParam1) {
 int func_13(int iParam0) {
 	if (func_14(17, 0, 1, 0)) {
 		if (iParam0 == 1) {
-			gameplay::set_bit(&Global_2314, 22);
+			gameplay::set_bit(&G_SleepModeOffOn11, 22);
 		}
 		else {
-			gameplay::clear_bit(&Global_2314, 22);
+			gameplay::clear_bit(&G_SleepModeOffOn11, 22);
 		}
 		return 1;
 	}
@@ -486,7 +486,7 @@ void func_18(char *sParam0) {
 int func_19(int iParam0) {
 	if (iParam0 == 1) {
 		if (Global_14443.f_1 > 3) {
-			if (gameplay::is_bit_set(Global_2313, 14)) {
+			if (gameplay::is_bit_set(G_SleepModeOnOn25, 14)) {
 				return 1;
 			}
 			else {
@@ -2002,17 +2002,17 @@ void func_68(int iParam0) {
 		func_70(0, 0);
 	}
 	if (Global_14443.f_1 == 10 || Global_14443.f_1 == 9) {
-		gameplay::set_bit(&Global_2314, 16);
+		gameplay::set_bit(&G_SleepModeOffOn11, 16);
 	}
 	if (audio::is_mobile_phone_call_ongoing()) {
 		audio::stop_scripted_conversation(0);
 	}
 	Global_15745 = 5;
 	if (iParam0 == 1) {
-		gameplay::set_bit(&Global_2313, 30);
+		gameplay::set_bit(&G_SleepModeOnOn25, 30);
 	}
 	else {
-		gameplay::clear_bit(&Global_2313, 30);
+		gameplay::clear_bit(&G_SleepModeOnOn25, 30);
 	}
 	if (!func_69()) {
 		Global_14443.f_1 = 3;
@@ -2052,7 +2052,7 @@ void func_70(int iParam0, int iParam1) {
 }
 
 // Position - 0x352D
-void func_71() { gameplay::set_bit(&Global_2314, 30); }
+void func_71() { gameplay::set_bit(&G_SleepModeOffOn11, 30); }
 
 // Position - 0x353E
 void func_72(int *iParam0, int *iParam1, var *uParam2, int iParam3, int *iParam4, int *iParam5, char *sParam6,

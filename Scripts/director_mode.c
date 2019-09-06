@@ -3810,7 +3810,7 @@ void func_46(int iParam0) {
 	if (iParam0) {
 		func_51();
 		if (Global_14443.f_1 == 10 || Global_14443.f_1 == 9) {
-			gameplay::set_bit(&Global_2314, 16);
+			gameplay::set_bit(&G_SleepModeOffOn11, 16);
 		}
 		Global_14443.f_1 = 1;
 		if (func_50(0)) {
@@ -3830,17 +3830,17 @@ void func_47(int iParam0) {
 		func_49(0, 0);
 	}
 	if (Global_14443.f_1 == 10 || Global_14443.f_1 == 9) {
-		gameplay::set_bit(&Global_2314, 16);
+		gameplay::set_bit(&G_SleepModeOffOn11, 16);
 	}
 	if (audio::is_mobile_phone_call_ongoing()) {
 		audio::stop_scripted_conversation(0);
 	}
 	Global_15745 = 5;
 	if (iParam0 == 1) {
-		gameplay::set_bit(&Global_2313, 30);
+		gameplay::set_bit(&G_SleepModeOnOn25, 30);
 	}
 	else {
-		gameplay::clear_bit(&Global_2313, 30);
+		gameplay::clear_bit(&G_SleepModeOnOn25, 30);
 	}
 	if (!func_48()) {
 		Global_14443.f_1 = 3;
@@ -3883,7 +3883,7 @@ void func_49(int iParam0, int iParam1) {
 bool func_50(int iParam0) {
 	if (iParam0 == 1) {
 		if (Global_14443.f_1 > 3) {
-			if (gameplay::is_bit_set(Global_2313, 14)) {
+			if (gameplay::is_bit_set(G_SleepModeOnOn25, 14)) {
 				return true;
 			}
 			else {
@@ -5262,7 +5262,7 @@ void func_79() {
 }
 
 // Position - 0x6B26
-void func_80() { gameplay::set_bit(&Global_2314, 4); }
+void func_80() { gameplay::set_bit(&G_SleepModeOffOn11, 4); }
 
 // Position - 0x6B36
 bool func_81() {
@@ -11140,7 +11140,7 @@ void func_189() {
 		if (func_50(0)) {
 			func_47(0);
 		}
-		gameplay::set_bit(&Global_2314, 2);
+		gameplay::set_bit(&G_SleepModeOffOn11, 2);
 	}
 }
 
@@ -14189,7 +14189,7 @@ void func_298(var *uParam0, int iParam1, int iParam2, float fParam3, int iParam4
 		StringConCat(&cVar55, "_Facial", 64);
 		ped::play_facial_anim(uParam0->f_119, &cVar55, Var22.f_1);
 	}
-	if (iVar54 == 7 && (!Global_69700 || Global_1751032) && !uParam0->f_104) {
+	if (iVar54 == 7 && (!G_DisableMessagesAndCalls1 || Global_1751032) && !uParam0->f_104) {
 		ai::open_sequence_task(&uParam0->f_115);
 		ai::task_scripted_animation(0, &Var22, &Var0, &Var0, fVar52, fVar53);
 		ai::close_sequence_task(uParam0->f_115);
@@ -14541,7 +14541,7 @@ int func_315(int iParam0, int iParam1) {
 
 // Position - 0x15A1F
 int func_316() {
-	if (func_247() || Global_69700) {
+	if (func_247() || G_DisableMessagesAndCalls1) {
 		return 1;
 	}
 	return 0;
@@ -114180,7 +114180,7 @@ void func_1072() {
 		ui::add_text_component_substring_text_label(&Global_2923[1 /*6*/]);
 		ui::_set_notification_message(&cVar0, &cVar0, 0, 3, "", 0);
 	}
-	gameplay::clear_bit(&Global_2313, 0);
+	gameplay::clear_bit(&G_SleepModeOnOn25, 0);
 }
 
 // Position - 0xA3FD0
@@ -118189,7 +118189,7 @@ int func_1145(int iParam0, int iParam1, int iParam2) {
 	if (Global_25441) {
 		return 8;
 	}
-	if (Global_69700) {
+	if (G_DisableMessagesAndCalls1) {
 		return 4;
 	}
 	if (player::is_player_playing(player::player_id())) {

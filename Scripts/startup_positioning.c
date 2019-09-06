@@ -90848,7 +90848,7 @@ void func_555(int iParam0) {
 	if (iParam0) {
 		func_560();
 		if (Global_14443.f_1 == 10 || Global_14443.f_1 == 9) {
-			gameplay::set_bit(&Global_2314, 16);
+			gameplay::set_bit(&G_SleepModeOffOn11, 16);
 		}
 		Global_14443.f_1 = 1;
 		if (func_559(0)) {
@@ -90868,17 +90868,17 @@ void func_556(int iParam0) {
 		func_558(0, 0);
 	}
 	if (Global_14443.f_1 == 10 || Global_14443.f_1 == 9) {
-		gameplay::set_bit(&Global_2314, 16);
+		gameplay::set_bit(&G_SleepModeOffOn11, 16);
 	}
 	if (audio::is_mobile_phone_call_ongoing()) {
 		audio::stop_scripted_conversation(0);
 	}
 	Global_15745 = 5;
 	if (iParam0 == 1) {
-		gameplay::set_bit(&Global_2313, 30);
+		gameplay::set_bit(&G_SleepModeOnOn25, 30);
 	}
 	else {
-		gameplay::clear_bit(&Global_2313, 30);
+		gameplay::clear_bit(&G_SleepModeOnOn25, 30);
 	}
 	if (!func_557()) {
 		Global_14443.f_1 = 3;
@@ -90921,7 +90921,7 @@ void func_558(int iParam0, int iParam1) {
 bool func_559(int iParam0) {
 	if (iParam0 == 1) {
 		if (Global_14443.f_1 > 3) {
-			if (gameplay::is_bit_set(Global_2313, 14)) {
+			if (gameplay::is_bit_set(G_SleepModeOnOn25, 14)) {
 				return true;
 			}
 			else {
@@ -95706,22 +95706,22 @@ bool func_608(int iParam0) {
 	int iVar0;
 
 	iVar0 = 0;
-	while (iVar0 < Global_101700.f_6647.f_136) {
-		if (Global_101700.f_6647[iVar0 /*15*/].f_6 == iParam0) {
+	while (iVar0 < G_SomeGlobalState.MessageCallStates.f_136) {
+		if (G_SomeGlobalState.MessageCallStates[iVar0 /*15*/].f_6 == iParam0) {
 			return true;
 		}
 		iVar0++;
 	}
 	iVar0 = 0;
-	while (iVar0 < Global_101700.f_6647.f_764) {
-		if (Global_101700.f_6647.f_651[iVar0 /*14*/].f_6 == iParam0) {
+	while (iVar0 < G_SomeGlobalState.MessageCallStates.f_764) {
+		if (G_SomeGlobalState.MessageCallStates.f_651[iVar0 /*14*/].f_6 == iParam0) {
 			return true;
 		}
 		iVar0++;
 	}
 	iVar0 = 0;
-	while (iVar0 < Global_101700.f_6647.f_866) {
-		if (Global_101700.f_6647.f_765[iVar0 /*10*/].f_6 == iParam0) {
+	while (iVar0 < G_SomeGlobalState.MessageCallStates.f_866) {
+		if (G_SomeGlobalState.MessageCallStates.f_765[iVar0 /*10*/].f_6 == iParam0) {
 			return true;
 		}
 		iVar0++;
@@ -95741,22 +95741,22 @@ bool func_609(int iParam0) {
 	if (!func_689(iParam0)) {
 	}
 	iVar0 = 0;
-	while (iVar0 < Global_101700.f_6647.f_136) {
-		if (gameplay::is_bit_set(Global_101700.f_6647[iVar0 /*15*/].f_2, iParam0)) {
+	while (iVar0 < G_SomeGlobalState.MessageCallStates.f_136) {
+		if (gameplay::is_bit_set(G_SomeGlobalState.MessageCallStates[iVar0 /*15*/].f_2, iParam0)) {
 			return true;
 		}
 		iVar0++;
 	}
 	iVar0 = 0;
-	while (iVar0 < Global_101700.f_6647.f_764) {
-		if (gameplay::is_bit_set(Global_101700.f_6647.f_651[iVar0 /*14*/].f_2, iParam0)) {
+	while (iVar0 < G_SomeGlobalState.MessageCallStates.f_764) {
+		if (gameplay::is_bit_set(G_SomeGlobalState.MessageCallStates.f_651[iVar0 /*14*/].f_2, iParam0)) {
 			return true;
 		}
 		iVar0++;
 	}
 	iVar0 = 0;
-	while (iVar0 < Global_101700.f_6647.f_866) {
-		if (gameplay::is_bit_set(Global_101700.f_6647.f_765[iVar0 /*10*/].f_2, iParam0)) {
+	while (iVar0 < G_SomeGlobalState.MessageCallStates.f_866) {
+		if (gameplay::is_bit_set(G_SomeGlobalState.MessageCallStates.f_765[iVar0 /*10*/].f_2, iParam0)) {
 			return true;
 		}
 		iVar0++;
@@ -95781,7 +95781,7 @@ bool func_610(int iParam0) {
 	iVar0 = gameplay::get_game_timer();
 	if (func_586(iParam0, &vVar1, &uVar4, &cVar5)) {
 		iVar13 = 0;
-		while (iVar13 < Global_101700.f_6647.f_136) {
+		while (iVar13 < G_SomeGlobalState.MessageCallStates.f_136) {
 			iVar14 = func_614(iVar13);
 			if (iVar14 != -1) {
 				if (iVar14 != -1 && iVar14 != 51 && iVar14 != 62 && iVar14 != 52 && iVar14 != 62 && iVar14 != 53 &&
@@ -95789,7 +95789,7 @@ bool func_610(int iParam0) {
 					iVar14 != 62 && iVar14 != 57 && iVar14 != 62 && iVar14 != 58 && iVar14 != 62 && iVar14 != 59 &&
 					iVar14 != 62 && iVar14 != 60 && iVar14 != 62 && iVar14 != 61 && iVar14 != 62 && iVar14 != 62 &&
 					iVar14 != 63) {
-					iVar15 = Global_101700.f_6647[iVar13 /*15*/].f_4 - iVar0;
+					iVar15 = G_SomeGlobalState.MessageCallStates[iVar13 /*15*/].f_4 - iVar0;
 					if (iVar15 < 180000) {
 						if (func_613(vVar1, iVar14)) {
 							return true;
@@ -95800,7 +95800,7 @@ bool func_610(int iParam0) {
 			iVar13++;
 		}
 		iVar13 = 0;
-		while (iVar13 < Global_101700.f_6647.f_764) {
+		while (iVar13 < G_SomeGlobalState.MessageCallStates.f_764) {
 			iVar16 = func_612(iVar13);
 			if (iVar16 != -1) {
 				if (iVar16 != -1 && iVar16 != 51 && iVar16 != 62 && iVar16 != 52 && iVar16 != 62 && iVar16 != 53 &&
@@ -95808,7 +95808,7 @@ bool func_610(int iParam0) {
 					iVar16 != 62 && iVar16 != 57 && iVar16 != 62 && iVar16 != 58 && iVar16 != 62 && iVar16 != 59 &&
 					iVar16 != 62 && iVar16 != 60 && iVar16 != 62 && iVar16 != 61 && iVar16 != 62 && iVar16 != 62 &&
 					iVar16 != 63) {
-					iVar17 = Global_101700.f_6647.f_651[iVar13 /*14*/].f_4 - iVar0;
+					iVar17 = G_SomeGlobalState.MessageCallStates.f_651[iVar13 /*14*/].f_4 - iVar0;
 					if (iVar17 < 180000) {
 						if (func_613(vVar1, iVar16)) {
 							return true;
@@ -95819,7 +95819,7 @@ bool func_610(int iParam0) {
 			iVar13++;
 		}
 		iVar13 = 0;
-		while (iVar13 < Global_101700.f_6647.f_866) {
+		while (iVar13 < G_SomeGlobalState.MessageCallStates.f_866) {
 			iVar18 = func_611(iVar13);
 			if (iVar18 != -1) {
 				if (iVar18 != -1 && iVar18 != 51 && iVar18 != 62 && iVar18 != 52 && iVar18 != 62 && iVar18 != 53 &&
@@ -95827,7 +95827,7 @@ bool func_610(int iParam0) {
 					iVar18 != 62 && iVar18 != 57 && iVar18 != 62 && iVar18 != 58 && iVar18 != 62 && iVar18 != 59 &&
 					iVar18 != 62 && iVar18 != 60 && iVar18 != 62 && iVar18 != 61 && iVar18 != 62 && iVar18 != 62 &&
 					iVar18 != 63) {
-					iVar19 = Global_101700.f_6647.f_765[iVar13 /*10*/].f_4 - iVar0;
+					iVar19 = G_SomeGlobalState.MessageCallStates.f_765[iVar13 /*10*/].f_4 - iVar0;
 					if (iVar19 < 180000) {
 						if (func_613(vVar1, iVar18)) {
 							return true;
@@ -95842,10 +95842,10 @@ bool func_610(int iParam0) {
 }
 
 // Position - 0x88513
-var func_611(int iParam0) { return Global_101700.f_6647.f_765[iParam0 /*10*/].f_7; }
+var func_611(int iParam0) { return G_SomeGlobalState.MessageCallStates.f_765[iParam0 /*10*/].f_7; }
 
 // Position - 0x8852B
-var func_612(int iParam0) { return Global_101700.f_6647.f_651[iParam0 /*14*/].f_7; }
+var func_612(int iParam0) { return G_SomeGlobalState.MessageCallStates.f_651[iParam0 /*14*/].f_7; }
 
 // Position - 0x88543
 bool func_613(vector3 vParam0, int iParam3) {
@@ -95865,7 +95865,7 @@ bool func_613(vector3 vParam0, int iParam3) {
 }
 
 // Position - 0x885AE
-var func_614(int iParam0) { return Global_101700.f_6647[iParam0 /*15*/].f_7; }
+var func_614(int iParam0) { return G_SomeGlobalState.MessageCallStates[iParam0 /*15*/].f_7; }
 
 // Position - 0x885C3
 bool func_615(int iParam0) {

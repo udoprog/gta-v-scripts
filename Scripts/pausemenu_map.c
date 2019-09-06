@@ -2639,7 +2639,7 @@ int func_82(var *uParam0, int iParam1) {
 		if (gameplay::is_bit_set(Global_2359301, 7)) {
 			return 10;
 		}
-		if (Global_68131 == 1) {
+		if (G_DisableMessagesAndCalls2 == 1) {
 			return 11;
 		}
 		if (Global_1574357 && ui::_0x4167EFE0527D706E() && ui::is_pause_menu_active()) {

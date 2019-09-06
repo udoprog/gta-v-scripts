@@ -1790,7 +1790,7 @@ void func_21(int iParam0) {
 	int iVar1;
 
 	Global_55823 = 0;
-	if (Global_56047[iParam0 /*13*/] != 3) {
+	if (MissionObjectives[iParam0 /*13*/] != 3) {
 		return;
 	}
 	iVar0 = 0;
@@ -2083,8 +2083,8 @@ int func_29(char *sParam0, int iParam1, int iParam2) {
 		Global_15364.f_369 = Global_16733;
 		Global_15741 = Global_15742;
 		if (Global_15751) {
-			gameplay::clear_bit(&Global_2313, 20);
-			gameplay::clear_bit(&Global_2314, 17);
+			gameplay::clear_bit(&G_SleepModeOnOn25, 20);
+			gameplay::clear_bit(&G_SleepModeOffOn11, 17);
 			gameplay::clear_bit(&Global_2315, 0);
 			if (iParam2) {
 				func_34();
@@ -2151,7 +2151,7 @@ int func_29(char *sParam0, int iParam1, int iParam2) {
 
 				default: break;
 				}
-				if (gameplay::is_bit_set(Global_2313, 9)) {
+				if (gameplay::is_bit_set(G_SleepModeOnOn25, 9)) {
 					return 0;
 				}
 			}
@@ -2211,7 +2211,7 @@ void func_31() {
 	Global_16761 = 0;
 	Global_15794 = 0;
 	Global_15795 = 0;
-	gameplay::clear_bit(&Global_2314, 16);
+	gameplay::clear_bit(&G_SleepModeOffOn11, 16);
 }
 
 // Position - 0x1385

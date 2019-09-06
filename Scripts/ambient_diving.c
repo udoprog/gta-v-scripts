@@ -185,10 +185,10 @@ int func_3(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4, int 
 	if (iParam2 < 1 || iParam2 > 7) {
 		return 0;
 	}
-	if (Global_101700.f_6647.f_136 < 9) {
+	if (G_SomeGlobalState.MessageCallStates.f_136 < 9) {
 		Var0 = iParam0;
-		if (Global_101700.f_6647.f_911 == Var0) {
-			Global_101700.f_6647.f_911 = -1;
+		if (G_SomeGlobalState.MessageCallStates.f_911 == Var0) {
+			G_SomeGlobalState.MessageCallStates.f_911 = -1;
 		}
 		Var0.f_3 = func_6(iParam1);
 		Var0.f_1 = iParam11;
@@ -210,8 +210,8 @@ int func_3(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4, int 
 		else if (iParam1 == 0) {
 			gameplay::set_bit(&Var0.f_1, 10);
 		}
-		Global_101700.f_6647[Global_101700.f_6647.f_136 /*15*/] = {Var0};
-		Global_101700.f_6647.f_136++;
+		G_SomeGlobalState.MessageCallStates[G_SomeGlobalState.MessageCallStates.f_136 /*15*/] = {Var0};
+		G_SomeGlobalState.MessageCallStates.f_136++;
 		iVar15 = 0;
 		while (iVar15 < 3) {
 			if (gameplay::is_bit_set(iParam2, iVar15)) {
@@ -235,24 +235,24 @@ void func_4(int iParam0) {
 		return;
 	}
 	iVar0 = 0;
-	while (iVar0 < Global_101700.f_6647.f_136) {
-		if (gameplay::is_bit_set(Global_101700.f_6647[iVar0 /*15*/].f_2, iParam0)) {
-			if (Global_101700.f_6647[iVar0 /*15*/].f_3 > iVar1) {
-				iVar1 = Global_101700.f_6647[iVar0 /*15*/].f_3;
+	while (iVar0 < G_SomeGlobalState.MessageCallStates.f_136) {
+		if (gameplay::is_bit_set(G_SomeGlobalState.MessageCallStates[iVar0 /*15*/].f_2, iParam0)) {
+			if (G_SomeGlobalState.MessageCallStates[iVar0 /*15*/].f_3 > iVar1) {
+				iVar1 = G_SomeGlobalState.MessageCallStates[iVar0 /*15*/].f_3;
 			}
 		}
 		iVar0++;
 	}
 	iVar2 = 0;
-	while (iVar2 < Global_101700.f_6647.f_764) {
-		if (gameplay::is_bit_set(Global_101700.f_6647.f_651[iVar2 /*14*/].f_2, iParam0)) {
-			if (Global_101700.f_6647.f_651[iVar2 /*14*/].f_3 == 5) {
+	while (iVar2 < G_SomeGlobalState.MessageCallStates.f_764) {
+		if (gameplay::is_bit_set(G_SomeGlobalState.MessageCallStates.f_651[iVar2 /*14*/].f_2, iParam0)) {
+			if (G_SomeGlobalState.MessageCallStates.f_651[iVar2 /*14*/].f_3 == 5) {
 				iVar1 = 5;
 			}
 		}
 		iVar2++;
 	}
-	Global_101700.f_6647.f_919[iParam0] = iVar1;
+	G_SomeGlobalState.MessageCallStates.f_919[iParam0] = iVar1;
 }
 
 // Position - 0x3D4

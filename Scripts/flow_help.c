@@ -48,7 +48,7 @@ void __EntryFunction__() {
 	while (true) {
 		if (Global_101700.f_19369.f_145 > 0 || Global_100342) {
 			if (!Global_100342) {
-				if (Global_35781 != 6 && Global_35781 != 15 && !Global_87831) {
+				if (Global_35781 != 6 && Global_35781 != 15 && !G_DisableMessagesAndCalls3) {
 					func_22();
 				}
 				if (!Global_100341) {
@@ -175,7 +175,7 @@ void __EntryFunction__() {
 				iLocal_37 = 0;
 			}
 		}
-		else if (Global_35781 != 6 && Global_35781 != 15 && !Global_87831) {
+		else if (Global_35781 != 6 && Global_35781 != 15 && !G_DisableMessagesAndCalls3) {
 			func_22();
 		}
 		system::wait(0);
@@ -464,7 +464,7 @@ bool func_19(var *uParam0) {
 		if (func_20()) {
 			return false;
 		}
-		if (Global_69700) {
+		if (G_DisableMessagesAndCalls1) {
 			return false;
 		}
 		if (Global_88744) {

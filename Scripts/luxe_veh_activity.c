@@ -1769,7 +1769,7 @@ void func_29(var *uParam0, var *uParam1, var *uParam2) {
 				if (!Global_25454) {
 					Global_25454 = 1;
 				}
-				if (Global_68131) {
+				if (G_DisableMessagesAndCalls2) {
 					func_296(uParam2, 22);
 					return;
 				}
@@ -1977,7 +1977,7 @@ void func_29(var *uParam0, var *uParam1, var *uParam2) {
 		}
 		ui::clear_help(1);
 		func_64(0, 0, 0, 0);
-		if (Global_68131 || Global_68134) {
+		if (G_DisableMessagesAndCalls2 || Global_68134) {
 			func_296(uParam2, 22);
 		}
 		break;
@@ -1986,7 +1986,7 @@ void func_29(var *uParam0, var *uParam1, var *uParam2) {
 		if (func_283(uParam2->f_8)) {
 			ui::clear_help(1);
 		}
-		if (Global_68131) {
+		if (G_DisableMessagesAndCalls2) {
 			func_63(&uLocal_54, 0, 0);
 		}
 		else if (func_62(&uLocal_54, 1000, 0)) {
@@ -52425,7 +52425,7 @@ bool func_283(char *sParam0) {
 bool func_284(int iParam0) {
 	if (iParam0 == 1) {
 		if (Global_14443.f_1 > 3) {
-			if (gameplay::is_bit_set(Global_2313, 14)) {
+			if (gameplay::is_bit_set(G_SleepModeOnOn25, 14)) {
 				return true;
 			}
 			else {
@@ -53568,7 +53568,7 @@ void func_336() {
 		if (func_284(0)) {
 			func_337(0);
 		}
-		gameplay::set_bit(&Global_2314, 2);
+		gameplay::set_bit(&G_SleepModeOffOn11, 2);
 	}
 }
 
@@ -53578,17 +53578,17 @@ void func_337(int iParam0) {
 		func_339(0, 0);
 	}
 	if (Global_14443.f_1 == 10 || Global_14443.f_1 == 9) {
-		gameplay::set_bit(&Global_2314, 16);
+		gameplay::set_bit(&G_SleepModeOffOn11, 16);
 	}
 	if (audio::is_mobile_phone_call_ongoing()) {
 		audio::stop_scripted_conversation(0);
 	}
 	Global_15745 = 5;
 	if (iParam0 == 1) {
-		gameplay::set_bit(&Global_2313, 30);
+		gameplay::set_bit(&G_SleepModeOnOn25, 30);
 	}
 	else {
-		gameplay::clear_bit(&Global_2313, 30);
+		gameplay::clear_bit(&G_SleepModeOnOn25, 30);
 	}
 	if (!func_338()) {
 		Global_14443.f_1 = 3;
@@ -53628,7 +53628,7 @@ void func_339(int iParam0, int iParam1) {
 }
 
 // Position - 0x4A11C
-void func_340() { gameplay::set_bit(&Global_2314, 4); }
+void func_340() { gameplay::set_bit(&G_SleepModeOffOn11, 4); }
 
 // Position - 0x4A12C
 void func_341() { Global_17151.f_6 = 1; }

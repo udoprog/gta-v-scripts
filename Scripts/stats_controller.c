@@ -198,7 +198,7 @@ void func_2() {
 		if (ped::is_ped_injured(player::player_ped_id()) ||
 			!network::network_is_game_in_progress() && !func_70(iLocal_55) ||
 			streaming::is_player_switch_in_progress() || func_69() || cutscene::is_cutscene_playing() ||
-			cam::is_screen_faded_out() || !player::is_player_control_on(player::player_id()) || Global_69700 ||
+			cam::is_screen_faded_out() || !player::is_player_control_on(player::player_id()) || G_DisableMessagesAndCalls1 ||
 			Global_89108 || iLocal_58) {
 			iLocal_79 = 1;
 			iLocal_80 = gameplay::get_game_timer();
@@ -694,7 +694,7 @@ bool func_18() {
 bool func_19(int iParam0) {
 	if (iParam0 == 1) {
 		if (Global_14443.f_1 > 3) {
-			if (gameplay::is_bit_set(Global_2313, 14)) {
+			if (gameplay::is_bit_set(G_SleepModeOnOn25, 14)) {
 				return true;
 			}
 			else {

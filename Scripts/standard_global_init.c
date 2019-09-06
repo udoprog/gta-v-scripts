@@ -139,7 +139,7 @@ void __EntryFunction__() {
 	StringCopy(&Global_32504, "", 32);
 	Global_35743 = -2;
 	Global_35781 = 15;
-	Global_36328 = -1;
+	LastDispatchedMessageOrCall = -1;
 	Global_36329 = -1;
 	Global_36685 = 1;
 	Global_36686 = -1;

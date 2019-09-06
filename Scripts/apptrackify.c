@@ -120,7 +120,7 @@ void func_2() {
 	func_3(2, 0);
 	func_3(3, 0);
 	func_3(4, 0);
-	gameplay::clear_bit(&Global_2314, 22);
+	gameplay::clear_bit(&G_SleepModeOffOn11, 22);
 	script::terminate_this_thread();
 }
 
@@ -174,7 +174,7 @@ void func_7() {
 		func_8(Global_14424, "SET_SOFT_KEYS", 3f, 1f, 14f, -1f, -1f, 0, 0, 0, 0, 0);
 	}
 	func_8(Global_14424, "SET_SOFT_KEYS", 1f, 0f, 1f, -1f, -1f, 0, 0, 0, 0, 0);
-	gameplay::clear_bit(&Global_2313, 17);
+	gameplay::clear_bit(&G_SleepModeOnOn25, 17);
 }
 
 // Position - 0x31A
@@ -239,7 +239,7 @@ void func_10() {
 				graphics::_push_scaleform_movie_function(Global_14424, "SET_DATA_SLOT");
 				graphics::_push_scaleform_movie_function_parameter_int(23);
 				graphics::_push_scaleform_movie_function_parameter_int(0);
-				if (gameplay::is_bit_set(Global_2314, 30)) {
+				if (gameplay::is_bit_set(G_SleepModeOffOn11, 30)) {
 					graphics::_push_scaleform_movie_function_parameter_int(-99);
 					graphics::_push_scaleform_movie_function_parameter_int(0);
 				}
@@ -248,13 +248,13 @@ void func_10() {
 					graphics::_push_scaleform_movie_function_parameter_int(system::floor(fLocal_28));
 				}
 				graphics::_push_scaleform_movie_function_parameter_int(100);
-				if (gameplay::is_bit_set(Global_2314, 22)) {
+				if (gameplay::is_bit_set(G_SleepModeOffOn11, 22)) {
 					graphics::_push_scaleform_movie_function_parameter_int(1);
 				}
 				else {
 					graphics::_push_scaleform_movie_function_parameter_int(0);
 				}
-				if (gameplay::is_bit_set(Global_2314, 29)) {
+				if (gameplay::is_bit_set(G_SleepModeOffOn11, 29)) {
 					graphics::_push_scaleform_movie_function_parameter_bool(0);
 				}
 				else {
@@ -324,13 +324,13 @@ void func_10() {
 					graphics::_push_scaleform_movie_function_parameter_int(system::floor(fLocal_28));
 				}
 				graphics::_push_scaleform_movie_function_parameter_int(100);
-				if (gameplay::is_bit_set(Global_2314, 22)) {
+				if (gameplay::is_bit_set(G_SleepModeOffOn11, 22)) {
 					graphics::_push_scaleform_movie_function_parameter_bool(1);
 				}
 				else {
 					graphics::_push_scaleform_movie_function_parameter_bool(1);
 				}
-				if (gameplay::is_bit_set(Global_2314, 29)) {
+				if (gameplay::is_bit_set(G_SleepModeOffOn11, 29)) {
 					graphics::_push_scaleform_movie_function_parameter_bool(0);
 				}
 				else {

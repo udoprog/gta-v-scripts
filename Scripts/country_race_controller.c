@@ -778,7 +778,7 @@ void func_29(char *sParam0, int iParam1, int iParam2, int iParam3) {
 int func_30(int iParam0) {
 	if (iParam0 == 1) {
 		if (Global_14443.f_1 > 3) {
-			if (gameplay::is_bit_set(Global_2313, 14)) {
+			if (gameplay::is_bit_set(G_SleepModeOnOn25, 14)) {
 				return 1;
 			}
 			else {

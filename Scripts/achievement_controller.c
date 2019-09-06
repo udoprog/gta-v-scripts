@@ -5382,7 +5382,7 @@ int func_120(bool bParam0) {
 			iVar5 = 0;
 			while (iVar5 < func_128(iVar0, 7)) {
 				iVar7 = func_126(iVar0, 7, iVar5);
-				if (!Global_56047[iVar7 /*13*/].f_7) {
+				if (!MissionObjectives[iVar7 /*13*/].f_7) {
 					if (func_123(iVar7) == 1) {
 						iVar4++;
 					}
@@ -5445,7 +5445,7 @@ float func_122(int iParam0, int iParam1, int iParam2) {
 
 // Position - 0x7E4B
 int func_123(int iParam0) {
-	if (func_124(iParam0, func_125(Global_56047[iParam0 /*13*/].f_4))) {
+	if (func_124(iParam0, func_125(MissionObjectives[iParam0 /*13*/].f_4))) {
 		return 1;
 	}
 	return 0;
@@ -5456,7 +5456,7 @@ bool func_124(int iParam0, int iParam1) {
 	if (iParam1 < 0) {
 		return false;
 	}
-	switch (Global_56047[iParam0 /*13*/]) {
+	switch (MissionObjectives[iParam0 /*13*/]) {
 	case 1:
 	case 2:
 	case 4:
@@ -5471,13 +5471,13 @@ bool func_124(int iParam0, int iParam1) {
 		return false;
 	}
 	if (iParam0 == 881 || iParam0 == 889 || iParam0 == 897)
-		&&Global_101700.f_23863[4 /*4*/] == func_56() { Global_56047[iParam0 /*13*/].f_2 = 0; }
-	if (Global_56047[iParam0 /*13*/].f_3) {
-		if (iParam1 < Global_56047[iParam0 /*13*/].f_2) {
+		&&Global_101700.f_23863[4 /*4*/] == func_56() { MissionObjectives[iParam0 /*13*/].f_2 = 0; }
+	if (MissionObjectives[iParam0 /*13*/].f_3) {
+		if (iParam1 < MissionObjectives[iParam0 /*13*/].f_2) {
 			return true;
 		}
 	}
-	else if (iParam1 >= Global_56047[iParam0 /*13*/].f_2) {
+	else if (iParam1 >= MissionObjectives[iParam0 /*13*/].f_2) {
 		return true;
 	}
 	return false;
@@ -6215,7 +6215,7 @@ int func_132(bool bParam0) {
 			iVar5 = 0;
 			while (iVar5 < func_128(iVar0, 1)) {
 				iVar7 = func_126(iVar0, 1, iVar5);
-				if (!Global_56047[iVar7 /*13*/].f_7) {
+				if (!MissionObjectives[iVar7 /*13*/].f_7) {
 					if (func_123(iVar7) == 1) {
 						iVar4++;
 					}
@@ -6255,7 +6255,7 @@ int func_132(bool bParam0) {
 int func_133(int iParam0) {
 	int iVar0;
 
-	iVar0 = func_125(Global_56047[iParam0 /*13*/].f_4);
+	iVar0 = func_125(MissionObjectives[iParam0 /*13*/].f_4);
 	if (iVar0 > -2) {
 		return iVar0;
 	}

@@ -615,7 +615,7 @@ bool func_18(int iParam0) {
 
 // Position - 0x92F
 bool func_19() {
-	if (Global_68131) {
+	if (G_DisableMessagesAndCalls2) {
 		return true;
 	}
 	if (!player::is_player_playing(player::get_player_index())) {
@@ -669,7 +669,7 @@ bool func_21(int iParam0) {
 bool func_22(int iParam0) {
 	if (iParam0 == 1) {
 		if (Global_14443.f_1 > 3) {
-			if (gameplay::is_bit_set(Global_2313, 14)) {
+			if (gameplay::is_bit_set(G_SleepModeOnOn25, 14)) {
 				return true;
 			}
 			else {
@@ -755,7 +755,7 @@ void func_25() {
 
 // Position - 0xB64
 void func_26() {
-	if (!streaming::is_player_switch_in_progress() && !Global_68131) {
+	if (!streaming::is_player_switch_in_progress() && !G_DisableMessagesAndCalls2) {
 		if (func_31(0)) {
 			if (!gameplay::is_string_null_or_empty(&Global_2443134.f_662.f_12)) {
 				func_30();

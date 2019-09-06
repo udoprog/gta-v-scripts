@@ -3114,7 +3114,7 @@ void func_67() {
 	switch (iLocal_654) {
 	case 0:
 		if (!ped::is_ped_injured(player::player_ped_id()) && player::is_player_control_on(player::player_id()) &&
-			!Global_68131 && !iLocal_854 && !cam::is_screen_faded_out()) {
+			!G_DisableMessagesAndCalls2 && !iLocal_854 && !cam::is_screen_faded_out()) {
 			if (Local_402.f_29.f_80 && Local_402.f_2 == 0 && (Global_68531.f_592[0] != -1 || func_179() != 0) &&
 				Local_402 != -1 && !iLocal_1016 && !func_27(0) && !func_27(3) && !func_27(2) && !func_27(4) &&
 				!func_27(14) && !func_180(-1082130432)) {
@@ -5202,7 +5202,7 @@ void func_75() {
 		if (func_79(0)) {
 			func_76(0);
 		}
-		gameplay::set_bit(&Global_2314, 2);
+		gameplay::set_bit(&G_SleepModeOffOn11, 2);
 	}
 }
 
@@ -5212,17 +5212,17 @@ void func_76(int iParam0) {
 		func_78(0, 0);
 	}
 	if (Global_14443.f_1 == 10 || Global_14443.f_1 == 9) {
-		gameplay::set_bit(&Global_2314, 16);
+		gameplay::set_bit(&G_SleepModeOffOn11, 16);
 	}
 	if (audio::is_mobile_phone_call_ongoing()) {
 		audio::stop_scripted_conversation(0);
 	}
 	Global_15745 = 5;
 	if (iParam0 == 1) {
-		gameplay::set_bit(&Global_2313, 30);
+		gameplay::set_bit(&G_SleepModeOnOn25, 30);
 	}
 	else {
-		gameplay::clear_bit(&Global_2313, 30);
+		gameplay::clear_bit(&G_SleepModeOnOn25, 30);
 	}
 	if (!func_77()) {
 		Global_14443.f_1 = 3;
@@ -5265,7 +5265,7 @@ void func_78(int iParam0, int iParam1) {
 bool func_79(int iParam0) {
 	if (iParam0 == 1) {
 		if (Global_14443.f_1 > 3) {
-			if (gameplay::is_bit_set(Global_2313, 14)) {
+			if (gameplay::is_bit_set(G_SleepModeOnOn25, 14)) {
 				return true;
 			}
 			else {
@@ -12464,8 +12464,8 @@ int func_176(int iParam0) {
 	int iVar0;
 
 	iVar0 = 0;
-	while (iVar0 < Global_101700.f_6647.f_764) {
-		if (Global_101700.f_6647.f_651[iVar0 /*14*/] == iParam0) {
+	while (iVar0 < G_SomeGlobalState.MessageCallStates.f_764) {
+		if (G_SomeGlobalState.MessageCallStates.f_651[iVar0 /*14*/] == iParam0) {
 			return 1;
 		}
 		iVar0++;
@@ -12618,7 +12618,7 @@ void func_182() {
 	iVar11 = 0;
 	if (Local_402.f_29.f_80 && Local_402.f_29.f_69 && !ped::is_ped_injured(player::player_ped_id()) &&
 			Local_402.f_2 == 0 && Local_402 != -1 && func_66(Local_402, 0) && func_66(Local_402, 5) && !func_27(0) &&
-			!func_27(3) && !func_27(2) && !func_27(4) && !func_27(5) && !func_27(14) && !Global_68131 && !func_181(1) &&
+			!func_27(3) && !func_27(2) && !func_27(4) && !func_27(5) && !func_27(14) && !G_DisableMessagesAndCalls2 && !func_181(1) &&
 			!func_240() ||
 		Local_402.f_3 > 1 && !func_181(0) && !ped::is_ped_injured(player::player_ped_id()) && !func_240()) {
 		func_239(Local_402, &Local_546);
@@ -14908,7 +14908,7 @@ void func_221(int iParam0, int iParam1, int iParam2, int iParam3) {
 		func_225(1, iParam3, iParam2, 0);
 		Global_55828 = 1;
 		Global_68134 = 1;
-		Global_69700 = 1;
+		G_DisableMessagesAndCalls1 = 1;
 	}
 	else {
 		func_226(0);
@@ -14929,7 +14929,7 @@ void func_221(int iParam0, int iParam1, int iParam2, int iParam3) {
 		else if (!ped::is_ped_injured(player::player_ped_id()) && !func_223(player::player_id())) {
 			entity::set_entity_invincible(player::player_ped_id(), 0);
 		}
-		Global_69700 = 0;
+		G_DisableMessagesAndCalls1 = 0;
 	}
 }
 
@@ -14972,10 +14972,10 @@ int func_225(int iParam0, int iParam1, var uParam2, int iParam3) {
 // Position - 0x18257
 void func_226(int iParam0) {
 	if (iParam0 == 1) {
-		gameplay::set_bit(&Global_2313, 13);
+		gameplay::set_bit(&G_SleepModeOnOn25, 13);
 	}
 	else {
-		gameplay::clear_bit(&Global_2313, 13);
+		gameplay::clear_bit(&G_SleepModeOnOn25, 13);
 	}
 }
 
@@ -16640,7 +16640,7 @@ void func_241() {
 		func_27(14) || !func_25(iLocal_672)) {
 		return;
 	}
-	if (!Global_68131) {
+	if (!G_DisableMessagesAndCalls2) {
 		if (Global_101700.f_31389.f_1982[iLocal_672 /*939*/].f_626[iLocal_855] != -15) {
 			if (!Global_68531[Global_101700.f_31389.f_1982[iLocal_672 /*939*/].f_313[iLocal_855]]) {
 				if (func_292(func_49(), Global_101700.f_31389.f_1982[iLocal_672 /*939*/].f_626[iLocal_855])) {

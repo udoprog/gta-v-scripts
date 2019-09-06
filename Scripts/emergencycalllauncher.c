@@ -467,8 +467,8 @@ int func_9(char *sParam0, int iParam1, bool bParam2) {
     Global_15364.f_369 = Global_16733;
     Global_15741 = Global_15742;
     if (Global_15751) {
-      gameplay::clear_bit(&Global_2313, 20);
-      gameplay::clear_bit(&Global_2314, 17);
+      gameplay::clear_bit(&G_SleepModeOnOn25, 20);
+      gameplay::clear_bit(&G_SleepModeOffOn11, 17);
       gameplay::clear_bit(&Global_2315, 0);
       if (bParam2) {
         func_14();
@@ -536,7 +536,7 @@ int func_9(char *sParam0, int iParam1, bool bParam2) {
 
         default: break;
         }
-        if (gameplay::is_bit_set(Global_2313, 9)) {
+        if (gameplay::is_bit_set(G_SleepModeOnOn25, 9)) {
           return 0;
         }
       }
@@ -596,7 +596,7 @@ void func_11() {
   Global_16761 = 0;
   Global_15794 = 0;
   Global_15795 = 0;
-  gameplay::clear_bit(&Global_2314, 16);
+  gameplay::clear_bit(&G_SleepModeOffOn11, 16);
 }
 
 // Position - 0x6D8

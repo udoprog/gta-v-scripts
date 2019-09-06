@@ -434,7 +434,7 @@ void func_11() {
 		if (func_15(0)) {
 			func_12(0);
 		}
-		gameplay::set_bit(&Global_2314, 2);
+		gameplay::set_bit(&G_SleepModeOffOn11, 2);
 	}
 }
 
@@ -444,17 +444,17 @@ void func_12(int iParam0) {
 		func_14(0, 0);
 	}
 	if (Global_14443.f_1 == 10 || Global_14443.f_1 == 9) {
-		gameplay::set_bit(&Global_2314, 16);
+		gameplay::set_bit(&G_SleepModeOffOn11, 16);
 	}
 	if (audio::is_mobile_phone_call_ongoing()) {
 		audio::stop_scripted_conversation(0);
 	}
 	Global_15745 = 5;
 	if (iParam0 == 1) {
-		gameplay::set_bit(&Global_2313, 30);
+		gameplay::set_bit(&G_SleepModeOnOn25, 30);
 	}
 	else {
-		gameplay::clear_bit(&Global_2313, 30);
+		gameplay::clear_bit(&G_SleepModeOnOn25, 30);
 	}
 	if (!func_13()) {
 		Global_14443.f_1 = 3;
@@ -497,7 +497,7 @@ void func_14(int iParam0, int iParam1) {
 bool func_15(int iParam0) {
 	if (iParam0 == 1) {
 		if (Global_14443.f_1 > 3) {
-			if (gameplay::is_bit_set(Global_2313, 14)) {
+			if (gameplay::is_bit_set(G_SleepModeOnOn25, 14)) {
 				return true;
 			}
 			else {
@@ -855,7 +855,7 @@ void func_18(int iParam0, int iParam1, int iParam2) {
 	else {
 		gameplay::clear_bit(&Global_101700.f_8975.f_25, 4);
 	}
-	Global_101700.f_6647.f_924 = gameplay::get_game_timer();
+	G_SomeGlobalState.MessageCallStates.f_924 = gameplay::get_game_timer();
 	if (Global_69964 == 62 || Global_69965 == 62) {
 		func_19(2, 1);
 	}
@@ -73173,7 +73173,7 @@ void func_383(int iParam0, int iParam1, int iParam2, int iParam3) {
 		func_389(1, iParam3, iParam2, 0);
 		Global_55828 = 1;
 		Global_68134 = 1;
-		Global_69700 = 1;
+		G_DisableMessagesAndCalls1 = 1;
 	}
 	else {
 		func_390(0);
@@ -73194,7 +73194,7 @@ void func_383(int iParam0, int iParam1, int iParam2, int iParam3) {
 		else if (!ped::is_ped_injured(player::player_ped_id()) && !func_387(player::player_id())) {
 			entity::set_entity_invincible(player::player_ped_id(), 0);
 		}
-		Global_69700 = 0;
+		G_DisableMessagesAndCalls1 = 0;
 	}
 }
 
@@ -73277,10 +73277,10 @@ int func_389(int iParam0, int iParam1, var uParam2, int iParam3) {
 // Position - 0x601C1
 void func_390(int iParam0) {
 	if (iParam0 == 1) {
-		gameplay::set_bit(&Global_2313, 13);
+		gameplay::set_bit(&G_SleepModeOnOn25, 13);
 	}
 	else {
-		gameplay::clear_bit(&Global_2313, 13);
+		gameplay::clear_bit(&G_SleepModeOnOn25, 13);
 	}
 }
 

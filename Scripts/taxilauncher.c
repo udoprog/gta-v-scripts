@@ -1461,13 +1461,13 @@ bool func_44() { return gameplay::get_game_timer() <= Global_17290.f_5745 + 100;
 bool func_45() { return Global_91543.f_304 > 0; }
 
 // Position - 0x19A7
-bool func_46() { return Global_68131; }
+bool func_46() { return G_DisableMessagesAndCalls2; }
 
 // Position - 0x19B3
 bool func_47(int iParam0) {
 	if (iParam0 == 1) {
 		if (Global_14443.f_1 > 3) {
-			if (gameplay::is_bit_set(Global_2313, 14)) {
+			if (gameplay::is_bit_set(G_SleepModeOnOn25, 14)) {
 				return true;
 			}
 			else {
@@ -4898,8 +4898,8 @@ int func_117(var *uParam0, var *uParam1, int iParam2, bool bParam3) {
 			Global_15964[1 /*6*/] = {Global_15990[1 /*6*/]};
 		}
 		if (Global_15751) {
-			gameplay::clear_bit(&Global_2313, 20);
-			gameplay::clear_bit(&Global_2314, 17);
+			gameplay::clear_bit(&G_SleepModeOnOn25, 20);
+			gameplay::clear_bit(&G_SleepModeOffOn11, 17);
 			gameplay::clear_bit(&Global_2315, 0);
 			if (bParam3) {
 				func_122();
@@ -5029,7 +5029,7 @@ void func_119() {
 	Global_16761 = 0;
 	Global_15794 = 0;
 	Global_15795 = 0;
-	gameplay::clear_bit(&Global_2314, 16);
+	gameplay::clear_bit(&G_SleepModeOffOn11, 16);
 }
 
 // Position - 0x8456
@@ -5296,8 +5296,8 @@ int func_132() {
 		if (func_85(iVar0)) {
 			vVar1 = {entity::get_entity_coords(player::player_ped_id(), 1)};
 			iVar4 = 0;
-			while (iVar4 < Global_101700.f_6647.f_136) {
-				if (gameplay::is_bit_set(Global_101700.f_6647[iVar4 /*15*/].f_2, iVar0)) {
+			while (iVar4 < G_SomeGlobalState.MessageCallStates.f_136) {
+				if (gameplay::is_bit_set(G_SomeGlobalState.MessageCallStates[iVar4 /*15*/].f_2, iVar0)) {
 					if (func_135(vVar1, func_136(iVar4))) {
 						return 1;
 					}
@@ -5305,8 +5305,8 @@ int func_132() {
 				iVar4++;
 			}
 			iVar4 = 0;
-			while (iVar4 < Global_101700.f_6647.f_764) {
-				if (gameplay::is_bit_set(Global_101700.f_6647.f_651[iVar4 /*14*/].f_2, iVar0)) {
+			while (iVar4 < G_SomeGlobalState.MessageCallStates.f_764) {
+				if (gameplay::is_bit_set(G_SomeGlobalState.MessageCallStates.f_651[iVar4 /*14*/].f_2, iVar0)) {
 					if (func_135(vVar1, func_134(iVar4))) {
 						return 1;
 					}
@@ -5314,8 +5314,8 @@ int func_132() {
 				iVar4++;
 			}
 			iVar4 = 0;
-			while (iVar4 < Global_101700.f_6647.f_866) {
-				if (gameplay::is_bit_set(Global_101700.f_6647.f_765[iVar4 /*10*/].f_2, iVar0)) {
+			while (iVar4 < G_SomeGlobalState.MessageCallStates.f_866) {
+				if (gameplay::is_bit_set(G_SomeGlobalState.MessageCallStates.f_765[iVar4 /*10*/].f_2, iVar0)) {
 					if (func_135(vVar1, func_133(iVar4))) {
 						return 1;
 					}
@@ -5328,10 +5328,10 @@ int func_132() {
 }
 
 // Position - 0x8A0D
-int func_133(int iParam0) { return Global_101700.f_6647.f_765[iParam0 /*10*/].f_7; }
+int func_133(int iParam0) { return G_SomeGlobalState.MessageCallStates.f_765[iParam0 /*10*/].f_7; }
 
 // Position - 0x8A25
-int func_134(int iParam0) { return Global_101700.f_6647.f_651[iParam0 /*14*/].f_7; }
+int func_134(int iParam0) { return G_SomeGlobalState.MessageCallStates.f_651[iParam0 /*14*/].f_7; }
 
 // Position - 0x8A3D
 bool func_135(vector3 vParam0, int iParam3) {
@@ -5351,7 +5351,7 @@ bool func_135(vector3 vParam0, int iParam3) {
 }
 
 // Position - 0x8AA8
-int func_136(int iParam0) { return Global_101700.f_6647[iParam0 /*15*/].f_7; }
+int func_136(int iParam0) { return G_SomeGlobalState.MessageCallStates[iParam0 /*15*/].f_7; }
 
 // Position - 0x8ABD
 void func_137(var *uParam0, int iParam1, int iParam2, char *sParam3, int iParam4, int iParam5) {

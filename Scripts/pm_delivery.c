@@ -2781,7 +2781,7 @@ int func_77(int iParam0, int iParam1, int iParam2) {
 	if (network::_network_is_text_chat_active()) {
 		return 0;
 	}
-	if (Global_68131) {
+	if (G_DisableMessagesAndCalls2) {
 		return 0;
 	}
 	if (script::_get_number_of_instances_of_script_with_name_hash(joaat("appinternet")) > 0) {
@@ -2835,7 +2835,7 @@ bool func_78() { return gameplay::get_game_timer() <= Global_17290.f_5745 + 100;
 bool func_79(int iParam0) {
 	if (iParam0 == 1) {
 		if (Global_14443.f_1 > 3) {
-			if (gameplay::is_bit_set(Global_2313, 14)) {
+			if (gameplay::is_bit_set(G_SleepModeOnOn25, 14)) {
 				return true;
 			}
 			else {
@@ -3165,7 +3165,7 @@ bool func_89(int iParam0) {
 }
 
 // Position - 0x4987
-void func_90() { gameplay::set_bit(&Global_2314, 4); }
+void func_90() { gameplay::set_bit(&G_SleepModeOffOn11, 4); }
 
 // Position - 0x4997
 bool func_91(char *sParam0) {

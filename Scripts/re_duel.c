@@ -6159,7 +6159,7 @@ int func_179(int iParam0) {
 						player::is_player_climbing(player::player_id()) ||
 						ped::is_ped_in_combat(player::player_ped_id(), 0) || func_188() || Global_100747 ||
 						Global_25192 || func_187() || func_186(8, -1) || func_185() || func_184() || func_183() ||
-						func_182() || Global_101700.f_6647.f_919[iVar0] == 5) {
+						func_182() || G_SomeGlobalState.MessageCallStates.f_919[iVar0] == 5) {
 						return 0;
 					}
 					break;
@@ -6167,7 +6167,7 @@ int func_179(int iParam0) {
 				case 1:
 					if (player::is_player_being_arrested(player::player_id(), 1) || func_188() || Global_25192 ||
 						func_187() || func_186(8, -1) || func_183() || func_185() || func_184() || func_182() ||
-						Global_101700.f_6647.f_919[iVar0] == 5) {
+						G_SomeGlobalState.MessageCallStates.f_919[iVar0] == 5) {
 						return 0;
 					}
 					break;
@@ -6181,7 +6181,7 @@ int func_179(int iParam0) {
 						player::is_player_climbing(player::player_id()) ||
 						ped::is_ped_in_combat(player::player_ped_id(), 0) || func_188() || Global_100747 ||
 						Global_25192 || func_187() || func_186(8, -1) || func_183() || func_185() || func_184() ||
-						func_182() || Global_101700.f_6647.f_919[iVar0] == 5 || Global_36328 != -1) {
+						func_182() || G_SomeGlobalState.MessageCallStates.f_919[iVar0] == 5 || LastDispatchedMessageOrCall != -1) {
 						return 0;
 					}
 					break;
@@ -6191,14 +6191,14 @@ int func_179(int iParam0) {
 						player::is_player_being_arrested(player::player_id(), 1) ||
 						ped::is_ped_in_combat(player::player_ped_id(), 0) || func_188() || Global_100747 ||
 						Global_25192 || func_187() || func_186(8, -1) || func_185() || func_184() || func_182() ||
-						Global_101700.f_6647.f_919[iVar0] == 5) {
+						G_SomeGlobalState.MessageCallStates.f_919[iVar0] == 5) {
 						return 0;
 					}
 					break;
 
 				case 4:
 					if (func_188() || player::get_player_wanted_level(player::player_id()) > 0 || func_186(8, -1) ||
-						func_182() || func_181() || Global_101700.f_6647.f_919[iVar0] == 5) {
+						func_182() || func_181() || G_SomeGlobalState.MessageCallStates.f_919[iVar0] == 5) {
 						return 0;
 					}
 					break;
@@ -6223,7 +6223,7 @@ int func_179(int iParam0) {
 							player::is_player_being_arrested(player::player_id(), 1) ||
 							player::is_player_climbing(player::player_id()) || func_188() || Global_25192 ||
 							func_187() || func_186(8, -1) || func_184() || func_183() || func_182() ||
-							Global_101700.f_6647.f_919[iVar0] == 5) {
+							G_SomeGlobalState.MessageCallStates.f_919[iVar0] == 5) {
 							return 0;
 						}
 					}
@@ -6237,7 +6237,7 @@ int func_179(int iParam0) {
 						ped::is_ped_ragdoll(player::player_ped_id()) || ped::is_ped_falling(player::player_ped_id()) ||
 						player::is_player_being_arrested(player::player_id(), 1) || func_188() || func_184() ||
 						Global_100747 || Global_25192 || func_187() || Global_36912 || func_186(8, -1) || func_183() ||
-						func_181() || func_182() || Global_101700.f_6647.f_919[iVar0] == 5) {
+						func_181() || func_182() || G_SomeGlobalState.MessageCallStates.f_919[iVar0] == 5) {
 						return 0;
 					}
 					break;
@@ -6448,7 +6448,7 @@ int func_193(int iParam0) {
 	if (!func_23(iParam0)) {
 		return 7;
 	}
-	return Global_101700.f_6647.f_919[iParam0];
+	return G_SomeGlobalState.MessageCallStates.f_919[iParam0];
 }
 
 // Position - 0xAA99

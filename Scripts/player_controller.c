@@ -25036,9 +25036,9 @@ void func_90() {
 	if (!network::network_is_game_in_progress() && gameplay::get_game_timer() - iLocal_295 > 10000 && !func_136(1) &&
 		!func_17(13)) {
 		if (ped::is_ped_injured(player::player_ped_id()) || streaming::is_player_switch_in_progress() || func_135() ||
-			cutscene::is_cutscene_playing() || !player::is_player_control_on(player::player_id()) || Global_69700 ||
+			cutscene::is_cutscene_playing() || !player::is_player_control_on(player::player_id()) || G_DisableMessagesAndCalls1 ||
 			iLocal_294 > 16 || cam::is_screen_fading_out() || cam::is_screen_faded_out() || func_17(0) || func_17(3) ||
-			func_17(4) || func_134(0) || interior::is_interior_scene() || Global_68131 || !func_132()) {
+			func_17(4) || func_134(0) || interior::is_interior_scene() || G_DisableMessagesAndCalls2 || !func_132()) {
 			iLocal_294 = 12;
 			iLocal_295 = gameplay::get_game_timer();
 		}
@@ -25288,7 +25288,7 @@ void func_90() {
 				switch (func_101()) {
 				case 0:
 					if (!gameplay::is_bit_set(Global_101700.f_668.f_1048, 0)) {
-						if (func_96(&uVar369, 21, 0, player::player_ped_id(), -1)) {
+						if (something_with_switching(&uVar369, 21, 0, player::player_ped_id(), -1)) {
 							func_123(&Global_101700.f_668.f_1048, 0, "CONTENT_NEW_T");
 						}
 					}
@@ -25296,7 +25296,7 @@ void func_90() {
 
 				case 1:
 					if (!gameplay::is_bit_set(Global_101700.f_668.f_1048, 1)) {
-						if (func_96(&uVar382, 40, 1, player::player_ped_id(), -1)) {
+						if (something_with_switching(&uVar382, 40, 1, player::player_ped_id(), -1)) {
 							func_123(&Global_101700.f_668.f_1048, 1, "CONTENT_NEW_T");
 						}
 					}
@@ -25304,7 +25304,7 @@ void func_90() {
 
 				case 2:
 					if (!gameplay::is_bit_set(Global_101700.f_668.f_1048, 2)) {
-						if (func_96(&uVar395, 34, 2, player::player_ped_id(), -1)) {
+						if (something_with_switching(&uVar395, 34, 2, player::player_ped_id(), -1)) {
 							func_123(&Global_101700.f_668.f_1048, 2, "CONTENT_NEW_T");
 						}
 					}
@@ -25469,7 +25469,7 @@ int func_95(int iParam0, int iParam1) {
 }
 
 // Position - 0x21BEA
-bool func_96(var *uParam0, int iParam1, int iParam2, int iParam3, int iParam4) {
+bool something_with_switching(var *uParam0, int switchId, int iParam2, int iParam3, int iParam4) {
 	int iVar0;
 	int iVar1;
 
@@ -25479,41 +25479,41 @@ bool func_96(var *uParam0, int iParam1, int iParam2, int iParam3, int iParam4) {
 	}
 	switch (iParam2) {
 	case 0:
-		switch (iParam1) {
+		switch (switchId) {
 		case 0:
-			func_100(uParam0, iParam1, iParam3, "TAT_MIC_01", "singleplayer_overlays", "MK_000", "", iParam2, 300, 3);
+			func_100(uParam0, switchId, iParam3, "TAT_MIC_01", "singleplayer_overlays", "MK_000", "", iParam2, 300, 3);
 			break;
 
 		case 1:
-			func_100(uParam0, iParam1, iParam3, "TAT_MIC_02", "singleplayer_overlays", "MK_001", "", iParam2, 450, 0);
+			func_100(uParam0, switchId, iParam3, "TAT_MIC_02", "singleplayer_overlays", "MK_001", "", iParam2, 450, 0);
 			break;
 
 		case 2:
-			func_100(uParam0, iParam1, iParam3, "TAT_MIC_03", "singleplayer_overlays", "MK_002", "", iParam2, 250, 4);
+			func_100(uParam0, switchId, iParam3, "TAT_MIC_03", "singleplayer_overlays", "MK_002", "", iParam2, 250, 4);
 			break;
 
 		case 3:
-			func_100(uParam0, iParam1, iParam3, "TAT_MIC_04", "singleplayer_overlays", "MK_003", "", iParam2, 175, 0);
+			func_100(uParam0, switchId, iParam3, "TAT_MIC_04", "singleplayer_overlays", "MK_003", "", iParam2, 175, 0);
 			break;
 
 		case 4:
-			func_100(uParam0, iParam1, iParam3, "TAT_MIC_06", "singleplayer_overlays", "MK_005", "", iParam2, 380, 0);
+			func_100(uParam0, switchId, iParam3, "TAT_MIC_06", "singleplayer_overlays", "MK_005", "", iParam2, 380, 0);
 			break;
 
 		case 5:
-			func_100(uParam0, iParam1, iParam3, "TAT_MIC_07", "singleplayer_overlays", "MK_006", "", iParam2, 180, 0);
+			func_100(uParam0, switchId, iParam3, "TAT_MIC_07", "singleplayer_overlays", "MK_006", "", iParam2, 180, 0);
 			break;
 
 		case 6:
-			func_100(uParam0, iParam1, iParam3, "TAT_MIC_08", "singleplayer_overlays", "MK_007", "", iParam2, 240, 0);
+			func_100(uParam0, switchId, iParam3, "TAT_MIC_08", "singleplayer_overlays", "MK_007", "", iParam2, 240, 0);
 			break;
 
 		case 7:
-			func_100(uParam0, iParam1, iParam3, "TAT_MIC_10", "singleplayer_overlays", "MK_009", "", iParam2, 195, 0);
+			func_100(uParam0, switchId, iParam3, "TAT_MIC_10", "singleplayer_overlays", "MK_009", "", iParam2, 195, 0);
 			break;
 
 		case 8:
-			func_100(uParam0, iParam1, iParam3, "TAT_MIC_11", "singleplayer_overlays", "MK_010", "", iParam2, 280, 6);
+			func_100(uParam0, switchId, iParam3, "TAT_MIC_11", "singleplayer_overlays", "MK_010", "", iParam2, 280, 6);
 			break;
 
 		case 9:
@@ -25522,250 +25522,250 @@ bool func_96(var *uParam0, int iParam1, int iParam2, int iParam3, int iParam4) {
 				if (func_119() && (func_99() || func_98())) {
 					iVar1 = 0;
 				}
-				func_100(uParam0, iParam1, iParam3, "TAT_MIC_12", "singleplayer_overlays", "MK_011", "", iParam2, iVar1,
+				func_100(uParam0, switchId, iParam3, "TAT_MIC_12", "singleplayer_overlays", "MK_011", "", iParam2, iVar1,
 						 2);
 			}
 			break;
 
 		case 10:
-			func_100(uParam0, iParam1, iParam3, "TAT_MIC_13", "singleplayer_overlays", "MK_012", "", iParam2, 320, 3);
+			func_100(uParam0, switchId, iParam3, "TAT_MIC_13", "singleplayer_overlays", "MK_012", "", iParam2, 320, 3);
 			break;
 
 		case 11:
-			func_100(uParam0, iParam1, iParam3, "TAT_MIC_14", "singleplayer_overlays", "MK_013", "", iParam2, 500, 2);
+			func_100(uParam0, switchId, iParam3, "TAT_MIC_14", "singleplayer_overlays", "MK_013", "", iParam2, 500, 2);
 			break;
 
 		case 12:
-			func_100(uParam0, iParam1, iParam3, "TAT_MIC_16", "singleplayer_overlays", "MK_015", "", iParam2, 220, 0);
+			func_100(uParam0, switchId, iParam3, "TAT_MIC_16", "singleplayer_overlays", "MK_015", "", iParam2, 220, 0);
 			break;
 
 		case 13:
-			func_100(uParam0, iParam1, iParam3, "TAT_MIC_17", "singleplayer_overlays", "MK_016", "", iParam2, 320, 4);
+			func_100(uParam0, switchId, iParam3, "TAT_MIC_17", "singleplayer_overlays", "MK_016", "", iParam2, 320, 4);
 			break;
 
 		case 14:
-			func_100(uParam0, iParam1, iParam3, "TAT_MIC_18", "singleplayer_overlays", "MK_017", "", iParam2, 140, 2);
+			func_100(uParam0, switchId, iParam3, "TAT_MIC_18", "singleplayer_overlays", "MK_017", "", iParam2, 140, 2);
 			break;
 
 		case 15:
-			func_100(uParam0, iParam1, iParam3, "TAT_MIC_20", "singleplayer_overlays", "MK_019", "", iParam2, 350, 0);
+			func_100(uParam0, switchId, iParam3, "TAT_MIC_20", "singleplayer_overlays", "MK_019", "", iParam2, 350, 0);
 			break;
 
 		case 16:
-			func_100(uParam0, iParam1, iParam3, "TAT_MIC_21", "singleplayer_overlays", "MK_020", "", iParam2, 350, 0);
+			func_100(uParam0, switchId, iParam3, "TAT_MIC_21", "singleplayer_overlays", "MK_020", "", iParam2, 350, 0);
 			break;
 
 		case 17:
-			func_100(uParam0, iParam1, iParam3, "TAT_MIC_05", "singleplayer_overlays", "MK_004", "", iParam2, 120, 1);
+			func_100(uParam0, switchId, iParam3, "TAT_MIC_05", "singleplayer_overlays", "MK_004", "", iParam2, 120, 1);
 			break;
 
 		case 18:
-			func_100(uParam0, iParam1, iParam3, "TAT_MIC_09", "singleplayer_overlays", "MK_008", "", iParam2, 99, 1);
+			func_100(uParam0, switchId, iParam3, "TAT_MIC_09", "singleplayer_overlays", "MK_008", "", iParam2, 99, 1);
 			break;
 
 		case 19:
-			func_100(uParam0, iParam1, iParam3, "TAT_MIC_15", "singleplayer_overlays", "MK_014", "", iParam2, 400, 1);
+			func_100(uParam0, switchId, iParam3, "TAT_MIC_15", "singleplayer_overlays", "MK_014", "", iParam2, 400, 1);
 			break;
 
 		case 20:
-			func_100(uParam0, iParam1, iParam3, "TAT_MIC_19", "singleplayer_overlays", "MK_018", "", iParam2, 420, 1);
+			func_100(uParam0, switchId, iParam3, "TAT_MIC_19", "singleplayer_overlays", "MK_018", "", iParam2, 420, 1);
 			break;
 
-		default: func_97(uParam0, iParam2, iParam1, 21); break;
+		default: func_97(uParam0, iParam2, switchId, 21); break;
 		}
 		break;
 
 	case 1:
-		switch (iParam1) {
+		switch (switchId) {
 		case 0:
 			if (func_131() || func_126()) {
 				iVar1 = 450;
 				if (func_119() && (func_99() || func_98())) {
 					iVar1 = 0;
 				}
-				func_100(uParam0, iParam1, iParam3, "TAT_FRA_01", "singleplayer_overlays", "fr_000", "", iParam2, iVar1,
+				func_100(uParam0, switchId, iParam3, "TAT_FRA_01", "singleplayer_overlays", "fr_000", "", iParam2, iVar1,
 						 0);
 			}
 			break;
 
 		case 1:
-			func_100(uParam0, iParam1, iParam3, "TAT_FRA_02", "singleplayer_overlays", "fr_001", "", iParam2, 230, 0);
+			func_100(uParam0, switchId, iParam3, "TAT_FRA_02", "singleplayer_overlays", "fr_001", "", iParam2, 230, 0);
 			break;
 
 		case 2:
-			func_100(uParam0, iParam1, iParam3, "TAT_FRA_03", "singleplayer_overlays", "fr_002", "", iParam2, 310, 0);
+			func_100(uParam0, switchId, iParam3, "TAT_FRA_03", "singleplayer_overlays", "fr_002", "", iParam2, 310, 0);
 			break;
 
 		case 3:
-			func_100(uParam0, iParam1, iParam3, "TAT_FRA_04", "singleplayer_overlays", "fr_003", "", iParam2, 260, 0);
+			func_100(uParam0, switchId, iParam3, "TAT_FRA_04", "singleplayer_overlays", "fr_003", "", iParam2, 260, 0);
 			break;
 
 		case 4:
-			func_100(uParam0, iParam1, iParam3, "TAT_FRA_07", "singleplayer_overlays", "fr_006", "", iParam2, 240, 2);
+			func_100(uParam0, switchId, iParam3, "TAT_FRA_07", "singleplayer_overlays", "fr_006", "", iParam2, 240, 2);
 			break;
 
 		case 5:
-			func_100(uParam0, iParam1, iParam3, "TAT_FRA_08", "singleplayer_overlays", "fr_007", "", iParam2, 190, 3);
+			func_100(uParam0, switchId, iParam3, "TAT_FRA_08", "singleplayer_overlays", "fr_007", "", iParam2, 190, 3);
 			break;
 
 		case 6:
-			func_100(uParam0, iParam1, iParam3, "TAT_FRA_09", "singleplayer_overlays", "fr_008", "", iParam2, 200, 2);
+			func_100(uParam0, switchId, iParam3, "TAT_FRA_09", "singleplayer_overlays", "fr_008", "", iParam2, 200, 2);
 			break;
 
 		case 7:
-			func_100(uParam0, iParam1, iParam3, "TAT_FRA_10", "singleplayer_overlays", "fr_009", "", iParam2, 225, 0);
+			func_100(uParam0, switchId, iParam3, "TAT_FRA_10", "singleplayer_overlays", "fr_009", "", iParam2, 225, 0);
 			break;
 
 		case 8:
-			func_100(uParam0, iParam1, iParam3, "TAT_FRA_12", "singleplayer_overlays", "fr_011", "", iParam2, 195, 0);
+			func_100(uParam0, switchId, iParam3, "TAT_FRA_12", "singleplayer_overlays", "fr_011", "", iParam2, 195, 0);
 			break;
 
 		case 9:
-			func_100(uParam0, iParam1, iParam3, "TAT_FRA_13", "singleplayer_overlays", "fr_012", "", iParam2, 275, 2);
+			func_100(uParam0, switchId, iParam3, "TAT_FRA_13", "singleplayer_overlays", "fr_012", "", iParam2, 275, 2);
 			break;
 
 		case 10:
-			func_100(uParam0, iParam1, iParam3, "TAT_FRA_14", "singleplayer_overlays", "fr_013", "", iParam2, 80, 0);
+			func_100(uParam0, switchId, iParam3, "TAT_FRA_14", "singleplayer_overlays", "fr_013", "", iParam2, 80, 0);
 			break;
 
 		case 11:
-			func_100(uParam0, iParam1, iParam3, "TAT_FRA_15", "singleplayer_overlays", "fr_014", "", iParam2, 95, 0);
+			func_100(uParam0, switchId, iParam3, "TAT_FRA_15", "singleplayer_overlays", "fr_014", "", iParam2, 95, 0);
 			break;
 
 		case 12:
-			func_100(uParam0, iParam1, iParam3, "TAT_FRA_16", "singleplayer_overlays", "fr_015", "", iParam2, 300, 3);
+			func_100(uParam0, switchId, iParam3, "TAT_FRA_16", "singleplayer_overlays", "fr_015", "", iParam2, 300, 3);
 			break;
 
 		case 13:
-			func_100(uParam0, iParam1, iParam3, "TAT_FRA_17", "singleplayer_overlays", "fr_016", "", iParam2, 450, 3);
+			func_100(uParam0, switchId, iParam3, "TAT_FRA_17", "singleplayer_overlays", "fr_016", "", iParam2, 450, 3);
 			break;
 
 		case 14:
-			func_100(uParam0, iParam1, iParam3, "TAT_FRA_18", "singleplayer_overlays", "fr_017", "", iParam2, 345, 3);
+			func_100(uParam0, switchId, iParam3, "TAT_FRA_18", "singleplayer_overlays", "fr_017", "", iParam2, 345, 3);
 			break;
 
 		case 15:
-			func_100(uParam0, iParam1, iParam3, "TAT_FRA_19", "singleplayer_overlays", "fr_018", "", iParam2, 550, 0);
+			func_100(uParam0, switchId, iParam3, "TAT_FRA_19", "singleplayer_overlays", "fr_018", "", iParam2, 550, 0);
 			break;
 
 		case 16:
-			func_100(uParam0, iParam1, iParam3, "TAT_FRA_20", "singleplayer_overlays", "fr_019", "", iParam2, 200, 0);
+			func_100(uParam0, switchId, iParam3, "TAT_FRA_20", "singleplayer_overlays", "fr_019", "", iParam2, 200, 0);
 			break;
 
 		case 17:
-			func_100(uParam0, iParam1, iParam3, "TAT_FRA_21", "singleplayer_overlays", "fr_020", "", iParam2, 180, 0);
+			func_100(uParam0, switchId, iParam3, "TAT_FRA_21", "singleplayer_overlays", "fr_020", "", iParam2, 180, 0);
 			break;
 
 		case 18:
-			func_100(uParam0, iParam1, iParam3, "TAT_FRA_22", "singleplayer_overlays", "fr_021", "", iParam2, 140, 0);
+			func_100(uParam0, switchId, iParam3, "TAT_FRA_22", "singleplayer_overlays", "fr_021", "", iParam2, 140, 0);
 			break;
 
 		case 19:
-			func_100(uParam0, iParam1, iParam3, "TAT_FRA_24", "singleplayer_overlays", "fr_023", "", iParam2, 245, 0);
+			func_100(uParam0, switchId, iParam3, "TAT_FRA_24", "singleplayer_overlays", "fr_023", "", iParam2, 245, 0);
 			break;
 
 		case 20: break;
 
 		case 21:
-			func_100(uParam0, iParam1, iParam3, "TAT_FRA_26", "singleplayer_overlays", "fr_025", "", iParam2, 370, 0);
+			func_100(uParam0, switchId, iParam3, "TAT_FRA_26", "singleplayer_overlays", "fr_025", "", iParam2, 370, 0);
 			break;
 
 		case 22:
-			func_100(uParam0, iParam1, iParam3, "TAT_FRA_27", "singleplayer_overlays", "fr_026", "", iParam2, 350, 0);
+			func_100(uParam0, switchId, iParam3, "TAT_FRA_27", "singleplayer_overlays", "fr_026", "", iParam2, 350, 0);
 			break;
 
 		case 23:
-			func_100(uParam0, iParam1, iParam3, "TAT_FRA_28", "singleplayer_overlays", "fr_027", "", iParam2, 310, 0);
+			func_100(uParam0, switchId, iParam3, "TAT_FRA_28", "singleplayer_overlays", "fr_027", "", iParam2, 310, 0);
 			break;
 
 		case 24:
-			func_100(uParam0, iParam1, iParam3, "TAT_FRA_29", "singleplayer_overlays", "fr_028", "", iParam2, 210, 0);
+			func_100(uParam0, switchId, iParam3, "TAT_FRA_29", "singleplayer_overlays", "fr_028", "", iParam2, 210, 0);
 			break;
 
 		case 25:
-			func_100(uParam0, iParam1, iParam3, "TAT_FRA_30", "singleplayer_overlays", "fr_029", "", iParam2, 245, 0);
+			func_100(uParam0, switchId, iParam3, "TAT_FRA_30", "singleplayer_overlays", "fr_029", "", iParam2, 245, 0);
 			break;
 
 		case 26:
-			func_100(uParam0, iParam1, iParam3, "TAT_FRA_31", "singleplayer_overlays", "fr_030", "", iParam2, 85, 0);
+			func_100(uParam0, switchId, iParam3, "TAT_FRA_31", "singleplayer_overlays", "fr_030", "", iParam2, 85, 0);
 			break;
 
 		case 27:
-			func_100(uParam0, iParam1, iParam3, "TAT_FRA_32", "singleplayer_overlays", "fr_031", "", iParam2, 210, 0);
+			func_100(uParam0, switchId, iParam3, "TAT_FRA_32", "singleplayer_overlays", "fr_031", "", iParam2, 210, 0);
 			break;
 
 		case 28:
-			func_100(uParam0, iParam1, iParam3, "TAT_FRA_33", "singleplayer_overlays", "fr_032", "", iParam2, 225, 0);
+			func_100(uParam0, switchId, iParam3, "TAT_FRA_33", "singleplayer_overlays", "fr_032", "", iParam2, 225, 0);
 			break;
 
 		case 29:
-			func_100(uParam0, iParam1, iParam3, "TAT_FRA_34", "singleplayer_overlays", "fr_033", "", iParam2, 145, 0);
+			func_100(uParam0, switchId, iParam3, "TAT_FRA_34", "singleplayer_overlays", "fr_033", "", iParam2, 145, 0);
 			break;
 
 		case 30:
-			func_100(uParam0, iParam1, iParam3, "TAT_FRA_35", "singleplayer_overlays", "fr_034", "", iParam2, 230, 0);
+			func_100(uParam0, switchId, iParam3, "TAT_FRA_35", "singleplayer_overlays", "fr_034", "", iParam2, 230, 0);
 			break;
 
 		case 31:
-			func_100(uParam0, iParam1, iParam3, "TAT_FRA_36", "singleplayer_overlays", "fr_035", "", iParam2, 195, 0);
+			func_100(uParam0, switchId, iParam3, "TAT_FRA_36", "singleplayer_overlays", "fr_035", "", iParam2, 195, 0);
 			break;
 
 		case 32:
-			func_100(uParam0, iParam1, iParam3, "TAT_FRA_37", "singleplayer_overlays", "fr_036", "", iParam2, 255, 0);
+			func_100(uParam0, switchId, iParam3, "TAT_FRA_37", "singleplayer_overlays", "fr_036", "", iParam2, 255, 0);
 			break;
 
 		case 33:
-			func_100(uParam0, iParam1, iParam3, "TAT_FRA_38", "singleplayer_overlays", "fr_037", "", iParam2, 300, 0);
+			func_100(uParam0, switchId, iParam3, "TAT_FRA_38", "singleplayer_overlays", "fr_037", "", iParam2, 300, 0);
 			break;
 
 		case 34:
-			func_100(uParam0, iParam1, iParam3, "TAT_FRA_40", "singleplayer_overlays", "fr_039", "", iParam2, 300, 0);
+			func_100(uParam0, switchId, iParam3, "TAT_FRA_40", "singleplayer_overlays", "fr_039", "", iParam2, 300, 0);
 			break;
 
 		case 35:
-			func_100(uParam0, iParam1, iParam3, "TAT_FRA_05", "singleplayer_overlays", "fr_004", "", iParam2, 255, 1);
+			func_100(uParam0, switchId, iParam3, "TAT_FRA_05", "singleplayer_overlays", "fr_004", "", iParam2, 255, 1);
 			break;
 
 		case 36:
-			func_100(uParam0, iParam1, iParam3, "TAT_FRA_06", "singleplayer_overlays", "fr_005", "", iParam2, 175, 1);
+			func_100(uParam0, switchId, iParam3, "TAT_FRA_06", "singleplayer_overlays", "fr_005", "", iParam2, 175, 1);
 			break;
 
 		case 37:
-			func_100(uParam0, iParam1, iParam3, "TAT_FRA_11", "singleplayer_overlays", "fr_010", "", iParam2, 520, 1);
+			func_100(uParam0, switchId, iParam3, "TAT_FRA_11", "singleplayer_overlays", "fr_010", "", iParam2, 520, 1);
 			break;
 
 		case 38:
-			func_100(uParam0, iParam1, iParam3, "TAT_FRA_23", "singleplayer_overlays", "fr_022", "", iParam2, 125, 1);
+			func_100(uParam0, switchId, iParam3, "TAT_FRA_23", "singleplayer_overlays", "fr_022", "", iParam2, 125, 1);
 			break;
 
 		case 39:
-			func_100(uParam0, iParam1, iParam3, "TAT_FRA_39", "singleplayer_overlays", "fr_038", "", iParam2, 365, 1);
+			func_100(uParam0, switchId, iParam3, "TAT_FRA_39", "singleplayer_overlays", "fr_038", "", iParam2, 365, 1);
 			break;
 
-		default: func_97(uParam0, iParam2, iParam1, 40); break;
+		default: func_97(uParam0, iParam2, switchId, 40); break;
 		}
 		break;
 
 	case 2:
-		switch (iParam1) {
+		switch (switchId) {
 		case 0:
-			func_100(uParam0, iParam1, iParam3, "TAT_TRV_01", "singleplayer_overlays", "tp_000", "", iParam2, 120, 0);
+			func_100(uParam0, switchId, iParam3, "TAT_TRV_01", "singleplayer_overlays", "tp_000", "", iParam2, 120, 0);
 			break;
 
 		case 1:
-			func_100(uParam0, iParam1, iParam3, "TAT_TRV_02", "singleplayer_overlays", "tp_001", "", iParam2, 150, 3);
+			func_100(uParam0, switchId, iParam3, "TAT_TRV_02", "singleplayer_overlays", "tp_001", "", iParam2, 150, 3);
 			break;
 
 		case 2:
-			func_100(uParam0, iParam1, iParam3, "TAT_TRV_03", "singleplayer_overlays", "tp_002", "", iParam2, 100, 0);
+			func_100(uParam0, switchId, iParam3, "TAT_TRV_03", "singleplayer_overlays", "tp_002", "", iParam2, 100, 0);
 			break;
 
 		case 3:
-			func_100(uParam0, iParam1, iParam3, "TAT_TRV_04", "singleplayer_overlays", "tp_003", "", iParam2, 140, 0);
+			func_100(uParam0, switchId, iParam3, "TAT_TRV_04", "singleplayer_overlays", "tp_003", "", iParam2, 140, 0);
 			break;
 
 		case 4:
-			func_100(uParam0, iParam1, iParam3, "TAT_TRV_05", "singleplayer_overlays", "tp_004", "", iParam2, 250, 0);
+			func_100(uParam0, switchId, iParam3, "TAT_TRV_05", "singleplayer_overlays", "tp_004", "", iParam2, 250, 0);
 			break;
 
 		case 5:
@@ -25774,1000 +25774,1000 @@ bool func_96(var *uParam0, int iParam1, int iParam2, int iParam3, int iParam4) {
 				if (func_119() && (func_99() || func_98())) {
 					iVar1 = 0;
 				}
-				func_100(uParam0, iParam1, iParam3, "TAT_TRV_06", "singleplayer_overlays", "tp_005", "", iParam2, iVar1,
+				func_100(uParam0, switchId, iParam3, "TAT_TRV_06", "singleplayer_overlays", "tp_005", "", iParam2, iVar1,
 						 3);
 			}
 			break;
 
 		case 6:
-			func_100(uParam0, iParam1, iParam3, "TAT_TRV_07", "singleplayer_overlays", "tp_006", "", iParam2, 120, 0);
+			func_100(uParam0, switchId, iParam3, "TAT_TRV_07", "singleplayer_overlays", "tp_006", "", iParam2, 120, 0);
 			break;
 
 		case 7:
-			func_100(uParam0, iParam1, iParam3, "TAT_TRV_08", "singleplayer_overlays", "tp_007", "", iParam2, 250, 0);
+			func_100(uParam0, switchId, iParam3, "TAT_TRV_08", "singleplayer_overlays", "tp_007", "", iParam2, 250, 0);
 			break;
 
 		case 8:
-			func_100(uParam0, iParam1, iParam3, "TAT_TRV_09", "singleplayer_overlays", "tp_008", "", iParam2, 50, 3);
+			func_100(uParam0, switchId, iParam3, "TAT_TRV_09", "singleplayer_overlays", "tp_008", "", iParam2, 50, 3);
 			break;
 
 		case 9:
-			func_100(uParam0, iParam1, iParam3, "TAT_TRV_10", "singleplayer_overlays", "tp_009", "", iParam2, 135, 2);
+			func_100(uParam0, switchId, iParam3, "TAT_TRV_10", "singleplayer_overlays", "tp_009", "", iParam2, 135, 2);
 			break;
 
 		case 10:
-			func_100(uParam0, iParam1, iParam3, "TAT_TRV_11", "singleplayer_overlays", "tp_010", "", iParam2, 245, 0);
+			func_100(uParam0, switchId, iParam3, "TAT_TRV_11", "singleplayer_overlays", "tp_010", "", iParam2, 245, 0);
 			break;
 
 		case 11:
-			func_100(uParam0, iParam1, iParam3, "TAT_TRV_12", "singleplayer_overlays", "tp_011", "", iParam2, 280, 0);
+			func_100(uParam0, switchId, iParam3, "TAT_TRV_12", "singleplayer_overlays", "tp_011", "", iParam2, 280, 0);
 			break;
 
 		case 12:
-			func_100(uParam0, iParam1, iParam3, "TAT_TRV_13", "singleplayer_overlays", "tp_012", "", iParam2, 65, 0);
+			func_100(uParam0, switchId, iParam3, "TAT_TRV_13", "singleplayer_overlays", "tp_012", "", iParam2, 65, 0);
 			break;
 
 		case 13:
-			func_100(uParam0, iParam1, iParam3, "TAT_TRV_14", "singleplayer_overlays", "tp_013", "", iParam2, 150, 6);
+			func_100(uParam0, switchId, iParam3, "TAT_TRV_14", "singleplayer_overlays", "tp_013", "", iParam2, 150, 6);
 			break;
 
 		case 14:
-			func_100(uParam0, iParam1, iParam3, "TAT_TRV_15", "singleplayer_overlays", "tp_014", "", iParam2, 200, 0);
+			func_100(uParam0, switchId, iParam3, "TAT_TRV_15", "singleplayer_overlays", "tp_014", "", iParam2, 200, 0);
 			break;
 
 		case 15:
-			func_100(uParam0, iParam1, iParam3, "TAT_TRV_16", "singleplayer_overlays", "tp_015", "", iParam2, 145, 0);
+			func_100(uParam0, switchId, iParam3, "TAT_TRV_16", "singleplayer_overlays", "tp_015", "", iParam2, 145, 0);
 			break;
 
 		case 16:
-			func_100(uParam0, iParam1, iParam3, "TAT_TRV_17", "singleplayer_overlays", "tp_016", "", iParam2, 290, 0);
+			func_100(uParam0, switchId, iParam3, "TAT_TRV_17", "singleplayer_overlays", "tp_016", "", iParam2, 290, 0);
 			break;
 
 		case 17:
-			func_100(uParam0, iParam1, iParam3, "TAT_TRV_18", "singleplayer_overlays", "tp_017", "", iParam2, 350, 3);
+			func_100(uParam0, switchId, iParam3, "TAT_TRV_18", "singleplayer_overlays", "tp_017", "", iParam2, 350, 3);
 			break;
 
 		case 18:
-			func_100(uParam0, iParam1, iParam3, "TAT_TRV_19", "singleplayer_overlays", "tp_018", "", iParam2, 70, 0);
+			func_100(uParam0, switchId, iParam3, "TAT_TRV_19", "singleplayer_overlays", "tp_018", "", iParam2, 70, 0);
 			break;
 
 		case 19:
-			func_100(uParam0, iParam1, iParam3, "TAT_TRV_20", "singleplayer_overlays", "tp_019", "", iParam2, 180, 6);
+			func_100(uParam0, switchId, iParam3, "TAT_TRV_20", "singleplayer_overlays", "tp_019", "", iParam2, 180, 6);
 			break;
 
 		case 20:
-			func_100(uParam0, iParam1, iParam3, "TAT_TRV_21", "singleplayer_overlays", "tp_020", "", iParam2, 230, 0);
+			func_100(uParam0, switchId, iParam3, "TAT_TRV_21", "singleplayer_overlays", "tp_020", "", iParam2, 230, 0);
 			break;
 
 		case 21:
-			func_100(uParam0, iParam1, iParam3, "TAT_TRV_22", "singleplayer_overlays", "tp_021", "", iParam2, 200, 0);
+			func_100(uParam0, switchId, iParam3, "TAT_TRV_22", "singleplayer_overlays", "tp_021", "", iParam2, 200, 0);
 			break;
 
 		case 22:
-			func_100(uParam0, iParam1, iParam3, "TAT_TRV_24", "singleplayer_overlays", "tp_023", "", iParam2, 240, 0);
+			func_100(uParam0, switchId, iParam3, "TAT_TRV_24", "singleplayer_overlays", "tp_023", "", iParam2, 240, 0);
 			break;
 
 		case 23:
-			func_100(uParam0, iParam1, iParam3, "TAT_TRV_25", "singleplayer_overlays", "tp_024", "", iParam2, 195, 0);
+			func_100(uParam0, switchId, iParam3, "TAT_TRV_25", "singleplayer_overlays", "tp_024", "", iParam2, 195, 0);
 			break;
 
 		case 24:
-			func_100(uParam0, iParam1, iParam3, "TAT_TRV_26", "singleplayer_overlays", "tp_025", "", iParam2, 225, 2);
+			func_100(uParam0, switchId, iParam3, "TAT_TRV_26", "singleplayer_overlays", "tp_025", "", iParam2, 225, 2);
 			break;
 
 		case 25:
-			func_100(uParam0, iParam1, iParam3, "TAT_TRV_28", "singleplayer_overlays", "tp_027", "", iParam2, 175, 0);
+			func_100(uParam0, switchId, iParam3, "TAT_TRV_28", "singleplayer_overlays", "tp_027", "", iParam2, 175, 0);
 			break;
 
 		case 26:
-			func_100(uParam0, iParam1, iParam3, "TAT_TRV_29", "singleplayer_overlays", "tp_028", "", iParam2, 65, 0);
+			func_100(uParam0, switchId, iParam3, "TAT_TRV_29", "singleplayer_overlays", "tp_028", "", iParam2, 65, 0);
 			break;
 
 		case 27:
-			func_100(uParam0, iParam1, iParam3, "TAT_TRV_30", "singleplayer_overlays", "tp_029", "", iParam2, 50, 0);
+			func_100(uParam0, switchId, iParam3, "TAT_TRV_30", "singleplayer_overlays", "tp_029", "", iParam2, 50, 0);
 			break;
 
 		case 28:
-			func_100(uParam0, iParam1, iParam3, "TAT_TRV_31", "singleplayer_overlays", "tp_030", "", iParam2, 70, 0);
+			func_100(uParam0, switchId, iParam3, "TAT_TRV_31", "singleplayer_overlays", "tp_030", "", iParam2, 70, 0);
 			break;
 
 		case 29:
-			func_100(uParam0, iParam1, iParam3, "TAT_TRV_34", "singleplayer_overlays", "tp_033", "", iParam2, 70, 0);
+			func_100(uParam0, switchId, iParam3, "TAT_TRV_34", "singleplayer_overlays", "tp_033", "", iParam2, 70, 0);
 			break;
 
 		case 30:
-			func_100(uParam0, iParam1, iParam3, "TAT_TRV_23", "singleplayer_overlays", "tp_022", "", iParam2, 500, 1);
+			func_100(uParam0, switchId, iParam3, "TAT_TRV_23", "singleplayer_overlays", "tp_022", "", iParam2, 500, 1);
 			break;
 
 		case 31:
-			func_100(uParam0, iParam1, iParam3, "TAT_TRV_27", "singleplayer_overlays", "tp_026", "", iParam2, 300, 1);
+			func_100(uParam0, switchId, iParam3, "TAT_TRV_27", "singleplayer_overlays", "tp_026", "", iParam2, 300, 1);
 			break;
 
 		case 32:
-			func_100(uParam0, iParam1, iParam3, "TAT_TRV_32", "singleplayer_overlays", "tp_031", "", iParam2, 190, 1);
+			func_100(uParam0, switchId, iParam3, "TAT_TRV_32", "singleplayer_overlays", "tp_031", "", iParam2, 190, 1);
 			break;
 
 		case 33:
-			func_100(uParam0, iParam1, iParam3, "TAT_TRV_33", "singleplayer_overlays", "tp_032", "", iParam2, 129, 1);
+			func_100(uParam0, switchId, iParam3, "TAT_TRV_33", "singleplayer_overlays", "tp_032", "", iParam2, 129, 1);
 			break;
 
-		default: func_97(uParam0, iParam2, iParam1, 34); break;
+		default: func_97(uParam0, iParam2, switchId, 34); break;
 		}
 		break;
 
 	case 3:
 	case 4:
-		switch (iParam1) {
+		switch (switchId) {
 		case 0:
-			func_100(uParam0, iParam1, iParam3, "TAT_FM_008", "multiplayer_overlays", "000", "", iParam2,
+			func_100(uParam0, switchId, iParam3, "TAT_FM_008", "multiplayer_overlays", "000", "", iParam2,
 					 system::round(system::to_float(20000) * Global_262145.f_2906), 0);
 			break;
 
 		case 1:
-			func_100(uParam0, iParam1, iParam3, "TAT_FM_009", "multiplayer_overlays", "001", "", iParam2,
+			func_100(uParam0, switchId, iParam3, "TAT_FM_009", "multiplayer_overlays", "001", "", iParam2,
 					 system::round(system::to_float(1400) * Global_262145.f_2907), 2);
 			break;
 
 		case 2:
-			func_100(uParam0, iParam1, iParam3, "TAT_FM_010", "multiplayer_overlays", "002", "", iParam2,
+			func_100(uParam0, switchId, iParam3, "TAT_FM_010", "multiplayer_overlays", "002", "", iParam2,
 					 system::round(system::to_float(9750) * Global_262145.f_2908), 3);
 			break;
 
 		case 3:
-			func_100(uParam0, iParam1, iParam3, "TAT_FM_011", "multiplayer_overlays", "003", "", iParam2,
+			func_100(uParam0, switchId, iParam3, "TAT_FM_011", "multiplayer_overlays", "003", "", iParam2,
 					 system::round(system::to_float(2150) * Global_262145.f_2909), 0);
 			break;
 
 		case 4:
-			func_100(uParam0, iParam1, iParam3, "TAT_FM_012", "multiplayer_overlays", "004", "", iParam2,
+			func_100(uParam0, switchId, iParam3, "TAT_FM_012", "multiplayer_overlays", "004", "", iParam2,
 					 system::round(system::to_float(10000) * Global_262145.f_2910), 0);
 			break;
 
 		case 54:
-			func_100(uParam0, iParam1, iParam3, "TAT_FM_013", "multiplayer_overlays", "005", "", iParam2,
+			func_100(uParam0, switchId, iParam3, "TAT_FM_013", "multiplayer_overlays", "005", "", iParam2,
 					 system::round(system::to_float(12400) * Global_262145.f_2911), 1);
 			break;
 
 		case 5:
-			func_100(uParam0, iParam1, iParam3, "TAT_FM_014", "multiplayer_overlays", "006", "", iParam2,
+			func_100(uParam0, switchId, iParam3, "TAT_FM_014", "multiplayer_overlays", "006", "", iParam2,
 					 system::round(system::to_float(3500) * Global_262145.f_2912), 0);
 			break;
 
 		case 6:
-			func_100(uParam0, iParam1, iParam3, "TAT_FM_015", "multiplayer_overlays", "007", "", iParam2,
+			func_100(uParam0, switchId, iParam3, "TAT_FM_015", "multiplayer_overlays", "007", "", iParam2,
 					 system::round(system::to_float(4950) * Global_262145.f_2913), 2);
 			break;
 
 		case 55:
-			func_100(uParam0, iParam1, iParam3, "TAT_FM_016", "multiplayer_overlays", "008", "", iParam2,
+			func_100(uParam0, switchId, iParam3, "TAT_FM_016", "multiplayer_overlays", "008", "", iParam2,
 					 system::round(system::to_float(1350) * Global_262145.f_2914), 1);
 			break;
 
 		case 7:
-			func_100(uParam0, iParam1, iParam3, "TAT_FM_017", "multiplayer_overlays", "009", "", iParam2,
+			func_100(uParam0, switchId, iParam3, "TAT_FM_017", "multiplayer_overlays", "009", "", iParam2,
 					 system::round(system::to_float(1450) * Global_262145.f_2915), 0);
 			break;
 
 		case 8:
-			func_100(uParam0, iParam1, iParam3, "TAT_FM_018", "multiplayer_overlays", "010", "", iParam2,
+			func_100(uParam0, switchId, iParam3, "TAT_FM_018", "multiplayer_overlays", "010", "", iParam2,
 					 system::round(system::to_float(2700) * Global_262145.f_2916), 7);
 			break;
 
 		case 9:
-			func_100(uParam0, iParam1, iParam3, "TAT_FM_019", "multiplayer_overlays", "011", "rank", iParam2,
+			func_100(uParam0, switchId, iParam3, "TAT_FM_019", "multiplayer_overlays", "011", "rank", iParam2,
 					 system::round(system::to_float(1200) * Global_262145.f_2917), 0);
 			break;
 
 		case 10:
-			func_100(uParam0, iParam1, iParam3, "TAT_FM_020", "multiplayer_overlays", "012", "rank", iParam2,
+			func_100(uParam0, switchId, iParam3, "TAT_FM_020", "multiplayer_overlays", "012", "rank", iParam2,
 					 system::round(system::to_float(1500) * Global_262145.f_2918), 0);
 			break;
 
 		case 11:
-			func_100(uParam0, iParam1, iParam3, "TAT_FM_021", "multiplayer_overlays", "013", "rank", iParam2,
+			func_100(uParam0, switchId, iParam3, "TAT_FM_021", "multiplayer_overlays", "013", "rank", iParam2,
 					 system::round(system::to_float(2650) * Global_262145.f_2919), 0);
 			break;
 
 		case 56:
-			func_100(uParam0, iParam1, iParam3, "TAT_FM_022", "multiplayer_overlays", "014", "", iParam2,
+			func_100(uParam0, switchId, iParam3, "TAT_FM_022", "multiplayer_overlays", "014", "", iParam2,
 					 system::round(system::to_float(1900) * Global_262145.f_2920), 1);
 			break;
 
 		case 12:
-			func_100(uParam0, iParam1, iParam3, "TAT_FM_023", "multiplayer_overlays", "015", "", iParam2,
+			func_100(uParam0, switchId, iParam3, "TAT_FM_023", "multiplayer_overlays", "015", "", iParam2,
 					 system::round(system::to_float(4950) * Global_262145.f_2921), 2);
 			break;
 
 		case 57:
-			func_100(uParam0, iParam1, iParam3, "TAT_FM_024", "multiplayer_overlays", "016", "", iParam2,
+			func_100(uParam0, switchId, iParam3, "TAT_FM_024", "multiplayer_overlays", "016", "", iParam2,
 					 system::round(system::to_float(2400) * Global_262145.f_2922), 1);
 			break;
 
 		case 58:
-			func_100(uParam0, iParam1, iParam3, "TAT_FM_025", "multiplayer_overlays", "017", "", iParam2,
+			func_100(uParam0, switchId, iParam3, "TAT_FM_025", "multiplayer_overlays", "017", "", iParam2,
 					 system::round(system::to_float(5100) * Global_262145.f_2923), 1);
 			break;
 
 		case 59:
-			func_100(uParam0, iParam1, iParam3, "TAT_FM_026", "multiplayer_overlays", "018", "", iParam2,
+			func_100(uParam0, switchId, iParam3, "TAT_FM_026", "multiplayer_overlays", "018", "", iParam2,
 					 system::round(system::to_float(7400) * Global_262145.f_2924), 1);
 			break;
 
 		case 60:
-			func_100(uParam0, iParam1, iParam3, "TAT_FM_027", "multiplayer_overlays", "019", "", iParam2,
+			func_100(uParam0, switchId, iParam3, "TAT_FM_027", "multiplayer_overlays", "019", "", iParam2,
 					 system::round(system::to_float(10000) * Global_262145.f_2925), 1);
 			break;
 
 		case 17:
-			func_100(uParam0, iParam1, iParam3, "TAT_FM_201", "multiplayer_overlays", "005", "", iParam2,
+			func_100(uParam0, switchId, iParam3, "TAT_FM_201", "multiplayer_overlays", "005", "", iParam2,
 					 system::round(system::to_float(2400) * Global_262145.f_2930), 2);
 			break;
 
 		case 18:
-			func_100(uParam0, iParam1, iParam3, "TAT_FM_202", "multiplayer_overlays", "006", "", iParam2,
+			func_100(uParam0, switchId, iParam3, "TAT_FM_202", "multiplayer_overlays", "006", "", iParam2,
 					 system::round(system::to_float(5100) * Global_262145.f_2931), 2);
 			break;
 
 		case 19:
-			func_100(uParam0, iParam1, iParam3, "TAT_FM_203", "multiplayer_overlays", "015", "", iParam2,
+			func_100(uParam0, switchId, iParam3, "TAT_FM_203", "multiplayer_overlays", "015", "", iParam2,
 					 system::round(system::to_float(3600) * Global_262145.f_2932), 2);
 			break;
 
 		case 20:
-			func_100(uParam0, iParam1, iParam3, "TAT_FM_204", "multiplayer_overlays", "000", "", iParam2,
+			func_100(uParam0, switchId, iParam3, "TAT_FM_204", "multiplayer_overlays", "000", "", iParam2,
 					 system::round(system::to_float(10000) * Global_262145.f_2933), 3);
 			break;
 
 		case 21:
-			func_100(uParam0, iParam1, iParam3, "TAT_FM_205", "multiplayer_overlays", "001", "", iParam2,
+			func_100(uParam0, switchId, iParam3, "TAT_FM_205", "multiplayer_overlays", "001", "", iParam2,
 					 system::round(system::to_float(12500) * Global_262145.f_2934), 3);
 			break;
 
 		case 22:
-			func_100(uParam0, iParam1, iParam3, "TAT_FM_206", "multiplayer_overlays", "003", "", iParam2,
+			func_100(uParam0, switchId, iParam3, "TAT_FM_206", "multiplayer_overlays", "003", "", iParam2,
 					 system::round(system::to_float(10000) * Global_262145.f_2935), 3);
 			break;
 
 		case 23:
-			func_100(uParam0, iParam1, iParam3, "TAT_FM_207", "multiplayer_overlays", "014", "", iParam2,
+			func_100(uParam0, switchId, iParam3, "TAT_FM_207", "multiplayer_overlays", "014", "", iParam2,
 					 system::round(system::to_float(5000) * Global_262145.f_2936), 3);
 			break;
 
 		case 24:
-			func_100(uParam0, iParam1, iParam3, "TAT_FM_208", "multiplayer_overlays", "018", "", iParam2,
+			func_100(uParam0, switchId, iParam3, "TAT_FM_208", "multiplayer_overlays", "018", "", iParam2,
 					 system::round(system::to_float(7500) * Global_262145.f_2937), 3);
 			break;
 
 		case 25:
-			func_100(uParam0, iParam1, iParam3, "TAT_FM_209", "multiplayer_overlays", "002", "", iParam2,
+			func_100(uParam0, switchId, iParam3, "TAT_FM_209", "multiplayer_overlays", "002", "", iParam2,
 					 system::round(system::to_float(3750) * Global_262145.f_2938), 2);
 			break;
 
 		case 26:
-			func_100(uParam0, iParam1, iParam3, "TAT_FM_210", "multiplayer_overlays", "007", "", iParam2,
+			func_100(uParam0, switchId, iParam3, "TAT_FM_210", "multiplayer_overlays", "007", "", iParam2,
 					 system::round(system::to_float(3750) * Global_262145.f_2939), 3);
 			break;
 
 		case 27:
-			func_100(uParam0, iParam1, iParam3, "TAT_FM_211", "multiplayer_overlays", "008", "", iParam2,
+			func_100(uParam0, switchId, iParam3, "TAT_FM_211", "multiplayer_overlays", "008", "", iParam2,
 					 system::round(system::to_float(4800) * Global_262145.f_2940), 3);
 			break;
 
 		case 28:
-			func_100(uParam0, iParam1, iParam3, "TAT_FM_212", "multiplayer_overlays", "017", "", iParam2,
+			func_100(uParam0, switchId, iParam3, "TAT_FM_212", "multiplayer_overlays", "017", "", iParam2,
 					 system::round(system::to_float(3500) * Global_262145.f_2941), 3);
 			break;
 
 		case 61:
-			func_100(uParam0, iParam1, iParam3, "TAT_FM_213", "multiplayer_overlays", "009", "", iParam2,
+			func_100(uParam0, switchId, iParam3, "TAT_FM_213", "multiplayer_overlays", "009", "", iParam2,
 					 system::round(system::to_float(12350) * Global_262145.f_2942), 1);
 			break;
 
 		case 62:
-			func_100(uParam0, iParam1, iParam3, "TAT_FM_214", "multiplayer_overlays", "011", "", iParam2,
+			func_100(uParam0, switchId, iParam3, "TAT_FM_214", "multiplayer_overlays", "011", "", iParam2,
 					 system::round(system::to_float(1900) * Global_262145.f_2943), 1);
 			break;
 
 		case 63:
-			func_100(uParam0, iParam1, iParam3, "TAT_FM_215", "multiplayer_overlays", "013", "", iParam2,
+			func_100(uParam0, switchId, iParam3, "TAT_FM_215", "multiplayer_overlays", "013", "", iParam2,
 					 system::round(system::to_float(4500) * Global_262145.f_2944), 1);
 			break;
 
 		case 64:
-			func_100(uParam0, iParam1, iParam3, "TAT_FM_216", "multiplayer_overlays", "016", "", iParam2,
+			func_100(uParam0, switchId, iParam3, "TAT_FM_216", "multiplayer_overlays", "016", "", iParam2,
 					 system::round(system::to_float(12250) * Global_262145.f_2945), 1);
 			break;
 
 		case 65:
-			func_100(uParam0, iParam1, iParam3, "TAT_FM_217", "multiplayer_overlays", "019", "", iParam2,
+			func_100(uParam0, switchId, iParam3, "TAT_FM_217", "multiplayer_overlays", "019", "", iParam2,
 					 system::round(system::to_float(12300) * Global_262145.f_2946), 1);
 			break;
 
 		case 29:
-			func_100(uParam0, iParam1, iParam3, "TAT_FM_218", "multiplayer_overlays", "010", "", iParam2,
+			func_100(uParam0, switchId, iParam3, "TAT_FM_218", "multiplayer_overlays", "010", "", iParam2,
 					 system::round(system::to_float(2500) * Global_262145.f_2947), 0);
 			break;
 
 		case 30:
-			func_100(uParam0, iParam1, iParam3, "TAT_FM_219", "multiplayer_overlays", "004", "", iParam2,
+			func_100(uParam0, switchId, iParam3, "TAT_FM_219", "multiplayer_overlays", "004", "", iParam2,
 					 system::round(system::to_float(10000) * Global_262145.f_2948), 0);
 			break;
 
 		case 31:
-			func_100(uParam0, iParam1, iParam3, "TAT_FM_220", "multiplayer_overlays", "012", "", iParam2,
+			func_100(uParam0, switchId, iParam3, "TAT_FM_220", "multiplayer_overlays", "012", "", iParam2,
 					 system::round(system::to_float(10000) * Global_262145.f_2949), 0);
 			break;
 
 		case 66:
-			func_100(uParam0, iParam1, iParam3, "TAT_FM_221", "multiplayer_overlays", "020", "", iParam2,
+			func_100(uParam0, switchId, iParam3, "TAT_FM_221", "multiplayer_overlays", "020", "", iParam2,
 					 system::round(system::to_float(7500) * Global_262145.f_2950), 1);
 			break;
 
 		case 32:
-			func_100(uParam0, iParam1, iParam3, "TAT_FM_222", "multiplayer_overlays", "021", "", iParam2,
+			func_100(uParam0, switchId, iParam3, "TAT_FM_222", "multiplayer_overlays", "021", "", iParam2,
 					 system::round(system::to_float(5000) * Global_262145.f_2951), 2);
 			break;
 
 		case 33:
-			func_100(uParam0, iParam1, iParam3, "TAT_FM_223", "multiplayer_overlays", "022", "", iParam2,
+			func_100(uParam0, switchId, iParam3, "TAT_FM_223", "multiplayer_overlays", "022", "", iParam2,
 					 system::round(system::to_float(7300) * Global_262145.f_2952), 3);
 			break;
 
 		case 34:
-			func_100(uParam0, iParam1, iParam3, "TAT_FM_224", "multiplayer_overlays", "023", "", iParam2,
+			func_100(uParam0, switchId, iParam3, "TAT_FM_224", "multiplayer_overlays", "023", "", iParam2,
 					 system::round(system::to_float(7250) * Global_262145.f_2953), 2);
 			break;
 
 		case 35:
-			func_100(uParam0, iParam1, iParam3, "TAT_FM_225", "multiplayer_overlays", "024", "", iParam2,
+			func_100(uParam0, switchId, iParam3, "TAT_FM_225", "multiplayer_overlays", "024", "", iParam2,
 					 system::round(system::to_float(11900) * Global_262145.f_2954), 0);
 			break;
 
 		case 36:
-			func_100(uParam0, iParam1, iParam3, "TAT_FM_226", "multiplayer_overlays", "025", "", iParam2,
+			func_100(uParam0, switchId, iParam3, "TAT_FM_226", "multiplayer_overlays", "025", "", iParam2,
 					 system::round(system::to_float(2750) * Global_262145.f_2955), 0);
 			break;
 
 		case 37:
-			func_100(uParam0, iParam1, iParam3, "TAT_FM_227", "multiplayer_overlays", "026", "", iParam2,
+			func_100(uParam0, switchId, iParam3, "TAT_FM_227", "multiplayer_overlays", "026", "", iParam2,
 					 system::round(system::to_float(1750) * Global_262145.f_2956), 0);
 			break;
 
 		case 38:
-			func_100(uParam0, iParam1, iParam3, "TAT_FM_228", "multiplayer_overlays", "027", "", iParam2,
+			func_100(uParam0, switchId, iParam3, "TAT_FM_228", "multiplayer_overlays", "027", "", iParam2,
 					 system::round(system::to_float(7300) * Global_262145.f_2957), 3);
 			break;
 
 		case 39:
-			func_100(uParam0, iParam1, iParam3, "TAT_FM_229", "multiplayer_overlays", "028", "", iParam2,
+			func_100(uParam0, switchId, iParam3, "TAT_FM_229", "multiplayer_overlays", "028", "", iParam2,
 					 system::round(system::to_float(3250) * Global_262145.f_2958), 2);
 			break;
 
 		case 40:
-			func_100(uParam0, iParam1, iParam3, "TAT_FM_230", "multiplayer_overlays", "029", "", iParam2,
+			func_100(uParam0, switchId, iParam3, "TAT_FM_230", "multiplayer_overlays", "029", "", iParam2,
 					 system::round(system::to_float(1000) * Global_262145.f_2959), 0);
 			break;
 
 		case 67:
-			func_100(uParam0, iParam1, iParam3, "TAT_FM_231", "multiplayer_overlays", "030", "", iParam2,
+			func_100(uParam0, switchId, iParam3, "TAT_FM_231", "multiplayer_overlays", "030", "", iParam2,
 					 system::round(system::to_float(5000) * Global_262145.f_2960), 1);
 			break;
 
 		case 41:
-			func_100(uParam0, iParam1, iParam3, "TAT_FM_232", "multiplayer_overlays", "031", "", iParam2,
+			func_100(uParam0, switchId, iParam3, "TAT_FM_232", "multiplayer_overlays", "031", "", iParam2,
 					 system::round(system::to_float(7500) * Global_262145.f_2961), 2);
 			break;
 
 		case 68:
-			func_100(uParam0, iParam1, iParam3, "TAT_FM_233", "multiplayer_overlays", "032", "", iParam2,
+			func_100(uParam0, switchId, iParam3, "TAT_FM_233", "multiplayer_overlays", "032", "", iParam2,
 					 system::round(system::to_float(5100) * Global_262145.f_2962), 1);
 			break;
 
 		case 42:
-			func_100(uParam0, iParam1, iParam3, "TAT_FM_234", "multiplayer_overlays", "033", "", iParam2,
+			func_100(uParam0, switchId, iParam3, "TAT_FM_234", "multiplayer_overlays", "033", "", iParam2,
 					 system::round(system::to_float(5050) * Global_262145.f_2963), 0);
 			break;
 
 		case 43:
-			func_100(uParam0, iParam1, iParam3, "TAT_FM_235", "multiplayer_overlays", "034", "", iParam2,
+			func_100(uParam0, switchId, iParam3, "TAT_FM_235", "multiplayer_overlays", "034", "", iParam2,
 					 system::round(system::to_float(2450) * Global_262145.f_2964), 2);
 			break;
 
 		case 44:
-			func_100(uParam0, iParam1, iParam3, "TAT_FM_236", "multiplayer_overlays", "035", "", iParam2,
+			func_100(uParam0, switchId, iParam3, "TAT_FM_236", "multiplayer_overlays", "035", "", iParam2,
 					 system::round(system::to_float(4950) * Global_262145.f_2965), 0);
 			break;
 
 		case 45:
-			func_100(uParam0, iParam1, iParam3, "TAT_FM_237", "multiplayer_overlays", "036", "", iParam2,
+			func_100(uParam0, switchId, iParam3, "TAT_FM_237", "multiplayer_overlays", "036", "", iParam2,
 					 system::round(system::to_float(5100) * Global_262145.f_2966), 0);
 			break;
 
 		case 46:
-			func_100(uParam0, iParam1, iParam3, "TAT_FM_238", "multiplayer_overlays", "037", "", iParam2,
+			func_100(uParam0, switchId, iParam3, "TAT_FM_238", "multiplayer_overlays", "037", "", iParam2,
 					 system::round(system::to_float(12250) * Global_262145.f_2967), 0);
 			break;
 
 		case 47:
-			func_100(uParam0, iParam1, iParam3, "TAT_FM_239", "multiplayer_overlays", "038", "", iParam2,
+			func_100(uParam0, switchId, iParam3, "TAT_FM_239", "multiplayer_overlays", "038", "", iParam2,
 					 system::round(system::to_float(1150) * Global_262145.f_2968), 3);
 			break;
 
 		case 48:
-			func_100(uParam0, iParam1, iParam3, "TAT_FM_240", "multiplayer_overlays", "039", "", iParam2,
+			func_100(uParam0, switchId, iParam3, "TAT_FM_240", "multiplayer_overlays", "039", "", iParam2,
 					 system::round(system::to_float(7500) * Global_262145.f_2969), 3);
 			break;
 
 		case 49:
-			func_100(uParam0, iParam1, iParam3, "TAT_FM_241", "multiplayer_overlays", "040", "", iParam2,
+			func_100(uParam0, switchId, iParam3, "TAT_FM_241", "multiplayer_overlays", "040", "", iParam2,
 					 system::round(system::to_float(7600) * Global_262145.f_2970), 3);
 			break;
 
 		case 50:
-			func_100(uParam0, iParam1, iParam3, "TAT_FM_242", "multiplayer_overlays", "041", "", iParam2,
+			func_100(uParam0, switchId, iParam3, "TAT_FM_242", "multiplayer_overlays", "041", "", iParam2,
 					 system::round(system::to_float(2600) * Global_262145.f_2971), 2);
 			break;
 
 		case 51:
-			func_100(uParam0, iParam1, iParam3, "TAT_FM_243", "multiplayer_overlays", "042", "", iParam2,
+			func_100(uParam0, switchId, iParam3, "TAT_FM_243", "multiplayer_overlays", "042", "", iParam2,
 					 system::round(system::to_float(2500) * Global_262145.f_2972), 3);
 			break;
 
 		case 52:
-			func_100(uParam0, iParam1, iParam3, "TAT_FM_244", "multiplayer_overlays", "043", "", iParam2,
+			func_100(uParam0, switchId, iParam3, "TAT_FM_244", "multiplayer_overlays", "043", "", iParam2,
 					 system::round(system::to_float(7450) * Global_262145.f_2973), 3);
 			break;
 
 		case 53:
-			func_100(uParam0, iParam1, iParam3, "TAT_FM_245", "multiplayer_overlays", "044", "", iParam2,
+			func_100(uParam0, switchId, iParam3, "TAT_FM_245", "multiplayer_overlays", "044", "", iParam2,
 					 system::round(system::to_float(7500) * Global_262145.f_2974), 0);
 			break;
 
 		case 69:
-			func_100(uParam0, iParam1, iParam3, "TAT_FM_246", "multiplayer_overlays", "045", "", iParam2,
+			func_100(uParam0, switchId, iParam3, "TAT_FM_246", "multiplayer_overlays", "045", "", iParam2,
 					 system::round(system::to_float(10000) * Global_262145.f_2975), 1);
 			break;
 
 		case 70:
-			func_100(uParam0, iParam1, iParam3, "TAT_FM_247", "multiplayer_overlays", "047", "", iParam2,
+			func_100(uParam0, switchId, iParam3, "TAT_FM_247", "multiplayer_overlays", "047", "", iParam2,
 					 system::round(system::to_float(2500) * Global_262145.f_2976), 2);
 			break;
 		}
 		if (iVar0 == joaat("mp_m_freemode_01")) {
-			switch (iParam1) {
+			switch (switchId) {
 			case 73:
-				func_100(uParam0, iParam1, iParam3, "NO_LABEL", "multiplayer_overlays", "mp_fm_branding_001",
+				func_100(uParam0, switchId, iParam3, "NO_LABEL", "multiplayer_overlays", "mp_fm_branding_001",
 						 "torsoDecal", iParam2, 100, 0);
 				break;
 
 			case 74:
-				func_100(uParam0, iParam1, iParam3, "NO_LABEL", "multiplayer_overlays", "mp_fm_branding_002",
+				func_100(uParam0, switchId, iParam3, "NO_LABEL", "multiplayer_overlays", "mp_fm_branding_002",
 						 "torsoDecal", iParam2, 100, 0);
 				break;
 
 			case 75:
-				func_100(uParam0, iParam1, iParam3, "NO_LABEL", "multiplayer_overlays", "mp_fm_branding_003",
+				func_100(uParam0, switchId, iParam3, "NO_LABEL", "multiplayer_overlays", "mp_fm_branding_003",
 						 "torsoDecal", iParam2, 100, 0);
 				break;
 
 			case 76:
-				func_100(uParam0, iParam1, iParam3, "NO_LABEL", "multiplayer_overlays", "mp_fm_branding_004",
+				func_100(uParam0, switchId, iParam3, "NO_LABEL", "multiplayer_overlays", "mp_fm_branding_004",
 						 "torsoDecal", iParam2, 100, 0);
 				break;
 
 			case 77:
-				func_100(uParam0, iParam1, iParam3, "NO_LABEL", "multiplayer_overlays", "mp_fm_branding_005",
+				func_100(uParam0, switchId, iParam3, "NO_LABEL", "multiplayer_overlays", "mp_fm_branding_005",
 						 "torsoDecal", iParam2, 100, 0);
 				break;
 
 			case 78:
-				func_100(uParam0, iParam1, iParam3, "NO_LABEL", "multiplayer_overlays", "mp_fm_branding_006",
+				func_100(uParam0, switchId, iParam3, "NO_LABEL", "multiplayer_overlays", "mp_fm_branding_006",
 						 "torsoDecal", iParam2, 100, 0);
 				break;
 
 			case 79:
-				func_100(uParam0, iParam1, iParam3, "NO_LABEL", "multiplayer_overlays", "mp_fm_branding_009",
+				func_100(uParam0, switchId, iParam3, "NO_LABEL", "multiplayer_overlays", "mp_fm_branding_009",
 						 "torsoDecal", iParam2, 100, 0);
 				break;
 
 			case 80:
-				func_100(uParam0, iParam1, iParam3, "NO_LABEL", "multiplayer_overlays", "mp_fm_branding_013",
+				func_100(uParam0, switchId, iParam3, "NO_LABEL", "multiplayer_overlays", "mp_fm_branding_013",
 						 "torsoDecal", iParam2, 100, 0);
 				break;
 
 			case 81:
-				func_100(uParam0, iParam1, iParam3, "NO_LABEL", "multiplayer_overlays", "mp_fm_branding_014",
+				func_100(uParam0, switchId, iParam3, "NO_LABEL", "multiplayer_overlays", "mp_fm_branding_014",
 						 "torsoDecal", iParam2, 100, 0);
 				break;
 
 			case 82:
-				func_100(uParam0, iParam1, iParam3, "NO_LABEL", "multiplayer_overlays", "mp_fm_branding_015",
+				func_100(uParam0, switchId, iParam3, "NO_LABEL", "multiplayer_overlays", "mp_fm_branding_015",
 						 "torsoDecal", iParam2, 100, 0);
 				break;
 
 			case 83:
-				func_100(uParam0, iParam1, iParam3, "NO_LABEL", "multiplayer_overlays", "mp_fm_branding_016",
+				func_100(uParam0, switchId, iParam3, "NO_LABEL", "multiplayer_overlays", "mp_fm_branding_016",
 						 "torsoDecal", iParam2, 100, 0);
 				break;
 
 			case 84:
-				func_100(uParam0, iParam1, iParam3, "NO_LABEL", "multiplayer_overlays", "mp_fm_branding_019",
+				func_100(uParam0, switchId, iParam3, "NO_LABEL", "multiplayer_overlays", "mp_fm_branding_019",
 						 "torsoDecal", iParam2, 100, 0);
 				break;
 
 			case 85:
-				func_100(uParam0, iParam1, iParam3, "NO_LABEL", "multiplayer_overlays", "mp_fm_branding_020",
+				func_100(uParam0, switchId, iParam3, "NO_LABEL", "multiplayer_overlays", "mp_fm_branding_020",
 						 "torsoDecal", iParam2, 100, 0);
 				break;
 
 			case 86:
-				func_100(uParam0, iParam1, iParam3, "NO_LABEL", "multiplayer_overlays", "mp_fm_branding_036",
+				func_100(uParam0, switchId, iParam3, "NO_LABEL", "multiplayer_overlays", "mp_fm_branding_036",
 						 "torsoDecal", iParam2, 100, 0);
 				break;
 
 			case 90:
-				func_100(uParam0, iParam1, iParam3, "NO_LABEL", "multiplayer_overlays", "mp_fm_branding_017",
+				func_100(uParam0, switchId, iParam3, "NO_LABEL", "multiplayer_overlays", "mp_fm_branding_017",
 						 "torsoDecal", iParam2, 100, 0);
 				break;
 
 			case 91:
-				func_100(uParam0, iParam1, iParam3, "NO_LABEL", "multiplayer_overlays", "mp_fm_branding_018",
+				func_100(uParam0, switchId, iParam3, "NO_LABEL", "multiplayer_overlays", "mp_fm_branding_018",
 						 "torsoDecal", iParam2, 100, 0);
 				break;
 
 			case 124:
-				func_100(uParam0, iParam1, iParam3, "NO_LABEL", "multiplayer_overlays", "mp_fm_branding_046",
+				func_100(uParam0, switchId, iParam3, "NO_LABEL", "multiplayer_overlays", "mp_fm_branding_046",
 						 "torsoDecal", iParam2, 100, 0);
 				break;
 
 			case 125:
-				func_100(uParam0, iParam1, iParam3, "NO_LABEL", "multiplayer_overlays", "mp_fm_branding_045",
+				func_100(uParam0, switchId, iParam3, "NO_LABEL", "multiplayer_overlays", "mp_fm_branding_045",
 						 "torsoDecal", iParam2, 100, 0);
 				break;
 
 			case 87:
-				func_100(uParam0, iParam1, iParam3, "NO_LABEL", "multiplayer_overlays", "FM_Tshirt_Award_000",
+				func_100(uParam0, switchId, iParam3, "NO_LABEL", "multiplayer_overlays", "FM_Tshirt_Award_000",
 						 "torsoDecal", iParam2, system::round(system::to_float(100) * Global_262145.f_2977), 0);
 				break;
 
 			case 88:
-				func_100(uParam0, iParam1, iParam3, "NO_LABEL", "multiplayer_overlays", "FM_Tshirt_Award_001",
+				func_100(uParam0, switchId, iParam3, "NO_LABEL", "multiplayer_overlays", "FM_Tshirt_Award_001",
 						 "torsoDecal", iParam2, system::round(system::to_float(100) * Global_262145.f_2978), 0);
 				break;
 
 			case 89:
-				func_100(uParam0, iParam1, iParam3, "NO_LABEL", "multiplayer_overlays", "FM_Tshirt_Award_002",
+				func_100(uParam0, switchId, iParam3, "NO_LABEL", "multiplayer_overlays", "FM_Tshirt_Award_002",
 						 "torsoDecal", iParam2, system::round(system::to_float(100) * Global_262145.f_2979), 0);
 				break;
 
 			case 93:
-				func_100(uParam0, iParam1, iParam3, "NO_LABEL", "multiplayer_overlays", "NG_M_Hair_001", "hairOverlay",
+				func_100(uParam0, switchId, iParam3, "NO_LABEL", "multiplayer_overlays", "NG_M_Hair_001", "hairOverlay",
 						 iParam2, 100, 0);
 				break;
 
 			case 94:
-				func_100(uParam0, iParam1, iParam3, "NO_LABEL", "multiplayer_overlays", "NG_M_Hair_002", "hairOverlay",
+				func_100(uParam0, switchId, iParam3, "NO_LABEL", "multiplayer_overlays", "NG_M_Hair_002", "hairOverlay",
 						 iParam2, 100, 0);
 				break;
 
 			case 95:
-				func_100(uParam0, iParam1, iParam3, "NO_LABEL", "multiplayer_overlays", "NG_M_Hair_003", "hairOverlay",
+				func_100(uParam0, switchId, iParam3, "NO_LABEL", "multiplayer_overlays", "NG_M_Hair_003", "hairOverlay",
 						 iParam2, 100, 0);
 				break;
 
 			case 96:
-				func_100(uParam0, iParam1, iParam3, "NO_LABEL", "multiplayer_overlays", "NG_M_Hair_004", "hairOverlay",
+				func_100(uParam0, switchId, iParam3, "NO_LABEL", "multiplayer_overlays", "NG_M_Hair_004", "hairOverlay",
 						 iParam2, 100, 0);
 				break;
 
 			case 97:
-				func_100(uParam0, iParam1, iParam3, "NO_LABEL", "multiplayer_overlays", "NG_M_Hair_005", "hairOverlay",
+				func_100(uParam0, switchId, iParam3, "NO_LABEL", "multiplayer_overlays", "NG_M_Hair_005", "hairOverlay",
 						 iParam2, 100, 0);
 				break;
 
 			case 98:
-				func_100(uParam0, iParam1, iParam3, "NO_LABEL", "multiplayer_overlays", "NG_M_Hair_006", "hairOverlay",
+				func_100(uParam0, switchId, iParam3, "NO_LABEL", "multiplayer_overlays", "NG_M_Hair_006", "hairOverlay",
 						 iParam2, 100, 0);
 				break;
 
 			case 99:
-				func_100(uParam0, iParam1, iParam3, "NO_LABEL", "multiplayer_overlays", "NG_M_Hair_007", "hairOverlay",
+				func_100(uParam0, switchId, iParam3, "NO_LABEL", "multiplayer_overlays", "NG_M_Hair_007", "hairOverlay",
 						 iParam2, 100, 0);
 				break;
 
 			case 100:
-				func_100(uParam0, iParam1, iParam3, "NO_LABEL", "multiplayer_overlays", "NG_M_Hair_008", "hairOverlay",
+				func_100(uParam0, switchId, iParam3, "NO_LABEL", "multiplayer_overlays", "NG_M_Hair_008", "hairOverlay",
 						 iParam2, 100, 0);
 				break;
 
 			case 101:
-				func_100(uParam0, iParam1, iParam3, "NO_LABEL", "multiplayer_overlays", "NG_M_Hair_009", "hairOverlay",
+				func_100(uParam0, switchId, iParam3, "NO_LABEL", "multiplayer_overlays", "NG_M_Hair_009", "hairOverlay",
 						 iParam2, 100, 0);
 				break;
 
 			case 102:
-				func_100(uParam0, iParam1, iParam3, "NO_LABEL", "multiplayer_overlays", "NG_M_Hair_010", "hairOverlay",
+				func_100(uParam0, switchId, iParam3, "NO_LABEL", "multiplayer_overlays", "NG_M_Hair_010", "hairOverlay",
 						 iParam2, 100, 0);
 				break;
 
 			case 103:
-				func_100(uParam0, iParam1, iParam3, "NO_LABEL", "multiplayer_overlays", "NG_M_Hair_011", "hairOverlay",
+				func_100(uParam0, switchId, iParam3, "NO_LABEL", "multiplayer_overlays", "NG_M_Hair_011", "hairOverlay",
 						 iParam2, 100, 0);
 				break;
 
 			case 104:
-				func_100(uParam0, iParam1, iParam3, "NO_LABEL", "multiplayer_overlays", "NG_M_Hair_012", "hairOverlay",
+				func_100(uParam0, switchId, iParam3, "NO_LABEL", "multiplayer_overlays", "NG_M_Hair_012", "hairOverlay",
 						 iParam2, 100, 0);
 				break;
 
 			case 105:
-				func_100(uParam0, iParam1, iParam3, "NO_LABEL", "multiplayer_overlays", "NG_M_Hair_013", "hairOverlay",
+				func_100(uParam0, switchId, iParam3, "NO_LABEL", "multiplayer_overlays", "NG_M_Hair_013", "hairOverlay",
 						 iParam2, 100, 0);
 				break;
 
 			case 106:
-				func_100(uParam0, iParam1, iParam3, "NO_LABEL", "multiplayer_overlays", "NG_M_Hair_014", "hairOverlay",
+				func_100(uParam0, switchId, iParam3, "NO_LABEL", "multiplayer_overlays", "NG_M_Hair_014", "hairOverlay",
 						 iParam2, 100, 0);
 				break;
 
 			case 107:
-				func_100(uParam0, iParam1, iParam3, "NO_LABEL", "multiplayer_overlays", "NG_M_Hair_015", "hairOverlay",
+				func_100(uParam0, switchId, iParam3, "NO_LABEL", "multiplayer_overlays", "NG_M_Hair_015", "hairOverlay",
 						 iParam2, 100, 0);
 				break;
 
 			case 108:
-				func_100(uParam0, iParam1, iParam3, "NO_LABEL", "multiplayer_overlays", "NGBea_M_Hair_000",
+				func_100(uParam0, switchId, iParam3, "NO_LABEL", "multiplayer_overlays", "NGBea_M_Hair_000",
 						 "hairOverlay", iParam2, 100, 0);
 				break;
 
 			case 109:
-				func_100(uParam0, iParam1, iParam3, "NO_LABEL", "multiplayer_overlays", "NGBea_M_Hair_001",
+				func_100(uParam0, switchId, iParam3, "NO_LABEL", "multiplayer_overlays", "NGBea_M_Hair_001",
 						 "hairOverlay", iParam2, 100, 0);
 				break;
 
 			case 110:
-				func_100(uParam0, iParam1, iParam3, "NO_LABEL", "multiplayer_overlays", "NGBus_M_Hair_000",
+				func_100(uParam0, switchId, iParam3, "NO_LABEL", "multiplayer_overlays", "NGBus_M_Hair_000",
 						 "hairOverlay", iParam2, 100, 0);
 				break;
 
 			case 111:
-				func_100(uParam0, iParam1, iParam3, "NO_LABEL", "multiplayer_overlays", "NGBus_M_Hair_001",
+				func_100(uParam0, switchId, iParam3, "NO_LABEL", "multiplayer_overlays", "NGBus_M_Hair_001",
 						 "hairOverlay", iParam2, 100, 0);
 				break;
 
 			case 112:
-				func_100(uParam0, iParam1, iParam3, "NO_LABEL", "multiplayer_overlays", "NGHip_M_Hair_000",
+				func_100(uParam0, switchId, iParam3, "NO_LABEL", "multiplayer_overlays", "NGHip_M_Hair_000",
 						 "hairOverlay", iParam2, 100, 0);
 				break;
 
 			case 113:
-				func_100(uParam0, iParam1, iParam3, "NO_LABEL", "multiplayer_overlays", "NGHip_M_Hair_001",
+				func_100(uParam0, switchId, iParam3, "NO_LABEL", "multiplayer_overlays", "NGHip_M_Hair_001",
 						 "hairOverlay", iParam2, 100, 0);
 				break;
 
 			case 114:
-				func_100(uParam0, iParam1, iParam3, "NO_LABEL", "multiplayer_overlays", "NGInd_M_Hair_000",
+				func_100(uParam0, switchId, iParam3, "NO_LABEL", "multiplayer_overlays", "NGInd_M_Hair_000",
 						 "hairOverlay", iParam2, 100, 0);
 				break;
 
 			case 115:
-				func_100(uParam0, iParam1, iParam3, "NO_LABEL", "multiplayer_overlays", "not_in_use", "hairOverlay",
+				func_100(uParam0, switchId, iParam3, "NO_LABEL", "multiplayer_overlays", "not_in_use", "hairOverlay",
 						 iParam2, 100, 0);
 				break;
 
 			case 116:
-				func_100(uParam0, iParam1, iParam3, "NO_LABEL", "multiplayer_overlays", "not_in_use", "hairOverlay",
+				func_100(uParam0, switchId, iParam3, "NO_LABEL", "multiplayer_overlays", "not_in_use", "hairOverlay",
 						 iParam2, 100, 0);
 				break;
 
 			case 117:
-				func_100(uParam0, iParam1, iParam3, "NO_LABEL", "multiplayer_overlays", "not_in_use", "hairOverlay",
+				func_100(uParam0, switchId, iParam3, "NO_LABEL", "multiplayer_overlays", "not_in_use", "hairOverlay",
 						 iParam2, 100, 0);
 				break;
 
 			case 123:
-				func_100(uParam0, iParam1, iParam3, "NO_LABEL", "mpBeach_overlays", "FM_Hair_Fuzz", "hairOverlay",
+				func_100(uParam0, switchId, iParam3, "NO_LABEL", "mpBeach_overlays", "FM_Hair_Fuzz", "hairOverlay",
 						 iParam2, 100, 0);
 				break;
 
 			case 13:
-				func_100(uParam0, iParam1, iParam3, "TAT_FM_100", "multiplayer_overlays", "000_A", "crewLogo", iParam2,
+				func_100(uParam0, switchId, iParam3, "TAT_FM_100", "multiplayer_overlays", "000_A", "crewLogo", iParam2,
 						 system::round(system::to_float(5000) * Global_262145.f_2926), 0);
 				break;
 
 			case 14:
-				func_100(uParam0, iParam1, iParam3, "TAT_FM_101", "multiplayer_overlays", "000_B", "crewLogo", iParam2,
+				func_100(uParam0, switchId, iParam3, "TAT_FM_101", "multiplayer_overlays", "000_B", "crewLogo", iParam2,
 						 system::round(system::to_float(10000) * Global_262145.f_2927), 0);
 				break;
 
 			case 15:
-				func_100(uParam0, iParam1, iParam3, "TAT_FMM_CLB", "multiplayer_overlays", "000_C", "crewLogo", iParam2,
+				func_100(uParam0, switchId, iParam3, "TAT_FMM_CLB", "multiplayer_overlays", "000_C", "crewLogo", iParam2,
 						 system::round(system::to_float(10000) * Global_262145.f_2928), 2);
 				break;
 
 			case 16:
-				func_100(uParam0, iParam1, iParam3, "TAT_FM_100", "multiplayer_overlays", "000_D", "crewLogo", iParam2,
+				func_100(uParam0, switchId, iParam3, "TAT_FM_100", "multiplayer_overlays", "000_D", "crewLogo", iParam2,
 						 system::round(system::to_float(5000) * Global_262145.f_2929), 0);
 				break;
 
 			case 71:
-				func_100(uParam0, iParam1, iParam3, "TAT_FM_101", "multiplayer_overlays", "000_E", "crewLogo", iParam2,
+				func_100(uParam0, switchId, iParam3, "TAT_FM_101", "multiplayer_overlays", "000_E", "crewLogo", iParam2,
 						 system::round(system::to_float(10000) * Global_262145.f_2929), 0);
 				break;
 
 			case 72:
-				func_100(uParam0, iParam1, iParam3, "TAT_FMM_CLB", "multiplayer_overlays", "000_F", "crewLogo", iParam2,
+				func_100(uParam0, switchId, iParam3, "TAT_FMM_CLB", "multiplayer_overlays", "000_F", "crewLogo", iParam2,
 						 system::round(system::to_float(10000) * Global_262145.f_2929), 0);
 				break;
 			}
 		}
 		else if (iVar0 == joaat("mp_f_freemode_01")) {
-			switch (iParam1) {
+			switch (switchId) {
 			case 73:
-				func_100(uParam0, iParam1, iParam3, "NO_LABEL", "multiplayer_overlays", "mp_fm_branding_027_f",
+				func_100(uParam0, switchId, iParam3, "NO_LABEL", "multiplayer_overlays", "mp_fm_branding_027_f",
 						 "torsoDecal", iParam2, 100, 0);
 				break;
 
 			case 74:
-				func_100(uParam0, iParam1, iParam3, "NO_LABEL", "multiplayer_overlays", "mp_fm_branding_028_f",
+				func_100(uParam0, switchId, iParam3, "NO_LABEL", "multiplayer_overlays", "mp_fm_branding_028_f",
 						 "torsoDecal", iParam2, 100, 0);
 				break;
 
 			case 75:
-				func_100(uParam0, iParam1, iParam3, "NO_LABEL", "multiplayer_overlays", "mp_fm_branding_034_f",
+				func_100(uParam0, switchId, iParam3, "NO_LABEL", "multiplayer_overlays", "mp_fm_branding_034_f",
 						 "torsoDecal", iParam2, 100, 0);
 				break;
 
 			case 76:
-				func_100(uParam0, iParam1, iParam3, "NO_LABEL", "multiplayer_overlays", "mp_fm_branding_036_f",
+				func_100(uParam0, switchId, iParam3, "NO_LABEL", "multiplayer_overlays", "mp_fm_branding_036_f",
 						 "torsoDecal", iParam2, 100, 0);
 				break;
 
 			case 77:
-				func_100(uParam0, iParam1, iParam3, "NO_LABEL", "multiplayer_overlays", "mp_fm_branding_048",
+				func_100(uParam0, switchId, iParam3, "NO_LABEL", "multiplayer_overlays", "mp_fm_branding_048",
 						 "torsoDecal", iParam2, 100, 0);
 				break;
 
 			case 78:
-				func_100(uParam0, iParam1, iParam3, "NO_LABEL", "multiplayer_overlays", "mp_fm_branding_052",
+				func_100(uParam0, switchId, iParam3, "NO_LABEL", "multiplayer_overlays", "mp_fm_branding_052",
 						 "torsoDecal", iParam2, 100, 0);
 				break;
 
 			case 79:
-				func_100(uParam0, iParam1, iParam3, "NO_LABEL", "multiplayer_overlays", "mp_fm_branding_053",
+				func_100(uParam0, switchId, iParam3, "NO_LABEL", "multiplayer_overlays", "mp_fm_branding_053",
 						 "torsoDecal", iParam2, 100, 0);
 				break;
 
 			case 80:
-				func_100(uParam0, iParam1, iParam3, "NO_LABEL", "multiplayer_overlays", "mp_fm_branding_054",
+				func_100(uParam0, switchId, iParam3, "NO_LABEL", "multiplayer_overlays", "mp_fm_branding_054",
 						 "torsoDecal", iParam2, 100, 0);
 				break;
 
 			case 81:
-				func_100(uParam0, iParam1, iParam3, "NO_LABEL", "multiplayer_overlays", "mp_fm_branding_055",
+				func_100(uParam0, switchId, iParam3, "NO_LABEL", "multiplayer_overlays", "mp_fm_branding_055",
 						 "torsoDecal", iParam2, 100, 0);
 				break;
 
 			case 82:
-				func_100(uParam0, iParam1, iParam3, "NO_LABEL", "multiplayer_overlays", "mp_fm_branding_056",
+				func_100(uParam0, switchId, iParam3, "NO_LABEL", "multiplayer_overlays", "mp_fm_branding_056",
 						 "torsoDecal", iParam2, 100, 0);
 				break;
 
 			case 83:
-				func_100(uParam0, iParam1, iParam3, "NO_LABEL", "multiplayer_overlays", "mp_fm_branding_058",
+				func_100(uParam0, switchId, iParam3, "NO_LABEL", "multiplayer_overlays", "mp_fm_branding_058",
 						 "torsoDecal", iParam2, 100, 0);
 				break;
 
 			case 84:
-				func_100(uParam0, iParam1, iParam3, "NO_LABEL", "multiplayer_overlays", "mp_fm_branding_067",
+				func_100(uParam0, switchId, iParam3, "NO_LABEL", "multiplayer_overlays", "mp_fm_branding_067",
 						 "torsoDecal", iParam2, 100, 0);
 				break;
 
 			case 85:
-				func_100(uParam0, iParam1, iParam3, "NO_LABEL", "multiplayer_overlays", "mp_fm_branding_068",
+				func_100(uParam0, switchId, iParam3, "NO_LABEL", "multiplayer_overlays", "mp_fm_branding_068",
 						 "torsoDecal", iParam2, 100, 0);
 				break;
 
 			case 92:
-				func_100(uParam0, iParam1, iParam3, "NO_LABEL", "multiplayer_overlays", "mp_fm_branding_051",
+				func_100(uParam0, switchId, iParam3, "NO_LABEL", "multiplayer_overlays", "mp_fm_branding_051",
 						 "torsoDecal", iParam2, 100, 0);
 				break;
 
 			case 87:
-				func_100(uParam0, iParam1, iParam3, "NO_LABEL", "multiplayer_overlays", "FM_Tshirt_Award_F_000",
+				func_100(uParam0, switchId, iParam3, "NO_LABEL", "multiplayer_overlays", "FM_Tshirt_Award_F_000",
 						 "torsoDecal", iParam2, system::round(system::to_float(100) * Global_262145.f_2977), 0);
 				break;
 
 			case 88:
-				func_100(uParam0, iParam1, iParam3, "NO_LABEL", "multiplayer_overlays", "FM_Tshirt_Award_F_001",
+				func_100(uParam0, switchId, iParam3, "NO_LABEL", "multiplayer_overlays", "FM_Tshirt_Award_F_001",
 						 "torsoDecal", iParam2, system::round(system::to_float(100) * Global_262145.f_2978), 0);
 				break;
 
 			case 89:
-				func_100(uParam0, iParam1, iParam3, "NO_LABEL", "multiplayer_overlays", "FM_Tshirt_Award_F_002",
+				func_100(uParam0, switchId, iParam3, "NO_LABEL", "multiplayer_overlays", "FM_Tshirt_Award_F_002",
 						 "torsoDecal", iParam2, system::round(system::to_float(100) * Global_262145.f_2979), 0);
 				break;
 
 			case 93:
-				func_100(uParam0, iParam1, iParam3, "NO_LABEL", "multiplayer_overlays", "NG_F_Hair_001", "hairOverlay",
+				func_100(uParam0, switchId, iParam3, "NO_LABEL", "multiplayer_overlays", "NG_F_Hair_001", "hairOverlay",
 						 iParam2, 100, 0);
 				break;
 
 			case 94:
-				func_100(uParam0, iParam1, iParam3, "NO_LABEL", "multiplayer_overlays", "NG_F_Hair_002", "hairOverlay",
+				func_100(uParam0, switchId, iParam3, "NO_LABEL", "multiplayer_overlays", "NG_F_Hair_002", "hairOverlay",
 						 iParam2, 100, 0);
 				break;
 
 			case 95:
-				func_100(uParam0, iParam1, iParam3, "NO_LABEL", "multiplayer_overlays", "NG_F_Hair_003", "hairOverlay",
+				func_100(uParam0, switchId, iParam3, "NO_LABEL", "multiplayer_overlays", "NG_F_Hair_003", "hairOverlay",
 						 iParam2, 100, 0);
 				break;
 
 			case 96:
-				func_100(uParam0, iParam1, iParam3, "NO_LABEL", "multiplayer_overlays", "NG_F_Hair_004", "hairOverlay",
+				func_100(uParam0, switchId, iParam3, "NO_LABEL", "multiplayer_overlays", "NG_F_Hair_004", "hairOverlay",
 						 iParam2, 100, 0);
 				break;
 
 			case 97:
-				func_100(uParam0, iParam1, iParam3, "NO_LABEL", "multiplayer_overlays", "NG_F_Hair_005", "hairOverlay",
+				func_100(uParam0, switchId, iParam3, "NO_LABEL", "multiplayer_overlays", "NG_F_Hair_005", "hairOverlay",
 						 iParam2, 100, 0);
 				break;
 
 			case 98:
-				func_100(uParam0, iParam1, iParam3, "NO_LABEL", "multiplayer_overlays", "NG_F_Hair_006", "hairOverlay",
+				func_100(uParam0, switchId, iParam3, "NO_LABEL", "multiplayer_overlays", "NG_F_Hair_006", "hairOverlay",
 						 iParam2, 100, 0);
 				break;
 
 			case 99:
-				func_100(uParam0, iParam1, iParam3, "NO_LABEL", "multiplayer_overlays", "NG_F_Hair_007", "hairOverlay",
+				func_100(uParam0, switchId, iParam3, "NO_LABEL", "multiplayer_overlays", "NG_F_Hair_007", "hairOverlay",
 						 iParam2, 100, 0);
 				break;
 
 			case 100:
-				func_100(uParam0, iParam1, iParam3, "NO_LABEL", "multiplayer_overlays", "NG_F_Hair_008", "hairOverlay",
+				func_100(uParam0, switchId, iParam3, "NO_LABEL", "multiplayer_overlays", "NG_F_Hair_008", "hairOverlay",
 						 iParam2, 100, 0);
 				break;
 
 			case 101:
-				func_100(uParam0, iParam1, iParam3, "NO_LABEL", "multiplayer_overlays", "NG_F_Hair_009", "hairOverlay",
+				func_100(uParam0, switchId, iParam3, "NO_LABEL", "multiplayer_overlays", "NG_F_Hair_009", "hairOverlay",
 						 iParam2, 100, 0);
 				break;
 
 			case 102:
-				func_100(uParam0, iParam1, iParam3, "NO_LABEL", "multiplayer_overlays", "NG_F_Hair_010", "hairOverlay",
+				func_100(uParam0, switchId, iParam3, "NO_LABEL", "multiplayer_overlays", "NG_F_Hair_010", "hairOverlay",
 						 iParam2, 100, 0);
 				break;
 
 			case 103:
-				func_100(uParam0, iParam1, iParam3, "NO_LABEL", "multiplayer_overlays", "NG_F_Hair_011", "hairOverlay",
+				func_100(uParam0, switchId, iParam3, "NO_LABEL", "multiplayer_overlays", "NG_F_Hair_011", "hairOverlay",
 						 iParam2, 100, 0);
 				break;
 
 			case 104:
-				func_100(uParam0, iParam1, iParam3, "NO_LABEL", "multiplayer_overlays", "NG_F_Hair_012", "hairOverlay",
+				func_100(uParam0, switchId, iParam3, "NO_LABEL", "multiplayer_overlays", "NG_F_Hair_012", "hairOverlay",
 						 iParam2, 100, 0);
 				break;
 
 			case 105:
-				func_100(uParam0, iParam1, iParam3, "NO_LABEL", "multiplayer_overlays", "NG_F_Hair_013", "hairOverlay",
+				func_100(uParam0, switchId, iParam3, "NO_LABEL", "multiplayer_overlays", "NG_F_Hair_013", "hairOverlay",
 						 iParam2, 100, 0);
 				break;
 
 			case 106:
-				func_100(uParam0, iParam1, iParam3, "NO_LABEL", "multiplayer_overlays", "NG_F_Hair_014", "hairOverlay",
+				func_100(uParam0, switchId, iParam3, "NO_LABEL", "multiplayer_overlays", "NG_F_Hair_014", "hairOverlay",
 						 iParam2, 100, 0);
 				break;
 
 			case 107:
-				func_100(uParam0, iParam1, iParam3, "NO_LABEL", "multiplayer_overlays", "NG_F_Hair_015", "hairOverlay",
+				func_100(uParam0, switchId, iParam3, "NO_LABEL", "multiplayer_overlays", "NG_F_Hair_015", "hairOverlay",
 						 iParam2, 100, 0);
 				break;
 
 			case 108:
-				func_100(uParam0, iParam1, iParam3, "NO_LABEL", "multiplayer_overlays", "NGBea_F_Hair_000",
+				func_100(uParam0, switchId, iParam3, "NO_LABEL", "multiplayer_overlays", "NGBea_F_Hair_000",
 						 "hairOverlay", iParam2, 100, 0);
 				break;
 
 			case 109:
-				func_100(uParam0, iParam1, iParam3, "NO_LABEL", "multiplayer_overlays", "NGBea_F_Hair_001",
+				func_100(uParam0, switchId, iParam3, "NO_LABEL", "multiplayer_overlays", "NGBea_F_Hair_001",
 						 "hairOverlay", iParam2, 100, 0);
 				break;
 
 			case 110:
-				func_100(uParam0, iParam1, iParam3, "NO_LABEL", "multiplayer_overlays", "NGBus_F_Hair_000",
+				func_100(uParam0, switchId, iParam3, "NO_LABEL", "multiplayer_overlays", "NGBus_F_Hair_000",
 						 "hairOverlay", iParam2, 100, 0);
 				break;
 
 			case 111:
-				func_100(uParam0, iParam1, iParam3, "NO_LABEL", "multiplayer_overlays", "NGBus_F_Hair_001",
+				func_100(uParam0, switchId, iParam3, "NO_LABEL", "multiplayer_overlays", "NGBus_F_Hair_001",
 						 "hairOverlay", iParam2, 100, 0);
 				break;
 
 			case 112:
-				func_100(uParam0, iParam1, iParam3, "NO_LABEL", "multiplayer_overlays", "NGHip_F_Hair_000",
+				func_100(uParam0, switchId, iParam3, "NO_LABEL", "multiplayer_overlays", "NGHip_F_Hair_000",
 						 "hairOverlay", iParam2, 100, 0);
 				break;
 
 			case 113:
-				func_100(uParam0, iParam1, iParam3, "NO_LABEL", "multiplayer_overlays", "NGHip_F_Hair_001",
+				func_100(uParam0, switchId, iParam3, "NO_LABEL", "multiplayer_overlays", "NGHip_F_Hair_001",
 						 "hairOverlay", iParam2, 100, 0);
 				break;
 
 			case 114:
-				func_100(uParam0, iParam1, iParam3, "NO_LABEL", "multiplayer_overlays", "NGInd_F_Hair_000",
+				func_100(uParam0, switchId, iParam3, "NO_LABEL", "multiplayer_overlays", "NGInd_F_Hair_000",
 						 "hairOverlay", iParam2, 100, 0);
 				break;
 
 			case 115:
-				func_100(uParam0, iParam1, iParam3, "NO_LABEL", "multiplayer_overlays", "not_in_use", "hairOverlay",
+				func_100(uParam0, switchId, iParam3, "NO_LABEL", "multiplayer_overlays", "not_in_use", "hairOverlay",
 						 iParam2, 100, 0);
 				break;
 
 			case 116:
-				func_100(uParam0, iParam1, iParam3, "NO_LABEL", "multiplayer_overlays", "not_in_use", "hairOverlay",
+				func_100(uParam0, switchId, iParam3, "NO_LABEL", "multiplayer_overlays", "not_in_use", "hairOverlay",
 						 iParam2, 100, 0);
 				break;
 
 			case 117:
-				func_100(uParam0, iParam1, iParam3, "NO_LABEL", "multiplayer_overlays", "not_in_use", "hairOverlay",
+				func_100(uParam0, switchId, iParam3, "NO_LABEL", "multiplayer_overlays", "not_in_use", "hairOverlay",
 						 iParam2, 100, 0);
 				break;
 
 			case 118:
-				func_100(uParam0, iParam1, iParam3, "NO_LABEL", "multiplayer_overlays", "not_in_use", "hairOverlay",
+				func_100(uParam0, switchId, iParam3, "NO_LABEL", "multiplayer_overlays", "not_in_use", "hairOverlay",
 						 iParam2, 100, 0);
 				break;
 
 			case 119:
-				func_100(uParam0, iParam1, iParam3, "NO_LABEL", "multiplayer_overlays", "not_in_use", "hairOverlay",
+				func_100(uParam0, switchId, iParam3, "NO_LABEL", "multiplayer_overlays", "not_in_use", "hairOverlay",
 						 iParam2, 100, 0);
 				break;
 
 			case 120:
-				func_100(uParam0, iParam1, iParam3, "NO_LABEL", "multiplayer_overlays", "not_in_use", "hairOverlay",
+				func_100(uParam0, switchId, iParam3, "NO_LABEL", "multiplayer_overlays", "not_in_use", "hairOverlay",
 						 iParam2, 100, 0);
 				break;
 
 			case 121:
-				func_100(uParam0, iParam1, iParam3, "NO_LABEL", "multiplayer_overlays", "not_in_use", "hairOverlay",
+				func_100(uParam0, switchId, iParam3, "NO_LABEL", "multiplayer_overlays", "not_in_use", "hairOverlay",
 						 iParam2, 100, 0);
 				break;
 
 			case 122:
-				func_100(uParam0, iParam1, iParam3, "NO_LABEL", "multiplayer_overlays", "not_in_use", "hairOverlay",
+				func_100(uParam0, switchId, iParam3, "NO_LABEL", "multiplayer_overlays", "not_in_use", "hairOverlay",
 						 iParam2, 100, 0);
 				break;
 
 			case 123:
-				func_100(uParam0, iParam1, iParam3, "NO_LABEL", "mpBeach_overlays", "FM_Hair_Fuzz", "hairOverlay",
+				func_100(uParam0, switchId, iParam3, "NO_LABEL", "mpBeach_overlays", "FM_Hair_Fuzz", "hairOverlay",
 						 iParam2, 100, 0);
 				break;
 
 			case 13:
-				func_100(uParam0, iParam1, iParam3, "TAT_FM_100", "multiplayer_overlays", "000_A", "crewLogo", iParam2,
+				func_100(uParam0, switchId, iParam3, "TAT_FM_100", "multiplayer_overlays", "000_A", "crewLogo", iParam2,
 						 system::round(system::to_float(5000) * Global_262145.f_2926), 0);
 				break;
 
 			case 14:
-				func_100(uParam0, iParam1, iParam3, "TAT_FM_100", "multiplayer_overlays", "000_B", "crewLogo", iParam2,
+				func_100(uParam0, switchId, iParam3, "TAT_FM_100", "multiplayer_overlays", "000_B", "crewLogo", iParam2,
 						 system::round(system::to_float(5000) * Global_262145.f_2927), 0);
 				break;
 
 			case 15:
-				func_100(uParam0, iParam1, iParam3, "TAT_FM_101", "multiplayer_overlays", "000_C", "crewLogo", iParam2,
+				func_100(uParam0, switchId, iParam3, "TAT_FM_101", "multiplayer_overlays", "000_C", "crewLogo", iParam2,
 						 system::round(system::to_float(10000) * Global_262145.f_2928), 2);
 				break;
 
 			case 16:
-				func_100(uParam0, iParam1, iParam3, "TAT_FM_101", "multiplayer_overlays", "000_D", "crewLogo", iParam2,
+				func_100(uParam0, switchId, iParam3, "TAT_FM_101", "multiplayer_overlays", "000_D", "crewLogo", iParam2,
 						 system::round(system::to_float(10000) * Global_262145.f_2929), 0);
 				break;
 			}
 		}
 		break;
 	}
-	if ((iParam2 == 3 || iParam2 == 4) && iParam1 >= 129) {
-		func_97(uParam0, iParam2, iParam1, 129);
+	if ((iParam2 == 3 || iParam2 == 4) && switchId >= 129) {
+		func_97(uParam0, iParam2, switchId, 129);
 	}
 	if (iParam4 == 22) {
 		uParam0->f_7 *= 2;
@@ -26912,19 +26912,19 @@ int func_99() {
 }
 
 // Position - 0x24ECF
-void func_100(var *uParam0, int iParam1, int iParam2, char *sParam3, char *sParam4, char *sParam5, char *sParam6,
+void func_100(var *uParam0, int switchId, int iParam2, char *sParam3, char *sParam4, char *sParam5, char *sParam6,
 			  int iParam7, int iParam8, int iParam9) {
 	char cVar0[32];
 
-	uParam0->f_11 = iParam1;
+	uParam0->f_11 = switchId;
 	StringCopy(uParam0, sParam3, 16);
 	uParam0->f_4 = gameplay::get_hash_key(sParam4);
 	uParam0->f_5 = gameplay::get_hash_key(sParam5);
 	uParam0->f_8 = gameplay::get_hash_key(sParam6);
 	uParam0->f_6 = iParam7;
 	uParam0->f_7 = iParam8;
-	uParam0->f_9 = iParam1 / 32;
-	uParam0->f_10 = iParam1 % 32;
+	uParam0->f_9 = switchId / 32;
+	uParam0->f_10 = switchId % 32;
 	uParam0->f_12 = iParam9;
 	if (entity::does_entity_exist(iParam2) && !ped::is_ped_injured(iParam2)) {
 		if (uParam0->f_6 == 0 || uParam0->f_6 == 1 || uParam0->f_6 == 2) {
@@ -29110,7 +29110,7 @@ void func_129(int iParam0, int iParam1, bool bParam2) {
 	struct<11> Var0;
 
 	if (func_103(iParam0)) {
-		if (func_96(&Var0, iParam1, func_130(iParam0), 0, -1)) {
+		if (something_with_switching(&Var0, iParam1, func_130(iParam0), 0, -1)) {
 			if (bParam2) {
 				gameplay::set_bit(&Global_101700.f_2095.f_493[iParam0 /*15*/][Var0.f_9], Var0.f_10);
 			}
@@ -31520,30 +31520,30 @@ void func_223() {
 			iVar0++;
 		}
 		iVar0 = 0;
-		while (iVar0 < Global_101700.f_6647.f_136) {
-			if (gameplay::is_bit_set(Global_101700.f_6647[iVar0 /*15*/].f_1, 2) ||
-				gameplay::is_bit_set(Global_101700.f_6647[iVar0 /*15*/].f_1, 3)) {
-				if (gameplay::is_bit_set(Global_101700.f_6647[iVar0 /*15*/].f_2, iLocal_100)) {
+		while (iVar0 < G_SomeGlobalState.MessageCallStates.f_136) {
+			if (gameplay::is_bit_set(G_SomeGlobalState.MessageCallStates[iVar0 /*15*/].f_1, 2) ||
+				gameplay::is_bit_set(G_SomeGlobalState.MessageCallStates[iVar0 /*15*/].f_1, 3)) {
+				if (gameplay::is_bit_set(G_SomeGlobalState.MessageCallStates[iVar0 /*15*/].f_2, iLocal_100)) {
 					Global_89145[iLocal_100]++;
 				}
 			}
 			iVar0++;
 		}
 		iVar0 = 0;
-		while (iVar0 < Global_101700.f_6647.f_764) {
-			if (gameplay::is_bit_set(Global_101700.f_6647.f_651[iVar0 /*14*/].f_1, 2) ||
-				gameplay::is_bit_set(Global_101700.f_6647.f_651[iVar0 /*14*/].f_1, 3)) {
-				if (gameplay::is_bit_set(Global_101700.f_6647.f_651[iVar0 /*14*/].f_2, iLocal_100)) {
+		while (iVar0 < G_SomeGlobalState.MessageCallStates.f_764) {
+			if (gameplay::is_bit_set(G_SomeGlobalState.MessageCallStates.f_651[iVar0 /*14*/].f_1, 2) ||
+				gameplay::is_bit_set(G_SomeGlobalState.MessageCallStates.f_651[iVar0 /*14*/].f_1, 3)) {
+				if (gameplay::is_bit_set(G_SomeGlobalState.MessageCallStates.f_651[iVar0 /*14*/].f_2, iLocal_100)) {
 					Global_89149[iLocal_100]++;
 				}
 			}
 			iVar0++;
 		}
 		iVar0 = 0;
-		while (iVar0 < Global_101700.f_6647.f_866) {
-			if (gameplay::is_bit_set(Global_101700.f_6647.f_765[iVar0 /*10*/].f_1, 2) ||
-				gameplay::is_bit_set(Global_101700.f_6647.f_765[iVar0 /*10*/].f_1, 3)) {
-				if (gameplay::is_bit_set(Global_101700.f_6647.f_765[iVar0 /*10*/].f_2, iLocal_100)) {
+		while (iVar0 < G_SomeGlobalState.MessageCallStates.f_866) {
+			if (gameplay::is_bit_set(G_SomeGlobalState.MessageCallStates.f_765[iVar0 /*10*/].f_1, 2) ||
+				gameplay::is_bit_set(G_SomeGlobalState.MessageCallStates.f_765[iVar0 /*10*/].f_1, 3)) {
+				if (gameplay::is_bit_set(G_SomeGlobalState.MessageCallStates.f_765[iVar0 /*10*/].f_2, iLocal_100)) {
 					Global_89149[iLocal_100]++;
 				}
 			}
@@ -33003,7 +33003,7 @@ bool func_250(int iParam0, char *sParam1, int iParam2, char *sParam3, int iParam
 
 	default: break;
 	}
-	gameplay::clear_bit(&Global_2313, 10);
+	gameplay::clear_bit(&G_SleepModeOnOn25, 10);
 	iVar0 = 3;
 	if (func_251(iParam0, sParam1, iParam2, iParam6, sParam3, sParam5, iParam4, iParam7, iParam8, iParam9, iParam11,
 				 iParam12, iParam13, iParam14, sParam15, sParam16, iVar0) == 1) {
@@ -33012,8 +33012,8 @@ bool func_250(int iParam0, char *sParam1, int iParam2, char *sParam3, int iParam
 			Global_2923[3 /*6*/] = {Global_101700.f_27009[iParam0 /*29*/].f_3};
 			Global_3000 = iParam0;
 			StringCopy(&Global_3001, sParam5, 64);
-			gameplay::set_bit(&Global_2313, 1);
-			gameplay::set_bit(&Global_2313, 7);
+			gameplay::set_bit(&G_SleepModeOnOn25, 1);
+			gameplay::set_bit(&G_SleepModeOnOn25, 7);
 		}
 		return true;
 	}
@@ -33103,7 +33103,7 @@ int func_251(var uParam0, char *sParam1, int iParam2, var uParam3, char *sParam4
 	Global_101700.f_13100[Global_16812 /*104*/].f_66 = iParam13;
 	StringCopy(&Global_101700.f_13100[Global_16812 /*104*/].f_67, sParam14, 64);
 	StringCopy(&Global_101700.f_13100[Global_16812 /*104*/].f_83, sParam15, 64);
-	if (gameplay::is_bit_set(Global_2313, 10)) {
+	if (gameplay::is_bit_set(G_SleepModeOnOn25, 10)) {
 		Global_101700.f_13100[Global_16812 /*104*/].f_99[0] = 1;
 		Global_101700.f_13100[Global_16812 /*104*/].f_99[1] = 1;
 		Global_101700.f_13100[Global_16812 /*104*/].f_99[2] = 1;
@@ -33150,7 +33150,7 @@ int func_251(var uParam0, char *sParam1, int iParam2, var uParam3, char *sParam4
 		}
 	}
 	if (iParam7 == 1) {
-		if (gameplay::is_bit_set(Global_2313, 10)) {
+		if (gameplay::is_bit_set(G_SleepModeOnOn25, 10)) {
 			Global_101700.f_13010[0 /*20*/].f_17 = 1;
 			Global_101700.f_13010[1 /*20*/].f_17 = 1;
 			Global_101700.f_13010[2 /*20*/].f_17 = 1;
@@ -33231,7 +33231,7 @@ void func_252(int iParam0) {
 						if (Global_2882[iVar0] == 0) {
 							Global_2846[iVar0] = iVar1;
 							if (iVar1 == 3) {
-								if (gameplay::is_bit_set(Global_2314, 3)) {
+								if (gameplay::is_bit_set(G_SleepModeOffOn11, 3)) {
 									iVar2 = 42;
 									Global_14608 = 1;
 								}
@@ -33337,7 +33337,7 @@ void func_252(int iParam0) {
 								graphics::_pop_scaleform_movie_function_void();
 							}
 							else if (iVar1 == 2) {
-								if (gameplay::is_bit_set(Global_2314, 6)) {
+								if (gameplay::is_bit_set(G_SleepModeOffOn11, 6)) {
 									iVar7 = 42;
 								}
 								else {
@@ -33353,7 +33353,7 @@ void func_252(int iParam0) {
 								graphics::_pop_scaleform_movie_function_void();
 							}
 							else if (iVar1 == 3) {
-								if (gameplay::is_bit_set(Global_2314, 3)) {
+								if (gameplay::is_bit_set(G_SleepModeOffOn11, 3)) {
 									iVar8 = 42;
 									Global_14608 = 1;
 								}
@@ -33382,7 +33382,7 @@ void func_252(int iParam0) {
 							}
 							else if (iVar1 == 23 &&
 									 gameplay::are_strings_equal(&Global_2320[iVar1 /*15*/], "CELL_BENWEB") &&
-									 gameplay::is_bit_set(Global_2314, 6)) {
+									 gameplay::is_bit_set(G_SleepModeOffOn11, 6)) {
 								graphics::_push_scaleform_movie_function(Global_14424, "SET_DATA_SLOT");
 								graphics::_push_scaleform_movie_function_parameter_int(1);
 								graphics::_push_scaleform_movie_function_parameter_int(iVar0);
@@ -44069,7 +44069,7 @@ void func_398(int iParam0, bool bParam1, int iParam2) {
 		iVar18 = 0;
 		while (iVar18 < 127) {
 			if (func_403(iVar18, iVar0)) {
-				if (func_96(&Var1, iVar18, iVar14, iParam0, -1)) {
+				if (something_with_switching(&Var1, iVar18, iVar14, iParam0, -1)) {
 					if (func_400(iParam0, &Var1, Var1.f_4, Var1.f_8, iVar15, iVar16, bParam1, iVar17)) {
 						ped::_set_ped_decoration(iParam0, Var1.f_4, Var1.f_5);
 					}
@@ -45557,7 +45557,7 @@ int func_413(int iParam0, int iParam1) {
 				case 1:
 				case 7:
 				case 12:
-					iVar2 = func_419(joaat("mp_m_freemode_01"), 11, func_452(iParam0, 11, -1), 0);
+					iVar2 = pick_switch_id(joaat("mp_m_freemode_01"), 11, func_452(iParam0, 11, -1), 0);
 					if (iVar1 == 1 && iVar2 == 88 || iVar1 == 7 && iVar2 == 89 || iVar1 == 12 && iVar2 == 87) {
 						return 1;
 					}
@@ -45693,7 +45693,7 @@ int func_413(int iParam0, int iParam1) {
 				case 7:
 				case 4:
 				case 9:
-					iVar7 = func_419(joaat("mp_f_freemode_01"), 11, func_452(iParam0, 11, -1), 0);
+					iVar7 = pick_switch_id(joaat("mp_f_freemode_01"), 11, func_452(iParam0, 11, -1), 0);
 					if (iVar1 == 7 && iVar7 == 88 || iVar1 == 4 && iVar7 == 89 || iVar1 == 9 && iVar7 == 87) {
 						return 1;
 					}
@@ -45750,7 +45750,7 @@ int func_413(int iParam0, int iParam1) {
 				case 7:
 				case 4:
 				case 9:
-					iVar10 = func_419(joaat("mp_f_freemode_01"), 11, func_452(iParam0, 11, -1), 0);
+					iVar10 = pick_switch_id(joaat("mp_f_freemode_01"), 11, func_452(iParam0, 11, -1), 0);
 					if (iVar1 == 7 && iVar10 == 88 || iVar1 == 4 && iVar10 == 89 || iVar1 == 9 && iVar10 == 87) {
 						return 1;
 					}
@@ -45766,7 +45766,7 @@ int func_413(int iParam0, int iParam1) {
 				case 7:
 				case 4:
 				case 9:
-					iVar11 = func_419(joaat("mp_f_freemode_01"), 11, func_452(iParam0, 11, -1), 0);
+					iVar11 = pick_switch_id(joaat("mp_f_freemode_01"), 11, func_452(iParam0, 11, -1), 0);
 					if (iVar1 == 7 && iVar11 == 88 || iVar1 == 4 && iVar11 == 89 || iVar1 == 9 && iVar11 == 87) {
 						return 1;
 					}
@@ -45891,7 +45891,7 @@ bool func_417(int iParam0, int iParam1) {
 int func_418() { return -1; }
 
 // Position - 0x48316
-int func_419(int iParam0, int iParam1, int iParam2, int iParam3) {
+int pick_switch_id(int iParam0, int iParam1, int iParam2, int iParam3) {
 	int iVar0;
 	int iVar1;
 	int iVar2;
@@ -50183,7 +50183,7 @@ void func_428(int iParam0, int iParam1) {
 			}
 			iVar82 = 0;
 			while (iVar82 < 127) {
-				if (func_96(&Var0, iVar82, iVar13, iParam1, -1)) {
+				if (something_with_switching(&Var0, iVar82, iVar13, iParam1, -1)) {
 					if (Var0.f_8 == iParam0) {
 						func_449(Var0.f_11, 0, Global_69521);
 					}
@@ -50241,7 +50241,7 @@ int func_430(int iParam0, int iParam1, int iParam2) {
 					return 1;
 				}
 				else if (iParam2 == 13 || iParam2 == 14) {
-					if (func_419(iParam0, 11, iParam1, 0) == -1) {
+					if (pick_switch_id(iParam0, 11, iParam1, 0) == -1) {
 						return 1;
 					}
 				}
@@ -50275,14 +50275,14 @@ int func_430(int iParam0, int iParam1, int iParam2) {
 			}
 			if (iParam1 >= 0 && iParam1 <= 15 || iVar2 == 0) {
 				if (iParam2 == 13 || iParam2 == 15) {
-					if (func_419(iParam0, 11, iParam1, 0) == -1) {
+					if (pick_switch_id(iParam0, 11, iParam1, 0) == -1) {
 						return 1;
 					}
 				}
 			}
 			else if (iParam1 >= 32 && iParam1 <= 47 || iVar2 == 2) {
 				if (iParam2 == 13 || iParam2 == 16) {
-					if (func_419(iParam0, 11, iParam1, 0) == -1) {
+					if (pick_switch_id(iParam0, 11, iParam1, 0) == -1) {
 						return 1;
 					}
 				}
@@ -55101,7 +55101,7 @@ void func_447(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4) {
 					func_428(gameplay::get_hash_key("crewLogo"), iParam0);
 				}
 			}
-			iVar2 = func_419(iVar0, iParam1, iParam2, iParam4);
+			iVar2 = pick_switch_id(iVar0, iParam1, iParam2, iParam4);
 			if (iVar2 != -1) {
 				if (iParam3 == 1) {
 					func_448(iParam0, iVar2, 0);
@@ -55115,15 +55115,15 @@ void func_447(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4) {
 }
 
 // Position - 0x57E81
-void func_448(int iParam0, int iParam1, int iParam2) {
+void func_448(int iParam0, int switchId, int iParam2) {
 	int iVar0;
 	struct<6> Var1;
 
 	if (!ped::is_ped_injured(iParam0)) {
-		if (iParam1 != -1) {
+		if (switchId != -1) {
 			iVar0 = func_426(iParam0);
-			if (!func_403(iParam1, -1) || iParam2) {
-				if (func_96(&Var1, iParam1, iVar0, iParam0, -1)) {
+			if (!func_403(switchId, -1) || iParam2) {
+				if (something_with_switching(&Var1, switchId, iVar0, iParam0, -1)) {
 					ped::_set_ped_decoration(iParam0, Var1.f_4, Var1.f_5);
 					func_399(iParam0, Var1.f_4, Var1.f_5);
 				}
@@ -81762,7 +81762,7 @@ void func_516(int iParam0) {
 			iVar2 = 0;
 			while (iVar2 < 32) {
 				if (gameplay::is_bit_set(Global_101700.f_2095.f_493[iVar0 /*15*/].f_10[iVar1], iVar2)) {
-					if (func_96(&Var3, func_517(iVar1, iVar2), func_130(iVar0), iParam0, -1)) {
+					if (something_with_switching(&Var3, func_517(iVar1, iVar2), func_130(iVar0), iParam0, -1)) {
 						ped::_set_ped_decoration(iParam0, Var3.f_4, Var3.f_5);
 					}
 				}
@@ -85065,7 +85065,7 @@ void func_607() {
 	Global_89130 = 1;
 	iVar0 = 0;
 	while (iVar0 <= 20) {
-		if (func_96(&Var3, iVar0, 0, 0, -1)) {
+		if (something_with_switching(&Var3, iVar0, 0, 0, -1)) {
 			gameplay::set_bit(&Global_101700.f_2095.f_493[0 /*15*/][Var3.f_9], Var3.f_10);
 			gameplay::set_bit(&Global_101700.f_2095.f_493[0 /*15*/].f_5[Var3.f_9], Var3.f_10);
 		}
@@ -85073,7 +85073,7 @@ void func_607() {
 	}
 	iVar0 = 0;
 	while (iVar0 <= 39) {
-		if (func_96(&Var3, iVar0, 1, 0, -1)) {
+		if (something_with_switching(&Var3, iVar0, 1, 0, -1)) {
 			gameplay::set_bit(&Global_101700.f_2095.f_493[1 /*15*/][Var3.f_9], Var3.f_10);
 			gameplay::set_bit(&Global_101700.f_2095.f_493[1 /*15*/].f_5[Var3.f_9], Var3.f_10);
 		}
@@ -85081,7 +85081,7 @@ void func_607() {
 	}
 	iVar0 = 0;
 	while (iVar0 <= 33) {
-		if (func_96(&Var3, iVar0, 2, 0, -1)) {
+		if (something_with_switching(&Var3, iVar0, 2, 0, -1)) {
 			gameplay::set_bit(&Global_101700.f_2095.f_493[2 /*15*/][Var3.f_9], Var3.f_10);
 			gameplay::set_bit(&Global_101700.f_2095.f_493[2 /*15*/].f_5[Var3.f_9], Var3.f_10);
 		}

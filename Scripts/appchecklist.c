@@ -188,13 +188,13 @@ void func_4() {
 		func_7(Global_14424, "SET_SOFT_KEYS", 2f, 1f, 2f, -1f, -1f, "CELL_205", 0, 0, 0, 0);
 		func_7(Global_14424, "SET_SOFT_KEYS", 3f, 1f, 4f, -1f, -1f, "CELL_206", 0, 0, 0, 0);
 		func_7(Global_14424, "SET_SOFT_KEYS", 1f, 0f, 15f, -1f, -1f, "CELL_227", 0, 0, 0, 0);
-		gameplay::set_bit(&Global_2313, 17);
+		gameplay::set_bit(&G_SleepModeOnOn25, 17);
 	}
 	else {
 		func_7(Global_14424, "SET_SOFT_KEYS", 2f, 1f, 2f, -1f, -1f, 0, 0, 0, 0, 0);
 		func_7(Global_14424, "SET_SOFT_KEYS", 3f, 1f, 4f, -1f, -1f, 0, 0, 0, 0, 0);
 		func_7(Global_14424, "SET_SOFT_KEYS", 1f, 0f, 15f, -1f, -1f, 0, 0, 0, 0, 0);
-		gameplay::set_bit(&Global_2313, 17);
+		gameplay::set_bit(&G_SleepModeOnOn25, 17);
 	}
 	iLocal_119 = 2;
 }
@@ -328,7 +328,7 @@ void func_10() {
 			func_5(Global_14424, "SET_HEADER", &Local_131[iLocal_117 /*6*/], 0, 0, 0, 0);
 			func_7(Global_14424, "SET_SOFT_KEYS", 2f, 0f, 2f, -1f, -1f, 0, 0, 0, 0, 0);
 			func_7(Global_14424, "SET_SOFT_KEYS", 1f, 0f, 2f, -1f, -1f, 0, 0, 0, 0, 0);
-			gameplay::clear_bit(&Global_2313, 17);
+			gameplay::clear_bit(&G_SleepModeOnOn25, 17);
 			if (Global_14431) {
 				func_7(Global_14424, "SET_SOFT_KEYS", 3f, 1f, 4f, -1f, -1f, "CELL_206", 0, 0, 0, 0);
 			}
@@ -465,9 +465,9 @@ void func_16() {
 	func_5(Global_14424, "SET_HEADER", "CELL_3301", 0, 0, 0, 0);
 	if (func_17(0) || Global_86825 == 0) {
 		func_7(Global_14424, "SET_SOFT_KEYS", 2f, 0f, 1f, -1f, -1f, 0, 0, 0, 0, 0);
-		gameplay::clear_bit(&Global_2313, 17);
+		gameplay::clear_bit(&G_SleepModeOnOn25, 17);
 		func_7(Global_14424, "SET_SOFT_KEYS", 1f, 0f, 1f, -1f, -1f, 0, 0, 0, 0, 0);
-		gameplay::clear_bit(&Global_2313, 17);
+		gameplay::clear_bit(&G_SleepModeOnOn25, 17);
 		if (Global_14431) {
 			func_7(Global_14424, "SET_SOFT_KEYS", 3f, 1f, 4f, -1f, -1f, "CELL_206", 0, 0, 0, 0);
 		}

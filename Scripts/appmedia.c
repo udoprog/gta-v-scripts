@@ -73,7 +73,7 @@ void __EntryFunction__() {
 						func_14();
 						Global_14421 = 1;
 						if (Global_14443.f_1 > 3) {
-							if (gameplay::is_bit_set(Global_2314, 15)) {
+							if (gameplay::is_bit_set(G_SleepModeOffOn11, 15)) {
 							}
 							func_13();
 						}
@@ -161,7 +161,7 @@ void func_3() {
 		func_6(Global_14424, "SET_SOFT_KEYS", 3f, 1f, 4f, -1f, -1f, 0, 0, 0, 0, 0);
 	}
 	func_6(Global_14424, "SET_SOFT_KEYS", 1f, 0f, 1f, -1f, -1f, 0, 0, 0, 0, 0);
-	gameplay::clear_bit(&Global_2313, 17);
+	gameplay::clear_bit(&G_SleepModeOnOn25, 17);
 }
 
 // Position - 0x2CE
@@ -310,7 +310,7 @@ void func_9() {
 		}
 		mobile::set_mobile_phone_rotation(vLocal_207, 0);
 	}
-	if (gameplay::is_bit_set(Global_2314, 15)) {
+	if (gameplay::is_bit_set(G_SleepModeOffOn11, 15)) {
 		iLocal_210 = 0;
 		iLocal_211 = 0;
 		func_7(Global_14424, "SET_DATA_SLOT_EMPTY", 18f, -1082130432, -1082130432, -1082130432, -1082130432);
@@ -325,7 +325,7 @@ void func_9() {
 			func_6(Global_14424, "SET_SOFT_KEYS", 3f, 1f, 4f, -1f, -1f, 0, 0, 0, 0, 0);
 		}
 		func_6(Global_14424, "SET_SOFT_KEYS", 1f, 0f, 1f, -1f, -1f, 0, 0, 0, 0, 0);
-		gameplay::clear_bit(&Global_2313, 17);
+		gameplay::clear_bit(&G_SleepModeOnOn25, 17);
 		func_7(Global_14424, "DISPLAY_VIEW", 18f, -1082130432, -1082130432, -1082130432, -1082130432);
 		func_4(Global_14424, "SET_HEADER", &Local_52[iLocal_23 /*6*/], 0, 0, 0, 0);
 	}
@@ -486,7 +486,7 @@ void func_22() {
 
 	if (Global_14421 == 0) {
 		if (func_15(2, Global_14412, 0)) {
-			gameplay::clear_bit(&Global_2314, 15);
+			gameplay::clear_bit(&G_SleepModeOffOn11, 15);
 			func_24();
 			Global_14421 = 1;
 			graphics::_push_scaleform_movie_function(Global_14424, "GET_CURRENT_SELECTION");
@@ -514,7 +514,7 @@ void func_22() {
 							func_6(Global_14424, "SET_SOFT_KEYS", 3f, 0f, 4f, -1f, -1f, 0, 0, 0, 0, 0);
 						}
 						func_6(Global_14424, "SET_SOFT_KEYS", 1f, 0f, 1f, -1f, -1f, 0, 0, 0, 0, 0);
-						gameplay::clear_bit(&Global_2313, 17);
+						gameplay::clear_bit(&G_SleepModeOnOn25, 17);
 						Global_16784 = iLocal_23;
 						Global_16780 = 12;
 						Global_14443.f_1 = 8;

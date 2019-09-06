@@ -833,7 +833,7 @@ void func_28() {
 		if (func_32(0)) {
 			func_29(0);
 		}
-		gameplay::set_bit(&Global_2314, 2);
+		gameplay::set_bit(&G_SleepModeOffOn11, 2);
 	}
 }
 
@@ -843,17 +843,17 @@ void func_29(int iParam0) {
 		func_31(0, 0);
 	}
 	if (Global_14443.f_1 == 10 || Global_14443.f_1 == 9) {
-		gameplay::set_bit(&Global_2314, 16);
+		gameplay::set_bit(&G_SleepModeOffOn11, 16);
 	}
 	if (audio::is_mobile_phone_call_ongoing()) {
 		audio::stop_scripted_conversation(0);
 	}
 	Global_15745 = 5;
 	if (iParam0 == 1) {
-		gameplay::set_bit(&Global_2313, 30);
+		gameplay::set_bit(&G_SleepModeOnOn25, 30);
 	}
 	else {
-		gameplay::clear_bit(&Global_2313, 30);
+		gameplay::clear_bit(&G_SleepModeOnOn25, 30);
 	}
 	if (!func_30()) {
 		Global_14443.f_1 = 3;
@@ -896,7 +896,7 @@ void func_31(int iParam0, int iParam1) {
 bool func_32(int iParam0) {
 	if (iParam0 == 1) {
 		if (Global_14443.f_1 > 3) {
-			if (gameplay::is_bit_set(Global_2313, 14)) {
+			if (gameplay::is_bit_set(G_SleepModeOnOn25, 14)) {
 				return true;
 			}
 			else {
@@ -5449,7 +5449,7 @@ int func_142() {
 
 // Position - 0x81AD
 int func_143() {
-	if (!gameplay::is_bit_set(Global_2482201, 5) && Global_2452551 == -1 && !func_32(0) && !Global_68131 &&
+	if (!gameplay::is_bit_set(Global_2482201, 5) && Global_2452551 == -1 && !func_32(0) && !G_DisableMessagesAndCalls2 &&
 		!ped::is_ped_in_cover(player::player_ped_id(), 0) &&
 		interior::get_room_key_from_entity(player::player_ped_id()) == interior::get_room_key_from_entity(iLocal_100) &&
 		entity::is_entity_at_coord(player::player_ped_id(), vLocal_126, 0.55f, 0.8f, 1.5f, 0, 1, 1) &&
@@ -5832,7 +5832,7 @@ void func_167(int iParam0) {
 	if (iParam0) {
 		func_168();
 		if (Global_14443.f_1 == 10 || Global_14443.f_1 == 9) {
-			gameplay::set_bit(&Global_2314, 16);
+			gameplay::set_bit(&G_SleepModeOffOn11, 16);
 		}
 		Global_14443.f_1 = 1;
 		if (func_32(0)) {

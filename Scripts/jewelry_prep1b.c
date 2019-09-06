@@ -1527,8 +1527,8 @@ int func_11(char *sParam0, int iParam1, int iParam2) {
 		Global_15364.f_369 = Global_16733;
 		Global_15741 = Global_15742;
 		if (Global_15751) {
-			gameplay::clear_bit(&Global_2313, 20);
-			gameplay::clear_bit(&Global_2314, 17);
+			gameplay::clear_bit(&G_SleepModeOnOn25, 20);
+			gameplay::clear_bit(&G_SleepModeOffOn11, 17);
 			gameplay::clear_bit(&Global_2315, 0);
 			if (iParam2) {
 				func_16();
@@ -1595,7 +1595,7 @@ int func_11(char *sParam0, int iParam1, int iParam2) {
 
 				default: break;
 				}
-				if (gameplay::is_bit_set(Global_2313, 9)) {
+				if (gameplay::is_bit_set(G_SleepModeOnOn25, 9)) {
 					return 0;
 				}
 			}
@@ -1655,7 +1655,7 @@ void func_13() {
 	Global_16761 = 0;
 	Global_15794 = 0;
 	Global_15795 = 0;
-	gameplay::clear_bit(&Global_2314, 16);
+	gameplay::clear_bit(&G_SleepModeOffOn11, 16);
 }
 
 // Position - 0x7BC
@@ -3880,7 +3880,7 @@ void func_83(int iParam0, int iParam1) {
 	if (iParam1 == -1) {
 		iVar0 = 0;
 		while (iVar0 < Global_67917) {
-			if (Global_56047[Global_67918[iVar0 /*9*/] /*13*/] == 4) {
+			if (MissionObjectives[Global_67918[iVar0 /*9*/] /*13*/] == 4) {
 				Global_67918[iVar0 /*9*/].f_5 = 0;
 				return;
 			}

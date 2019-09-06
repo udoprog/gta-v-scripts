@@ -238,7 +238,7 @@ void func_3() {
 		if (func_354(0)) {
 			func_4(0);
 		}
-		gameplay::set_bit(&Global_2314, 2);
+		gameplay::set_bit(&G_SleepModeOffOn11, 2);
 	}
 }
 
@@ -248,17 +248,17 @@ void func_4(int iParam0) {
 		func_6(0, 0);
 	}
 	if (Global_14443.f_1 == 10 || Global_14443.f_1 == 9) {
-		gameplay::set_bit(&Global_2314, 16);
+		gameplay::set_bit(&G_SleepModeOffOn11, 16);
 	}
 	if (audio::is_mobile_phone_call_ongoing()) {
 		audio::stop_scripted_conversation(0);
 	}
 	Global_15745 = 5;
 	if (iParam0 == 1) {
-		gameplay::set_bit(&Global_2313, 30);
+		gameplay::set_bit(&G_SleepModeOnOn25, 30);
 	}
 	else {
-		gameplay::clear_bit(&Global_2313, 30);
+		gameplay::clear_bit(&G_SleepModeOnOn25, 30);
 	}
 	if (!func_5()) {
 		Global_14443.f_1 = 3;
@@ -402,7 +402,7 @@ void func_10(int iParam0, int iParam1, int iParam2) {
 	else {
 		gameplay::clear_bit(&Global_101700.f_8975.f_25, 4);
 	}
-	Global_101700.f_6647.f_924 = gameplay::get_game_timer();
+	G_SomeGlobalState.MessageCallStates.f_924 = gameplay::get_game_timer();
 	if (Global_69964 == 62 || Global_69965 == 62) {
 		func_11(2, 1);
 	}
@@ -72182,15 +72182,15 @@ bool func_351() {
 		}
 		iVar16 = gameplay::get_game_timer();
 		iVar17 = 0;
-		while (iVar17 < Global_101700.f_6647.f_136) {
-			iVar18 = Global_101700.f_6647[iVar17 /*15*/].f_7;
+		while (iVar17 < G_SomeGlobalState.MessageCallStates.f_136) {
+			iVar18 = G_SomeGlobalState.MessageCallStates[iVar17 /*15*/].f_7;
 			if (iVar18 != -1) {
 				if (iVar18 != -1 && iVar18 != 51 && iVar18 != 62 && iVar18 != 52 && iVar18 != 62 && iVar18 != 53 &&
 					iVar18 != 62 && iVar18 != 54 && iVar18 != 62 && iVar18 != 55 && iVar18 != 62 && iVar18 != 56 &&
 					iVar18 != 62 && iVar18 != 57 && iVar18 != 62 && iVar18 != 58 && iVar18 != 62 && iVar18 != 59 &&
 					iVar18 != 62 && iVar18 != 60 && iVar18 != 62 && iVar18 != 61 && iVar18 != 62 && iVar18 != 62 &&
 					iVar18 != 63) {
-					iVar19 = Global_101700.f_6647[iVar17 /*15*/].f_4 - iVar16;
+					iVar19 = G_SomeGlobalState.MessageCallStates[iVar17 /*15*/].f_4 - iVar16;
 					if (iVar19 < 180000) {
 						if (func_352(vVar1, iVar18)) {
 							return true;
@@ -72201,15 +72201,15 @@ bool func_351() {
 			iVar17++;
 		}
 		iVar17 = 0;
-		while (iVar17 < Global_101700.f_6647.f_764) {
-			iVar20 = Global_101700.f_6647.f_651[iVar17 /*14*/].f_7;
+		while (iVar17 < G_SomeGlobalState.MessageCallStates.f_764) {
+			iVar20 = G_SomeGlobalState.MessageCallStates.f_651[iVar17 /*14*/].f_7;
 			if (iVar20 != -1) {
 				if (iVar20 != -1 && iVar20 != 51 && iVar20 != 62 && iVar20 != 52 && iVar20 != 62 && iVar20 != 53 &&
 					iVar20 != 62 && iVar20 != 54 && iVar20 != 62 && iVar20 != 55 && iVar20 != 62 && iVar20 != 56 &&
 					iVar20 != 62 && iVar20 != 57 && iVar20 != 62 && iVar20 != 58 && iVar20 != 62 && iVar20 != 59 &&
 					iVar20 != 62 && iVar20 != 60 && iVar20 != 62 && iVar20 != 61 && iVar20 != 62 && iVar20 != 62 &&
 					iVar20 != 63) {
-					iVar21 = Global_101700.f_6647.f_651[iVar17 /*14*/].f_4 - iVar16;
+					iVar21 = G_SomeGlobalState.MessageCallStates.f_651[iVar17 /*14*/].f_4 - iVar16;
 					if (iVar21 < 180000) {
 						if (func_352(vVar1, iVar20)) {
 							return true;
@@ -72220,15 +72220,15 @@ bool func_351() {
 			iVar17++;
 		}
 		iVar17 = 0;
-		while (iVar17 < Global_101700.f_6647.f_866) {
-			iVar22 = Global_101700.f_6647.f_765[iVar17 /*10*/].f_7;
+		while (iVar17 < G_SomeGlobalState.MessageCallStates.f_866) {
+			iVar22 = G_SomeGlobalState.MessageCallStates.f_765[iVar17 /*10*/].f_7;
 			if (iVar22 != -1) {
 				if (iVar22 != -1 && iVar22 != 51 && iVar22 != 62 && iVar22 != 52 && iVar22 != 62 && iVar22 != 53 &&
 					iVar22 != 62 && iVar22 != 54 && iVar22 != 62 && iVar22 != 55 && iVar22 != 62 && iVar22 != 56 &&
 					iVar22 != 62 && iVar22 != 57 && iVar22 != 62 && iVar22 != 58 && iVar22 != 62 && iVar22 != 59 &&
 					iVar22 != 62 && iVar22 != 60 && iVar22 != 62 && iVar22 != 61 && iVar22 != 62 && iVar22 != 62 &&
 					iVar22 != 63) {
-					iVar23 = Global_101700.f_6647.f_765[iVar17 /*10*/].f_4 - iVar16;
+					iVar23 = G_SomeGlobalState.MessageCallStates.f_765[iVar17 /*10*/].f_4 - iVar16;
 					if (iVar23 < 180000) {
 						if (func_352(vVar1, iVar22)) {
 							return true;
@@ -72305,7 +72305,7 @@ bool func_353() {
 bool func_354(int iParam0) {
 	if (iParam0 == 1) {
 		if (Global_14443.f_1 > 3) {
-			if (gameplay::is_bit_set(Global_2313, 14)) {
+			if (gameplay::is_bit_set(G_SleepModeOnOn25, 14)) {
 				return true;
 			}
 			else {

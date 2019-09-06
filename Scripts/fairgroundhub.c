@@ -320,7 +320,7 @@ bool func_1(var *uParam0, var *uParam1, int iParam2, int iParam3, int iParam4, i
 			func_38(uParam1, 0);
 			return false;
 		}
-		if (Global_68131) {
+		if (G_DisableMessagesAndCalls2) {
 			return false;
 		}
 		if (func_5(1)) {
@@ -1091,7 +1091,7 @@ bool func_46(var uParam0) {
 bool func_47(int iParam0) {
 	if (iParam0 == 1) {
 		if (Global_14443.f_1 > 3) {
-			if (gameplay::is_bit_set(Global_2313, 14)) {
+			if (gameplay::is_bit_set(G_SleepModeOnOn25, 14)) {
 				return true;
 			}
 			else {

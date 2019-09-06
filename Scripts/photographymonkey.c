@@ -127,7 +127,7 @@ void __EntryFunction__() {
 				if (func_113()) {
 					fVar0 = 0f;
 					iLocal_48 = func_102(&fVar0);
-					iLocal_461 = gameplay::is_bit_set(Global_2314, 28);
+					iLocal_461 = gameplay::is_bit_set(G_SleepModeOffOn11, 28);
 					if (iLocal_48 != -1) {
 						if (fVar0 < fLocal_46) {
 							vVar1 = {vLocal_455};
@@ -271,10 +271,10 @@ bool func_3() {
 // Position - 0x4D0
 void func_4(int iParam0) {
 	if (iParam0 == 1) {
-		gameplay::set_bit(&Global_2314, 28);
+		gameplay::set_bit(&G_SleepModeOffOn11, 28);
 	}
 	else {
-		gameplay::clear_bit(&Global_2314, 28);
+		gameplay::clear_bit(&G_SleepModeOffOn11, 28);
 	}
 }
 

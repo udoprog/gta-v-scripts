@@ -1674,8 +1674,8 @@ int func_39(char *sParam0, int iParam1, int iParam2) {
 		Global_15364.f_369 = Global_16733;
 		Global_15741 = Global_15742;
 		if (Global_15751) {
-			gameplay::clear_bit(&Global_2313, 20);
-			gameplay::clear_bit(&Global_2314, 17);
+			gameplay::clear_bit(&G_SleepModeOnOn25, 20);
+			gameplay::clear_bit(&G_SleepModeOffOn11, 17);
 			gameplay::clear_bit(&Global_2315, 0);
 			if (iParam2) {
 				func_44();
@@ -1742,7 +1742,7 @@ int func_39(char *sParam0, int iParam1, int iParam2) {
 
 				default: break;
 				}
-				if (gameplay::is_bit_set(Global_2313, 9)) {
+				if (gameplay::is_bit_set(G_SleepModeOnOn25, 9)) {
 					return 0;
 				}
 			}
@@ -1802,7 +1802,7 @@ void func_41() {
 	Global_16761 = 0;
 	Global_15794 = 0;
 	Global_15795 = 0;
-	gameplay::clear_bit(&Global_2314, 16);
+	gameplay::clear_bit(&G_SleepModeOffOn11, 16);
 }
 
 // Position - 0x2435
@@ -6997,7 +6997,7 @@ int func_150(int iParam0) {
 						player::is_player_climbing(player::player_id()) ||
 						ped::is_ped_in_combat(player::player_ped_id(), 0) || func_158() || Global_100747 ||
 						Global_25192 || func_157() || func_46(8, -1) || func_156() || func_155() || func_154() ||
-						func_153() || Global_101700.f_6647.f_919[iVar0] == 5) {
+						func_153() || G_SomeGlobalState.MessageCallStates.f_919[iVar0] == 5) {
 						return 0;
 					}
 					break;
@@ -7005,7 +7005,7 @@ int func_150(int iParam0) {
 				case 1:
 					if (player::is_player_being_arrested(player::player_id(), 1) || func_158() || Global_25192 ||
 						func_157() || func_46(8, -1) || func_154() || func_156() || func_155() || func_153() ||
-						Global_101700.f_6647.f_919[iVar0] == 5) {
+						G_SomeGlobalState.MessageCallStates.f_919[iVar0] == 5) {
 						return 0;
 					}
 					break;
@@ -7019,7 +7019,7 @@ int func_150(int iParam0) {
 						player::is_player_climbing(player::player_id()) ||
 						ped::is_ped_in_combat(player::player_ped_id(), 0) || func_158() || Global_100747 ||
 						Global_25192 || func_157() || func_46(8, -1) || func_154() || func_156() || func_155() ||
-						func_153() || Global_101700.f_6647.f_919[iVar0] == 5 || Global_36328 != -1) {
+						func_153() || G_SomeGlobalState.MessageCallStates.f_919[iVar0] == 5 || LastDispatchedMessageOrCall != -1) {
 						return 0;
 					}
 					break;
@@ -7029,14 +7029,14 @@ int func_150(int iParam0) {
 						player::is_player_being_arrested(player::player_id(), 1) ||
 						ped::is_ped_in_combat(player::player_ped_id(), 0) || func_158() || Global_100747 ||
 						Global_25192 || func_157() || func_46(8, -1) || func_156() || func_155() || func_153() ||
-						Global_101700.f_6647.f_919[iVar0] == 5) {
+						G_SomeGlobalState.MessageCallStates.f_919[iVar0] == 5) {
 						return 0;
 					}
 					break;
 
 				case 4:
 					if (func_158() || player::get_player_wanted_level(player::player_id()) > 0 || func_46(8, -1) ||
-						func_153() || func_152() || Global_101700.f_6647.f_919[iVar0] == 5) {
+						func_153() || func_152() || G_SomeGlobalState.MessageCallStates.f_919[iVar0] == 5) {
 						return 0;
 					}
 					break;
@@ -7061,7 +7061,7 @@ int func_150(int iParam0) {
 							player::is_player_being_arrested(player::player_id(), 1) ||
 							player::is_player_climbing(player::player_id()) || func_158() || Global_25192 ||
 							func_157() || func_46(8, -1) || func_155() || func_154() || func_153() ||
-							Global_101700.f_6647.f_919[iVar0] == 5) {
+							G_SomeGlobalState.MessageCallStates.f_919[iVar0] == 5) {
 							return 0;
 						}
 					}
@@ -7075,7 +7075,7 @@ int func_150(int iParam0) {
 						ped::is_ped_ragdoll(player::player_ped_id()) || ped::is_ped_falling(player::player_ped_id()) ||
 						player::is_player_being_arrested(player::player_id(), 1) || func_158() || func_155() ||
 						Global_100747 || Global_25192 || func_157() || Global_36912 || func_46(8, -1) || func_154() ||
-						func_152() || func_153() || Global_101700.f_6647.f_919[iVar0] == 5) {
+						func_152() || func_153() || G_SomeGlobalState.MessageCallStates.f_919[iVar0] == 5) {
 						return 0;
 					}
 					break;
@@ -7242,7 +7242,7 @@ int func_162(int iParam0) {
 	if (!func_25(iParam0)) {
 		return 7;
 	}
-	return Global_101700.f_6647.f_919[iParam0];
+	return G_SomeGlobalState.MessageCallStates.f_919[iParam0];
 }
 
 // Position - 0xBEA1

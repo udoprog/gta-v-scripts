@@ -2696,17 +2696,17 @@ void func_47(int iParam0) {
 		func_49(0, 0);
 	}
 	if (Global_14443.f_1 == 10 || Global_14443.f_1 == 9) {
-		gameplay::set_bit(&Global_2314, 16);
+		gameplay::set_bit(&G_SleepModeOffOn11, 16);
 	}
 	if (audio::is_mobile_phone_call_ongoing()) {
 		audio::stop_scripted_conversation(0);
 	}
 	Global_15745 = 5;
 	if (iParam0 == 1) {
-		gameplay::set_bit(&Global_2313, 30);
+		gameplay::set_bit(&G_SleepModeOnOn25, 30);
 	}
 	else {
-		gameplay::clear_bit(&Global_2313, 30);
+		gameplay::clear_bit(&G_SleepModeOnOn25, 30);
 	}
 	if (!func_48()) {
 		Global_14443.f_1 = 3;
@@ -2749,7 +2749,7 @@ void func_49(int iParam0, int iParam1) {
 bool func_50(int iParam0) {
 	if (iParam0 == 1) {
 		if (Global_14443.f_1 > 3) {
-			if (gameplay::is_bit_set(Global_2313, 14)) {
+			if (gameplay::is_bit_set(G_SleepModeOnOn25, 14)) {
 				return true;
 			}
 			else {
@@ -2772,10 +2772,10 @@ bool func_50(int iParam0) {
 // Position - 0x2532
 void func_51(int iParam0) {
 	if (iParam0 == 1) {
-		gameplay::set_bit(&Global_2313, 24);
+		gameplay::set_bit(&G_SleepModeOnOn25, 24);
 	}
 	else {
-		gameplay::clear_bit(&Global_2313, 24);
+		gameplay::clear_bit(&G_SleepModeOnOn25, 24);
 	}
 }
 
@@ -2866,7 +2866,7 @@ void func_61(int *iParam0, float fParam1) {
 
 // Position - 0x26B7
 bool func_62() {
-	if (gameplay::is_bit_set(Global_2314, 23)) {
+	if (gameplay::is_bit_set(G_SleepModeOffOn11, 23)) {
 		if (Global_15798 == 1) {
 			return true;
 		}
@@ -2888,10 +2888,10 @@ int func_64(int iParam0, int iParam1, var *uParam2, var *uParam3, var *uParam4, 
 	int iVar0;
 	int iVar1;
 
-	if (gameplay::is_bit_set(Global_2314, 9)) {
+	if (gameplay::is_bit_set(G_SleepModeOffOn11, 9)) {
 		return 0;
 	}
-	gameplay::set_bit(&Global_2314, 9);
+	gameplay::set_bit(&G_SleepModeOffOn11, 9);
 	Global_16729 = iParam0;
 	iVar0 = 0;
 	while (iVar0 < iParam0 + 1) {
@@ -2988,8 +2988,8 @@ int func_66(var *uParam0, var *uParam1, int iParam2, bool bParam3) {
 			Global_15964[1 /*6*/] = {Global_15990[1 /*6*/]};
 		}
 		if (Global_15751) {
-			gameplay::clear_bit(&Global_2313, 20);
-			gameplay::clear_bit(&Global_2314, 17);
+			gameplay::clear_bit(&G_SleepModeOnOn25, 20);
+			gameplay::clear_bit(&G_SleepModeOffOn11, 17);
 			gameplay::clear_bit(&Global_2315, 0);
 			if (bParam3) {
 				func_70();
@@ -3119,7 +3119,7 @@ void func_68() {
 	Global_16761 = 0;
 	Global_15794 = 0;
 	Global_15795 = 0;
-	gameplay::clear_bit(&Global_2314, 16);
+	gameplay::clear_bit(&G_SleepModeOffOn11, 16);
 }
 
 // Position - 0x2C0A
@@ -4232,36 +4232,36 @@ int func_107(int iParam0)
 	int iVar0;
 
 	iVar0 = 0;
-	while (iVar0 < Global_101700.f_6647.f_136) {
-		if (Global_101700.f_6647[iVar0 /*15*/] == iParam0) {
+	while (iVar0 < G_SomeGlobalState.MessageCallStates.f_136) {
+		if (G_SomeGlobalState.MessageCallStates[iVar0 /*15*/] == iParam0) {
 			return 1;
 		}
 		iVar0++;
 	}
 	iVar0 = 0;
-	while (iVar0 < Global_101700.f_6647.f_650) {
-		if (Global_101700.f_6647.f_199[iVar0 /*15*/] == iParam0) {
+	while (iVar0 < G_SomeGlobalState.MessageCallStates.f_650) {
+		if (G_SomeGlobalState.MessageCallStates.f_199[iVar0 /*15*/] == iParam0) {
 			return 1;
 		}
 		iVar0++;
 	}
 	iVar0 = 0;
-	while (iVar0 < Global_101700.f_6647.f_198) {
-		if (Global_101700.f_6647.f_137[iVar0 /*15*/] == iParam0) {
+	while (iVar0 < G_SomeGlobalState.MessageCallStates.f_198) {
+		if (G_SomeGlobalState.MessageCallStates.f_137[iVar0 /*15*/] == iParam0) {
 			return 1;
 		}
 		iVar0++;
 	}
 	iVar0 = 0;
-	while (iVar0 < Global_101700.f_6647.f_764) {
-		if (Global_101700.f_6647.f_651[iVar0 /*14*/] == iParam0) {
+	while (iVar0 < G_SomeGlobalState.MessageCallStates.f_764) {
+		if (G_SomeGlobalState.MessageCallStates.f_651[iVar0 /*14*/] == iParam0) {
 			return 1;
 		}
 		iVar0++;
 	}
 	iVar0 = 0;
-	while (iVar0 < Global_101700.f_6647.f_866) {
-		if (Global_101700.f_6647.f_765[iVar0 /*10*/] == iParam0) {
+	while (iVar0 < G_SomeGlobalState.MessageCallStates.f_866) {
+		if (G_SomeGlobalState.MessageCallStates.f_765[iVar0 /*10*/] == iParam0) {
 			return 1;
 		}
 		iVar0++;
